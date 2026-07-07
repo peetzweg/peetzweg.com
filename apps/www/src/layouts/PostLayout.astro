@@ -2,11 +2,13 @@
 const { content } = Astro.props;
 
 import 'latex.css';
+import Analytics from '../components/Analytics.astro';
 ---
 
 <html>
   <head>
     <title>{content.title}</title>
+    <Analytics />
   </head>
   <body>
     <main>

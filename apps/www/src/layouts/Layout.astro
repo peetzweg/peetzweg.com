@@ -4,6 +4,7 @@ export interface Props {
 }
 import '@fontsource/noto-sans-mono';
 import '@fontsource/noto-sans-mono/600.css';
+import Analytics from '../components/Analytics.astro';
 
 const { title } = Astro.props;
 ---
@@ -21,6 +22,7 @@ const { title } = Astro.props;
     />
     <meta name="keywords" content="developer, profile, resume" />
     <title>{title}</title>
+    <Analytics />
   </head>
 
   <body>

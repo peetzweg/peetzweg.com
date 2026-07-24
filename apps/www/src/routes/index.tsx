@@ -1,4 +1,5 @@
 import { Link, createFileRoute } from '@tanstack/react-router';
+import { StravaEmbeds } from '../components/StravaEmbeds';
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -42,6 +43,9 @@ function Home() {
             <a href="https://github.com/peetzweg" rel="noreferrer" target="_blank">
               github
             </a>
+            <a href="https://x.com/peetzweg" rel="noreferrer" target="_blank">
+              x
+            </a>
             <a href="https://www.linkedin.com/in/peetzweg/" rel="noreferrer" target="_blank">
               linkedin
             </a>
@@ -64,6 +68,14 @@ function Home() {
         <HomeLink to="/epub" title="EPUB Reader" detail="Parked for a cleaner MDX block rebuild." />
         <HomeLink to="/running" title="Running" detail="Waiting for the database-backed stats path." />
         <HomeLink to="/p5" title="P5" detail="Future sketch workspace, not old bundle baggage." />
+      </section>
+
+      <section className="strava-section" aria-labelledby="strava-title">
+        <div>
+          <p>selected activities</p>
+          <h2 id="strava-title">Strava embeds</h2>
+        </div>
+        <StravaEmbeds />
       </section>
     </main>
   );

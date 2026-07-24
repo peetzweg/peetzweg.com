@@ -42,3 +42,7 @@ Thumbs.db
 .astro
 
 .nx/cache
+
+# Netlify local/build output
+.netlify
+apps/*/.netlify

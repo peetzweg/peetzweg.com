@@ -1,4 +1,3 @@
-import 'latex.css';
 import { Link, createFileRoute } from '@tanstack/react-router';
 import { posts } from '../../content/posts';
 
@@ -8,7 +7,7 @@ export const Route = createFileRoute('/posts/')({
 
 function PostsIndex() {
   return (
-    <main className="latex-page">
+    <main className="content-page">
       <article>
         <h1>Posts</h1>
         <ol className="text-lg">

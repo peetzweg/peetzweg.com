@@ -1,4 +1,3 @@
-import 'latex.css';
 import { notFound, createFileRoute } from '@tanstack/react-router';
 import { getPost, getPostMeta } from '../../content/posts';
 
@@ -26,7 +25,7 @@ function PostPage() {
   const Component = post.Component;
 
   return (
-    <main className="latex-page">
+    <main className="content-page">
       <article>
         <h1>{postMeta.title}</h1>
         <Component />

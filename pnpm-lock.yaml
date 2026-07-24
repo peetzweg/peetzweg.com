@@ -61,9 +61,6 @@ importers:
       feature-vocabulary:
         specifier: workspace:*
         version: link:../../features/vocabulary
-      latex.css:
-        specifier: ^1.12.0
-        version: 1.12.0
       lochkarte:
         specifier: workspace:*
         version: link:../../libs/lochkarte
@@ -6341,9 +6338,6 @@ packages:
   language-tags@1.0.9:
     resolution: {integrity: sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==}
     engines: {node: '>=0.10'}
-
-  latex.css@1.12.0:
-    resolution: {integrity: sha512-cD5UrbvxWyjP+Mrd6ZGEbep6mQH6aEcRV4O38HQMM06v54Vp1GsQf6j/al8sdgUAAn3pQmWPWpdnOlgUpDz72Q==}
 
   lazy-ass@1.6.0:
     resolution: {integrity: sha512-cc8oEVoctTvsFZ/Oje/kGnHbpWHYBe8IAJe4C0QNc3t8uM/0Y8+erSz/7Y1ALuXTEZTMvxXwO6YbX1ey3ujiZw==}
@@ -14787,8 +14781,6 @@ snapshots:
   language-tags@1.0.9:
     dependencies:
       language-subtag-registry: 0.3.22
-
-  latex.css@1.12.0: {}
 
   lazy-ass@1.6.0: {}
 

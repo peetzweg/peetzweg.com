@@ -10,8 +10,8 @@
   "dependencies": {
     "@fontsource/noto-sans-mono": "^5.0.5",
     "@p5-wrapper/react": "^4.2.0",
-    "@react-three/drei": "^9.78.2",
-    "@react-three/fiber": "^8.13.5",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
     "@react-three/flex": "^1.0.1",
     "@visx/axis": "^3.3.0",
     "@visx/grid": "^3.3.0",
@@ -21,13 +21,13 @@
     "@visx/shape": "^3.0.0",
     "d3-array": "^3.2.4",
     "framer-motion": "^10.12.22",
-    "framer-motion-3d": "^10.12.22",
+    "framer-motion-3d": "^12.4.13",
     "leva": "^0.9.35",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-is": "18.2.0",
     "styled-components": "^5.3.11",
-    "three": "^0.154.0"
+    "three": "^0.185.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
@@ -39,7 +39,7 @@
     "@types/react-dom": "19.2.3",
     "@types/react-is": "18.2.2",
     "@types/styled-components": "5.1.26",
-    "@types/three": "^0.154.0",
+    "@types/three": "^0.185.1",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "babel-plugin-styled-components": "2.1.4",

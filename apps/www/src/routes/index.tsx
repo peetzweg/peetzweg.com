@@ -7,38 +7,63 @@ export const Route = createFileRoute('/')({
 function Home() {
   return (
     <main className="home-page">
-      <section className="home-hero" aria-labelledby="home-title">
-        <p className="home-kicker">peet.sh / Philip Poloczek</p>
-        <h1 id="home-title">building software, interfaces, tools, and small experiments.</h1>
-        <p className="home-copy">
-          This is the new TanStack Start shell. The old feature blocks are still
-          around, but the homepage is intentionally quiet while the site gets rebuilt
-          piece by piece.
-        </p>
+      <section className="arena-hero" aria-labelledby="home-title">
+        <div className="arena-mark" aria-hidden="true">
+          <img src="/set2/1.png" alt="" />
+          <img src="/set2/2.png" alt="" />
+          <img src="/set2/3.png" alt="" />
+        </div>
+
+        <div className="arena-corner">◠◠</div>
+
+        <div className="arena-grid">
+          <p className="arena-label">peet.sh /</p>
+
+          <div className="arena-main">
+            <p>Philip Poloczek</p>
+            <h1 id="home-title">
+              building software, interfaces, tools, and small experiments.
+            </h1>
+          </div>
+
+          <nav aria-label="Site sections" className="arena-links">
+            <Link to="/posts">posts</Link>
+            <Link to="/hyperlinks">hyperlinks</Link>
+            <Link to="/hardware">hardware</Link>
+            <Link to="/epub">epub reader</Link>
+            <Link to="/running">running</Link>
+            <Link to="/p5">p5</Link>
+          </nav>
+
+          <nav aria-label="Profiles" className="arena-links arena-profiles">
+            <a href="https://bsky.app/profile/peet.sh" rel="noreferrer" target="_blank">
+              bluesky
+            </a>
+            <a href="https://github.com/peetzweg" rel="noreferrer" target="_blank">
+              github
+            </a>
+            <a href="https://www.linkedin.com/in/peetzweg/" rel="noreferrer" target="_blank">
+              linkedin
+            </a>
+            <a href="https://www.strava.com/athletes/18353420" rel="noreferrer" target="_blank">
+              strava
+            </a>
+          </nav>
+        </div>
+
+        <a className="arena-scroll" href="#site-index">
+          scroll for rebuild map
+          <span>↓</span>
+        </a>
       </section>
 
-      <nav className="home-grid" aria-label="Site sections">
-        <HomeLink to="/posts/" title="Posts" detail="MDX writing and notes" />
-        <HomeLink to="/hyperlinks/" title="Hyperlinks" detail="Collected links" />
-        <HomeLink to="/hardware" title="Hardware" detail="Objects and DIY archive" />
-        <HomeLink to="/epub" title="EPUB Reader" detail="Feature playground" />
-        <HomeLink to="/running" title="Running" detail="Stats experiment" />
-        <HomeLink to="/p5" title="P5" detail="Sketch archive" />
-      </nav>
-
-      <section className="home-profile-links" aria-label="Profiles">
-        <a href="https://bsky.app/profile/peet.sh" rel="noreferrer" target="_blank">
-          bluesky
-        </a>
-        <a href="https://github.com/peetzweg" rel="noreferrer" target="_blank">
-          github
-        </a>
-        <a href="https://www.linkedin.com/in/peetzweg/" rel="noreferrer" target="_blank">
-          linkedin
-        </a>
-        <a href="https://www.strava.com/athletes/18353420" rel="noreferrer" target="_blank">
-          strava
-        </a>
+      <section className="home-index" id="site-index" aria-label="Rebuild map">
+        <HomeLink to="/posts/" title="Posts" detail="MDX writing is kept and moved first-class into Start." />
+        <HomeLink to="/hyperlinks/" title="Hyperlinks" detail="The link archive is already part of the new shell." />
+        <HomeLink to="/hardware" title="Hardware" detail="A separate visual page, free to keep its own look." />
+        <HomeLink to="/epub" title="EPUB Reader" detail="Parked for a cleaner MDX block rebuild." />
+        <HomeLink to="/running" title="Running" detail="Waiting for the database-backed stats path." />
+        <HomeLink to="/p5" title="P5" detail="Future sketch workspace, not old bundle baggage." />
       </section>
     </main>
   );

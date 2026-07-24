@@ -7,6 +7,7 @@ tmp
 
 # dependencies
 node_modules
+node-compile-cache
 
 # IDEs and editors
 /.idea
@@ -41,3 +42,7 @@ Thumbs.db
 .astro
 
 .nx/cache
+
+# Netlify local/build output
+.netlify
+apps/*/.netlify

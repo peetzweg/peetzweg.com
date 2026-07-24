@@ -1,0 +1,7 @@
+[build]
+  command = "pnpm --filter www build"
+  publish = "apps/www/dist/client"
+
+[functions]
+  directory = "apps/www/.netlify/v1/functions"
+  included_files = ["apps/www/dist/server/**"]

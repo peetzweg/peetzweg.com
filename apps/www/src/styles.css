@@ -1,0 +1,454 @@
+@import '@fontsource/noto-sans-mono';
+@import '@fontsource/noto-sans-mono/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #f7f7f2;
+  --color-fg: #111316;
+  --color-muted: #626760;
+  --color-line: #d9ddd2;
+  --color-panel: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #10120f;
+    --color-fg: #f4f4ed;
+    --color-muted: #a5ab9f;
+    --color-line: #30352f;
+    --color-panel: #171a16;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 0;
+  min-height: 100%;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: 'Noto Sans Mono', Monaco, monospace;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+.home-page {
+  background: var(--color-bg);
+}
+
+.arena-hero {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  overflow: hidden;
+  align-items: center;
+  padding: clamp(1rem, 4vw, 3rem);
+  isolation: isolate;
+}
+
+.arena-mark {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  z-index: -1;
+  width: min(105vw, 52rem);
+  aspect-ratio: 1;
+  opacity: 0.82;
+  transform: translate(-50%, -50%);
+}
+
+.arena-mark img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  animation: arena-spin 34s linear infinite;
+}
+
+.arena-mark img:nth-child(2) {
+  animation-duration: 48s;
+  animation-direction: reverse;
+}
+
+.arena-mark img:nth-child(3) {
+  animation-duration: 68s;
+}
+
+.arena-corner {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: var(--color-muted);
+}
+
+.arena-grid {
+  display: grid;
+  width: min(100%, 62rem);
+  margin: 0 auto;
+  grid-template-columns: minmax(5rem, 0.55fr) minmax(0, 1.35fr) minmax(8rem, 0.75fr);
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.arena-label,
+.arena-main p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.arena-main {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.arena-main h1 {
+  max-width: 10ch;
+  margin: 0;
+  font-size: clamp(2.5rem, 9vw, 6.5rem);
+  font-weight: 600;
+  line-height: 0.94;
+}
+
+.arena-links {
+  display: grid;
+  align-content: start;
+  gap: 0.2rem;
+}
+
+.arena-links a,
+.arena-scroll {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.arena-profiles {
+  grid-column: 3;
+  padding-top: clamp(3rem, 14vw, 8rem);
+}
+
+.arena-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  display: grid;
+  justify-items: center;
+  color: var(--color-muted);
+  transform: translateX(-50%);
+}
+
+.home-index {
+  display: grid;
+  padding: clamp(1rem, 5vw, 4rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1px;
+  border: 1px solid var(--color-line);
+  background: var(--color-line);
+}
+
+.home-link {
+  display: grid;
+  min-height: 8rem;
+  align-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: var(--color-panel);
+  text-decoration: none;
+}
+
+.home-link span {
+  font-size: 1.25rem;
+}
+
+.home-link small {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.projects-section {
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(1rem, 5vw, 4rem);
+  border-top: 1px solid var(--color-line);
+}
+
+.projects-section p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.projects-section h2 {
+  max-width: 11ch;
+  margin: 0.35rem 0 0;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1px;
+  border: 1px solid var(--color-line);
+  background: var(--color-line);
+}
+
+.project-link {
+  display: grid;
+  min-height: 13rem;
+  align-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+  background: var(--color-panel);
+  text-decoration: none;
+}
+
+.project-link span {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.project-link small {
+  max-width: 34rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.strava-section {
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(1rem, 5vw, 4rem);
+  border-top: 1px solid var(--color-line);
+}
+
+.strava-section p,
+.strava-card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.strava-section h2 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(2rem, 7vw, 5rem);
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.strava-strip {
+  display: grid;
+  grid-auto-columns: minmax(min(86vw, 24rem), 1fr);
+  grid-auto-flow: column;
+  gap: 1px;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.strava-card {
+  display: grid;
+  min-height: 30rem;
+  align-content: start;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-panel);
+  scroll-snap-align: start;
+}
+
+.strava-card .strava-embed-placeholder {
+  min-height: 24rem;
+}
+
+@keyframes arena-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (max-width: 760px) {
+  .arena-hero {
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  .arena-mark {
+    top: 45%;
+    width: min(180vw, 44rem);
+  }
+
+  .arena-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .arena-label,
+  .arena-profiles {
+    grid-column: auto;
+  }
+
+  .arena-profiles {
+    padding-top: 1rem;
+  }
+
+  .arena-main h1 {
+    max-width: 11ch;
+  }
+
+  .arena-scroll {
+    position: static;
+    margin-top: 2rem;
+    transform: none;
+  }
+}
+
+.content-page,
+.link-page {
+  width: min(100%, 46rem);
+  margin: 0 auto;
+  padding: clamp(1rem, 5vw, 3rem);
+}
+
+.content-page article {
+  display: grid;
+  gap: 1rem;
+  line-height: 1.7;
+}
+
+.content-page h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 8vw, 4rem);
+  line-height: 1;
+}
+
+.content-page p,
+.content-page li {
+  color: var(--color-muted);
+}
+
+.content-page ol {
+  padding-left: 1.4rem;
+}
+
+.content-page hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.link-page ol {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+  list-style: none;
+}
+
+.link-item {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem;
+  background: var(--color-panel);
+  text-decoration: none;
+}
+
+.link-title {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.link-title img {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+}
+
+.link-title span,
+.link-url,
+.link-item p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link-title span,
+.link-url {
+  white-space: nowrap;
+}
+
+.link-url,
+.link-item p {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.link-item p {
+  display: -webkit-box;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.rebuild-page {
+  display: grid;
+  min-height: 100svh;
+  align-content: center;
+  gap: 2rem;
+  padding: clamp(1rem, 5vw, 3rem);
+}
+
+.rebuild-page section {
+  max-width: 42rem;
+}
+
+.rebuild-page p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.rebuild-page section > p {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.rebuild-page h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.rebuild-page a {
+  color: var(--color-muted);
+}

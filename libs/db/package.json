@@ -20,10 +20,10 @@
   "private": true,
   "dependencies": {
     "clsx": "^2.1.0",
-    "react": "18.2.0"
+    "react": "19.2.8"
   },
   "devDependencies": {
-    "@types/react": "18.2.24",
+    "@types/react": "19.2.17",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "babel-plugin-styled-components": "2.1.4",

@@ -20,8 +20,6 @@
     "@visx/scale": "^3.3.0",
     "@visx/shape": "^3.0.0",
     "d3-array": "^3.2.4",
-    "framer-motion": "^10.12.22",
-    "framer-motion-3d": "^12.4.13",
     "leva": "^0.9.35",
     "react": "19.2.8",
     "react-dom": "19.2.8",

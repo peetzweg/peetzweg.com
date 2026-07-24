@@ -9,11 +9,11 @@
   "private": true,
   "dependencies": {
     "epubjs": "^0.3.93",
-    "framer-motion": "^11.2.10",
     "lib-utils": "workspace:*",
+    "motion": "^12.42.2",
+    "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-is": "18.2.0",
-    "react": "19.2.8",
     "zustand": "^4.5.4"
   },
   "devDependencies": {

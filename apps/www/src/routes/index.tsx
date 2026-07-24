@@ -37,14 +37,14 @@ function Home() {
           </nav>
 
           <nav aria-label="Profiles" className="arena-links arena-profiles">
-            <a href="https://bsky.app/profile/peet.sh" rel="noreferrer" target="_blank">
-              bluesky
+            <a href="https://x.com/peetzweg" rel="noreferrer" target="_blank">
+              x
             </a>
             <a href="https://github.com/peetzweg" rel="noreferrer" target="_blank">
               github
             </a>
-            <a href="https://x.com/peetzweg" rel="noreferrer" target="_blank">
-              x
+            <a href="https://bsky.app/profile/peet.sh" rel="noreferrer" target="_blank">
+              bluesky
             </a>
             <a href="https://www.linkedin.com/in/peetzweg/" rel="noreferrer" target="_blank">
               linkedin
@@ -70,10 +70,30 @@ function Home() {
         <HomeLink to="/p5" title="P5" detail="Future sketch workspace, not old bundle baggage." />
       </section>
 
+      <section className="projects-section" aria-labelledby="projects-title">
+        <div>
+          <p>projects /</p>
+          <h2 id="projects-title">new things worth opening</h2>
+        </div>
+
+        <div className="projects-grid">
+          <ProjectLink
+            href="https://github.com/peetzweg/opendisplay"
+            title="Open Display"
+            detail="Free, open-source Sidecar/Duet alternative for using an iPhone or iPad as a second Mac display."
+          />
+          <ProjectLink
+            href="https://commit-history.com/"
+            title="Commit History"
+            detail="A career-wide GitHub commit chart, like star-history, but for commits."
+          />
+        </div>
+      </section>
+
       <section className="strava-section" aria-labelledby="strava-title">
         <div>
-          <p>selected activities</p>
-          <h2 id="strava-title">Strava embeds</h2>
+          <p>strava /</p>
+          <h2 id="strava-title">Adventures had</h2>
         </div>
         <StravaEmbeds />
       </section>
@@ -95,5 +115,22 @@ function HomeLink({
       <span>{title}</span>
       <small>{detail}</small>
     </Link>
+  );
+}
+
+function ProjectLink({
+  detail,
+  href,
+  title,
+}: {
+  detail: string;
+  href: string;
+  title: string;
+}) {
+  return (
+    <a className="project-link" href={href} rel="noreferrer" target="_blank">
+      <span>{title}</span>
+      <small>{detail}</small>
+    </a>
   );
 }

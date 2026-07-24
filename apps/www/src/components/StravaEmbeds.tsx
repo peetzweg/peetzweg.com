@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 
 const activities = [
-  { id: '3675236976', title: 'Nordsee Century' },
-  { id: '5496950656', title: 'Ostsee' },
-  { id: '10239498330', title: "Berlin's Twin Peaks" },
-  { id: '9508161008', title: 'Berkeley Fire Trails' },
-  { id: '7865006227', title: 'Berlin Marathon 2022' },
-  { id: '1201296650', title: 'Berlin Marathon 2017' },
+  '3675236976',
+  '5496950656',
+  '10239498330',
+  '9508161008',
+  '7865006227',
+  '1201296650',
 ];
 
 export function StravaEmbeds() {
@@ -15,7 +15,9 @@ export function StravaEmbeds() {
       'script[data-strava-embeds="true"]',
     );
 
-    if (existingScript) return;
+    if (existingScript) {
+      return;
+    }
 
     const script = document.createElement('script');
     script.async = true;
@@ -30,12 +32,11 @@ export function StravaEmbeds() {
 
   return (
     <div className="strava-strip" aria-label="Selected Strava activities">
-      {activities.map((activity) => (
-        <article className="strava-card" key={activity.id}>
-          <p>{activity.title}</p>
+      {activities.map((activityId) => (
+        <article className="strava-card" key={activityId}>
           <div
             className="strava-embed-placeholder"
-            data-embed-id={activity.id}
+            data-embed-id={activityId}
             data-embed-type="activity"
           />
         </article>

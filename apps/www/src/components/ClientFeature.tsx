@@ -17,11 +17,17 @@ export function ClientFeature({
   useEffect(() => {
     let mounted = true;
 
-    loader().then((module) => {
-      if (mounted) {
-        setComponent(() => (module[exportName] as ComponentType | undefined) ?? null);
-      }
-    });
+    loader()
+      .then((module) => {
+        if (mounted) {
+          setComponent(() => (module[exportName] as ComponentType | undefined) ?? null);
+        }
+      })
+      .catch(() => {
+        if (mounted) {
+          setComponent(null);
+        }
+      });
 
     return () => {
       mounted = false;

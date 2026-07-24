@@ -6,17 +6,6 @@
     "allowJs": true,
     "baseUrl": ".",
     "moduleResolution": "Bundler",
-    "paths": {
-      "feature-epub-reader": ["src/types/feature-epub-reader.d.ts"],
-      "feature-portfolio-models": ["src/types/feature-portfolio-models.d.ts"],
-      "feature-portfolio-p5": ["src/types/feature-portfolio-p5.d.ts"],
-      "feature-profile-arena": ["src/types/feature-profile-arena.d.ts"],
-      "feature-profile-terminal": ["src/types/feature-profile-terminal.d.ts"],
-      "feature-punchcard": ["src/types/feature-punchcard.d.ts"],
-      "feature-sport-stats": ["src/types/feature-sport-stats.d.ts"],
-      "feature-strava-activities": ["src/types/feature-strava-activities.d.ts"],
-      "feature-vocabulary": ["src/types/feature-vocabulary.d.ts"]
-    },
     "resolveJsonModule": true,
     "target": "ES2022",
     "strict": true,

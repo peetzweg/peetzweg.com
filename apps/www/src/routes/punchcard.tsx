@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { ClientFeature } from '../components/ClientFeature';
-import { legacyFeatures } from '../legacyFeatures';
+import { RebuildPage } from '../components/RebuildPage';
 
 export const Route = createFileRoute('/punchcard')({
   component: PunchcardPage,
@@ -8,8 +7,11 @@ export const Route = createFileRoute('/punchcard')({
 
 function PunchcardPage() {
   return (
-    <main>
-      <ClientFeature exportName="Feature" loader={legacyFeatures.punchcard} />
-    </main>
+    <RebuildPage eyebrow="reading history" title="Punchcard">
+      <p>
+        The reading punchcard is kept as a concept, but it should be rebuilt
+        from clean data primitives.
+      </p>
+    </RebuildPage>
   );
 }

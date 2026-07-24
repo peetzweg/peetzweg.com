@@ -211,3 +211,38 @@ svg {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+
+.rebuild-page {
+  display: grid;
+  min-height: 100svh;
+  align-content: center;
+  gap: 2rem;
+  padding: clamp(1rem, 5vw, 3rem);
+}
+
+.rebuild-page section {
+  max-width: 42rem;
+}
+
+.rebuild-page p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.rebuild-page section > p {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.rebuild-page h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.rebuild-page a {
+  color: var(--color-muted);
+}

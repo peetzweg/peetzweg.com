@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { ClientFeature } from '../components/ClientFeature';
-import { legacyFeatures } from '../legacyFeatures';
+import { RebuildPage } from '../components/RebuildPage';
 
 export const Route = createFileRoute('/strava')({
   component: StravaPage,
@@ -8,8 +7,11 @@ export const Route = createFileRoute('/strava')({
 
 function StravaPage() {
   return (
-    <main>
-      <ClientFeature exportName="FeatStravaActivities" loader={legacyFeatures.stravaActivities} />
-    </main>
+    <RebuildPage eyebrow="activity feed" title="Strava">
+      <p>
+        Activity data can move here later as a proper server function or static
+        build-time fetch, instead of a legacy client feature.
+      </p>
+    </RebuildPage>
   );
 }

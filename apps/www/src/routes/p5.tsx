@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { ClientFeature } from '../components/ClientFeature';
-import { legacyFeatures } from '../legacyFeatures';
+import { RebuildPage } from '../components/RebuildPage';
 
 export const Route = createFileRoute('/p5')({
   component: P5Page,
@@ -8,8 +7,11 @@ export const Route = createFileRoute('/p5')({
 
 function P5Page() {
   return (
-    <main>
-      <ClientFeature exportName="Feature" loader={legacyFeatures.portfolioP5} />
-    </main>
+    <RebuildPage eyebrow="sketch space" title="P5">
+      <p>
+        Generative sketches can come back here, but without coupling the new
+        site shell to the old P5 workspace.
+      </p>
+    </RebuildPage>
   );
 }

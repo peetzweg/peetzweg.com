@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { ClientFeature } from '../components/ClientFeature';
-import { legacyFeatures } from '../legacyFeatures';
+import { RebuildPage } from '../components/RebuildPage';
 
 export const Route = createFileRoute('/vocabulary')({
   component: VocabularyPage,
@@ -8,8 +7,11 @@ export const Route = createFileRoute('/vocabulary')({
 
 function VocabularyPage() {
   return (
-    <main>
-      <ClientFeature exportName="Feature" loader={legacyFeatures.vocabulary} />
-    </main>
+    <RebuildPage eyebrow="language notes" title="Vocabulary">
+      <p>
+        Vocabulary gets a clean rebuild later, likely as structured content
+        instead of a bundled legacy widget.
+      </p>
+    </RebuildPage>
   );
 }

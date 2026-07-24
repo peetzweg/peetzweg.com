@@ -1,4 +1,3 @@
-import 'latex.css';
 import { createFileRoute } from '@tanstack/react-router';
 import linkData from '../../content/hyperlinks.json';
 
@@ -16,33 +15,27 @@ export const Route = createFileRoute('/hyperlinks/')({
 
 function HyperlinksPage() {
   return (
-    <main className="latex-page">
-      <ol className="gap-4">
+    <main className="link-page">
+      <ol>
         {(linkData as LinkInfo[]).map((link) => (
           <li key={link.url}>
             <a
-              className="flex flex-col px-1 py-2 font-mono md:px-0"
+              className="link-item"
               href={link.url}
               rel="noreferrer"
               target="_blank"
             >
-              <div className="flex flex-row items-center gap-2">
+              <div className="link-title">
                 {link.favicon ? (
-                  <img alt="" className="aspect-square w-4" src={link.favicon} />
+                  <img alt="" src={link.favicon} />
                 ) : null}
-                <span className="truncate">{link.ogTitle || link.title}</span>
+                <span>{link.ogTitle || link.title}</span>
               </div>
-              <div className="pl-6 text-sm text-gray-500">
-                <span className="line-clamp-1" title={link.url}>
-                  {link.url}
-                </span>
+              <div className="link-url" title={link.url}>
+                {link.url}
               </div>
               {link.description ? (
-                <div className="pl-6 pt-2">
-                  <span className="line-clamp-2 text-sm text-black">
-                    {link.description}
-                  </span>
-                </div>
+                <p>{link.description}</p>
               ) : null}
             </a>
           </li>

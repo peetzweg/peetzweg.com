@@ -27,7 +27,6 @@
     "feature-sport-stats": "workspace:*",
     "feature-strava-activities": "workspace:*",
     "feature-vocabulary": "workspace:*",
-    "latex.css": "^1.12.0",
     "lochkarte": "workspace:*",
     "react": "19.2.8",
     "react-dom": "19.2.8",

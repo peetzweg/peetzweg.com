@@ -1,4 +1,5 @@
 import mdx from '@mdx-js/rollup';
+import netlify from '@netlify/vite-plugin-tanstack-start';
 import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
@@ -12,6 +13,7 @@ export default defineConfig({
       providerImportSource: '@mdx-js/react',
     }),
     tanstackStart(),
+    netlify(),
     react(),
   ],
 });

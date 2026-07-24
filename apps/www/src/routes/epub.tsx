@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { ClientFeature } from '../components/ClientFeature';
-import { legacyFeatures } from '../legacyFeatures';
+import { RebuildPage } from '../components/RebuildPage';
 
 export const Route = createFileRoute('/epub')({
   component: EpubPage,
@@ -8,8 +7,11 @@ export const Route = createFileRoute('/epub')({
 
 function EpubPage() {
   return (
-    <main>
-      <ClientFeature exportName="EpubReader" loader={legacyFeatures.epubReader} />
-    </main>
+    <RebuildPage eyebrow="reader experiment" title="EPUB Reader">
+      <p>
+        The old reader is parked. This route stays as the place to rebuild it as
+        an MDX-friendly reading block with modern Start data/loading boundaries.
+      </p>
+    </RebuildPage>
   );
 }

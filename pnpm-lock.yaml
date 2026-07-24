@@ -31,39 +31,6 @@ importers:
       '@tanstack/react-start':
         specifier: ^1.168.32
         version: 1.168.32(crossws@0.4.10(srvx@0.11.22))(esbuild@0.28.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rolldown@1.1.5)(rollup@4.62.2)(vite@8.1.5(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
-      feature-epub-reader:
-        specifier: workspace:*
-        version: link:../../features/epub-reader
-      feature-portfolio-diy:
-        specifier: workspace:*
-        version: link:../../features/portfolio-diy
-      feature-portfolio-models:
-        specifier: workspace:*
-        version: link:../../features/portfolio-models
-      feature-portfolio-p5:
-        specifier: workspace:*
-        version: link:../../features/portfolio-p5
-      feature-profile-arena:
-        specifier: workspace:*
-        version: link:../../features/profile-arena
-      feature-profile-terminal:
-        specifier: workspace:*
-        version: link:../../features/profile-terminal
-      feature-punchcard:
-        specifier: workspace:*
-        version: link:../../features/punchcard
-      feature-sport-stats:
-        specifier: workspace:*
-        version: link:../../features/sport-stats
-      feature-strava-activities:
-        specifier: workspace:*
-        version: link:../../features/strava-activities
-      feature-vocabulary:
-        specifier: workspace:*
-        version: link:../../features/vocabulary
-      lochkarte:
-        specifier: workspace:*
-        version: link:../../libs/lochkarte
       react:
         specifier: 19.2.8
         version: 19.2.8

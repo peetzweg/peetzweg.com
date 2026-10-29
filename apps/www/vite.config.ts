@@ -7,6 +7,10 @@ import remarkFrontmatter from 'remark-frontmatter';
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 
 export default defineConfig({
+  server: {
+    // Lets the dev server be opened from other devices through `tailscale serve`.
+    allowedHosts: ['.ts.net'],
+  },
   plugins: [
     mdx({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],

@@ -5,6 +5,7 @@ type PostModule = {
   frontmatter: {
     author?: string;
     date: string;
+    description?: string;
     title: string;
   };
 };
@@ -17,6 +18,7 @@ export type Post = {
   author?: string;
   Component: ComponentType;
   date: string;
+  description?: string;
   slug: string;
   title: string;
 };
@@ -29,6 +31,7 @@ export const posts = Object.entries(modules)
       author: module.frontmatter.author,
       Component: module.default,
       date: module.frontmatter.date,
+      description: module.frontmatter.description,
       slug,
       title: module.frontmatter.title,
     };

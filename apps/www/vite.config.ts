@@ -19,6 +19,7 @@ export default defineConfig({
       },
     }),
     react(),
-    netlify(),
+    // Netlify's local edge-function server needs a matching Deno and crashes dev; the site has no edge functions.
+    netlify({ dev: { edgeFunctions: { enabled: false } } }),
   ],
 });

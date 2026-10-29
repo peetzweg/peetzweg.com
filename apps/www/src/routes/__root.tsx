@@ -5,7 +5,9 @@ export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
+      { name: 'theme-color', content: '#f7f7f2', media: '(prefers-color-scheme: light)' },
+      { name: 'theme-color', content: '#10120f', media: '(prefers-color-scheme: dark)' },
       {
         name: 'description',
         content: 'This is the personal website of Philip Poloczek',

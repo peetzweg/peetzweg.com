@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router';
 import type { TimelineEntry, TimelineYear } from '../../content/timeline';
+import { StravaEmbed, useStravaScript } from '../StravaEmbeds';
 
 const LABELS: Record<TimelineEntry['type'], string> = {
   post: 'Writing',
@@ -9,9 +10,14 @@ const LABELS: Record<TimelineEntry['type'], string> = {
   link: 'Link',
   collection: 'Collection',
   note: 'Note',
+  activity: 'Sport',
+  book: 'Book',
 };
 
 export function Timeline({ years }: { years: TimelineYear[] }) {
+  // Filtering mounts different embeds, which Strava's script has to pick up again.
+  useStravaScript(years);
+
   return (
     <div className="tl-years">
       {years.map(({ year, entries }) => (
@@ -67,7 +73,13 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
           {entry.language || entry.stars ? (
             <p className="tl-facts">
               {entry.language ? <span>{entry.language}</span> : null}
-              {entry.stars ? <span>★ {entry.stars.toLocaleString('en-US')}</span> : null}
+              {entry.stars ? (
+                <span className="tl-stars">
+                  <StarIcon />
+                  {entry.stars.toLocaleString('en-US')}
+                  <span className="sr-only"> GitHub stars</span>
+                </span>
+              ) : null}
             </p>
           ) : null}
         </OutLink>
@@ -118,6 +130,32 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
       );
     case 'note':
       return <p className="tl-note">{entry.text}</p>;
+    case 'activity':
+      return (
+        <div className="tl-embed">
+          <StravaEmbed activityId={entry.stravaId} />
+        </div>
+      );
+    case 'book':
+      return (
+        <OutLink className="tl-card tl-book" href={entry.href}>
+          {entry.cover ? (
+            <img
+              alt=""
+              className="tl-image tl-cover"
+              decoding="async"
+              height={entry.cover.height}
+              loading="lazy"
+              src={entry.cover.src}
+              width={entry.cover.width}
+            />
+          ) : null}
+          <span>
+            <span className="tl-title">{entry.title}</span>
+            <span className="tl-text tl-author">{entry.author}</span>
+          </span>
+        </OutLink>
+      );
   }
 }
 
@@ -138,6 +176,19 @@ function Arrow() {
     <span aria-hidden="true" className="tl-arrow">
       ↗
     </span>
+  );
+}
+
+function StarIcon() {
+  return (
+    <svg aria-hidden="true" className="tl-star" fill="none" height="12" viewBox="0 0 16 16" width="12">
+      <path
+        d="M8 1.75l1.86 3.94 4.3.52-3.17 2.96.82 4.26L8 11.3l-3.81 2.13.82-4.26L1.84 6.2l4.3-.52L8 1.75z"
+        stroke="currentColor"
+        strokeLinejoin="round"
+        strokeWidth="1.25"
+      />
+    </svg>
   );
 }
 

@@ -1,8 +1,16 @@
 import { Link, createFileRoute } from '@tanstack/react-router';
 import { Timeline } from '../components/timeline/Timeline';
-import { groupByYear, timeline } from '../content/timeline';
+import {
+  availableFilters,
+  filterTimeline,
+  groupByYear,
+  isFilterId,
+  type FilterId,
+} from '../content/timeline';
 
 export const Route = createFileRoute('/')({
+  validateSearch: (search: Record<string, unknown>): { filter?: FilterId } =>
+    isFilterId(search.filter) ? { filter: search.filter } : {},
   component: Home,
 });
 
@@ -14,17 +22,10 @@ const PROFILES = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/peetzweg/' },
 ];
 
-/** Ongoing collections live on their own pages instead of in the timeline. */
-const PAGES = [
-  { label: 'Writing', to: '/posts' },
-  { label: 'Hyperlinks', to: '/hyperlinks' },
-  { label: 'Running', to: '/running' },
-  { label: 'Made by hand', to: '/hardware' },
-] as const;
-
-const years = groupByYear(timeline);
-
 function Home() {
+  const { filter } = Route.useSearch();
+  const years = groupByYear(filterTimeline(filter));
+
   return (
     <main className="tl">
       <header className="tl-intro">
@@ -40,16 +41,31 @@ function Home() {
             </a>
           ))}
         </nav>
-        <nav aria-label="Pages" className="tl-profiles tl-pages">
-          {PAGES.map(({ label, to }) => (
-            <Link key={to} to={to}>
-              {label}
-            </Link>
-          ))}
-        </nav>
       </header>
+
+      <nav aria-label="Filter the timeline" className="tl-filters">
+        <FilterLink active={!filter} label="All" />
+        {availableFilters.map(({ id, label }) => (
+          <FilterLink active={filter === id} filter={id} key={id} label={label} />
+        ))}
+      </nav>
 
       <Timeline years={years} />
     </main>
+  );
+}
+
+function FilterLink({ active, filter, label }: { active: boolean; filter?: FilterId; label: string }) {
+  return (
+    <Link
+      aria-current={active ? 'page' : undefined}
+      className="tl-filter"
+      replace
+      resetScroll={false}
+      search={filter ? { filter } : {}}
+      to="/"
+    >
+      {label}
+    </Link>
   );
 }

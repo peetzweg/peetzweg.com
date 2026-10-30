@@ -110,10 +110,6 @@ const playlists: TimelineEntry[] = [
 const writing: TimelineEntry[] = [
   { id: 'tpc-1', type: 'link', date: '2020-07', title: 'The Polo Club, Issue #1', href: 'https://atemio.notion.site/TPC-Issue-1-573baef12d224d9ab3ad63bc9ef1e8bb', note: 'Newsletter' },
   { id: 'tpc-2', type: 'link', date: '2020-08', title: 'The Polo Club, Issue #2', href: 'https://atemio.notion.site/TPC-Issue-2-0e11cc0a849641cfac657e32090d0441', note: 'Newsletter' },
-  { id: 'grateful-2020-07-30', type: 'note', date: '2020-07-30', text: 'Grateful for: having a proper place to work. A decent chair and a fitting table height.' },
-  { id: 'grateful-2020-08-01', type: 'note', date: '2020-08-01', text: 'Grateful for: being able to work out my body.' },
-  { id: 'grateful-2020-08-13', type: 'note', date: '2020-08-13', text: 'Grateful for: healthy teeth.' },
-  { id: 'grateful-2020-08-14', type: 'note', date: '2020-08-14', text: 'Grateful for: I had a childhood.' },
   {
     id: 'hyperlinks',
     type: 'collection',
@@ -125,12 +121,23 @@ const writing: TimelineEntry[] = [
   },
 ];
 
+/** Hand-picked activities, shown with Strava's own embed. */
+const activities: TimelineEntry[] = [
+  ['2017-09-24', '1201296650', 'BMW Berlin Marathon 2017'],
+  ['2020-06-26', '3675236976', 'Nordsee Century'],
+  ['2021-06-19', '5496950656', 'Wir haben keine Brötchen mehr.'],
+  ['2022-09-25', '7865006227', 'Berlin Marathon 2022'],
+  ['2023-07-23', '9508161008', 'UC Berkeley Fire Trail System'],
+  ['2023-11-18', '10239498330', 'Berlin’s Twin Peaks'],
+].map(([date, stravaId, title]) => ({ id: `strava-${stravaId}`, type: 'activity', date, stravaId, title }));
+
 export const entries: TimelineEntry[] = [
   ...hardware,
   ...projects,
   ...experiments,
   ...playlists,
   ...writing,
+  ...activities,
 ];
 
 function photo(date: string, id: string, src: string, width: number, height: number, caption: string): TimelineEntry {

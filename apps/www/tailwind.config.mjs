@@ -3,10 +3,10 @@ import path from 'node:path';
 
 export default {
   content: [
-    path.join(__dirname, './src/**/*.{astro,html,jsx,md,mdx,svelte,tsx,vue}'),
+    path.join(__dirname, './src/**/*.{html,jsx,md,mdx,tsx}'),
     path.join(
       __dirname,
-      '../../features/**/src/**/*.{astro,html,jsx,md,mdx,svelte,tsx,vue}',
+      '../../features/*/src/**/*.{jsx,tsx}',
     ),
   ],
   theme: {

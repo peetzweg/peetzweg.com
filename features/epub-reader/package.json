@@ -9,16 +9,16 @@
   "private": true,
   "dependencies": {
     "epubjs": "^0.3.93",
-    "framer-motion": "^11.2.10",
     "lib-utils": "workspace:*",
-    "react-dom": "18.2.0",
+    "motion": "^12.42.2",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "react-is": "18.2.0",
-    "react": "18.2.0",
     "zustand": "^4.5.4"
   },
   "devDependencies": {
-    "@types/react": "18.2.24",
-    "@types/react-dom": "18.2.9",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
     "@types/react-is": "18.2.2",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",

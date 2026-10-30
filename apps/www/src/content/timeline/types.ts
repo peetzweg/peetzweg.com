@@ -38,6 +38,8 @@ export type TimelineEntry = EntryBase &
     | { type: 'link'; title: string; href: string; note?: string }
     | { type: 'collection'; title: string; description: string; to: SitePath; preview: string[] }
     | { type: 'note'; text: string }
+    | { type: 'activity'; title: string; stravaId: string }
+    | { type: 'book'; title: string; author: string; cover?: Image; href?: string }
   );
 
 export type EntryType = TimelineEntry['type'];

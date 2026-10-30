@@ -10,14 +10,38 @@ const activities = [
 ];
 
 export function StravaEmbeds() {
-  useEffect(() => {
-    const existingScript = document.querySelector<HTMLScriptElement>(
-      'script[data-strava-embeds="true"]',
-    );
+  useStravaScript();
 
-    if (existingScript) {
-      return;
-    }
+  return (
+    <div className="strava-strip" aria-label="Selected Strava activities">
+      {activities.map((activityId) => (
+        <article className="strava-card" key={activityId}>
+          <StravaEmbed activityId={activityId} />
+        </article>
+      ))}
+    </div>
+  );
+}
+
+export function StravaEmbed({ activityId }: { activityId: string }) {
+  return (
+    <div
+      className="strava-embed-placeholder"
+      data-embed-id={activityId}
+      data-embed-type="activity"
+    />
+  );
+}
+
+/**
+ * Strava's script replaces every placeholder on the page once, when it loads. Pass a
+ * key that changes whenever new placeholders render so the script runs again.
+ */
+export function useStravaScript(refreshKey?: unknown) {
+  useEffect(() => {
+    document
+      .querySelectorAll('script[data-strava-embeds="true"]')
+      .forEach((existing) => existing.remove());
 
     const script = document.createElement('script');
     script.async = true;
@@ -28,19 +52,5 @@ export function StravaEmbeds() {
     return () => {
       script.remove();
     };
-  }, []);
-
-  return (
-    <div className="strava-strip" aria-label="Selected Strava activities">
-      {activities.map((activityId) => (
-        <article className="strava-card" key={activityId}>
-          <div
-            className="strava-embed-placeholder"
-            data-embed-id={activityId}
-            data-embed-type="activity"
-          />
-        </article>
-      ))}
-    </div>
-  );
+  }, [refreshKey]);
 }

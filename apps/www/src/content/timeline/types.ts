@@ -22,6 +22,18 @@ export type Image = {
   height: number;
 };
 
+/**
+ * Something to look at beside an entry's text: a screenshot, a small cover, a code
+ * snippet, or data the entry is about, drawn by the timeline itself.
+ */
+export type Media =
+  | { kind: 'image'; image: Image }
+  | { kind: 'thumb'; image: Image }
+  | { kind: 'code'; code: string }
+  | { kind: 'words'; words: ReadonlyArray<readonly [word: string, translation: string]> }
+  /** ISO dates (`YYYY-MM-DD`) to punch into a week-by-day card. */
+  | { kind: 'punchcard'; days: ReadonlyArray<string> };
+
 export type TimelineEntry = EntryBase &
   (
     | { type: 'post'; title: string; slug: string; excerpt: string }
@@ -32,10 +44,11 @@ export type TimelineEntry = EntryBase &
         href?: string;
         language?: string;
         stars?: number;
+        media?: Media;
       }
     | { type: 'photo'; image: Image; caption: string; tag?: string }
-    | { type: 'experiment'; title: string; description: string; to: SitePath }
-    | { type: 'link'; title: string; href: string; note?: string }
+    | { type: 'experiment'; title: string; description: string; to: SitePath; media?: Media }
+    | { type: 'link'; title: string; href: string; note?: string; media?: Media }
     | { type: 'collection'; title: string; description: string; to: SitePath; preview: string[] }
     | { type: 'note'; text: string }
     | { type: 'activity'; title: string; stravaId: string }

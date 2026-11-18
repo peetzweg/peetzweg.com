@@ -13,7 +13,10 @@ import Pottery from '../../components/hardware/assets/pottery.jpg';
 import Rack01 from '../../components/hardware/assets/Rack01.jpg';
 import Shades from '../../components/hardware/assets/shades.jpg';
 import hyperlinks from '../hyperlinks.json';
-import type { SitePath, TimelineEntry } from './types';
+import kindle from '../kindle.json';
+import type { Image, Media, SitePath, TimelineEntry } from './types';
+
+const mediaFiles = import.meta.glob<string>('./media/*.webp', { eager: true, import: 'default' });
 
 /**
  * Hand-curated history. Posts come from MDX (see ./index.ts); later, notes and media
@@ -41,6 +44,42 @@ const hardware: TimelineEntry[] = [
   photo('2025-01-24', 'pillow', Pillow, 960, 686, 'Pillow sewn from textile samples'),
   photo('2025-02-08', 'bench', Bench, 960, 686, 'Wooden bench made from my dining table'),
 ];
+
+/** Screenshots, README demos and snippets, keyed by project title. */
+const projectMedia: Record<string, Media> = {
+  papr: shot('papr', 960, 960, 'A printed calendar page made with papr'),
+  'Commander Ottens Pro Longboarding': shot('copl', 960, 562, 'Pixel-art longboarder riding across a green field'),
+  cairobou: shot('cairobou', 960, 437, 'Two images remixed into geometric patterns'),
+  'Nuclear Power Plant Simulator 2014': shot('npps', 856, 500, 'Gauges, switches and sliders of the power plant control panel'),
+  diarydash: shot('diarydash', 1088, 744, 'A diary page over a photo of the coast'),
+  'Five Minute Journal': shot('five-minute-journal', 1088, 544, 'A quote and prompts for gratitude and affirmations'),
+  matgen: shot('matgen', 720, 450, 'Settings above a generated cutting mat grid'),
+  breathpacer: shot('breathpacer', 1088, 680, 'A single circle pacing the breath'),
+  Globe: shot('globe', 222, 480, 'Transactions of an Ethereum address on an iPhone'),
+  'Parcel Explorer': shot('parcel-explorer', 222, 480, 'A Decentraland parcel on an iPhone'),
+  abimate: code(`import { balanceOf } from '@abimate/solmate/ERC20';
+
+const token = getContract({ address, abi: [balanceOf] });
+const balance = await token.callStatic.balanceOf(owner);`),
+  notar: shot('notar', 960, 595, 'notar listing the functions of an ERC-721 contract'),
+  'Crypto Address Lens': thumb('crypto-address-lens', 256, 256, 'Crypto Address Lens icon'),
+  depon: code(`$ cargo install depon
+$ depon ./images/*.jpg && ./minify_images.sh ./images/*.jpg`),
+  'pace-rs': shot('pace-rs', 960, 600, 'pace-rs printing the pace for a 5k and a 10k'),
+  dyor: shot('dyor', 1088, 612, 'The dyor logo'),
+  'trmnl-cli': code(`$ trmnl plugin add home "https://trmnl.com/api/custom_plugins/YOUR_UUID"
+$ trmnl send --content '<div class="layout">Hello TRMNL!</div>'`),
+  'acli-skill': code(`$ git clone https://github.com/peetzweg/acli-skill.git ~/.claude/skills/acli`),
+  matcrawl: code(`$ brew install peetzweg/tap/matcrawl
+$ matcrawl sync --backfill
+$ matcrawl search "<query>" --limit 20`),
+  'Open Display': shot('open-display', 1088, 680, 'The Open Display homepage'),
+  'Commit History': shot('commit-history', 1088, 680, 'Commit History with a search field and recently looked up users'),
+  sonics: shot('sonics', 1088, 680, 'The sonics playground with a waveform of the selected sound'),
+  Crosswind: shot('crosswind', 1088, 680, 'The Crosswind homepage: Post anywhere. Sync everywhere.'),
+  calcfile: shot('calcfile', 1088, 680, 'A calcfile with travel costs and their totals'),
+  bookblitz: shot('bookblitz', 800, 167, 'bookblitz showing a single word'),
+};
 
 const projects: TimelineEntry[] = [
   project('2014-06-19', 'papr', 'Command-line tool to generate PDF calendars.', 'https://peetzweg.github.io/papr', 'Rust', 41),
@@ -78,34 +117,39 @@ const projects: TimelineEntry[] = [
   project('2026-10-27', 'bookblitz', 'Speed-read your own EPUBs, one word at a time.', 'https://peetzweg.github.io/bookblitz/', 'TypeScript'),
 ];
 
+/** Days with Kindle activity, from the reading log behind /punchcard. */
+const readingDays = [...new Set(kindle.map((time) => new Date(time).toISOString().slice(0, 10)))].sort();
+
 const experiments: TimelineEntry[] = [
-  experiment('2023-11-09', 'Generative sketches', 'DIY Chromie Squiggle and Subscapes in p5.js.', '/p5'),
-  experiment('2023-11-09', '3D models', '3D in the browser, starting with a tulip.', '/models'),
-  experiment('2024-01-26', 'Vocabulary', 'Words I looked up while reading, with translations and definitions.', '/vocabulary'),
-  experiment('2024-03-21', 'Punchcard', 'Days I read on my Kindle, punched into a card.', '/punchcard'),
+  experiment('2023-11-09', 'Generative sketches', 'DIY Chromie Squiggle and Subscapes in p5.js.', '/p5', shot('p5', 1040, 560, 'A Chromie Squiggle drawn with p5.js')),
+  experiment('2023-11-09', '3D models', '3D in the browser, starting with a tulip.', '/models', shot('models', 1088, 680, 'A bunch of tulips rendered in 3D')),
+  experiment('2024-01-26', 'Vocabulary', 'Words I looked up while reading, with translations and definitions.', '/vocabulary', {
+    kind: 'words',
+    words: [
+      ['implore', 'beschwören'],
+      ['persevere', 'ausharren'],
+      ['adversity', 'Widrigkeiten'],
+      ['wherewithal', 'die Mittel'],
+      ['prevalent', 'weit verbreitet'],
+      ['blithely', 'munter'],
+    ],
+  }),
+  experiment('2024-03-21', 'Punchcard', `${readingDays.length} days I read on my Kindle, punched into a card.`, '/punchcard', { kind: 'punchcard', days: readingDays }),
   experiment('2024-06-03', 'EPUB reader', 'A tiny in-browser EPUB reader.', '/epub'),
 ];
 
+/** Monthly playlists ran from 2019-08 to 2020-06; this is the only one still public. */
 const playlists: TimelineEntry[] = [
-  ['2019-08', '4T8B45N4PfSSGGy44XapPf'],
-  ['2019-09', '66WfauOx6VLoaVhAD3NVOI'],
-  ['2019-10', '1mBpXfM0xWXyxdCcVULzR9'],
-  ['2019-11', '1l3h8FIMTadft71KTPGPCP'],
-  ['2019-12', '4bzzBlVTwvN2Rzszs4BJZJ'],
-  ['2020-01', '3cPBvDG8UZmXbd8mlD213a'],
-  ['2020-02', '1RuE5bOqKSJ3GoXZlN6srm'],
-  ['2020-03', '7K8VtjkGc0hStLFkkzs4hG'],
-  ['2020-04', '710E0jCXYWXKXyTTRnEj8N'],
-  ['2020-05', '2DSDS3yNDjMogrSKwbZoC4'],
-  ['2020-06', '6pjzD4VwszhPdBbmsFgKEG'],
-].map(([date, id]) => ({
-  id: `playlist-${date}`,
-  type: 'link',
-  date,
-  title: 'Monthly playlist',
-  href: `https://open.spotify.com/playlist/${id}`,
-  note: 'Spotify',
-}));
+  {
+    id: 'playlist-2020-01',
+    type: 'link',
+    date: '2020-01',
+    title: 'Hype 2020.01',
+    href: 'https://open.spotify.com/playlist/3cPBvDG8UZmXbd8mlD213a',
+    note: 'Spotify playlist',
+    media: thumb('playlist-2020-01', 300, 300, 'Playlist cover'),
+  },
+];
 
 const writing: TimelineEntry[] = [
   { id: 'tpc-1', type: 'link', date: '2020-07', title: 'The Polo Club, Issue #1', href: 'https://atemio.notion.site/TPC-Issue-1-573baef12d224d9ab3ad63bc9ef1e8bb', note: 'Newsletter' },
@@ -145,9 +189,32 @@ function photo(date: string, id: string, src: string, width: number, height: num
 }
 
 function project(date: string, title: string, description: string, href?: string, language?: string, stars?: number): TimelineEntry {
-  return { id: `project-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`, type: 'project', date, title, description, href, language, stars };
+  const id = `project-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+  return { id, type: 'project', date, title, description, href, language, stars, media: projectMedia[title] };
 }
 
-function experiment(date: string, title: string, description: string, to: SitePath): TimelineEntry {
-  return { id: `experiment-${to.slice(1)}`, type: 'experiment', date, title, description, to };
+function experiment(date: string, title: string, description: string, to: SitePath, media?: Media): TimelineEntry {
+  return { id: `experiment-${to.slice(1)}`, type: 'experiment', date, title, description, to, media };
+}
+
+/** A screenshot or picture from ./media, shown at the width of the column. */
+function shot(name: string, width: number, height: number, alt: string): Media {
+  return { kind: 'image', image: mediaImage(name, width, height, alt) };
+}
+
+/** A small square picture from ./media, shown beside the text. */
+function thumb(name: string, width: number, height: number, alt: string): Media {
+  return { kind: 'thumb', image: mediaImage(name, width, height, alt) };
+}
+
+function code(snippet: string): Media {
+  return { kind: 'code', code: snippet };
+}
+
+function mediaImage(name: string, width: number, height: number, alt: string): Image {
+  const src = mediaFiles[`./media/${name}.webp`];
+  if (!src) {
+    throw new Error(`Missing timeline media: ./media/${name}.webp`);
+  }
+  return { src, alt, width, height };
 }

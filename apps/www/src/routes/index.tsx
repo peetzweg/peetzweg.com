@@ -44,9 +44,9 @@ function Home() {
       </header>
 
       <nav aria-label="Filter the timeline" className="tl-filters">
-        <FilterLink active={!filter} label="All" />
+        <FilterLink label="All" />
         {availableFilters.map(({ id, label }) => (
-          <FilterLink active={filter === id} filter={id} key={id} label={label} />
+          <FilterLink filter={id} key={id} label={label} />
         ))}
       </nav>
 
@@ -55,10 +55,11 @@ function Home() {
   );
 }
 
-function FilterLink({ active, filter, label }: { active: boolean; filter?: FilterId; label: string }) {
+function FilterLink({ filter, label }: { filter?: FilterId; label: string }) {
   return (
+    // Without `exact`, "All" (no search params) would also count as active on every filter.
     <Link
-      aria-current={active ? 'page' : undefined}
+      activeOptions={{ exact: true }}
       className="tl-filter"
       replace
       resetScroll={false}

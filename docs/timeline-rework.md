@@ -14,11 +14,17 @@ Filters above the timeline (`?filter=writing|projects|made|experiments|sport|boo
 - [ ] Star counts are a snapshot from 2026-10-29. Fetch at build time?
 - [ ] Experiment descriptions (p5, models, vocabulary, punchcard, epub) still point at placeholder pages from the Start rebuild.
 
+## Media
+
+- [ ] Screenshots in `apps/www/src/content/timeline/media/` were taken on 2026-11-18 (live sites, README demos, the p5 and models pages on peetzweg.com). Retake them when a project changes.
+- [ ] No media yet: Aves, Monota, Polo's Pretty Paper, Airbox, Offwhite, loop, OpenGov Tip, polkadot-dapp-template, the EPUB reader, both TPC issues and the posts. App Store pages for Monota and Polo's Pretty Paper are gone; the Medium article for Airbox blocks scripts.
+- [ ] 10 of the 11 monthly Spotify playlists (2019-08 to 2020-06) return 404, so they are private or deleted. Only Hype 2020.01 is listed. Make them public again to bring them back: `4T8B45N4PfSSGGy44XapPf`, `66WfauOx6VLoaVhAD3NVOI`, `1mBpXfM0xWXyxdCcVULzR9`, `1l3h8FIMTadft71KTPGPCP`, `4bzzBlVTwvN2Rzszs4BJZJ`, `1RuE5bOqKSJ3GoXZlN6srm`, `7K8VtjkGc0hStLFkkzs4hG`, `710E0jCXYWXKXyTTRnEj8N`, `2DSDS3yNDjMogrSKwbZoC4`, `6pjzD4VwszhPdBbmsFgKEG`.
+- [ ] `src/content/kindle.json` is a copy of `libs/db/src/data/kindle.json` and ships to the client (~8 KB gzipped) for the punchcard. Moves to the database later.
+
 ## Books
 
 - [ ] Goodreads shelves need a login (profile 150027885, 472 books; RSS and shelf pages return "Sign in"). Either make the shelves public or export the library as CSV (My Books → Import and export) and commit it.
 - [ ] Book entries are ready (`type: 'book'`, cover beside title and author, greyscale until hover). Covers can come from Open Library by ISBN (`covers.openlibrary.org/b/isbn/<isbn>-L.jpg`), downloaded into the repo.
-- [ ] Maybe Kindle reading days from the punchcard data.
 
 ## Sport
 

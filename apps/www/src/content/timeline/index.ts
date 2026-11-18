@@ -2,7 +2,7 @@ import { posts } from '../posts';
 import { entries } from './entries';
 import type { EntryType, TimelineEntry } from './types';
 
-export type { Image, TimelineEntry, EntryType } from './types';
+export type { Image, Media, TimelineEntry, EntryType } from './types';
 
 const postEntries: TimelineEntry[] = posts.map((post) => {
   const [day, month, year] = post.date.split('.');

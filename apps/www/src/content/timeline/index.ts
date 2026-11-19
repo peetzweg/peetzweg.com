@@ -26,6 +26,7 @@ export const timeline: TimelineEntry[] = [...entries, ...postEntries].sort((a, b
 export const FILTERS = [
   { id: 'writing', label: 'Writing', types: ['post', 'note'] },
   { id: 'projects', label: 'Projects', types: ['project'] },
+  { id: 'work', label: 'Client work', types: ['work'] },
   { id: 'made', label: 'Made', types: ['photo'] },
   { id: 'experiments', label: 'Experiments', types: ['experiment'] },
   { id: 'sport', label: 'Sport', types: ['activity'] },

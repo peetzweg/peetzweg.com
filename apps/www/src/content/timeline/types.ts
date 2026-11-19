@@ -29,6 +29,9 @@ export type Image = {
 export type Media =
   | { kind: 'image'; image: Image }
   | { kind: 'thumb'; image: Image }
+  | { kind: 'gallery'; images: ReadonlyArray<Image> }
+  | { kind: 'row'; images: ReadonlyArray<Image> }
+  | { kind: 'video'; src: string; poster: Image }
   | { kind: 'code'; code: string }
   | { kind: 'words'; words: ReadonlyArray<readonly [word: string, translation: string]> }
   /** ISO dates (`YYYY-MM-DD`) to punch into a week-by-day card. */
@@ -41,9 +44,21 @@ export type TimelineEntry = EntryBase &
         type: 'project';
         title: string;
         description: string;
+        /** The project itself: the deployed site, store page or package. */
         href?: string;
+        /** The GitHub repository, linked beside the project when `href` points elsewhere. */
+        repo?: string;
         language?: string;
         stars?: number;
+        media?: Media;
+      }
+    | {
+        type: 'work';
+        client: string;
+        role: string;
+        description: string;
+        href?: string;
+        stack: ReadonlyArray<string>;
         media?: Media;
       }
     | { type: 'photo'; image: Image; caption: string; tag?: string }
@@ -51,7 +66,8 @@ export type TimelineEntry = EntryBase &
     | { type: 'link'; title: string; href: string; note?: string; media?: Media }
     | { type: 'collection'; title: string; description: string; to: SitePath; preview: string[] }
     | { type: 'note'; text: string }
-    | { type: 'activity'; title: string; stravaId: string }
+    /** With a `map`, drawn as the site's own card; without one, as Strava's embed. */
+    | { type: 'activity'; title: string; stravaId: string; map?: Image }
     | { type: 'book'; title: string; author: string; cover?: Image; href?: string }
   );
 

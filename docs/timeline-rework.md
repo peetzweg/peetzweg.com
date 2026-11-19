@@ -11,13 +11,21 @@ Filters above the timeline (`?filter=writing|projects|made|experiments|sport|boo
 - [ ] Project dates are GitHub repo creation dates; some projects started earlier or shipped later.
 - [ ] Repos left out because they have no description: sunshine, wavcraft, ui, obsidian-plugin, shadow-overlay, siikafish, status-saver, playgrounds. Add descriptions to include them.
 - [ ] Crosswind is listed and links to crosswind.social although its repo is private. Keep?
-- [ ] Star counts are a snapshot from 2026-10-29. Fetch at build time?
+- [ ] Star counts are a snapshot from 2026-11-19. Fetch at build time?
 - [ ] Experiment descriptions (p5, models, vocabulary, punchcard, epub) still point at placeholder pages from the Start rebuild.
+
+## Client work
+
+- [ ] All 13 client work dates are guesses (the Notion page has none), from the page's order, App Store IDs and screenshot dates. Please correct them, ideally with start and end months.
+- [ ] tiny.ink (mentioned under Parity) doesn't respond anymore.
+- [ ] Polo's Pretty Paper links to its App Store page, which answered with rate limits when checked, so it may be gone like Monota's.
 
 ## Media
 
 - [ ] Screenshots in `apps/www/src/content/timeline/media/` were taken on 2026-11-18 (live sites, README demos, the p5 and models pages on peetzweg.com). Retake them when a project changes.
-- [ ] No media yet: Aves, Monota, Polo's Pretty Paper, Airbox, Offwhite, loop, OpenGov Tip, polkadot-dapp-template, the EPUB reader, both TPC issues and the posts. App Store pages for Monota and Polo's Pretty Paper are gone; the Medium article for Airbox blocks scripts.
+- [ ] No media yet: Aves, Polo's Pretty Paper, OpenGov Tip, polkadot-dapp-template, both TPC issues and the posts.
+- [ ] Client work and side project pictures come from the Client Work and Software Side Projects Notion pages; the Notion Input and EPUB speed reader clips from their tweets.
+- [ ] After adding or replacing a file in `media/`, run `pnpm media:sizes`.
 - [ ] 10 of the 11 monthly Spotify playlists (2019-08 to 2020-06) return 404, so they are private or deleted. Only Hype 2020.01 is listed. Make them public again to bring them back: `4T8B45N4PfSSGGy44XapPf`, `66WfauOx6VLoaVhAD3NVOI`, `1mBpXfM0xWXyxdCcVULzR9`, `1l3h8FIMTadft71KTPGPCP`, `4bzzBlVTwvN2Rzszs4BJZJ`, `1RuE5bOqKSJ3GoXZlN6srm`, `7K8VtjkGc0hStLFkkzs4hG`, `710E0jCXYWXKXyTTRnEj8N`, `2DSDS3yNDjMogrSKwbZoC4`, `6pjzD4VwszhPdBbmsFgKEG`.
 - [ ] `src/content/kindle.json` is a copy of `libs/db/src/data/kindle.json` and ships to the client (~8 KB gzipped) for the punchcard. Moves to the database later.
 
@@ -28,6 +36,7 @@ Filters above the timeline (`?filter=writing|projects|made|experiments|sport|boo
 
 ## Sport
 
+- [ ] The TdF 9 Japan stages (Nov 2026) show the route map from their public page, because Strava's embed answers "This content is unavailable" for them. Check the activity's privacy and embed settings; if embeds start working, drop `map` to use the embed again.
 - [ ] Hand-picked Strava activities use Strava's embed. A native card in the site's style would need the Strava API (distance, time, map polyline).
 - [ ] `/running` and `/strava` are no longer linked from the homepage; merge or retire them.
 

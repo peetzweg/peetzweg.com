@@ -14,9 +14,9 @@ import Rack01 from '../../components/hardware/assets/Rack01.jpg';
 import Shades from '../../components/hardware/assets/shades.jpg';
 import hyperlinks from '../hyperlinks.json';
 import kindle from '../kindle.json';
-import type { Image, Media, SitePath, TimelineEntry } from './types';
-
-const mediaFiles = import.meta.glob<string>('./media/*.webp', { eager: true, import: 'default' });
+import { code, gallery, mediaImage, row, shot, thumb, video } from './media';
+import type { Media, SitePath, TimelineEntry } from './types';
+import { work } from './work';
 
 /**
  * Hand-curated history. Posts come from MDX (see ./index.ts); later, notes and media
@@ -47,82 +47,111 @@ const hardware: TimelineEntry[] = [
 
 /** Screenshots, README demos and snippets, keyed by project title. */
 const projectMedia: Record<string, Media> = {
-  papr: shot('papr', 960, 960, 'A printed calendar page made with papr'),
-  'Commander Ottens Pro Longboarding': shot('copl', 960, 562, 'Pixel-art longboarder riding across a green field'),
-  cairobou: shot('cairobou', 960, 437, 'Two images remixed into geometric patterns'),
-  'Nuclear Power Plant Simulator 2014': shot('npps', 856, 500, 'Gauges, switches and sliders of the power plant control panel'),
-  diarydash: shot('diarydash', 1088, 744, 'A diary page over a photo of the coast'),
-  'Five Minute Journal': shot('five-minute-journal', 1088, 544, 'A quote and prompts for gratitude and affirmations'),
-  matgen: shot('matgen', 720, 450, 'Settings above a generated cutting mat grid'),
-  breathpacer: shot('breathpacer', 1088, 680, 'A single circle pacing the breath'),
-  Globe: shot('globe', 222, 480, 'Transactions of an Ethereum address on an iPhone'),
-  'Parcel Explorer': shot('parcel-explorer', 222, 480, 'A Decentraland parcel on an iPhone'),
+  papr: gallery(
+    ['papr', 'classic: a two-month foldable calendar'],
+    ['papr-2', 'oneyear: the whole year on one sheet'],
+    ['papr-3', 'column: a quarter on one sheet'],
+  ),
+  'Commander Ottens Pro Longboarding': shot('copl', 'Pixel-art longboarder riding across a green field'),
+  cairobou: shot('cairobou', 'Two images remixed into geometric patterns'),
+  'Nuclear Power Plant Simulator 2014': shot('npps', 'Gauges, switches and sliders of the power plant control panel'),
+  diarydash: gallery(
+    ['diarydash', 'A diary page over a photo of the coast'],
+    ['diarydash-2', 'Writing statistics per month'],
+    ['diarydash-3', 'A note that entries stay in the browser'],
+  ),
+  'Five Minute Journal': shot('five-minute-journal', 'A quote and prompts for gratitude and affirmations'),
+  matgen: shot('matgen', 'Settings above a generated cutting mat grid'),
+  breathpacer: shot('breathpacer', 'A single circle pacing the breath'),
+  Monota: row(['monota-1', 'Monota showing the one task to do now'], ['monota-2', 'Adding a task with a deadline in Monota']),
+  Globe: shot('globe', 'Transactions of an Ethereum address on an iPhone'),
+  'Parcel Explorer': shot('parcel-explorer', 'A Decentraland parcel on an iPhone'),
+  Airbox: gallery(
+    ['airbox-1', 'Sketch of Airbox on a smart speaker'],
+    ['airbox-2', 'Voice messages arriving on a smart speaker'],
+    ['airbox-3', 'Recording a message for Airbox on the phone'],
+  ),
+  loop: thumb('loop', 'loop app icon'),
+  Offwhite: row(
+    ['offwhite-1', 'Offwhite templates to design'],
+    ['offwhite-2', 'Offwhite templates to reflect'],
+    ['offwhite-3', 'Offwhite templates to create'],
+  ),
+  'ERC721A: start minting at _startTokenId()': code(`function _startTokenId() internal view virtual returns (uint256) {
+    return 0;
+}`),
+  'Notion Input': video('notion-input', 'Adding an entry to a Notion database from the app'),
   abimate: code(`import { balanceOf } from '@abimate/solmate/ERC20';
 
 const token = getContract({ address, abi: [balanceOf] });
 const balance = await token.callStatic.balanceOf(owner);`),
-  notar: shot('notar', 960, 595, 'notar listing the functions of an ERC-721 contract'),
-  'Crypto Address Lens': thumb('crypto-address-lens', 256, 256, 'Crypto Address Lens icon'),
+  notar: shot('notar', 'notar listing the functions of an ERC-721 contract'),
+  'Crypto Address Lens': shot('crypto-address-lens-demo', 'An Ethereum address in VS Code, checked and linked inline'),
   depon: code(`$ cargo install depon
 $ depon ./images/*.jpg && ./minify_images.sh ./images/*.jpg`),
-  'pace-rs': shot('pace-rs', 960, 600, 'pace-rs printing the pace for a 5k and a 10k'),
-  dyor: shot('dyor', 1088, 612, 'The dyor logo'),
+  'web3 Tools': shot('web3-tools', 'A form to snapshot the holders of an NFT collection'),
+  'pace-rs': shot('pace-rs', 'pace-rs printing the pace for a 5k and a 10k'),
+  dyor: shot('dyor', 'The dyor logo'),
   'trmnl-cli': code(`$ trmnl plugin add home "https://trmnl.com/api/custom_plugins/YOUR_UUID"
 $ trmnl send --content '<div class="layout">Hello TRMNL!</div>'`),
   'acli-skill': code(`$ git clone https://github.com/peetzweg/acli-skill.git ~/.claude/skills/acli`),
   matcrawl: code(`$ brew install peetzweg/tap/matcrawl
 $ matcrawl sync --backfill
 $ matcrawl search "<query>" --limit 20`),
-  'Open Display': shot('open-display', 1088, 680, 'The Open Display homepage'),
-  'Commit History': shot('commit-history', 1088, 680, 'Commit History with a search field and recently looked up users'),
-  sonics: shot('sonics', 1088, 680, 'The sonics playground with a waveform of the selected sound'),
-  Crosswind: shot('crosswind', 1088, 680, 'The Crosswind homepage: Post anywhere. Sync everywhere.'),
-  calcfile: shot('calcfile', 1088, 680, 'A calcfile with travel costs and their totals'),
-  bookblitz: shot('bookblitz', 800, 167, 'bookblitz showing a single word'),
+  'Open Display': shot('open-display', 'The Open Display homepage'),
+  'Commit History': shot('commit-history', 'Commit History with a search field and recently looked up users'),
+  sonics: shot('sonics', 'The sonics playground with a waveform of the selected sound'),
+  Crosswind: shot('crosswind', 'The Crosswind homepage: Post anywhere. Sync everywhere.'),
+  calcfile: shot('calcfile', 'A calcfile with travel costs and their totals'),
+  bookblitz: shot('bookblitz', 'bookblitz showing a single word'),
 };
 
+/** `repo` is the GitHub repository name under github.com/peetzweg. Stars as of 2026-11-19. */
 const projects: TimelineEntry[] = [
-  project('2014-06-19', 'papr', 'Command-line tool to generate PDF calendars.', 'https://peetzweg.github.io/papr', 'Rust', 41),
-  project('2014-08-26', 'Commander Ottens Pro Longboarding', 'Infinite side-scroller about a longboarding friend. My first Unity game.', 'https://github.com/peetzweg/COPL', 'C#'),
-  project('2014-09-25', 'cairobou', 'Creative coding with Cairo: remixes of given images.', 'https://github.com/peetzweg/cairobou', 'Python'),
-  project('2014-12-06', 'Nuclear Power Plant Simulator 2014', 'My Ludum Dare 31 compo entry.', 'https://github.com/peetzweg/NPPS2014', 'C#'),
-  project('2015-02-01', 'diarydash', 'Browser homepage for daily diary writing.', 'https://github.com/peetzweg/diarydash-deprecated', 'JavaScript'),
-  project('2015-06-26', 'Five Minute Journal', 'The Five Minute Journal, on the web.', 'https://peetzweg.github.io/5mJ/', 'JavaScript'),
-  project('2016-03-21', 'matgen', 'Cutting mat wallpaper generator.', 'https://peetzweg.github.io/matgen/', 'Processing'),
-  project('2016-07-03', 'breathpacer', 'Minimalistic breathing visualisation for breath pacing.', 'https://peetzweg.github.io/breathpacer/', 'HTML'),
-  project('2017-01-20', 'Aves', 'Setupless text-to-speech for blogs.', 'https://github.com/peetzweg/aves', 'JavaScript'),
-  project('2017-11-23', 'Monota', 'Mono-tasking app for iOS.', 'https://itunes.apple.com/us/app/monota/id1333036184?mt=8', 'JavaScript'),
-  project('2018-02-15', 'Globe', 'Etherscan-like iOS app, a connected Ethereum wallet proof of concept.', 'https://github.com/peetzweg/Globe', 'JavaScript'),
-  project('2018-02-23', 'Parcel Explorer', 'Google Maps for Decentraland.', 'https://github.com/peetzweg/ParcelExplorer', 'JavaScript'),
-  project('2018-05', 'Airbox', 'Audio inbox for your smart speaker.', 'https://julianlehr.medium.com/we-are-building-the-twitter-for-smart-speakers-49d70c0f2a21'),
-  project('2019-01', 'Polo’s Pretty Paper', 'Print templates, as an iOS app.', 'https://itunes.apple.com/us/app/polos-pretty-paper/id1439946484?mt=8'),
-  project('2019-07-10', 'loop', 'Mac app to keep track of your social interactions.'),
-  project('2020-02-28', 'Offwhite', 'Store for stationery templates.', 'https://www.instagram.com/offwhiteapp'),
-  project('2022-06-16', 'abimate', 'Prebuilt ABIs and TypeScript types for popular smart contracts.', 'https://github.com/peetzweg/abimate', 'TypeScript', 8),
-  project('2022-07-02', 'notar', 'Interactive CLI to read and call contracts on EVM chains. Bring your own ABIs.', 'https://www.npmjs.com/package/notar-cli', 'TypeScript', 30),
-  project('2022-08-05', 'Crypto Address Lens', 'VS Code extension to inspect and validate crypto addresses in your editor.', 'https://marketplace.visualstudio.com/items?itemName=peetzweg.crypto-address-lens', 'TypeScript', 11),
-  project('2022-12-16', 'depon', 'Run the next command only if its dependencies changed.', 'https://crates.io/crates/depon', 'Rust'),
-  project('2023-07-06', 'pace-rs', 'CLI to calculate running pace for a given time and distance.', 'https://github.com/peetzweg/pace-rs', 'Rust'),
-  project('2023-11-28', 'polkadot-dapp-template', 'Frontend template for Polkadot-compatible decentralised apps.', 'https://github.com/peetzweg/polkadot-dapp-template', 'TypeScript', 3),
-  project('2023-12-01', 'OpenGov Tip', 'Interface to propose tips from the Polkadot treasury.', 'https://github.com/peetzweg/polkadot-dapp-opengov-tip', 'TypeScript'),
-  project('2024-03-28', 'dyor', 'React hooks for Polkadot SDK chains, inspired by wagmi.', 'https://github.com/peetzweg/dyor', 'TypeScript'),
-  project('2026-01-29', 'trmnl-cli', 'CLI for your TRMNL device.', 'https://peetzweg.github.io/trmnl-cli/', 'TypeScript'),
-  project('2026-02-13', 'acli-skill', 'Atlassian aCLI reference skill for Jira and Confluence.', 'https://github.com/peetzweg/acli-skill', undefined, 10),
-  project('2026-05-27', 'matcrawl', 'Local-first Matrix/Element archive CLI with full-text search.', 'https://github.com/peetzweg/matcrawl', 'Go'),
-  project('2026-06-10', 'Open Display', 'Use an iPhone, iPad or spare Mac as a true second display for your Mac.', 'https://opendisplay.app', 'Rust', 6037),
-  project('2026-06-26', 'Commit History', 'Watch any GitHub user’s commits stack up across their whole career.', 'https://commit-history.com/', 'TypeScript', 117),
-  project('2026-07-06', 'sonics', 'Tiny, dependency-free UI sound effects for the web.', 'https://peetzweg.github.io/sonics/', 'TypeScript', 3),
-  project('2026-08-06', 'Crosswind', 'Minimal account-to-account mirror for X, Bluesky, LinkedIn and Instagram.', 'https://crosswind.social'),
-  project('2026-08-09', 'calcfile', 'An open, local-first plain-text format and editor for calculations.', 'https://peetzweg.github.io/calcfile/', 'TypeScript'),
-  project('2026-10-27', 'bookblitz', 'Speed-read your own EPUBs, one word at a time.', 'https://peetzweg.github.io/bookblitz/', 'TypeScript'),
+  project('2014-06-19', 'papr', 'Command-line tool to generate printable calendars, in three layouts.', { href: 'https://peetzweg.github.io/papr', repo: 'papr', language: 'Rust', stars: 42 }),
+  project('2014-08-26', 'Commander Ottens Pro Longboarding', 'Infinite side-scroller about a longboarding friend. My first Unity game.', { repo: 'COPL', language: 'C#' }),
+  project('2014-09-25', 'cairobou', 'Creative coding with Cairo: remixes of given images.', { repo: 'cairobou', language: 'Python' }),
+  project('2014-12-06', 'Nuclear Power Plant Simulator 2014', 'My Ludum Dare 31 compo entry.', { href: 'https://web.archive.org/web/20170811023729/http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=46047', repo: 'NPPS2014', language: 'C#' }),
+  project('2015-02-01', 'diarydash', 'Browser start page for daily journaling. No backend, everything stays in the browser.', { href: 'https://diarydash.com', repo: 'diarydash-deprecated', language: 'JavaScript', stars: 5 }),
+  project('2015-06-26', 'Five Minute Journal', 'The Five Minute Journal, on the web.', { href: 'https://peetzweg.github.io/5mJ/', repo: '5mJ', language: 'JavaScript' }),
+  project('2016-03-21', 'matgen', 'Cutting mat wallpaper generator.', { href: 'https://peetzweg.github.io/matgen/', repo: 'matgen', language: 'Processing' }),
+  project('2016-07-03', 'breathpacer', 'Minimalistic breathing visualisation for breath pacing.', { href: 'https://peetzweg.github.io/breathpacer/', repo: 'breathpacer', language: 'HTML' }),
+  project('2017-01-20', 'Aves', 'Setupless text-to-speech for blogs.', { repo: 'aves', language: 'JavaScript' }),
+  project('2017-11-23', 'Monota', 'Mono-tasking for iOS: one task at a time, earliest deadline first.', { repo: 'Monota', language: 'JavaScript' }),
+  project('2018-02-15', 'Globe', 'Etherscan-like iOS app, a connected Ethereum wallet proof of concept.', { repo: 'Globe', language: 'JavaScript' }),
+  project('2018-02-23', 'Parcel Explorer', 'Google Maps for Decentraland, in your pocket.', { repo: 'ParcelExplorer', language: 'JavaScript' }),
+  { ...project('2018-05', 'Airbox', 'Audio inbox for your smart speaker.', { href: 'https://julianlehr.medium.com/we-are-building-the-twitter-for-smart-speakers-49d70c0f2a21' }), approximate: true },
+  { ...project('2019-01', 'Polo’s Pretty Paper', 'Print templates, as an iOS app.', { href: 'https://apps.apple.com/us/app/polos-pretty-paper/id1439946484' }), approximate: true },
+  project('2019-07-10', 'loop', 'Desktop app to keep track of your social interactions, and who to get in touch with next.', { language: 'Electron' }),
+  project('2020-02-28', 'Offwhite', 'iOS app selling stationery templates to print straight from the phone.', { href: 'https://www.instagram.com/offwhiteapp' }),
+  project('2022-02-26', 'ERC721A: start minting at _startTokenId()', 'Merged into chiru-labs/ERC721A, so collections can start at a token ID other than 0.', { href: 'https://github.com/chiru-labs/ERC721A/pull/66', language: 'Solidity' }),
+  project('2022-06-16', 'abimate', 'Prebuilt ABIs and TypeScript types for popular smart contracts.', { repo: 'abimate', language: 'TypeScript', stars: 8 }),
+  project('2022-06-20', 'Notion Input', 'Proof of concept for an app that does one thing: an instant input to a Notion database.', { href: 'https://x.com/peetzweg/status/1538999168504844288' }),
+  project('2022-07-02', 'notar', 'Interactive CLI to read and call contracts on EVM chains. Bring your own ABIs.', { href: 'https://www.npmjs.com/package/notar-cli', repo: 'notar', language: 'TypeScript', stars: 30 }),
+  project('2022-08-05', 'Crypto Address Lens', 'VS Code extension to inspect and validate crypto addresses in your editor.', { href: 'https://marketplace.visualstudio.com/items?itemName=peetzweg.crypto-address-lens', repo: 'vscode-crypto-address-lens', language: 'TypeScript', stars: 11 }),
+  project('2022-12-16', 'depon', 'Run the next command only if its dependencies changed.', { href: 'https://crates.io/crates/depon', repo: 'depon', language: 'Rust' }),
+  { ...project('2023-01', 'web3 Tools', 'Resolve ENS names and snapshot the holders of an NFT collection.'), approximate: true },
+  project('2023-07-06', 'pace-rs', 'CLI to calculate running pace for a given time and distance.', { repo: 'pace-rs', language: 'Rust' }),
+  project('2023-11-28', 'polkadot-dapp-template', 'Frontend template for Polkadot-compatible decentralised apps.', { repo: 'polkadot-dapp-template', language: 'TypeScript', stars: 3 }),
+  project('2023-12-01', 'OpenGov Tip', 'Interface to propose tips from the Polkadot treasury.', { repo: 'polkadot-dapp-opengov-tip', language: 'TypeScript' }),
+  project('2024-03-28', 'dyor', 'React hooks for Polkadot SDK chains, inspired by wagmi.', { href: 'https://www.npmjs.com/package/dyor', repo: 'dyor', language: 'TypeScript' }),
+  project('2026-01-29', 'trmnl-cli', 'CLI for your TRMNL device.', { href: 'https://peetzweg.github.io/trmnl-cli/', repo: 'trmnl-cli', language: 'TypeScript' }),
+  project('2026-02-13', 'acli-skill', 'Atlassian aCLI reference skill for Jira and Confluence.', { repo: 'acli-skill', stars: 10 }),
+  project('2026-05-27', 'matcrawl', 'Local-first Matrix/Element archive CLI with full-text search.', { repo: 'matcrawl', language: 'Go' }),
+  project('2026-06-10', 'Open Display', 'Use an iPhone, iPad or spare Mac as a true second display for your Mac.', { href: 'https://opendisplay.app', repo: 'opendisplay', language: 'Rust', stars: 6424 }),
+  project('2026-06-26', 'Commit History', 'Watch any GitHub user’s commits stack up across their whole career.', { href: 'https://commit-history.com/', repo: 'commit-history', language: 'TypeScript', stars: 122 }),
+  project('2026-07-06', 'sonics', 'Tiny, dependency-free UI sound effects for the web.', { href: 'https://peetzweg.github.io/sonics/', repo: 'sonics', language: 'TypeScript', stars: 4 }),
+  project('2026-08-06', 'Crosswind', 'Minimal account-to-account mirror for X, Bluesky, LinkedIn and Instagram.', { href: 'https://crosswind.social' }),
+  project('2026-08-09', 'calcfile', 'An open, local-first plain-text format and editor for calculations.', { href: 'https://peetzweg.github.io/calcfile/', repo: 'calcfile', language: 'TypeScript' }),
+  project('2026-10-27', 'bookblitz', 'Speed-read your own EPUBs, one word at a time.', { href: 'https://peetzweg.github.io/bookblitz/', repo: 'bookblitz', language: 'TypeScript' }),
 ];
 
 /** Days with Kindle activity, from the reading log behind /punchcard. */
 const readingDays = [...new Set(kindle.map((time) => new Date(time).toISOString().slice(0, 10)))].sort();
 
 const experiments: TimelineEntry[] = [
-  experiment('2023-11-09', 'Generative sketches', 'DIY Chromie Squiggle and Subscapes in p5.js.', '/p5', shot('p5', 1040, 560, 'A Chromie Squiggle drawn with p5.js')),
-  experiment('2023-11-09', '3D models', '3D in the browser, starting with a tulip.', '/models', shot('models', 1088, 680, 'A bunch of tulips rendered in 3D')),
+  experiment('2023-11-09', 'Generative sketches', 'DIY Chromie Squiggle and Subscapes in p5.js.', '/p5', shot('p5', 'A Chromie Squiggle drawn with p5.js')),
+  experiment('2023-11-09', '3D models', '3D in the browser, starting with a tulip.', '/models', shot('models', 'A bunch of tulips rendered in 3D')),
   experiment('2024-01-26', 'Vocabulary', 'Words I looked up while reading, with translations and definitions.', '/vocabulary', {
     kind: 'words',
     words: [
@@ -135,7 +164,7 @@ const experiments: TimelineEntry[] = [
     ],
   }),
   experiment('2024-03-21', 'Punchcard', `${readingDays.length} days I read on my Kindle, punched into a card.`, '/punchcard', { kind: 'punchcard', days: readingDays }),
-  experiment('2024-06-03', 'EPUB reader', 'A tiny in-browser EPUB reader.', '/epub'),
+  experiment('2024-06-03', 'EPUB speed reader', 'A tiny in-browser EPUB reader, with a Dynamic Island for navigation.', '/epub', video('epub-speed-reader', 'Speed reading an EPUB, one word at a time')),
 ];
 
 /** Monthly playlists ran from 2019-08 to 2020-06; this is the only one still public. */
@@ -147,7 +176,7 @@ const playlists: TimelineEntry[] = [
     title: 'Hype 2020.01',
     href: 'https://open.spotify.com/playlist/3cPBvDG8UZmXbd8mlD213a',
     note: 'Spotify playlist',
-    media: thumb('playlist-2020-01', 300, 300, 'Playlist cover'),
+    media: thumb('playlist-2020-01', 'Playlist cover'),
   },
 ];
 
@@ -165,19 +194,38 @@ const writing: TimelineEntry[] = [
   },
 ];
 
-/** Hand-picked activities, shown with Strava's own embed. */
+/**
+ * Hand-picked activities. Older ones use Strava's embed; Strava won't embed newer ones,
+ * so those show the route map from their public page instead.
+ */
 const activities: TimelineEntry[] = [
-  ['2017-09-24', '1201296650', 'BMW Berlin Marathon 2017'],
-  ['2020-06-26', '3675236976', 'Nordsee Century'],
-  ['2021-06-19', '5496950656', 'Wir haben keine Brötchen mehr.'],
-  ['2022-09-25', '7865006227', 'Berlin Marathon 2022'],
-  ['2023-07-23', '9508161008', 'UC Berkeley Fire Trail System'],
-  ['2023-11-18', '10239498330', 'Berlin’s Twin Peaks'],
-].map(([date, stravaId, title]) => ({ id: `strava-${stravaId}`, type: 'activity', date, stravaId, title }));
+  ...[
+    ['2017-09-24', '1201296650', 'BMW Berlin Marathon 2017'],
+    ['2020-06-26', '3675236976', 'Nordsee Century'],
+    ['2021-06-19', '5496950656', 'Wir haben keine Brötchen mehr.'],
+    ['2022-09-25', '7865006227', 'Berlin Marathon 2022'],
+    ['2023-07-23', '9508161008', 'UC Berkeley Fire Trail System'],
+    ['2023-11-18', '10239498330', 'Berlin’s Twin Peaks'],
+  ].map(([date, stravaId, title]): TimelineEntry => ({ id: `strava-${stravaId}`, type: 'activity', date, stravaId, title })),
+  ...[
+    ['2026-11-03', '20839710960', 'TdF 9 Japan, Stage 1', 'Fukuoka to Beppu'],
+    ['2026-11-04', '20855365799', 'TdF 9 Japan, Stage 2', 'Beppu to Aso'],
+    ['2026-11-05', '20866813531', 'TdF 9 Japan, Stage 3', 'Aso to Yatsushiro'],
+    ['2026-11-06', '20878565596', 'TdF 9 Japan, Stage 4', 'Into Kirishima and Kagoshima'],
+  ].map(([date, stravaId, title, route]): TimelineEntry => ({
+    id: `strava-${stravaId}`,
+    type: 'activity',
+    date,
+    stravaId,
+    title,
+    map: mediaImage(`strava-${stravaId}`, `Route map: ${route}`),
+  })),
+];
 
 export const entries: TimelineEntry[] = [
   ...hardware,
   ...projects,
+  ...work,
   ...experiments,
   ...playlists,
   ...writing,
@@ -188,33 +236,26 @@ function photo(date: string, id: string, src: string, width: number, height: num
   return { id: `hardware-${id}`, type: 'photo', date, caption, tag: 'Made by me', image: { src, alt: caption, width, height } };
 }
 
-function project(date: string, title: string, description: string, href?: string, language?: string, stars?: number): TimelineEntry {
-  const id = `project-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
-  return { id, type: 'project', date, title, description, href, language, stars, media: projectMedia[title] };
+type ProjectDetails = { href?: string; repo?: string; language?: string; stars?: number };
+
+/** Without a site of its own, a project links to its repository. */
+function project(date: string, title: string, description: string, details: ProjectDetails = {}): TimelineEntry {
+  const id = `project-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+  const repo = details.repo ? `https://github.com/peetzweg/${details.repo}` : undefined;
+  return {
+    id,
+    type: 'project',
+    date,
+    title,
+    description,
+    href: details.href ?? repo,
+    repo,
+    language: details.language,
+    stars: details.stars,
+    media: projectMedia[title],
+  };
 }
 
 function experiment(date: string, title: string, description: string, to: SitePath, media?: Media): TimelineEntry {
   return { id: `experiment-${to.slice(1)}`, type: 'experiment', date, title, description, to, media };
-}
-
-/** A screenshot or picture from ./media, shown at the width of the column. */
-function shot(name: string, width: number, height: number, alt: string): Media {
-  return { kind: 'image', image: mediaImage(name, width, height, alt) };
-}
-
-/** A small square picture from ./media, shown beside the text. */
-function thumb(name: string, width: number, height: number, alt: string): Media {
-  return { kind: 'thumb', image: mediaImage(name, width, height, alt) };
-}
-
-function code(snippet: string): Media {
-  return { kind: 'code', code: snippet };
-}
-
-function mediaImage(name: string, width: number, height: number, alt: string): Image {
-  const src = mediaFiles[`./media/${name}.webp`];
-  if (!src) {
-    throw new Error(`Missing timeline media: ./media/${name}.webp`);
-  }
-  return { src, alt, width, height };
 }

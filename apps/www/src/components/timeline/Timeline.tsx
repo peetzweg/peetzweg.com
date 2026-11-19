@@ -1,10 +1,12 @@
 import { Link } from '@tanstack/react-router';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import type { Image, Media, TimelineEntry, TimelineYear } from '../../content/timeline';
 import { StravaEmbed, useStravaScript } from '../StravaEmbeds';
 
 const LABELS: Record<TimelineEntry['type'], string> = {
   post: 'Writing',
   project: 'Project',
+  work: 'Client work',
   photo: 'Made',
   experiment: 'Experiment',
   link: 'Link',
@@ -62,30 +64,43 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
           <p className="tl-text">{entry.excerpt}</p>
         </Link>
       );
-    case 'project':
+    case 'project': {
+      const repo = entry.repo && entry.repo !== entry.href ? entry.repo : undefined;
       return (
-        <OutLink className="tl-card" href={entry.href}>
-          <WithThumb media={entry.media}>
-            <h3 className="tl-title">
-              {entry.title}
-              {entry.href ? <Arrow /> : null}
-            </h3>
-            <p className="tl-text">{entry.description}</p>
-            {entry.language || entry.stars ? (
-              <p className="tl-facts">
-                {entry.language ? <span>{entry.language}</span> : null}
-                {entry.stars ? (
-                  <span className="tl-stars">
-                    <StarIcon />
-                    {entry.stars.toLocaleString('en-US')}
-                    <span className="sr-only"> GitHub stars</span>
-                  </span>
-                ) : null}
-              </p>
-            ) : null}
-          </WithThumb>
-          <EntryMedia media={entry.media} />
-        </OutLink>
+        <LinkedCard href={entry.href} media={entry.media} title={entry.title}>
+          <p className="tl-text">{entry.description}</p>
+          {entry.language || entry.stars || repo ? (
+            <p className="tl-facts">
+              {entry.language ? <span>{entry.language}</span> : null}
+              {entry.stars ? (
+                <span className="tl-stars">
+                  <StarIcon />
+                  {entry.stars.toLocaleString('en-US')}
+                  <span className="sr-only"> GitHub stars</span>
+                </span>
+              ) : null}
+              {repo ? (
+                <a className="tl-repo" href={repo} rel="noreferrer" target="_blank">
+                  <GitHubIcon />
+                  GitHub
+                </a>
+              ) : null}
+            </p>
+          ) : null}
+        </LinkedCard>
+      );
+    }
+    case 'work':
+      return (
+        <LinkedCard href={entry.href} media={entry.media} title={entry.client}>
+          <p className="tl-role">{entry.role}</p>
+          <p className="tl-text">{entry.description}</p>
+          <p className="tl-facts tl-stack">
+            {entry.stack.map((tool) => (
+              <span key={tool}>{tool}</span>
+            ))}
+          </p>
+        </LinkedCard>
       );
     case 'photo':
       return (
@@ -130,6 +145,17 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
     case 'note':
       return <p className="tl-note">{entry.text}</p>;
     case 'activity':
+      if (entry.map) {
+        return (
+          <OutLink className="tl-card" href={`https://www.strava.com/activities/${entry.stravaId}`}>
+            <h3 className="tl-title">
+              {entry.title}
+              <Arrow />
+            </h3>
+            <Picture className="tl-media" image={entry.map} />
+          </OutLink>
+        );
+      }
       return (
         <div className="tl-embed">
           <StravaEmbed activityId={entry.stravaId} />
@@ -146,6 +172,41 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
         </OutLink>
       );
   }
+}
+
+/**
+ * A card whose title is the link. The link's hit area stretches over the whole card,
+ * so the card can also hold its own links and buttons, which an `<a>` can't.
+ */
+function LinkedCard({
+  children,
+  href,
+  media,
+  title,
+}: {
+  children: React.ReactNode;
+  href?: string;
+  media?: Media;
+  title: string;
+}) {
+  return (
+    <div className={href ? 'tl-card tl-card-linked' : 'tl-card'}>
+      <WithThumb media={media}>
+        <h3 className="tl-title">
+          {href ? (
+            <a className="tl-card-link" href={href} rel="noreferrer" target="_blank">
+              {title}
+              <Arrow />
+            </a>
+          ) : (
+            title
+          )}
+        </h3>
+        {children}
+      </WithThumb>
+      <EntryMedia media={media} />
+    </div>
+  );
 }
 
 /** Puts a thumbnail beside the text. Other media go below it, see EntryMedia. */
@@ -166,6 +227,18 @@ function EntryMedia({ media }: { media?: Media }) {
   switch (media?.kind) {
     case 'image':
       return <Picture className="tl-media" image={media.image} />;
+    case 'gallery':
+      return <Gallery images={media.images} />;
+    case 'row':
+      return (
+        <div className="tl-media tl-strip">
+          {media.images.map((image) => (
+            <Picture image={image} key={image.src} />
+          ))}
+        </div>
+      );
+    case 'video':
+      return <Clip poster={media.poster} src={media.src} />;
     case 'code':
       return (
         <pre className="tl-media tl-code">
@@ -201,6 +274,133 @@ function Picture({ className, decorative, image }: { className?: string; decorat
       src={image.src}
       width={image.width}
     />
+  );
+}
+
+/**
+ * Pictures that crossfade one after another while the gallery is in view. The bars
+ * below fill up over `--tl-gallery-interval` (CSS); when the current one is full, the
+ * next picture shows. They also let you pick one. Hovering
+ * pauses it; with reduced motion it never advances on its own.
+ */
+function Gallery({ images }: { images: ReadonlyArray<Image> }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, 0.6);
+  const reducedMotion = useReducedMotion();
+  const [index, setIndex] = useState(0);
+  const [hovered, setHovered] = useState(false);
+  const playing = inView && !hovered && !reducedMotion;
+  const [first] = images;
+
+  return (
+    <div
+      className="tl-media tl-gallery"
+      data-playing={playing}
+      onPointerEnter={(event) => event.pointerType === 'mouse' && setHovered(true)}
+      onPointerLeave={() => setHovered(false)}
+      ref={ref}
+    >
+      <div className="tl-gallery-frame" style={{ aspectRatio: `${first.width} / ${first.height}` }}>
+        {images.map((image, i) => (
+          <img
+            alt={image.alt}
+            aria-hidden={i !== index}
+            className="tl-image tl-gallery-image"
+            data-active={i === index}
+            decoding="async"
+            height={image.height}
+            key={image.src}
+            loading="lazy"
+            src={image.src}
+            width={image.width}
+          />
+        ))}
+      </div>
+      <div className="tl-gallery-bars">
+        {images.map((image, i) => (
+          <button
+            aria-current={i === index}
+            aria-label={`Show picture ${i + 1} of ${images.length}`}
+            className="tl-gallery-bar"
+            data-state={i < index ? 'done' : i === index ? 'active' : 'next'}
+            key={image.src}
+            onClick={() => setIndex(i)}
+            type="button"
+          >
+            <span
+              className="tl-gallery-fill"
+              onAnimationEnd={i === index ? () => setIndex((i + 1) % images.length) : undefined}
+            />
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** A silent loop that only plays while on screen, and not at all with reduced motion. */
+function Clip({ poster, src }: { poster: Image; src: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const inView = useInView(ref, 0.5);
+  const reducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    const video = ref.current;
+    if (!video) {
+      return;
+    }
+    if (inView && !reducedMotion) {
+      // Browsers may refuse to autoplay (data saver, low power); the poster stays then.
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  }, [inView, reducedMotion]);
+
+  return (
+    <video
+      aria-label={poster.alt}
+      className="tl-media tl-image tl-clip"
+      height={poster.height}
+      loop
+      muted
+      playsInline
+      poster={poster.src}
+      preload="none"
+      ref={ref}
+      src={src}
+      width={poster.width}
+    />
+  );
+}
+
+function useInView(ref: React.RefObject<Element | null>, threshold: number) {
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) {
+      return;
+    }
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [ref, threshold]);
+
+  return inView;
+}
+
+const REDUCED_MOTION = '(prefers-reduced-motion: reduce)';
+
+function useReducedMotion() {
+  return useSyncExternalStore(
+    (onChange) => {
+      const query = window.matchMedia(REDUCED_MOTION);
+      query.addEventListener('change', onChange);
+      return () => query.removeEventListener('change', onChange);
+    },
+    () => window.matchMedia(REDUCED_MOTION).matches,
+    () => false,
   );
 }
 
@@ -266,6 +466,14 @@ function Arrow() {
     <span aria-hidden="true" className="tl-arrow">
       ↗
     </span>
+  );
+}
+
+function GitHubIcon() {
+  return (
+    <svg aria-hidden="true" className="tl-star" fill="currentColor" height="12" viewBox="0 0 16 16" width="12">
+      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+    </svg>
   );
 }
 

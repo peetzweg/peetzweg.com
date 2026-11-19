@@ -9,7 +9,8 @@
     "generate-routes": "tsr generate",
     "typecheck": "tsc --noEmit",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --port 4321"
+    "preview": "vite preview --port 4321",
+    "media:sizes": "node scripts/timeline-media-sizes.mjs"
   },
   "private": true,
   "dependencies": {

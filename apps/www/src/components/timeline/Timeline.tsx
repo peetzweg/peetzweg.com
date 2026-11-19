@@ -1,7 +1,6 @@
 import { Link } from '@tanstack/react-router';
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import type { Image, Media, TimelineEntry, TimelineYear } from '../../content/timeline';
-import { StravaEmbed, useStravaScript } from '../StravaEmbeds';
 
 const LABELS: Record<TimelineEntry['type'], string> = {
   post: 'Writing',
@@ -17,9 +16,6 @@ const LABELS: Record<TimelineEntry['type'], string> = {
 };
 
 export function Timeline({ years }: { years: TimelineYear[] }) {
-  // Filtering mounts different embeds, which Strava's script has to pick up again.
-  useStravaScript(years);
-
   return (
     <div className="tl-years">
       {years.map(({ year, entries }) => (
@@ -50,7 +46,7 @@ function EntryMeta({ entry }: { entry: TimelineEntry }) {
         {entry.approximate ? '~' : ''}
         {formatDate(entry.date)}
       </time>
-      <span className="tl-kind">{LABELS[entry.type]}</span>
+      <span className="tl-kind">{entry.type === 'activity' ? entry.sport : LABELS[entry.type]}</span>
     </p>
   );
 }
@@ -145,21 +141,37 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
     case 'note':
       return <p className="tl-note">{entry.text}</p>;
     case 'activity':
-      if (entry.map) {
-        return (
-          <OutLink className="tl-card" href={`https://www.strava.com/activities/${entry.stravaId}`}>
-            <h3 className="tl-title">
-              {entry.title}
-              <Arrow />
-            </h3>
-            <Picture className="tl-media" image={entry.map} />
-          </OutLink>
-        );
-      }
       return (
-        <div className="tl-embed">
-          <StravaEmbed activityId={entry.stravaId} />
-        </div>
+        <OutLink className="tl-card" href={`https://www.strava.com/activities/${entry.stravaId}`}>
+          <h3 className="tl-title">
+            {entry.title}
+            <Arrow />
+          </h3>
+          {entry.stats ? (
+            <dl className="tl-stats">
+              <div>
+                <dt>Distance</dt>
+                <dd>{entry.stats.distance.toLocaleString('en-US')} km</dd>
+              </div>
+              <div>
+                <dt>Elevation</dt>
+                <dd>{entry.stats.elevation.toLocaleString('en-US')} m</dd>
+              </div>
+              <div>
+                <dt>Time</dt>
+                <dd>{entry.stats.time}</dd>
+              </div>
+            </dl>
+          ) : null}
+          <Picture className="tl-media" image={entry.map} />
+          {entry.photos.length ? (
+            <span className="tl-media tl-strip">
+              {entry.photos.map((photo) => (
+                <Picture image={photo} key={photo.src} />
+              ))}
+            </span>
+          ) : null}
+        </OutLink>
       );
     case 'book':
       return (

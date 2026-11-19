@@ -36,8 +36,8 @@ Filters above the timeline (`?filter=writing|projects|made|experiments|sport|boo
 
 ## Sport
 
-- [ ] The TdF 9 Japan stages (Nov 2026) show the route map from their public page, because Strava's embed answers "This content is unavailable" for them. Check the activity's privacy and embed settings; if embeds start working, drop `map` to use the embed again.
-- [ ] Hand-picked Strava activities use Strava's embed. A native card in the site's style would need the Strava API (distance, time, map polyline).
+- [ ] Activities are the site's own cards: route map, photos and stats (distance, elevation, time) from the public Strava page and Strava's embed. The TdF 9 Japan stages (Nov 2026) have no stats yet, because Strava won't embed them ("This content is unavailable") and the logged-out page has no numbers. Add them by hand, or via the Strava API, which would also make adding new activities a one-liner.
+- [ ] The second Berlin Marathon 2022 photo on Strava is a watermarked Sportograf proof, so it's left out.
 - [ ] `/running` and `/strava` are no longer linked from the homepage; merge or retire them.
 
 ## Next steps

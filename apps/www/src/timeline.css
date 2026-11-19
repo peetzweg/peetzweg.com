@@ -554,11 +554,37 @@ a.tl-card:active,
   opacity: 1;
 }
 
+/* Activity stats: small label above a larger value, like Strava's own. */
+
+.tl-stats {
+  display: flex;
+  gap: 1.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.tl-stats dt {
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.6875rem;
+}
+
+.tl-stats dd {
+  margin: 0.125rem 0 0;
+  color: var(--tl-fg);
+  font-size: 1.0625rem;
+  font-variant-numeric: tabular-nums;
+}
+
 /* Tall pictures side by side, like phone screenshots. */
 
 .tl-strip {
   display: flex;
   gap: 0.5rem;
+}
+
+/* Photos under a map belong to it, so they sit closer. */
+.tl-media + .tl-strip {
+  margin-top: 0.5rem;
 }
 
 .tl-strip .tl-image {
@@ -710,22 +736,6 @@ a.tl-card:active,
 .tl-author {
   display: block;
   margin-top: 0.125rem;
-}
-
-/* Embeds */
-
-.tl-embed {
-  max-width: 100%;
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-
-.tl-embed .strava-embed-placeholder {
-  min-height: 20rem;
-}
-
-.tl-embed iframe {
-  max-width: 100%;
 }
 
 /* Entries rise in softly as they scroll into view. Items already on screen at load

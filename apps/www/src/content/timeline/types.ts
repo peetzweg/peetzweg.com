@@ -37,6 +37,15 @@ export type Media =
   /** ISO dates (`YYYY-MM-DD`) to punch into a week-by-day card. */
   | { kind: 'punchcard'; days: ReadonlyArray<string> };
 
+export type ActivityStats = {
+  /** Kilometres */
+  distance: number;
+  /** Metres climbed */
+  elevation: number;
+  /** As Strava shows it, like `4h 7m` */
+  time: string;
+};
+
 export type TimelineEntry = EntryBase &
   (
     | { type: 'post'; title: string; slug: string; excerpt: string }
@@ -66,8 +75,16 @@ export type TimelineEntry = EntryBase &
     | { type: 'link'; title: string; href: string; note?: string; media?: Media }
     | { type: 'collection'; title: string; description: string; to: SitePath; preview: string[] }
     | { type: 'note'; text: string }
-    /** With a `map`, drawn as the site's own card; without one, as Strava's embed. */
-    | { type: 'activity'; title: string; stravaId: string; map?: Image }
+    | {
+        type: 'activity';
+        title: string;
+        stravaId: string;
+        sport: 'Ride' | 'Run';
+        map: Image;
+        photos: ReadonlyArray<Image>;
+        /** From Strava's embed; newer activities can't be embedded and have none yet. */
+        stats?: ActivityStats;
+      }
     | { type: 'book'; title: string; author: string; cover?: Image; href?: string }
   );
 

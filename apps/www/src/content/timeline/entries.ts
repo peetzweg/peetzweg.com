@@ -15,7 +15,7 @@ import Shades from '../../components/hardware/assets/shades.jpg';
 import hyperlinks from '../hyperlinks.json';
 import kindle from '../kindle.json';
 import { code, gallery, mediaImage, row, shot, thumb, video } from './media';
-import type { Media, SitePath, TimelineEntry } from './types';
+import type { ActivityStats, Media, SitePath, TimelineEntry } from './types';
 import { work } from './work';
 
 /**
@@ -194,32 +194,18 @@ const writing: TimelineEntry[] = [
   },
 ];
 
-/**
- * Hand-picked activities. Older ones use Strava's embed; Strava won't embed newer ones,
- * so those show the route map from their public page instead.
- */
+/** Hand-picked activities: route map, photos and stats from their public Strava pages. */
 const activities: TimelineEntry[] = [
-  ...[
-    ['2017-09-24', '1201296650', 'BMW Berlin Marathon 2017'],
-    ['2020-06-26', '3675236976', 'Nordsee Century'],
-    ['2021-06-19', '5496950656', 'Wir haben keine Brötchen mehr.'],
-    ['2022-09-25', '7865006227', 'Berlin Marathon 2022'],
-    ['2023-07-23', '9508161008', 'UC Berkeley Fire Trail System'],
-    ['2023-11-18', '10239498330', 'Berlin’s Twin Peaks'],
-  ].map(([date, stravaId, title]): TimelineEntry => ({ id: `strava-${stravaId}`, type: 'activity', date, stravaId, title })),
-  ...[
-    ['2026-11-03', '20839710960', 'TdF 9 Japan, Stage 1', 'Fukuoka to Beppu'],
-    ['2026-11-04', '20855365799', 'TdF 9 Japan, Stage 2', 'Beppu to Aso'],
-    ['2026-11-05', '20866813531', 'TdF 9 Japan, Stage 3', 'Aso to Yatsushiro'],
-    ['2026-11-06', '20878565596', 'TdF 9 Japan, Stage 4', 'Into Kirishima and Kagoshima'],
-  ].map(([date, stravaId, title, route]): TimelineEntry => ({
-    id: `strava-${stravaId}`,
-    type: 'activity',
-    date,
-    stravaId,
-    title,
-    map: mediaImage(`strava-${stravaId}`, `Route map: ${route}`),
-  })),
+  activity('2017-09-24', '1201296650', 'Run', 'BMW Berlin Marathon 2017', 1, { distance: 42.6, elevation: 322, time: '4h 7m' }),
+  activity('2020-06-26', '3675236976', 'Ride', 'Nordsee Century', 1, { distance: 175.8, elevation: 260, time: '5h 38m' }),
+  activity('2021-06-19', '5496950656', 'Ride', 'Wir haben keine Brötchen mehr.', 2, { distance: 152.3, elevation: 860, time: '5h 51m' }),
+  activity('2022-09-25', '7865006227', 'Run', 'Berlin Marathon 2022', 1, { distance: 42.7, elevation: 71, time: '3h 50m' }),
+  activity('2023-07-23', '9508161008', 'Run', 'UC Berkeley Fire Trail System', 2, { distance: 15.3, elevation: 398, time: '1h 38m' }),
+  activity('2023-11-18', '10239498330', 'Ride', 'Berlin’s Twin Peaks', 3, { distance: 62.9, elevation: 356, time: '3h 10m' }),
+  activity('2026-11-03', '20839710960', 'Ride', 'TdF 9 Japan, Stage 1', 1),
+  activity('2026-11-04', '20855365799', 'Ride', 'TdF 9 Japan, Stage 2', 1),
+  activity('2026-11-05', '20866813531', 'Ride', 'TdF 9 Japan, Stage 3', 1),
+  activity('2026-11-06', '20878565596', 'Ride', 'TdF 9 Japan, Stage 4', 2),
 ];
 
 export const entries: TimelineEntry[] = [
@@ -253,6 +239,28 @@ function project(date: string, title: string, description: string, details: Proj
     language: details.language,
     stars: details.stars,
     media: projectMedia[title],
+  };
+}
+
+/** Media for an activity are `strava-<id>.webp` (the map) and `strava-<id>-<n>.webp` (photos). */
+function activity(
+  date: string,
+  stravaId: string,
+  sport: 'Ride' | 'Run',
+  title: string,
+  photoCount: number,
+  stats?: ActivityStats,
+): TimelineEntry {
+  return {
+    id: `strava-${stravaId}`,
+    type: 'activity',
+    date,
+    title,
+    stravaId,
+    sport,
+    map: mediaImage(`strava-${stravaId}`, `Route map of ${title}`),
+    photos: Array.from({ length: photoCount }, (_, i) => mediaImage(`strava-${stravaId}-${i + 1}`, `Photo from ${title}`)),
+    stats,
   };
 }
 

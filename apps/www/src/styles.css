@@ -366,13 +366,6 @@ svg {
   color: var(--color-muted);
 }
 
-/* Justified, see timeline.css and src/justify. */
-.content-page article p,
-.content-page article li {
-  text-align: justify;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-}
 
 .content-page ol {
   padding-left: 1.4rem;

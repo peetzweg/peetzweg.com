@@ -46,3 +46,6 @@ Thumbs.db
 # Netlify local/build output
 .netlify
 apps/*/.netlify
+
+# Nitro build output (DEPLOY_TARGET=node)
+.output

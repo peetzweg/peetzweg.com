@@ -53,7 +53,7 @@ Every entry has a page: posts, experiments and collections their existing routes
 - [x] Posts use the timeline's column and type, justified, with Share and older/newer links; `/posts` is the timeline's writing.
 - [x] Pictures turn colour in the middle of the screen on every device; hover no longer does.
 - [x] Galleries are a strip of pictures that slides on one at a time; swipe or scroll it, or use the buttons that appear on hover.
-- [x] Weighted wheel scrolling (Lenis) and a rubber band at the page's ends, for mouse and trackpad only (`src/scroll`). Try it and decide whether it stays.
+- [x] Tried weighted wheel scrolling (Lenis) with an edge rubber band on desktop; removed, it felt odd.
 - [x] Islands (`src/islands`): live pieces that load only near the screen, over a still picture. The p5 entry and `/p5` run the sketches live. Add one by writing a component that takes `IslandProps` and listing it in `src/islands/index.ts`.
 - [x] Islands work in MDX posts: `<Island name="squiggle" />`.
 - [ ] The tulip from `/models` as an island (three.js, from `features/portfolio-models`).

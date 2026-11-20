@@ -1,5 +1,4 @@
 import { HeadContent, Outlet, Scripts, createRootRoute } from '@tanstack/react-router';
-import { PhysicalScroll } from '../scroll/PhysicalScroll';
 import { SITE, seo } from '../seo';
 import appCss from '../styles.css?url';
 
@@ -47,7 +46,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        <PhysicalScroll />
         <Scripts />
       </body>
     </html>

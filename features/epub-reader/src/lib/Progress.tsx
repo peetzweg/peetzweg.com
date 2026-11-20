@@ -3,10 +3,10 @@ import {
   useMotionTemplate,
   useMotionValue,
   useTransform,
-} from 'framer-motion';
+} from 'motion/react';
 import { useStore } from './store';
 import { useEffect } from 'react';
-import { cubicBezier, circOut } from 'framer-motion';
+import { cubicBezier, circOut } from 'motion/react';
 export const Progress = () => {
   const progress = useStore((state) => state.progress);
   const motionProgress = useMotionValue(0);

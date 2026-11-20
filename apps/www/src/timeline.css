@@ -1,0 +1,1963 @@
+/* Homepage timeline. Mobile first: one column, with dates above each entry and a
+   vertical line on the left. From 60rem the dates move into a left margin, the line
+   runs between dates and content, and the text column stays centred. */
+
+.tl {
+  --tl-fg: #1a1a1a;
+  --tl-muted: #6f6f6b;
+  --tl-faint: #a2a29c;
+  --tl-hover: rgb(0 0 0 / 0.04);
+  --tl-outline: rgb(0 0 0 / 0.08);
+  --tl-line: rgb(0 0 0 / 0.1);
+  --tl-chip: rgb(0 0 0 / 0.045);
+  --tl-chip-hover: rgb(0 0 0 / 0.08);
+  --tl-gutter: 7rem;
+  --tl-gap: 1.5rem;
+  /* Mobile: content sits this far right of the line. */
+  --tl-indent: 1.5rem;
+  --tl-rail: 0.3125rem;
+  --tl-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --tl-mono: 'Noto Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  width: 100%;
+  max-width: calc(34rem + 2 * max(1.25rem, env(safe-area-inset-left)));
+  margin: 0 auto;
+  padding: calc(env(safe-area-inset-top) + clamp(3.5rem, 14vw, 7rem))
+    max(1.25rem, env(safe-area-inset-right))
+    calc(env(safe-area-inset-bottom) + 6rem)
+    max(1.25rem, env(safe-area-inset-left));
+  color: var(--tl-fg);
+  font-family: var(--tl-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tl {
+    --tl-fg: #ededea;
+    --tl-muted: #a0a09a;
+    --tl-faint: #6c6c66;
+    --tl-hover: rgb(255 255 255 / 0.05);
+    --tl-outline: rgb(255 255 255 / 0.1);
+    --tl-line: rgb(255 255 255 / 0.12);
+    --tl-chip: rgb(255 255 255 / 0.07);
+    --tl-chip-hover: rgb(255 255 255 / 0.11);
+  }
+}
+
+/* Intro */
+
+.tl-intro {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.tl-intro h1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.tl-intro p {
+  margin: 0;
+  color: var(--tl-muted);
+  text-wrap: pretty;
+}
+
+.tl-profiles {
+  display: flex;
+  flex-wrap: wrap;
+  /* Negative margin cancels the links' padding, which only exists to enlarge tap targets. */
+  margin: 0 -0.5rem;
+}
+
+.tl-profiles a {
+  padding: 0.625rem 0.5rem;
+  color: var(--tl-muted);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+@media (hover: hover) {
+  .tl-profiles a:hover {
+    color: var(--tl-fg);
+  }
+}
+
+/* Filters: chips that switch on and off. Any number can be on; with none on, everything
+   shows. Chips wrap, so every filter is visible at a glance. */
+
+.tl-controls {
+  margin-bottom: clamp(2rem, 8vw, 3.5rem);
+}
+
+.tl-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tl-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4375rem;
+  min-height: 2.25rem;
+  padding: 0 0.875rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--tl-chip);
+  color: var(--tl-fg);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* 44px tall hit area around the 36px chip, shared with the gap. */
+.tl-chip::before {
+  content: '';
+  position: absolute;
+  inset: -0.25rem -0.125rem;
+}
+
+.tl-chip-count {
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  transition: color 200ms ease;
+}
+
+/* The × grows in from nothing, so a chip widens smoothly as it switches on. */
+.tl-chip-x {
+  display: grid;
+  place-items: center;
+  width: 0;
+  margin-left: -0.4375rem;
+  opacity: 0;
+  filter: blur(2px);
+  transform: scale(0.4);
+  transition:
+    width 250ms cubic-bezier(0.23, 1, 0.32, 1),
+    margin 250ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 250ms cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 200ms ease,
+    filter 200ms ease;
+}
+
+.tl-chip[aria-pressed='true'] {
+  background: var(--tl-fg);
+  color: var(--color-bg);
+}
+
+.tl-chip[aria-pressed='true'] .tl-chip-count {
+  color: color-mix(in srgb, var(--color-bg) 55%, transparent);
+}
+
+.tl-chip[aria-pressed='true'] .tl-chip-x {
+  width: 10px;
+  margin-left: 0;
+  opacity: 0.75;
+  filter: none;
+  transform: none;
+}
+
+/* Once something is picked, the rest step back. */
+.tl-filters:has([aria-pressed='true']) .tl-chip:not([aria-pressed='true']) {
+  color: var(--tl-muted);
+}
+
+.tl-chip:active {
+  transform: scale(0.96);
+}
+
+.tl-chip:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .tl-chip:not([aria-pressed='true']):hover {
+    background: var(--tl-chip-hover);
+    color: var(--tl-fg);
+  }
+}
+
+.tl-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.tl-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.875rem;
+  margin: 0;
+}
+
+.tl-clear,
+.tl-sort {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--tl-muted);
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 150ms ease;
+}
+
+.tl-clear::before,
+.tl-sort::before {
+  content: '';
+  position: absolute;
+  inset: -0.75rem -0.5rem;
+}
+
+.tl-clear {
+  text-decoration: underline;
+  text-decoration-color: var(--tl-line);
+  text-underline-offset: 0.25em;
+}
+
+.tl-sort {
+  flex: none;
+}
+
+.tl-sort svg {
+  transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tl-sort[data-order='oldest'] svg {
+  transform: rotate(180deg);
+}
+
+.tl-clear:focus-visible,
+.tl-sort:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+@media (hover: hover) {
+  .tl-clear:hover,
+  .tl-sort:hover {
+    color: var(--tl-fg);
+  }
+}
+
+/* The line: one continuous rail through all years, with a ring per year and a dot
+   per entry. */
+
+.tl-years {
+  position: relative;
+  padding-left: var(--tl-indent);
+  /* Timeline.tsx keeps the place itself as pages load (useKeepPlace). */
+  overflow-anchor: none;
+}
+
+.tl-years::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  bottom: 0;
+  left: calc(var(--tl-rail) - 0.5px);
+  width: 1px;
+  background: var(--tl-line);
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 6rem), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 6rem), transparent);
+}
+
+.tl-year-head::before,
+.tl-entry::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Years */
+
+.tl-year + .tl-year {
+  margin-top: 2.5rem;
+}
+
+.tl-year {
+  scroll-margin-top: 0;
+}
+
+/* The year stays at the top while its entries scroll beneath it. A soft, progressive
+   blur below it lets entries fade under instead of being cut off. */
+.tl-year-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -1.25rem 0 calc(-1.25rem - var(--tl-indent));
+  padding: calc(env(safe-area-inset-top) + 0.625rem) 1.25rem 0.625rem calc(1.25rem + var(--tl-indent));
+  background: color-mix(in srgb, var(--color-bg) 84%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.tl-year-head::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  height: 1.25rem;
+  background: linear-gradient(color-mix(in srgb, var(--color-bg) 84%, transparent), transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  -webkit-mask-image: linear-gradient(#000, transparent);
+  mask-image: linear-gradient(#000, transparent);
+  pointer-events: none;
+}
+
+.tl-year-label {
+  margin: 0;
+  color: var(--tl-fg);
+  font-family: var(--tl-mono);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.5rem;
+}
+
+.tl-year-head::before {
+  top: calc(env(safe-area-inset-top) + 0.625rem + 0.75rem - 4.5px);
+  left: calc(1.25rem + var(--tl-rail) - 4.5px);
+  width: 9px;
+  height: 9px;
+  box-shadow: inset 0 0 0 1.5px var(--tl-fg);
+  background: var(--color-bg);
+}
+
+.tl-jump-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--tl-muted);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tl-jump-button::before {
+  content: '';
+  position: absolute;
+  inset: -0.75rem -0.5rem;
+}
+
+.tl-jump-button:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+/* Go to year: a sheet near the thumb on phones. */
+.tl-jump {
+  position: fixed;
+  inset: auto 0.75rem calc(0.75rem + env(safe-area-inset-bottom));
+  width: auto;
+  max-width: 26rem;
+  margin: 0 auto;
+  padding: 1rem 0.75rem 0.75rem;
+  border: 0;
+  border-radius: 1.25rem;
+  background: var(--color-panel);
+  box-shadow:
+    0 0 0 1px var(--tl-outline),
+    0 1.5rem 3rem rgb(0 0 0 / 0.16);
+  color: var(--tl-fg);
+  font-family: var(--tl-sans);
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(1rem) scale(0.98);
+  transition:
+    opacity 200ms ease,
+    filter 200ms ease,
+    transform 300ms cubic-bezier(0.32, 0.72, 0, 1),
+    overlay 300ms allow-discrete,
+    display 300ms allow-discrete;
+}
+
+.tl-jump:popover-open {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+@starting-style {
+  .tl-jump:popover-open {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(1rem) scale(0.98);
+  }
+}
+
+.tl-jump::backdrop {
+  background: rgb(0 0 0 / 0);
+  transition:
+    background-color 200ms ease,
+    overlay 200ms allow-discrete,
+    display 200ms allow-discrete;
+}
+
+.tl-jump:popover-open::backdrop {
+  background: rgb(0 0 0 / 0.14);
+}
+
+@starting-style {
+  .tl-jump:popover-open::backdrop {
+    background: rgb(0 0 0 / 0);
+  }
+}
+
+.tl-jump-title {
+  margin: 0 0.25rem 0.75rem;
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+}
+
+.tl-jump-years {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.25rem;
+}
+
+.tl-jump-years a {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.125rem;
+  min-height: 3.25rem;
+  border-radius: 0.75rem;
+  color: var(--tl-fg);
+  font-family: var(--tl-mono);
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 150ms ease,
+    transform 150ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tl-jump-years a:active {
+  background: var(--tl-hover);
+  transform: scale(0.96);
+}
+
+.tl-jump-years a[aria-current='true'] {
+  background: var(--tl-fg);
+  color: var(--color-bg);
+}
+
+.tl-jump-count {
+  color: var(--tl-faint);
+  font-size: 0.625rem;
+}
+
+.tl-jump-years a[aria-current='true'] .tl-jump-count {
+  color: color-mix(in srgb, var(--color-bg) 55%, transparent);
+}
+
+/* Years beside the timeline, on screens wide enough to have room for them. */
+.tl-yearnav {
+  display: none;
+}
+
+@media (min-width: 76rem) {
+  .tl-yearnav {
+    position: fixed;
+    top: 50%;
+    left: calc(50% + 17rem + 4rem);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    font-family: var(--tl-mono);
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tl-yearnav a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.1875rem 0;
+    color: var(--tl-faint);
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+
+  /* A tick that grows for the year in view. */
+  .tl-yearnav a::before {
+    content: '';
+    width: 0.375rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+    transition:
+      width 250ms cubic-bezier(0.23, 1, 0.32, 1),
+      opacity 150ms ease;
+  }
+
+  .tl-yearnav a[aria-current='true'] {
+    color: var(--tl-fg);
+  }
+
+  .tl-yearnav a[aria-current='true']::before {
+    width: 1rem;
+    opacity: 1;
+  }
+
+  .tl-yearnav a:hover {
+    color: var(--tl-fg);
+  }
+
+  .tl-yearnav a:focus-visible {
+    outline: 2px solid var(--tl-fg);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+}
+
+.tl-entries {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* A page of entries still loading holds about their height (see Timeline.tsx). */
+.tl-pending {
+  display: grid;
+  place-items: start;
+  padding-block: 1.125rem;
+}
+
+.tl-retry {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--tl-muted);
+  font: inherit;
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+  text-decoration: underline;
+  text-decoration-color: var(--tl-faint);
+  text-underline-offset: 0.22em;
+  cursor: pointer;
+}
+
+.tl-retry:hover {
+  color: var(--tl-fg);
+}
+
+/* Entries */
+
+.tl-entry {
+  position: relative;
+  display: grid;
+  gap: 0.375rem;
+  padding-block: 1.125rem;
+  scroll-margin-top: 3rem;
+}
+
+/* An entry linked as `/#slug` gets a short highlight on its dot. */
+.tl-entry:target::before,
+.tl-entry[data-target]::before {
+  background: var(--tl-fg);
+  box-shadow: 0 0 0 4px var(--tl-chip-hover);
+}
+
+.tl-entry::before {
+  top: calc(1.125rem + 0.5625rem - 2.5px);
+  left: calc(var(--tl-rail) - var(--tl-indent) - 2.5px);
+  width: 5px;
+  height: 5px;
+  background: var(--tl-faint);
+  transition: background-color 150ms ease;
+}
+
+@media (hover: hover) {
+  .tl-entry:hover::before {
+    background: var(--tl-fg);
+  }
+}
+
+.tl-meta {
+  display: flex;
+  gap: 0.625rem;
+  margin: 0;
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+
+.tl-date {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.tl-date::before {
+  content: '';
+  position: absolute;
+  inset: -0.5rem -0.375rem;
+}
+
+.tl-date:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+@media (hover: hover) {
+  .tl-date:hover {
+    color: var(--tl-fg);
+    text-decoration: underline;
+    text-decoration-color: var(--tl-line);
+    text-underline-offset: 0.25em;
+  }
+}
+
+.tl-kind::before {
+  content: '·';
+  margin-right: 0.625rem;
+}
+
+.tl-body {
+  min-width: 0;
+}
+
+.tl-title {
+  margin: 0;
+  color: var(--tl-fg);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.tl-text {
+  margin: 0.25rem 0 0;
+  color: var(--tl-muted);
+  text-wrap: pretty;
+}
+
+.tl-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.875rem;
+  margin: 0.375rem 0 0;
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.tl-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.tl-star {
+  flex: none;
+}
+
+.tl-note {
+  margin: 0;
+  color: var(--tl-fg);
+  font-size: 1.0625rem;
+  text-wrap: pretty;
+}
+
+/* Cards are links without a visible box. Hovering underlines the title and nudges its arrow;
+   a surface around the card would run into the timeline's rail. */
+
+.tl-card {
+  display: block;
+  border-radius: 0.25rem;
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a.tl-card .tl-title,
+.tl-card-link {
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: text-decoration-color 150ms ease;
+}
+
+.tl-card-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.75rem;
+}
+
+.tl-card-inline .tl-facts {
+  margin: 0;
+}
+
+/* Long addresses truncate instead of widening the page. */
+.tl-card-inline > *,
+.tl-facts {
+  min-width: 0;
+  max-width: 100%;
+}
+
+a.tl-card:focus-visible,
+.tl-card-linked:has(.tl-card-link:focus-visible) {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 6px;
+}
+
+/* Linked cards: the title link covers the card, and links or buttons inside the card
+   sit above it so they stay clickable. */
+
+.tl-card-linked {
+  position: relative;
+  cursor: pointer;
+}
+
+.tl-card-link {
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tl-card-link:focus-visible {
+  outline: none;
+}
+
+.tl-card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.tl-card-linked a:not(.tl-card-link),
+.tl-card-linked button {
+  position: relative;
+  z-index: 1;
+}
+
+.tl-url {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--tl-muted);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.tl-url-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* A figure's source line, as in a paper: where the picture or video above comes from. */
+.tl-source {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  min-width: 0;
+  margin: 0.5rem 0 0;
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+}
+
+.tl-source-label {
+  flex: none;
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tl-source a {
+  display: flex;
+  min-width: 0;
+  color: var(--tl-muted);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+a.tl-url::before {
+  content: '';
+  position: absolute;
+  inset: -0.625rem -0.375rem;
+}
+
+a.tl-url:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+.tl-repo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+/* A taller hit area than the 0.75rem text, without moving it. */
+.tl-repo::before {
+  content: '';
+  position: absolute;
+  inset: -0.625rem -0.375rem;
+}
+
+.tl-repo:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+.tl-role {
+  margin: 0.125rem 0 0;
+  color: var(--tl-faint);
+  font-size: 0.875rem;
+}
+
+.tl-stack {
+  column-gap: 0.625rem;
+}
+
+.tl-arrow {
+  display: inline-block;
+  margin-left: 0.3em;
+  color: var(--tl-faint);
+  font-size: 0.875em;
+  transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), color 150ms ease;
+}
+
+@media (hover: hover) {
+  a.tl-card:hover .tl-title,
+  .tl-card-linked:hover .tl-card-link {
+    text-decoration-color: var(--tl-faint);
+  }
+
+  .tl-repo:hover,
+  a.tl-url:hover,
+  .tl-source a:hover {
+    color: var(--tl-fg);
+  }
+
+  a.tl-url:hover .tl-url-text,
+  .tl-source a:hover .tl-url-text {
+    text-decoration: underline;
+    text-decoration-color: var(--tl-line);
+    text-underline-offset: 0.25em;
+  }
+
+  a.tl-card:hover .tl-arrow,
+  .tl-card-linked:hover .tl-card-link .tl-arrow {
+    color: var(--tl-fg);
+    transform: translate(2px, -2px);
+  }
+}
+
+.tl-preview {
+  display: grid;
+  gap: 0.125rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  color: var(--tl-faint);
+  font-size: 0.875rem;
+  list-style: none;
+}
+
+.tl-preview li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Pictures are greyscale and turn colour while they pass through the middle of the screen, on
+   every device; hovering does nothing, so galleries can use hover for their controls. Without
+   scroll-driven animations they simply stay in colour. */
+
+.tl-figure {
+  margin: 0;
+}
+
+.tl-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(70svh, 32rem);
+  border-radius: 0.5rem;
+  outline: 1px solid var(--tl-outline);
+  outline-offset: -1px;
+  background: var(--tl-hover);
+}
+
+.tl-figure figcaption {
+  margin-top: 0.625rem;
+}
+
+@supports (animation-timeline: view()) {
+  .tl-image {
+    animation: tl-colorize linear both;
+    animation-timeline: view();
+  }
+}
+
+@keyframes tl-colorize {
+  0%,
+  20% {
+    filter: grayscale(1);
+  }
+
+  35%,
+  65% {
+    filter: grayscale(0);
+  }
+
+  80%,
+  100% {
+    filter: grayscale(1);
+  }
+}
+
+/* Media below an entry's text: screenshots, snippets and small data views. */
+
+.tl-media {
+  display: block;
+  margin-top: 0.875rem;
+}
+
+/* Screenshots stay secondary to the text; tall phone captures shrink to fit. */
+.tl-media.tl-image {
+  max-height: 22rem;
+}
+
+.tl-code {
+  margin-bottom: 0;
+  padding: 0.75rem 0.875rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0 1px var(--tl-outline);
+  color: var(--tl-muted);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.tl-words {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 1.25rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+
+.tl-words div {
+  display: contents;
+}
+
+.tl-words dt {
+  color: var(--tl-fg);
+  font-family: var(--tl-mono);
+  font-size: 0.8125rem;
+}
+
+.tl-words dd {
+  margin: 0;
+  color: var(--tl-muted);
+}
+
+.tl-punchcard {
+  width: 100%;
+  height: auto;
+}
+
+.tl-punchcard circle {
+  fill: var(--tl-faint);
+  opacity: 0.6;
+}
+
+.tl-punchcard .tl-punched {
+  fill: var(--tl-fg);
+  opacity: 1;
+}
+
+/* Activity stats: small label above a larger value, like Strava's own. */
+
+.tl-stats {
+  display: flex;
+  gap: 1.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.tl-stats dt {
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.6875rem;
+}
+
+.tl-stats dd {
+  margin: 0.125rem 0 0;
+  color: var(--tl-fg);
+  font-size: 1.0625rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tall pictures side by side, like phone screenshots. */
+
+.tl-strip {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Photos under a map belong to it, so they sit closer. */
+.tl-media + .tl-strip {
+  margin-top: 0.5rem;
+}
+
+.tl-strip .tl-image {
+  min-width: 0;
+  max-width: calc((100% - 1rem) / 3);
+  max-height: 20rem;
+}
+
+.tl-clip {
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+/* Phone recordings stay as tall as screenshots, not as wide as the column. */
+.tl-clip.tl-clip-portrait {
+  width: auto;
+  max-height: 22rem;
+}
+
+/* Galleries: a strip of pictures at one height, as many as fit, that slides on by one picture at a
+   time. It scrolls sideways natively, so swiping and trackpads just work, and snaps to pictures. */
+
+.tl-gallery {
+  --tl-gallery-interval: 4000ms;
+  --tl-gallery-height: clamp(11rem, 48vw, 17rem);
+}
+
+.tl-gallery-viewport {
+  position: relative;
+}
+
+.tl-gallery-track {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: 0.5rem;
+}
+
+.tl-gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tl-gallery-track:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+}
+
+.tl-gallery-track .tl-image {
+  flex: none;
+  width: auto;
+  max-width: none;
+  height: var(--tl-gallery-height);
+  max-height: none;
+  scroll-snap-align: start;
+}
+
+/* Step buttons: only with a mouse, and only while hovering the strip (or tabbing to them). The
+   doubled class beats `.tl-card-linked button`, which would put them back in the flow. */
+.tl-gallery-step.tl-gallery-step {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-top: -1.125rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-panel) 88%, transparent);
+  box-shadow:
+    0 0 0 1px var(--tl-outline),
+    0 0.25rem 0.75rem rgb(0 0 0 / 0.12);
+  color: var(--tl-fg);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transform: scale(0.9);
+  transition:
+    opacity 150ms ease,
+    transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tl-gallery-step[data-direction='previous'] {
+  left: 0.5rem;
+}
+
+.tl-gallery-step[data-direction='next'] {
+  right: 0.5rem;
+}
+
+.tl-gallery-step .tl-chevron {
+  transform: rotate(90deg);
+}
+
+.tl-gallery-step[data-direction='next'] .tl-chevron {
+  transform: rotate(-90deg);
+}
+
+.tl-gallery-step:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+}
+
+.tl-gallery-step:active {
+  transform: scale(0.94);
+}
+
+@media (hover: hover) {
+  .tl-gallery-viewport:hover .tl-gallery-step {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .tl-gallery-viewport:hover .tl-gallery-step:active {
+    transform: scale(0.94);
+  }
+}
+
+/* The bars' row keeps its height before they're measured in, so nothing below jumps. */
+.tl-gallery-bars {
+  display: flex;
+  gap: 0.25rem;
+  min-height: 1.25rem;
+}
+
+.tl-gallery-bar {
+  flex: 1;
+  height: 1.25rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tl-gallery-bar:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: -2px;
+  border-radius: 0.25rem;
+}
+
+/* The visible bar is 2px; the button around it is the tap target. */
+.tl-gallery-bar::before,
+.tl-gallery-fill {
+  display: block;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.tl-gallery-bar::before {
+  content: '';
+  background: var(--tl-outline);
+  transform: translateY(1px);
+}
+
+.tl-gallery-fill {
+  margin-top: -2px;
+  background: var(--tl-muted);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.tl-gallery-bar[data-state='done'] .tl-gallery-fill {
+  transform: scaleX(1);
+}
+
+/* Linear on purpose: the fill shows time passing. */
+.tl-gallery-bar[data-state='active'] .tl-gallery-fill {
+  animation: tl-gallery-progress var(--tl-gallery-interval) linear forwards;
+  animation-play-state: paused;
+}
+
+.tl-gallery[data-playing='true'] .tl-gallery-bar[data-state='active'] .tl-gallery-fill {
+  animation-play-state: running;
+}
+
+@keyframes tl-gallery-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tl-gallery-bar[data-state='active'] .tl-gallery-fill {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
+
+/* Thumbnails and book covers sit beside the text. */
+
+.tl-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.tl-row-text {
+  display: block;
+  min-width: 0;
+}
+
+.tl-thumb {
+  flex: none;
+  width: 3.5rem;
+  border-radius: 0.375rem;
+}
+
+.tl-cover {
+  flex: none;
+  width: 4rem;
+  border-radius: 0.25rem;
+}
+
+.tl-author {
+  display: block;
+  margin-top: 0.125rem;
+}
+
+/* Entries rise in softly as they scroll into view. Items already on screen at load
+   are past their entry range, so nothing animates on first paint. */
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .tl-entry {
+      animation: tl-enter linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+@keyframes tl-enter {
+  from {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
+/* Wide screens: dates hang in the left margin. */
+
+@media (min-width: 60rem) {
+  .tl-years {
+    padding-left: 0;
+  }
+
+  .tl-years::before {
+    left: calc(-0.5 * var(--tl-gap) - 0.5px);
+  }
+
+  .tl-year-head,
+  .tl-entry {
+    margin-left: calc(-1 * (var(--tl-gutter) + var(--tl-gap)));
+  }
+
+  /* The year sits large at the top of the margin and stays there while its entries
+     scroll, with a fade so dates passing beneath it don't collide with it. */
+  .tl-year-head {
+    z-index: 4;
+    justify-content: flex-end;
+    width: var(--tl-gutter);
+    margin-right: 0;
+    padding: 1.25rem 0 1.5rem;
+    background: linear-gradient(var(--color-bg) 72%, transparent);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .tl-year-head::after,
+  .tl-jump-button {
+    display: none;
+  }
+
+  .tl-year-label {
+    font-family: var(--tl-sans);
+    font-size: 1.625rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 2rem;
+  }
+
+  .tl-year-head::before {
+    top: calc(1.25rem + 1rem - 4.5px);
+    left: calc(var(--tl-gutter) + 0.5 * var(--tl-gap) - 4.5px);
+  }
+
+  /* Content scrolling off the top blurs out instead of being cut off. */
+  .tl::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: 1.5rem;
+    background: linear-gradient(var(--color-bg), transparent);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    -webkit-mask-image: linear-gradient(#000 30%, transparent);
+    mask-image: linear-gradient(#000 30%, transparent);
+    pointer-events: none;
+  }
+
+  .tl-entry::before {
+    top: calc(1.125rem + 0.15rem + 0.5625rem - 2.5px);
+    left: calc(var(--tl-gutter) + 0.5 * var(--tl-gap) - 2.5px);
+  }
+
+  .tl-entry {
+    grid-template-columns: var(--tl-gutter) minmax(0, 1fr);
+    column-gap: var(--tl-gap);
+  }
+
+  .tl-meta {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-end;
+    padding-top: 0.15rem;
+  }
+
+  .tl-kind::before {
+    content: none;
+  }
+
+  .tl-kind {
+    color: var(--tl-faint);
+    opacity: 0.7;
+  }
+}
+
+/* Entry pages: one entry, larger, with its neighbours below. */
+
+.tl-back {
+  margin: 0 -0.5rem clamp(2.5rem, 10vw, 4.5rem);
+  font-size: 0.875rem;
+}
+
+.tl-back a {
+  display: inline-flex;
+  gap: 0.375rem;
+  padding: 0.625rem 0.5rem;
+  color: var(--tl-muted);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.tl-single {
+  display: grid;
+  gap: 0.625rem;
+}
+
+/* The date stays above the entry here, even where the timeline hangs it in the margin. */
+.tl-single .tl-meta {
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: baseline;
+  padding-top: 0;
+}
+
+.tl-single .tl-kind::before {
+  content: '·';
+}
+
+.tl-single .tl-kind {
+  opacity: 1;
+}
+
+.tl-single .tl-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.tl-single .tl-text,
+.tl-single .tl-note {
+  font-size: 1.0625rem;
+}
+
+/* On its own page an entry is the subject, so its pictures keep their colour. */
+.tl-single .tl-image {
+  filter: none;
+  animation: none;
+}
+
+.tl-single .tl-media.tl-image {
+  max-height: min(75svh, 36rem);
+}
+
+.tl-single .tl-gallery {
+  --tl-gallery-height: clamp(14rem, 60vw, 26rem);
+}
+
+.tl-share {
+  justify-self: start;
+  margin-top: 2rem;
+  min-height: 2.25rem;
+  padding: 0 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--tl-chip);
+  color: var(--tl-fg);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 200ms ease,
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tl-share:active {
+  transform: scale(0.96);
+}
+
+.tl-share:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+}
+
+.tl-pager {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--tl-line);
+}
+
+.tl-neighbour {
+  display: grid;
+  align-content: start;
+  gap: 0.25rem;
+  margin: -0.625rem -0.75rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem;
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 150ms ease;
+}
+
+.tl-neighbour[data-direction='newer'] {
+  grid-column: 2;
+  text-align: right;
+}
+
+.tl-neighbour-label {
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+}
+
+.tl-neighbour-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--tl-fg);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (hover: hover) {
+  .tl-back a:hover {
+    color: var(--tl-fg);
+  }
+
+  .tl-share:hover,
+  .tl-neighbour:hover {
+    background: var(--tl-chip-hover);
+  }
+}
+
+/* First paint: the intro, the filters and the timeline settle in one after another. */
+
+@media (prefers-reduced-motion: no-preference) {
+  .tl-intro > *,
+  .tl-controls,
+  .tl-years,
+  .tl-back,
+  .tl-single,
+  .tl-share,
+  .tl-pager {
+    animation: tl-rise 700ms cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .tl-intro > :nth-child(2),
+  .tl-single {
+    animation-delay: 60ms;
+  }
+
+  .tl-intro > :nth-child(3),
+  .tl-share {
+    animation-delay: 120ms;
+  }
+
+  .tl-controls,
+  .tl-pager {
+    animation-delay: 180ms;
+  }
+
+  .tl-years {
+    animation-delay: 240ms;
+  }
+}
+
+@keyframes tl-rise {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(0.5rem);
+  }
+}
+
+/* Changing filters or order: the timeline blurs out and the new one blurs in, while
+   the intro and the filters stay put. */
+
+.tl-intro {
+  view-transition-name: tl-intro;
+}
+
+.tl-controls {
+  view-transition-name: tl-controls;
+}
+
+.tl-yearnav {
+  view-transition-name: tl-yearnav;
+}
+
+::view-transition-group(tl-intro),
+::view-transition-group(tl-controls),
+::view-transition-group(tl-yearnav),
+::view-transition-new(tl-intro),
+::view-transition-new(tl-controls),
+::view-transition-new(tl-yearnav) {
+  animation: none;
+}
+
+::view-transition-old(tl-intro),
+::view-transition-old(tl-controls),
+::view-transition-old(tl-yearnav) {
+  display: none;
+}
+
+::view-transition-old(root) {
+  animation: tl-blur-out 160ms ease-in both;
+}
+
+::view-transition-new(root) {
+  animation: tl-blur-in 420ms cubic-bezier(0.23, 1, 0.32, 1) 60ms both;
+}
+
+@keyframes tl-blur-out {
+  to {
+    opacity: 0;
+    filter: blur(6px);
+  }
+}
+
+@keyframes tl-blur-in {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(0.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+/* YouTube: a picture with a play button until pressed, then the player in its place. */
+
+.tl-youtube {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  background: var(--tl-hover);
+  overflow: hidden;
+}
+
+.tl-youtube iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.tl-youtube-poster {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tl-youtube-poster .tl-image {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+}
+
+.tl-youtube-poster:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+}
+
+.tl-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin: -1.625rem 0 0 -1.625rem;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.82);
+  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.16);
+  color: #111;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Optically centred: a triangle's weight sits left of its box's centre. */
+.tl-play svg {
+  margin-left: 2px;
+}
+
+.tl-youtube-poster:active .tl-play {
+  transform: scale(0.94);
+}
+
+.tl-duration {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  background: rgb(0 0 0 / 0.62);
+  color: #fff;
+  font-family: var(--tl-mono);
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+
+@media (hover: hover) {
+  .tl-youtube-poster:hover .tl-play {
+    transform: scale(1.06);
+  }
+}
+
+/* Tweets keep X's own layout, in the timeline's type and colours. */
+
+.tl-tweet .react-tweet-theme {
+  --tweet-container-margin: 0;
+  --tweet-font-family: var(--tl-sans);
+  --tweet-font-color: var(--tl-fg);
+  --tweet-font-color-secondary: var(--tl-muted);
+  --tweet-bg-color: transparent;
+  --tweet-bg-color-hover: var(--tl-hover);
+  --tweet-border: 1px solid var(--tl-outline);
+  --tweet-body-font-size: 1rem;
+  --tweet-body-line-height: 1.6;
+  --tweet-header-font-size: 0.9375rem;
+  --tweet-info-font-size: 0.8125rem;
+  --tweet-actions-font-size: 0.8125rem;
+  min-width: 0;
+  max-width: none;
+}
+
+/* Running text is justified. Until the line breaker runs (src/justify), and wherever it gives up,
+   the browser justifies and hyphenates on its own; once it has, the breaks are its own, so the
+   browser's hyphenation steps aside. */
+
+.tl-intro p,
+p.tl-text,
+.tl-note {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Specific enough to beat the selectors above. */
+.tl [data-justify='on'] {
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
+/* Text the line breaker couldn't justify without wide gaps, like a short line of long words. */
+.tl [data-justify='ragged'] {
+  text-align: start;
+}
+
+/* Islands (src/islands): live pieces that load near the screen, over their still picture. */
+
+.tl-island {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.tl-island > * {
+  grid-area: 1 / 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.tl-island-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 400ms ease;
+}
+
+.tl-island-live {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.tl-island[data-ready='true'] .tl-island-live {
+  opacity: 1;
+}
+
+.tl-island[data-ready='true'] .tl-island-poster {
+  opacity: 0;
+}
+
+/* p5 sizes its canvas in pixels; the island decides the size. */
+.tl-island-canvas,
+.tl-island-canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Posts: long-form text in the timeline's column and type. */
+
+.tl-page-title {
+  margin: 0 0 clamp(1.5rem, 6vw, 2.5rem);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.tl-prose {
+  margin-top: 1.25rem;
+  color: var(--tl-fg);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.tl-prose > * {
+  margin: 0;
+}
+
+.tl-prose > * + * {
+  margin-top: 1.1em;
+}
+
+.tl-prose p,
+.tl-prose li {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.tl-prose h2,
+.tl-prose h3 {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.tl-prose h2 {
+  margin-top: 2.25em;
+  font-size: 1.25rem;
+}
+
+.tl-prose h3 {
+  margin-top: 1.75em;
+  font-size: 1.0625rem;
+}
+
+.tl-prose h2 + *,
+.tl-prose h3 + * {
+  margin-top: 0.6em;
+}
+
+.tl-prose a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--tl-line);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 150ms ease;
+}
+
+@media (hover: hover) {
+  .tl-prose a:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+.tl-prose ul,
+.tl-prose ol {
+  padding-left: 1.25em;
+}
+
+.tl-prose li + li {
+  margin-top: 0.4em;
+}
+
+.tl-prose li::marker {
+  color: var(--tl-faint);
+}
+
+.tl-prose blockquote {
+  padding-left: 1rem;
+  border-left: 2px solid var(--tl-line);
+  color: var(--tl-muted);
+}
+
+.tl-prose code {
+  padding: 0.1em 0.3em;
+  border-radius: 0.25rem;
+  background: var(--tl-chip);
+  font-family: var(--tl-mono);
+  font-size: 0.85em;
+}
+
+.tl-prose pre {
+  padding: 0.875rem 1rem;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0 1px var(--tl-outline);
+  font-size: 0.8125rem;
+  line-height: 1.65;
+}
+
+.tl-prose pre code {
+  padding: 0;
+  background: none;
+  font-size: inherit;
+}
+
+.tl-prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.tl-prose hr {
+  margin-block: 2.5em;
+  border: 0;
+  border-top: 1px solid var(--tl-line);
+}
+
+.tl-prose .tl-island {
+  margin-block: 1.75em;
+}

@@ -1,0 +1,8 @@
+/** Old short links that point elsewhere, served as permanent redirects (Nitro route rules). */
+export const REDIRECTS: Record<string, string> = {
+  '/web3-vscode-extension': 'https://marketplace.visualstudio.com/items?itemName=peetzweg.crypto-address-lens',
+  '/client-work': 'https://peetzweg.notion.site/peetzweg/504f7a0b831841f7b71c50bbe8b6f368',
+  '/software': 'https://peetzweg.notion.site/e006cc11b7fb4c0d880d986a30e65e0e',
+  '/product/input/privacy-policy': 'https://peetzweg.notion.site/54d02ca9dcc84d39bcfbd1eed867b904',
+  '/product/input/terms-of-service': 'https://peetzweg.notion.site/8b490e6ef2324ba1ad8d122ddd971838',
+};

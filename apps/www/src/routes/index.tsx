@@ -26,7 +26,7 @@ export const Route = createFileRoute('/')({
 
 const PROFILES = [
   { label: 'X', href: 'https://x.com/peetzweg' },
-  { label: 'Bluesky', href: 'https://bsky.app/profile/peet.sh' },
+  { label: 'Bluesky', href: 'https://bsky.app/profile/peetzweg.com' },
   { label: 'GitHub', href: 'https://github.com/peetzweg' },
   { label: 'Strava', href: 'https://www.strava.com/athletes/18353420' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/peetzweg/' },

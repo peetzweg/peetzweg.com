@@ -241,8 +241,8 @@ const videos: TimelineEntry[] = [
   youtube('2026-10-27', 'PoUIk0ngcyY', 'OpenDisplay Sender and Receiver for Linux are now available', 38),
 ];
 
-/** Posts on X that mattered. Save one with `pnpm tweets:pull <id>`, then list it here. */
-const tweets: TimelineEntry[] = [];
+/** Every tweet saved by `pnpm tweets:pull` (see scripts/timeline-tweets.mjs); delete a file to drop it. */
+const tweets: TimelineEntry[] = Object.values(savedTweets).map(tweet);
 
 export const entries: TimelineEntry[] = [
   ...hardware,
@@ -318,11 +318,6 @@ function youtube(date: string, youtubeId: string, title: string, duration: numbe
   };
 }
 
-/** A tweet saved in ./tweets by `pnpm tweets:pull`. */
-export function tweet(id: string): TimelineEntry {
-  const data = savedTweets[`./tweets/${id}.json`];
-  if (!data) {
-    throw new Error(`Missing tweet ${id}: run pnpm tweets:pull ${id}`);
-  }
-  return { id: `tweet-${id}`, type: 'tweet', date: data.created_at.slice(0, 10), tweet: data };
+function tweet(data: Tweet): TimelineEntry {
+  return { id: `tweet-${data.id_str}`, type: 'tweet', date: data.created_at.slice(0, 10), tweet: data };
 }

@@ -61,7 +61,6 @@ export type TimelineEntry = EntryBase &
         href?: string;
         /** The GitHub repository, linked beside the project when `href` points elsewhere. */
         repo?: string;
-        language?: string;
         stars?: number;
         media?: Media;
       }

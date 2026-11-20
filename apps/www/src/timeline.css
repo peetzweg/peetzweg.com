@@ -683,18 +683,24 @@
   text-wrap: pretty;
 }
 
-/* Cards are links without a visible box. Hovering reveals a soft surface that
-   extends past the text, so the text itself never moves. */
+/* Cards are links without a visible box. Hovering underlines the title and nudges its arrow;
+   a surface around the card would run into the timeline's rail. */
 
 .tl-card {
   display: block;
-  margin: -0.625rem -0.75rem;
-  padding: 0.625rem 0.75rem;
-  border-radius: 0.75rem;
+  border-radius: 0.25rem;
   color: inherit;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-  transition: background-color 150ms ease;
+}
+
+a.tl-card .tl-title,
+.tl-card-link {
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: text-decoration-color 150ms ease;
 }
 
 .tl-card-inline {
@@ -718,16 +724,7 @@
 a.tl-card:focus-visible,
 .tl-card-linked:has(.tl-card-link:focus-visible) {
   outline: 2px solid var(--tl-fg);
-  outline-offset: 2px;
-}
-
-/* Only with a mouse: on touch screens every scroll starts with a press, which would
-   flash the surface on whatever card the finger lands on. */
-@media (hover: hover) {
-  a.tl-card:active,
-  .tl-card-linked:has(.tl-card-link:active) {
-    background-color: var(--tl-hover);
-  }
+  outline-offset: 6px;
 }
 
 /* Linked cards: the title link covers the card, and links or buttons inside the card
@@ -740,7 +737,6 @@ a.tl-card:focus-visible,
 
 .tl-card-link {
   color: inherit;
-  text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -776,6 +772,33 @@ a.tl-card:focus-visible,
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* A figure's source line, as in a paper: where the picture or video above comes from. */
+.tl-source {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  min-width: 0;
+  margin: 0.5rem 0 0;
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+}
+
+.tl-source-label {
+  flex: none;
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tl-source a {
+  display: flex;
+  min-width: 0;
+  color: var(--tl-muted);
+  text-decoration: none;
+  transition: color 150ms ease;
 }
 
 a.tl-url::before {
@@ -831,17 +854,19 @@ a.tl-url:focus-visible {
 }
 
 @media (hover: hover) {
-  a.tl-card:hover,
-  .tl-card-linked:hover {
-    background-color: var(--tl-hover);
+  a.tl-card:hover .tl-title,
+  .tl-card-linked:hover .tl-card-link {
+    text-decoration-color: var(--tl-faint);
   }
 
   .tl-repo:hover,
-  a.tl-url:hover {
+  a.tl-url:hover,
+  .tl-source a:hover {
     color: var(--tl-fg);
   }
 
-  a.tl-url:hover .tl-url-text {
+  a.tl-url:hover .tl-url-text,
+  .tl-source a:hover .tl-url-text {
     text-decoration: underline;
     text-decoration-color: var(--tl-line);
     text-underline-offset: 0.25em;

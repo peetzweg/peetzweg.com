@@ -47,6 +47,19 @@ Every entry has a page: posts, experiments and collections their existing routes
 - [ ] The second Berlin Marathon 2022 photo on Strava is a watermarked Sportograf proof, so it's left out.
 - [ ] `/running` and `/strava` are no longer linked from the homepage; merge or retire them.
 
+## Typography and interaction
+
+- [x] Running text (intro, descriptions, notes, posts) is justified with whole-paragraph line breaks and hyphenation (`src/justify`, Knuth-Plass as in bookblitz). Pretext isn't used: it measures with canvas, which is unreliable for system fonts like SF Pro.
+- [ ] Posts still use the old monospace page style; justified mono on a phone leaves wide gaps. Move posts to the timeline's typography.
+- [x] Pictures turn colour in the middle of the screen on every device; hover no longer does.
+- [x] Galleries are a strip of pictures that slides on one at a time; swipe or scroll it, or use the buttons that appear on hover.
+- [x] Weighted wheel scrolling (Lenis) and a rubber band at the page's ends, for mouse and trackpad only (`src/scroll`). Try it and decide whether it stays.
+- [x] Islands (`src/islands`): live pieces that load only near the screen, over a still picture. The p5 entry and `/p5` run the sketches live. Add one by writing a component that takes `IslandProps` and listing it in `src/islands/index.ts`.
+- [ ] Use islands in MDX posts (`<Island name="…" />` through an MDXProvider).
+- [ ] The tulip from `/models` as an island (three.js, from `features/portfolio-models`).
+- [ ] The homepage ships all of `hyperlinks.json` (60 KB gzipped) for a count and four titles. Precompute those.
+- [ ] Some hardware photos are 450–780 KB JPEGs (bench, pillow, bike wall mount). Convert them to WebP like the rest.
+
 ## SEO and sharing
 
 - [x] Repo description and topics updated on GitHub (2026-11-20).

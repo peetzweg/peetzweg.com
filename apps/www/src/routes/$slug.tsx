@@ -1,5 +1,5 @@
 import { Link, createFileRoute, notFound } from '@tanstack/react-router';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { EntryBody, EntryMeta, HeadingLevel } from '../components/timeline/Timeline';
 import {
   entryImage,
@@ -10,6 +10,7 @@ import {
   neighbours,
   type TimelineEntry,
 } from '../content/timeline';
+import { TIMELINE_TEXT, useJustify } from '../justify/useJustify';
 import { SITE, seo } from '../seo';
 
 /** One timeline entry on its own page, at a short dateless URL like `/papr`. */
@@ -39,13 +40,15 @@ export const Route = createFileRoute('/$slug')({
 function EntryPage() {
   const { slug } = Route.useParams();
   const entry = entryPages.get(slug);
+  const main = useRef<HTMLElement>(null);
+  useJustify(main, TIMELINE_TEXT);
   if (!entry) {
     return null;
   }
   const { newer, older } = neighbours(entry);
 
   return (
-    <main className="tl tl-page">
+    <main className="tl tl-page" ref={main}>
       <nav className="tl-back">
         <Link hash={slug} to="/">
           <span aria-hidden="true">←</span> {SITE.name}

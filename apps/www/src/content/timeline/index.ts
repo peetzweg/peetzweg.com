@@ -235,6 +235,7 @@ function firstImage(media?: Media): Image | undefined {
     case 'row':
       return media.images[0];
     case 'video':
+    case 'live':
       return media.poster;
     default:
       return undefined;

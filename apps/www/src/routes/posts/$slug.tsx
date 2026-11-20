@@ -1,5 +1,7 @@
 import { notFound, createFileRoute } from '@tanstack/react-router';
+import { useRef } from 'react';
 import { getPost, getPostMeta } from '../../content/posts';
+import { useJustify } from '../../justify/useJustify';
 
 export const Route = createFileRoute('/posts/$slug')({
   loader: ({ params }) => {
@@ -17,6 +19,8 @@ export const Route = createFileRoute('/posts/$slug')({
 function PostPage() {
   const postMeta = Route.useLoaderData();
   const post = getPost(postMeta.slug);
+  const article = useRef<HTMLElement>(null);
+  useJustify(article, 'p, li');
 
   if (!post) {
     throw notFound();
@@ -26,7 +30,7 @@ function PostPage() {
 
   return (
     <main className="content-page">
-      <article>
+      <article ref={article}>
         <h1>{postMeta.title}</h1>
         <Component />
         <hr />

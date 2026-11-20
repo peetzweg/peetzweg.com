@@ -1,6 +1,8 @@
 import { Link } from '@tanstack/react-router';
 import { EmbeddedTweet } from 'react-tweet';
-import { createContext, useContext, useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { createContext, useContext, useEffect, useRef, useState } from 'react';
+import { useInView, useReducedMotion } from '../../hooks';
+import { Island } from '../../islands/Island';
 import { entryPages, entryPath, type Image, type Media, type TimelineEntry, type TimelineYear } from '../../content/timeline';
 
 const LABELS: Record<TimelineEntry['type'], string> = {
@@ -407,6 +409,8 @@ function EntryMedia({ media }: { media?: Media }) {
       );
     case 'punchcard':
       return <Punchcard days={media.days} />;
+    case 'live':
+      return <Island className="tl-media" name={media.island} poster={media.poster} />;
     default:
       return null;
   }
@@ -427,19 +431,56 @@ function Picture({ className, decorative, image }: { className?: string; decorat
 }
 
 /**
- * Pictures that crossfade one after another while the gallery is in view. The bars
- * below fill up over `--tl-gallery-interval` (CSS); when the current one is full, the
- * next picture shows. They also let you pick one. Hovering
- * pauses it; with reduced motion it never advances on its own.
+ * Pictures side by side in a strip, as many as fit, sliding on by one picture at a time while
+ * the strip is in view. The bars below fill up over `--tl-gallery-interval` (CSS); when the
+ * current one is full, the strip moves on, and back to the start after the end. Swipe or scroll
+ * it sideways to move yourself; with a mouse, hovering pauses it and shows buttons to step
+ * through. With reduced motion it never moves on its own.
  */
 function Gallery({ images }: { images: ReadonlyArray<Image> }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, 0.6);
+  const root = useRef<HTMLDivElement>(null);
+  const track = useRef<HTMLDivElement>(null);
+  const inView = useInView(root, 0.6);
   const reducedMotion = useReducedMotion();
-  const [index, setIndex] = useState(0);
   const [hovered, setHovered] = useState(false);
-  const playing = inView && !hovered && !reducedMotion;
-  const [first] = images;
+  const [touching, setTouching] = useState(false);
+  /** Where the strip can rest: each picture's left edge, up to where the last one is fully in. */
+  const [stops, setStops] = useState<number[]>([]);
+  const [index, setIndex] = useState(0);
+  /** Until when the strip is sliding on its own, so its scroll events aren't taken as a hand. */
+  const sliding = useRef(0);
+  const playing = inView && !hovered && !touching && !reducedMotion && stops.length > 1;
+
+  useEffect(() => {
+    const strip = track.current;
+    if (!strip) return;
+    const measure = () => {
+      const end = strip.scrollWidth - strip.clientWidth;
+      const lefts = Array.from(strip.children, (child) => Math.min((child as HTMLElement).offsetLeft - strip.offsetLeft, end));
+      setStops([...new Set(lefts.map(Math.round))].filter((left, i, all) => i === 0 || left - all[i - 1] > 4));
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(strip);
+    return () => observer.disconnect();
+  }, []);
+
+  /** Follows the strip when it's scrolled by hand, so the bars show where it is. */
+  function onScroll() {
+    const strip = track.current;
+    if (!strip || !stops.length || performance.now() < sliding.current) return;
+    const nearest = stops.reduce((best, left, i) => (Math.abs(left - strip.scrollLeft) < Math.abs(stops[best] - strip.scrollLeft) ? i : best), 0);
+    if (nearest !== index) setIndex(nearest);
+  }
+
+  function go(next: number) {
+    const count = stops.length;
+    if (!count) return;
+    const target = (next + count) % count;
+    setIndex(target);
+    sliding.current = performance.now() + 800;
+    track.current?.scrollTo({ left: stops[target], behavior: reducedMotion ? 'auto' : 'smooth' });
+  }
 
   return (
     <div
@@ -447,41 +488,50 @@ function Gallery({ images }: { images: ReadonlyArray<Image> }) {
       data-playing={playing}
       onPointerEnter={(event) => event.pointerType === 'mouse' && setHovered(true)}
       onPointerLeave={() => setHovered(false)}
-      ref={ref}
+      ref={root}
     >
-      <div className="tl-gallery-frame" style={{ aspectRatio: `${first.width} / ${first.height}` }}>
-        {images.map((image, i) => (
-          <img
-            alt={image.alt}
-            aria-hidden={i !== index}
-            className="tl-image tl-gallery-image"
-            data-active={i === index}
-            decoding="async"
-            height={image.height}
-            key={image.src}
-            loading="lazy"
-            src={image.src}
-            width={image.width}
-          />
-        ))}
+      <div className="tl-gallery-viewport">
+        <div
+          aria-label={`${images.length} pictures`}
+          className="tl-gallery-track"
+          onScroll={onScroll}
+          onTouchEnd={() => setTouching(false)}
+          onTouchStart={() => setTouching(true)}
+          ref={track}
+          role="group"
+          tabIndex={0}
+        >
+          {images.map((image) => (
+            <Picture image={image} key={image.src} />
+          ))}
+        </div>
+        {stops.length > 1 ? (
+          <>
+            <button aria-label="Previous picture" className="tl-gallery-step" data-direction="previous" onClick={() => go(index - 1)} type="button">
+              <Chevron />
+            </button>
+            <button aria-label="Next picture" className="tl-gallery-step" data-direction="next" onClick={() => go(index + 1)} type="button">
+              <Chevron />
+            </button>
+          </>
+        ) : null}
       </div>
-      <div className="tl-gallery-bars">
-        {images.map((image, i) => (
-          <button
-            aria-current={i === index}
-            aria-label={`Show picture ${i + 1} of ${images.length}`}
-            className="tl-gallery-bar"
-            data-state={i < index ? 'done' : i === index ? 'active' : 'next'}
-            key={image.src}
-            onClick={() => setIndex(i)}
-            type="button"
-          >
-            <span
-              className="tl-gallery-fill"
-              onAnimationEnd={i === index ? () => setIndex((i + 1) % images.length) : undefined}
-            />
-          </button>
-        ))}
+      <div aria-hidden={stops.length < 2} className="tl-gallery-bars">
+        {stops.length > 1
+          ? stops.map((left, i) => (
+              <button
+                aria-current={i === index}
+                aria-label={`Show picture ${i + 1} of ${stops.length}`}
+                className="tl-gallery-bar"
+                data-state={i < index ? 'done' : i === index ? 'active' : 'next'}
+                key={left}
+                onClick={() => go(i)}
+                type="button"
+              >
+                <span className="tl-gallery-fill" onAnimationEnd={i === index ? () => go(index + 1) : undefined} />
+              </button>
+            ))
+          : null}
       </div>
     </div>
   );
@@ -575,36 +625,6 @@ function Clip({ poster, src }: { poster: Image; src: string }) {
       src={src}
       width={poster.width}
     />
-  );
-}
-
-function useInView(ref: React.RefObject<Element | null>, threshold: number) {
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) {
-      return;
-    }
-    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold });
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, [ref, threshold]);
-
-  return inView;
-}
-
-const REDUCED_MOTION = '(prefers-reduced-motion: reduce)';
-
-function useReducedMotion() {
-  return useSyncExternalStore(
-    (onChange) => {
-      const query = window.matchMedia(REDUCED_MOTION);
-      query.addEventListener('change', onChange);
-      return () => query.removeEventListener('change', onChange);
-    },
-    () => window.matchMedia(REDUCED_MOTION).matches,
-    () => false,
   );
 }
 

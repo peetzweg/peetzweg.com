@@ -735,6 +735,7 @@ a.tl-card:focus-visible,
 
 .tl-card-linked {
   position: relative;
+  cursor: pointer;
 }
 
 .tl-card-link {
@@ -1023,6 +1024,12 @@ a.tl-url:focus-visible {
   width: 100%;
   height: auto;
   max-height: none;
+}
+
+/* Phone recordings stay as tall as screenshots, not as wide as the column. */
+.tl-clip.tl-clip-portrait {
+  width: auto;
+  max-height: 22rem;
 }
 
 /* Galleries: a strip of pictures at one height, as many as fit, that slides on by one picture at a
@@ -1725,6 +1732,11 @@ p.tl-text,
 .tl [data-justify='on'] {
   -webkit-hyphens: manual;
   hyphens: manual;
+}
+
+/* Text the line breaker couldn't justify without wide gaps, like a short line of long words. */
+.tl [data-justify='ragged'] {
+  text-align: start;
 }
 
 /* Islands (src/islands): live pieces that load near the screen, over their still picture. */

@@ -341,7 +341,7 @@ function LinkedCard({
   title: string;
 }) {
   return (
-    <div className={href ? 'tl-card tl-card-linked' : 'tl-card'}>
+    <div className={href ? 'tl-card tl-card-linked' : 'tl-card'} onClick={href ? followCardLink : undefined}>
       <WithThumb media={media}>
         <Heading>
           {href ? (
@@ -358,6 +358,21 @@ function LinkedCard({
       <EntryMedia media={media} />
     </div>
   );
+}
+
+/**
+ * The title link's `::after` covers the card, but pictures that fade into colour paint above it
+ * (a filter makes them a layer of their own), and strips need their own pointer events to scroll.
+ * So a click anywhere else in the card is passed on to the title link, modifier keys and all.
+ */
+function followCardLink(event: React.MouseEvent<HTMLDivElement>) {
+  const target = event.target as Element;
+  if (target.closest('a, button') || window.getSelection()?.toString()) {
+    return;
+  }
+  const link = event.currentTarget.querySelector<HTMLAnchorElement>('.tl-card-link');
+  const { altKey, button, ctrlKey, metaKey, shiftKey } = event;
+  link?.dispatchEvent(new MouseEvent('click', { altKey, bubbles: true, button, cancelable: true, ctrlKey, metaKey, shiftKey }));
 }
 
 /** Puts a thumbnail beside the text. Other media go below it, see EntryMedia. */
@@ -614,7 +629,7 @@ function Clip({ poster, src }: { poster: Image; src: string }) {
   return (
     <video
       aria-label={poster.alt}
-      className="tl-media tl-image tl-clip"
+      className={poster.height > poster.width ? 'tl-media tl-image tl-clip tl-clip-portrait' : 'tl-media tl-image tl-clip'}
       height={poster.height}
       loop
       muted

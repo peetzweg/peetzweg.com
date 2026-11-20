@@ -39,11 +39,12 @@ export type Paragraph = {
 
 /**
  * Where to break: for each line, the index one past its last piece. The last line is set ragged at
- * its natural spacing.
+ * its natural spacing. `loose` says the best breaks still stretch some line beyond LOOSE_LIMIT, as
+ * in a short paragraph of long words in a narrow column; such text reads better ragged.
  */
-export function breakLines({ widths, after, space, hyphen, lineWidth }: Paragraph): number[] {
+export function breakLines({ widths, after, space, hyphen, lineWidth }: Paragraph): { breaks: number[]; loose: boolean } {
   const n = widths.length;
-  if (!n) return [];
+  if (!n) return { breaks: [], loose: false };
 
   // Prefix sums of piece widths and of spaces, so a line's natural width is O(1).
   const width = [0];
@@ -56,6 +57,7 @@ export function breakLines({ widths, after, space, hyphen, lineWidth }: Paragrap
 
   const best = new Array<number>(n + 1).fill(Infinity);
   const from = new Array<number>(n + 1).fill(-1);
+  const tooLoose = new Array<boolean>(n + 1).fill(false);
   best[0] = 0;
 
   for (let i = 0; i < n; i++) {
@@ -69,13 +71,14 @@ export function breakLines({ widths, after, space, hyphen, lineWidth }: Paragrap
       if (tightest > lineWidth && j > i + 1) break;
 
       let cost: number;
+      let ratio = 0;
       if (j === n) {
         cost = natural < lineWidth * RUNT && i > 0 ? RUNT_DEMERITS : 0;
       } else {
         const slack = lineWidth - natural;
         // A line with no spaces can't be justified; it's fine only if the word nearly fills it,
         // like a long URL, and otherwise as bad as an overly loose line.
-        const ratio =
+        ratio =
           gaps === 0
             ? natural > lineWidth * 0.8
               ? 0
@@ -90,11 +93,16 @@ export function breakLines({ widths, after, space, hyphen, lineWidth }: Paragrap
       if (best[i] + cost < best[j]) {
         best[j] = best[i] + cost;
         from[j] = i;
+        tooLoose[j] = ratio > LOOSE_LIMIT;
       }
     }
   }
 
   const breaks: number[] = [];
-  for (let j = n; j > 0; j = from[j]) breaks.push(j);
-  return breaks.reverse();
+  let loose = false;
+  for (let j = n; j > 0; j = from[j]) {
+    breaks.push(j);
+    loose ||= tooLoose[j];
+  }
+  return { breaks: breaks.reverse(), loose };
 }

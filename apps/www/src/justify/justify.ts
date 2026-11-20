@@ -11,7 +11,8 @@ import { SHRINK, breakLines } from './breakLines';
  * line. A word broken across lines gets a soft hyphen at that point.
  *
  * The CSS fallback, until this runs or where it gives up, is plain `text-align: justify` with the
- * browser's own hyphenation.
+ * browser's own hyphenation. Paragraphs that can't be justified without gaping, or short ones where
+ * the plan didn't hold, are set ragged instead.
  */
 
 type Hyphenate = (word: string) => string;
@@ -24,6 +25,8 @@ type Plan = {
   pieces: Segment[][];
   separators: Separator[];
   breaks: number[];
+  /** Justified, some line would gape; it's set ragged instead. */
+  loose: boolean;
   space: number;
 };
 
@@ -48,13 +51,17 @@ export function justify(elements: HTMLElement[], hyphenate: Hyphenate) {
   todo.forEach(restore);
   for (const element of todo) element.dataset.justify = 'on';
   const plans = todo.flatMap((element) => plan(element, hyphenate) ?? []);
-  plans.forEach(apply);
+  plans.filter((p) => !p.loose).forEach(apply);
 
   for (const element of todo) {
     const current = plans.find((p) => p.element === element);
-    if (!current || !matches(current)) {
+    if (current?.loose) {
+      element.dataset.justify = 'ragged';
+    } else if (!current || !matches(current)) {
       restore(element);
-      delete element.dataset.justify;
+      // The browser's own justify spreads a short paragraph's first line wide; ragged reads better.
+      if (current && current.breaks.length <= 2) element.dataset.justify = 'ragged';
+      else delete element.dataset.justify;
     }
     done.set(element, { width: element.clientWidth, text: element.textContent ?? '' });
   }
@@ -135,7 +142,7 @@ function plan(element: HTMLElement, hyphenate: Hyphenate): Plan | undefined {
   const { space, hyphen } = glyphWidths(style);
   if (!space || lineWidth <= 0) return undefined;
 
-  const breaks = breakLines({
+  const { breaks, loose } = breakLines({
     widths,
     after: separators.map((separator) => separator.kind),
     space,
@@ -143,7 +150,7 @@ function plan(element: HTMLElement, hyphenate: Hyphenate): Plan | undefined {
     // Leaves room for rounding, so a full line never spills over and breaks somewhere unplanned.
     lineWidth: lineWidth - 1,
   });
-  return { element, pieces, separators, breaks, space };
+  return { element, pieces, separators, breaks, loose, space };
 }
 
 /** Offsets of the soft hyphens in a hyphenated word, counted in the word without them. */

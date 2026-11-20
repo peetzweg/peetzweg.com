@@ -21,7 +21,7 @@ export const Route = createRootRoute({
     links: [
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       { rel: 'me', href: 'https://github.com/peetzweg' },
-      { rel: 'me', href: 'https://bsky.app/profile/peet.sh' },
+      { rel: 'me', href: 'https://bsky.app/profile/peetzweg.com' },
       { rel: 'stylesheet', href: appCss },
     ],
     scripts: [

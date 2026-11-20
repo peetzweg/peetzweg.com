@@ -276,6 +276,8 @@
 .tl-years {
   position: relative;
   padding-left: var(--tl-indent);
+  /* Timeline.tsx keeps the place itself as pages load (useKeepPlace). */
+  overflow-anchor: none;
 }
 
 .tl-years::before {
@@ -561,6 +563,31 @@
   list-style: none;
 }
 
+/* A page of entries still loading holds about their height (see Timeline.tsx). */
+.tl-pending {
+  display: grid;
+  place-items: start;
+  padding-block: 1.125rem;
+}
+
+.tl-retry {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--tl-muted);
+  font: inherit;
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+  text-decoration: underline;
+  text-decoration-color: var(--tl-faint);
+  text-underline-offset: 0.22em;
+  cursor: pointer;
+}
+
+.tl-retry:hover {
+  color: var(--tl-fg);
+}
+
 /* Entries */
 
 .tl-entry {
@@ -572,7 +599,8 @@
 }
 
 /* An entry linked as `/#slug` gets a short highlight on its dot. */
-.tl-entry:target::before {
+.tl-entry:target::before,
+.tl-entry[data-target]::before {
   background: var(--tl-fg);
   box-shadow: 0 0 0 4px var(--tl-chip-hover);
 }

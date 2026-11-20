@@ -4,21 +4,23 @@ import { useRef } from 'react';
 import { EntryFooter } from '../../components/timeline/EntryFooter';
 import { EntryMeta } from '../../components/timeline/Timeline';
 import { getPost, getPostMeta } from '../../content/posts';
-import { timeline } from '../../content/timeline';
+import { getEntry } from '../../content/timeline/api';
 import { Island } from '../../islands/Island';
 import { useJustify } from '../../justify/useJustify';
 import { SITE, seo } from '../../seo';
 
 export const Route = createFileRoute('/posts/$slug')({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const post = getPostMeta(params.slug);
 
     if (!post) {
       throw notFound();
     }
 
-    return post;
+    const { entry, newer, older } = await getEntry({ data: { id: `post-${params.slug}` } });
+    return { ...post, entry, newer, older };
   },
+  staleTime: Infinity,
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {};
@@ -45,13 +47,12 @@ export const Route = createFileRoute('/posts/$slug')({
 const components = { Island };
 
 function PostPage() {
-  const postMeta = Route.useLoaderData();
+  const { entry, newer, older, ...postMeta } = Route.useLoaderData();
   const post = getPost(postMeta.slug);
-  const entry = timeline.find((item) => item.id === `post-${postMeta.slug}`);
   const main = useRef<HTMLElement>(null);
   useJustify(main, '.tl-prose p, .tl-prose li');
 
-  if (!post || !entry) {
+  if (!post) {
     throw notFound();
   }
 
@@ -75,7 +76,7 @@ function PostPage() {
         </div>
       </article>
 
-      <EntryFooter entry={entry} />
+      <EntryFooter newer={newer} older={older} title={postMeta.title} />
     </main>
   );
 }

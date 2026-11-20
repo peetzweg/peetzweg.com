@@ -1,11 +1,13 @@
-import { Link } from '@tanstack/react-router';
+import { Link, useLocation, useNavigate } from '@tanstack/react-router';
+import { useServerFn } from '@tanstack/react-start';
 import { EmbeddedTweet } from 'react-tweet';
-import { createContext, useContext, useEffect, useRef, useState } from 'react';
+import { createContext, useContext, useEffect, useReducer, useRef, useState } from 'react';
 import { useInView, useReducedMotion } from '../../hooks';
 import { Island } from '../../islands/Island';
-import { entryPages, entryPath, type Image, type Media, type TimelineEntry, type TimelineYear } from '../../content/timeline';
+import { findTimelineEntry, getTimelinePages, type TimelineQuery } from '../../content/timeline/api';
+import type { Image, Media, TimelineIndex, TimelineItem } from '../../content/timeline/types';
 
-const LABELS: Record<TimelineEntry['type'], string> = {
+const LABELS: Record<TimelineItem['type'], string> = {
   post: 'Writing',
   project: 'Project',
   work: 'Client work',
@@ -20,19 +22,42 @@ const LABELS: Record<TimelineEntry['type'], string> = {
   tweet: 'Post on X',
 };
 
-export function Timeline({ years }: { years: TimelineYear[] }) {
-  const current = useCurrentYear(years);
+/**
+ * Every year of the timeline, its entries loaded a page at a time. Pages not here yet hold
+ * about their height, so the scrollbar, the year links and `/#<entry>` reach all of it, and
+ * load when they come within two screens.
+ */
+export function Timeline({ index, query }: { index: TimelineIndex; query: TimelineQuery }) {
+  const root = useRef<HTMLDivElement>(null);
+  const hold = useKeepPlace(root);
+  const pages = usePages(index, query, hold);
+  const current = useCurrentYear(index.years);
+  const pending = index.years.flatMap((year) => year.pages.filter((page) => !pages.get(page.key)).map((page) => page.key));
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (records) => {
+        const keys = records.filter((record) => record.isIntersecting).map((record) => (record.target as HTMLElement).dataset.page!);
+        if (keys.length) pages.load(keys);
+      },
+      { rootMargin: '200% 0px' },
+    );
+    root.current?.querySelectorAll('.tl-pending:not([data-failed])').forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, [pending.join(), pages.failed]);
+
+  useHashTarget(query, pages, hold);
 
   return (
     <>
-      <div className="tl-years">
-        {years.map(({ year, entries }) => (
+      <div className="tl-years" ref={root}>
+        {index.years.map(({ pages: yearPages, year }) => (
           <section aria-labelledby={`year-${year}`} className="tl-year" id={year} key={year}>
             <div className="tl-year-head">
               <h2 className="tl-year-label" id={`year-${year}`}>
                 {year}
               </h2>
-              {years.length > 1 ? (
+              {index.years.length > 1 ? (
                 <button className="tl-jump-button" popoverTarget="tl-jump" type="button">
                   Go to year
                   <Chevron />
@@ -40,57 +65,227 @@ export function Timeline({ years }: { years: TimelineYear[] }) {
               ) : null}
             </div>
             <ol className="tl-entries">
-              {entries.map((entry) => (
-                <li className="tl-entry" data-type={entry.type} id={anchorOf(entry)} key={entry.id}>
-                  <EntryMeta entry={entry} />
-                  <div className="tl-body">
-                    <EntryBody entry={entry} />
-                  </div>
-                </li>
-              ))}
+              {yearPages.map((page) => {
+                const entries = pages.get(page.key);
+                if (!entries) {
+                  const failed = pages.failed.has(page.key);
+                  return (
+                    <li
+                      aria-hidden={failed ? undefined : 'true'}
+                      className="tl-pending"
+                      data-failed={failed || undefined}
+                      data-page={page.key}
+                      key={page.key}
+                      style={{ height: `${page.height}rem` }}
+                    >
+                      {failed ? (
+                        <button className="tl-retry" onClick={() => pages.retry(page.key)} type="button">
+                          {page.count === 1 ? 'An entry' : `${page.count} entries`} didn’t load. Try again
+                        </button>
+                      ) : null}
+                    </li>
+                  );
+                }
+                return entries.map((entry) => (
+                  <li className="tl-entry" data-page={page.key} data-type={entry.type} id={entry.anchor} key={entry.id}>
+                    <EntryMeta entry={entry} />
+                    <div className="tl-body">
+                      <EntryBody entry={entry} />
+                    </div>
+                  </li>
+                ));
+              })}
             </ol>
           </section>
         ))}
       </div>
-      {years.length > 1 ? <YearNav current={current} years={years} /> : null}
+      {index.years.length > 1 ? <YearNav current={current} hold={hold} pages={pages} years={index.years} /> : null}
     </>
   );
 }
 
-/** Where `/#<anchor>` lands on the homepage: the entry's slug, or its id if it has a page elsewhere. */
-function anchorOf(entry: TimelineEntry) {
-  const path = entryPath(entry);
-  return entryPages.has(path.slice(1)) ? path.slice(1) : entry.id;
+/** Pages already loaded, kept across filters, so switching one off and on again is instant. */
+const loaded = new Map<string, ReadonlyArray<TimelineItem>>();
+
+type Pages = ReturnType<typeof usePages>;
+
+/** The timeline's pages: the ones the homepage came with and those loaded since. */
+function usePages(index: TimelineIndex, query: TimelineQuery, hold: (renew?: boolean) => void) {
+  const prefix = `${query.filter ?? ''}|${query.order ?? ''}|`;
+  for (const [key, entries] of Object.entries(index.pages)) {
+    loaded.set(prefix + key, entries);
+  }
+  const fetchPages = useServerFn(getTimelinePages);
+  const [, rerender] = useReducer((count: number) => count + 1, 0);
+  const [failed, setFailed] = useState<ReadonlySet<string>>(new Set());
+  const loading = useRef(new Set<string>());
+
+  async function load(keys: string[]) {
+    const todo = keys.filter((key) => !loaded.has(prefix + key) && !loading.current.has(prefix + key));
+    if (!todo.length) return;
+    todo.forEach((key) => loading.current.add(prefix + key));
+    try {
+      const result = await fetchPages({ data: { ...query, keys: todo } });
+      for (const [key, entries] of Object.entries(result)) {
+        loaded.set(prefix + key, entries);
+      }
+      hold();
+      rerender();
+    } catch {
+      setFailed((current) => new Set([...current, ...todo]));
+    } finally {
+      todo.forEach((key) => loading.current.delete(prefix + key));
+    }
+  }
+
+  function retry(key: string) {
+    setFailed((current) => new Set([...current].filter((other) => other !== key)));
+    load([key]);
+  }
+
+  return { failed, get: (key: string) => loaded.get(prefix + key), load, retry };
+}
+
+/**
+ * Keeps what's on screen where it is while the timeline changes size above it: pages filling
+ * in, and then their pictures. Browsers' own scroll anchoring would do this, but Safari has none
+ * and Chrome's picks the sticky year heading, so it's off for the timeline (CSS) and done here,
+ * from a load or jump until you scroll yourself.
+ */
+function useKeepPlace(root: React.RefObject<HTMLElement | null>) {
+  const held = useRef<ReturnType<typeof topOfScreen>>(null);
+
+  useEffect(() => {
+    const element = root.current;
+    if (!element) return;
+    const resized = new ResizeObserver(() => {
+      const kept = held.current;
+      const anchor = kept?.find();
+      if (!kept || !anchor) return;
+      const moved = anchor.getBoundingClientRect().top - kept.top;
+      if (Math.abs(moved) > 1) window.scrollBy({ behavior: 'instant', top: moved });
+    });
+    const release = () => {
+      held.current = null;
+    };
+    const input = ['wheel', 'touchstart', 'keydown', 'mousedown'] as const;
+    resized.observe(element);
+    input.forEach((type) => window.addEventListener(type, release, { passive: true }));
+    return () => {
+      resized.disconnect();
+      input.forEach((type) => window.removeEventListener(type, release));
+    };
+  }, [root]);
+
+  /** Holds what's on screen now; a newer jump takes over, but a load keeps what's held already. */
+  return (renew = false) => {
+    if (renew || !held.current?.find()) held.current = topOfScreen();
+  };
+}
+
+/**
+ * What to hold in place while pages above it fill in: the year or entry jumped to if it's on
+ * screen, or else the first year, entry or loading page that starts on screen. A page that's
+ * loading gives way to its entries; then the first of them takes its place.
+ */
+function topOfScreen() {
+  const target = document.querySelector<HTMLElement>('[data-target], .tl-year:target, .tl-entry:target');
+  const candidates = [target, ...Array.from(document.querySelectorAll<HTMLElement>('.tl-year, .tl-entry, .tl-pending'))];
+  for (const element of candidates) {
+    const top = element?.getBoundingClientRect().top ?? -1;
+    if (element && top > -2 && top < window.innerHeight) {
+      const page = element.dataset.page;
+      return { find: () => (element.isConnected ? element : document.querySelector(`[data-page="${page}"]`)), top };
+    }
+  }
+  return null;
+}
+
+/** `/#<entry>` for an entry whose page isn't loaded yet: find its page, load it, then go there. */
+function useHashTarget(query: TimelineQuery, pages: Pages, hold: (renew?: boolean) => void) {
+  const hash = useLocation({ select: (location) => location.hash });
+  const find = useServerFn(findTimelineEntry);
+
+  useEffect(() => {
+    if (!hash || document.getElementById(hash)) return;
+    let cancelled = false;
+    find({ data: { ...query, anchor: hash } })
+      .then(async (key) => {
+        if (!key || cancelled) return;
+        await pages.load([key]);
+        for (let frame = 0; frame < 30 && !cancelled; frame++) {
+          if (goTo(hash)) return hold(true);
+          await new Promise(requestAnimationFrame);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [hash, query.filter, query.order]);
+}
+
+/** Marks the year or entry with this id as the one gone to and puts it at the top, at once. */
+function goTo(id: string) {
+  const target = document.getElementById(id);
+  if (!target) return false;
+  document.querySelectorAll('[data-target]').forEach((element) => element.removeAttribute('data-target'));
+  target.dataset.target = '';
+  target.scrollIntoView({ behavior: 'instant', block: 'start' });
+  return true;
 }
 
 /**
  * Years to jump to. On wide screens a list beside the timeline that marks the year in
- * view; on narrow ones a sheet opened from the sticky year header.
+ * view; on narrow ones a sheet opened from the sticky year header. Pointing at a year
+ * starts loading it; choosing one waits for it and jumps there, without the smooth scroll,
+ * which would only pass through pages still loading.
  */
-function YearNav({ current, years }: { current?: string; years: TimelineYear[] }) {
+function YearNav({ current, hold, pages, years }: { current?: string; hold: (renew?: boolean) => void; pages: Pages; years: TimelineIndex['years'] }) {
   const sheet = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+  const prefetch = (year: TimelineIndex['years'][number]) => () => pages.load(year.pages.slice(0, 1).map((page) => page.key));
+
+  function jump(year: TimelineIndex['years'][number]) {
+    return async (event: React.MouseEvent) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      sheet.current?.hidePopover();
+      await pages.load(year.pages.slice(0, 1).map((page) => page.key));
+      await navigate({ to: '.', search: (search) => search, hash: year.year, hashScrollIntoView: false, resetScroll: false });
+      requestAnimationFrame(() => goTo(year.year) && hold(true));
+    };
+  }
 
   return (
     <>
       <nav aria-label="Years" className="tl-yearnav">
-        {years.map(({ year }) => (
-          <a aria-current={year === current ? 'true' : undefined} href={`#${year}`} key={year}>
-            {year}
+        {years.map((year) => (
+          <a
+            aria-current={year.year === current ? 'true' : undefined}
+            href={`#${year.year}`}
+            key={year.year}
+            onClick={jump(year)}
+            onFocus={prefetch(year)}
+            onPointerEnter={prefetch(year)}
+          >
+            {year.year}
           </a>
         ))}
       </nav>
       <div aria-label="Go to year" className="tl-jump" id="tl-jump" popover="auto" ref={sheet} role="dialog">
         <p className="tl-jump-title">Go to year</p>
         <nav aria-label="Years" className="tl-jump-years">
-          {years.map(({ entries, year }) => (
+          {years.map((year) => (
             <a
-              aria-current={year === current ? 'true' : undefined}
-              href={`#${year}`}
-              key={year}
-              onClick={() => sheet.current?.hidePopover()}
+              aria-current={year.year === current ? 'true' : undefined}
+              href={`#${year.year}`}
+              key={year.year}
+              onClick={jump(year)}
+              onPointerDown={prefetch(year)}
             >
-              {year}
-              <span className="tl-jump-count">{entries.length}</span>
+              {year.year}
+              <span className="tl-jump-count">{year.count}</span>
             </a>
           ))}
         </nav>
@@ -100,7 +295,7 @@ function YearNav({ current, years }: { current?: string; years: TimelineYear[] }
 }
 
 /** The year whose section crosses a line a quarter down the viewport. */
-function useCurrentYear(years: TimelineYear[]) {
+function useCurrentYear(years: TimelineIndex['years']) {
   const [current, setCurrent] = useState<string>();
   const keys = years.map(({ year }) => year).join();
 
@@ -132,7 +327,7 @@ function Heading({ children }: { children: React.ReactNode }) {
   return <Tag className="tl-title">{children}</Tag>;
 }
 
-export function EntryMeta({ entry, withYear }: { entry: TimelineEntry; withYear?: boolean }) {
+export function EntryMeta({ entry, withYear }: { entry: TimelineItem; withYear?: boolean }) {
   return (
     <p className="tl-meta">
       <EntryLink className="tl-date" entry={entry}>
@@ -147,7 +342,7 @@ export function EntryMeta({ entry, withYear }: { entry: TimelineEntry; withYear?
 }
 
 /** A link to the entry's own page, like a tweet's timestamp. */
-function EntryLink({ children, className, entry }: { children: React.ReactNode; className?: string; entry: TimelineEntry }) {
+function EntryLink({ children, className, entry }: { children: React.ReactNode; className?: string; entry: TimelineItem }) {
   switch (entry.type) {
     case 'post':
       return (
@@ -164,14 +359,14 @@ function EntryLink({ children, className, entry }: { children: React.ReactNode; 
       );
     default:
       return (
-        <Link className={className} params={{ slug: entryPath(entry).slice(1) }} to="/$slug">
+        <Link className={className} params={{ slug: entry.path.slice(1) }} to="/$slug">
           {children}
         </Link>
       );
   }
 }
 
-export function EntryBody({ entry }: { entry: TimelineEntry }) {
+export function EntryBody({ entry }: { entry: TimelineItem }) {
   switch (entry.type) {
     case 'post':
       return (

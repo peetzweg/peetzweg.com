@@ -96,3 +96,36 @@ export type TimelineEntry = EntryBase &
   );
 
 export type EntryType = TimelineEntry['type'];
+
+/*
+ * What the browser gets. The entries stay on the server (see api.ts) and come over a page at a
+ * time, with where each one lives on the site worked out already.
+ */
+
+/** An entry as the timeline draws it. */
+export type TimelineItem = TimelineEntry & {
+  /** Its own page, like `/papr` or `/posts/hello`. */
+  path: string;
+  /** Its id on the homepage, for `/#<anchor>`. */
+  anchor: string;
+};
+
+/** Up to a page of one year's entries, loaded when it scrolls near. */
+export type TimelinePageRef = {
+  key: string;
+  count: number;
+  /** Roughly how tall its entries are, in rem, so the space is held until they load. */
+  height: number;
+};
+
+/** Everything about a (filtered, ordered) timeline except most of its entries. */
+export type TimelineIndex = {
+  filters: ReadonlyArray<{ id: string; label: string; count: number }>;
+  total: number;
+  years: ReadonlyArray<{ year: string; count: number; pages: ReadonlyArray<TimelinePageRef> }>;
+  /** The pages loaded right away: the first screen or two. */
+  pages: Record<string, ReadonlyArray<TimelineItem>>;
+};
+
+/** An entry just before or after another, linked below an entry's page. */
+export type Neighbour = { path: string; title: string };

@@ -1,15 +1,8 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
 import { useRef } from 'react';
 import { Timeline } from '../components/timeline/Timeline';
-import {
-  availableFilters,
-  filterTimeline,
-  groupByYear,
-  parseFilters,
-  serializeFilters,
-  type FilterId,
-  type Order,
-} from '../content/timeline';
+import { getTimeline } from '../content/timeline/api';
+import { parseFilters, serializeFilters, type FilterId, type Order } from '../content/timeline/filters';
 import { TIMELINE_TEXT, useJustify } from '../justify/useJustify';
 import { SITE, seo } from '../seo';
 
@@ -20,6 +13,9 @@ export const Route = createFileRoute('/')({
     const filter = serializeFilters(parseFilters(search.filter));
     return { ...(filter ? { filter } : {}), ...(search.order === 'oldest' ? { order: 'oldest' } : {}) };
   },
+  loaderDeps: ({ search }) => search,
+  loader: ({ deps }) => getTimeline({ data: deps }),
+  staleTime: Infinity,
   head: () => seo({ title: SITE.title, description: SITE.description, path: '/', video: SITE.video, type: 'profile' }),
   component: Home,
 });
@@ -38,8 +34,7 @@ function Home() {
   const navigate = useNavigate({ from: '/' });
   const filters = parseFilters(search.filter);
   const order: Order = search.order ?? 'newest';
-  const entries = filterTimeline(filters, order);
-  const years = groupByYear(entries);
+  const index = Route.useLoaderData();
   const main = useRef<HTMLElement>(null);
   useJustify(main, TIMELINE_TEXT);
 
@@ -59,8 +54,8 @@ function Home() {
     update({ filters: filters.includes(id) ? filters.filter((f) => f !== id) : [...filters, id] });
   }
 
-  const first = years.at(0)?.year;
-  const last = years.at(-1)?.year;
+  const first = index.years.at(0)?.year;
+  const last = index.years.at(-1)?.year;
 
   return (
     <main className="tl" ref={main}>
@@ -81,12 +76,12 @@ function Home() {
 
       <div className="tl-controls">
         <div aria-label="Show only" className="tl-filters" role="group">
-          {availableFilters.map(({ count, id, label }) => (
+          {index.filters.map(({ count, id, label }) => (
             <button
-              aria-pressed={filters.includes(id)}
+              aria-pressed={filters.includes(id as FilterId)}
               className="tl-chip"
               key={id}
-              onClick={() => toggle(id)}
+              onClick={() => toggle(id as FilterId)}
               type="button"
             >
               <span className="tl-chip-label">{label}</span>
@@ -102,7 +97,7 @@ function Home() {
 
         <div className="tl-toolbar">
           <p aria-live="polite" className="tl-summary">
-            {entries.length} {entries.length === 1 ? 'entry' : 'entries'}
+            {index.total} {index.total === 1 ? 'entry' : 'entries'}
             {first && last && first !== last ? ` · ${order === 'oldest' ? `${first}–${last}` : `${last}–${first}`}` : ''}
             {filters.length ? (
               <button className="tl-clear" onClick={() => update({ filters: [] })} type="button">
@@ -125,7 +120,7 @@ function Home() {
         </div>
       </div>
 
-      <Timeline years={years} />
+      <Timeline index={index} query={search} />
     </main>
   );
 }

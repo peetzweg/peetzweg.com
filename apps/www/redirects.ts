@@ -1,8 +1,4 @@
-/**
- * Old short links that point elsewhere. Netlify reads public/_redirects; the Node server (Coolify)
- * gets these as Nitro route rules. Keep both in sync until Netlify is retired, then delete
- * public/_redirects.
- */
+/** Old short links that point elsewhere, served as permanent redirects (Nitro route rules). */
 export const REDIRECTS: Record<string, string> = {
   '/web3-vscode-extension': 'https://marketplace.visualstudio.com/items?itemName=peetzweg.crypto-address-lens',
   '/client-work': 'https://peetzweg.notion.site/peetzweg/504f7a0b831841f7b71c50bbe8b6f368',

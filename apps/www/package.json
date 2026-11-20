@@ -9,7 +9,7 @@
     "generate-routes": "tsr generate",
     "typecheck": "tsc --noEmit",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --port 4321",
+    "preview": "PORT=4321 node .output/server/index.mjs",
     "media:sizes": "node scripts/timeline-media-sizes.mjs",
     "tweets:pull": "node scripts/timeline-tweets.mjs"
   },
@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "@mdx-js/rollup": "^3.1.1",
-    "@netlify/vite-plugin-tanstack-start": "^1.3.17",
     "@tanstack/router-cli": "^1.167.21",
     "@types/p5": "^1.7.6",
     "@types/react": "19.2.17",

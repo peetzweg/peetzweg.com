@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { SITE } from '../seo';
 
 /**
- * Host-aware: the real site is indexable, every other host (Netlify and Coolify previews,
+ * Host-aware: the real site is indexable, every other host (Coolify previews,
  * the server's own address) asks crawlers to stay away, since they find preview hosts fast.
  */
 export const Route = createFileRoute('/robots.txt')({

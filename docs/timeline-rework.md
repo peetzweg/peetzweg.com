@@ -34,7 +34,7 @@ Every entry has a page: posts, experiments and collections their existing routes
 
 - [ ] Backfill every tweet with media. Request the archive on X (Settings → Your account → Download an archive of your data; it takes a day or so), then `pnpm tweets:pull --archive <zip>` (`--dry-run` to count first). It keeps your own tweets with a photo, video or GIF, leaves out retweets and replies to other people, and saves each to `content/timeline/tweets/<id>.json`; every saved tweet is on the timeline, under Writing, in X's layout (react-tweet). Delete a file to drop one. Single tweets: `pnpm tweets:pull <id or URL>`.
 - [ ] Tweets that repeat a project (the Notion Input video is both) can go either way; delete the tweet's file or the project's media.
-- [ ] Every tweet adds about 1.4 KB gzipped to the homepage, since the whole timeline ships with it. A few hundred tweets want the homepage to load tweets (or older years) on demand; see infinite scroll below.
+- [x] Tweets cost the homepage nothing up front: the timeline loads in pages as you scroll (below).
 - [ ] Text-only tweets later, behind an approval gate in Crosswind like the one for LinkedIn: a post goes to the site's webhook only once approved. `--text` already pulls them from an archive.
 - [ ] Tweet media still loads from pbs.twimg.com and video.twimg.com, so it breaks if a tweet is deleted. Download it next to the JSON if that matters.
 - [ ] All 7 videos from youtube.com/@peetzweg are listed (6 OpenDisplay demos and a gravel ride). Remove the ones that don't belong; new ones need a `youtube(...)` line and a `youtube-<id>.webp` thumbnail from `i.ytimg.com/vi/<id>/maxresdefault.jpg`.
@@ -72,12 +72,13 @@ Every entry has a page: posts, experiments and collections their existing routes
 
 ## Next steps
 
-- [ ] Load entries in pages as you scroll, rendering the first page on the server.
-- [ ] Filtered URLs (`/?filter=…`) are served the unfiltered prerendered page on Netlify and filter after hydration. Server rendering on Coolify fixes this.
+- [x] Load entries in pages as you scroll, rendering the first page on the server. Entries stay on the server (`content/timeline/api.ts`); the homepage gets the years, counts and first 24 entries, and pages of up to 24 (never spanning two years) load within two screens of the viewport. Unloaded pages hold an estimated height, so the scrollbar, year links and `/#entry` links reach everything; `useKeepPlace` holds what's on screen while pages and their pictures fill in above it.
+- [x] Filtered URLs (`/?filter=…`) are rendered filtered by the server.
 - [ ] SQLite (Drizzle) for entries that don't live in git.
 - [ ] `POST /api/ingest` server route: Standard Webhooks signature, dedupe on `source.platform + source.id`, download media to a volume.
 - [ ] Crosswind: webhook destination (`WebhookGateway`, `MirrorPostToWebhookJob`, routes `x→webhook` and `bluesky→webhook`, update `docs/mirroring-rules.md`).
 - [ ] Media entries: image grids, video, GIFs (muted loop), link cards, quotes.
 - [ ] iOS Shortcut that posts photos and links to the ingest API, so a photo can go from the phone's share sheet straight onto the timeline.
 - [ ] Mermaid in MDX posts, loaded only on posts that use it.
-- [ ] Move hosting to Coolify: the repo is ready (`Dockerfile`, `DEPLOY_TARGET=node`); the steps are in peetzweg/devops#13.
+- [ ] Move hosting to Coolify: the repo is ready (`Dockerfile`; Netlify support is gone, so merge after the switch); the steps are in peetzweg/devops#13. Preview locally with `pnpm build && pnpm preview`.
+- [ ] Three entry pages aren't prerendered (their neighbours are pages without the Older/Newer footer, so the crawler doesn't reach them); the server renders them on request.

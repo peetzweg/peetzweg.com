@@ -1,54 +1,37 @@
-import { Link, createFileRoute, notFound } from '@tanstack/react-router';
+import { Link, createFileRoute } from '@tanstack/react-router';
 import { useRef } from 'react';
 import { EntryFooter } from '../components/timeline/EntryFooter';
 import { EntryBody, EntryMeta, HeadingLevel } from '../components/timeline/Timeline';
-import {
-  entryImage,
-  entryPages,
-  entryPath,
-  entrySummary,
-  entryTitle,
-} from '../content/timeline';
+import { getEntry } from '../content/timeline/api';
 import { TIMELINE_TEXT, useJustify } from '../justify/useJustify';
 import { SITE, seo } from '../seo';
 
 /** One timeline entry on its own page, at a short dateless URL like `/papr`. */
 export const Route = createFileRoute('/$slug')({
-  loader: ({ params }) => {
-    if (!entryPages.has(params.slug)) {
-      throw notFound();
-    }
-  },
-  head: ({ params }) => {
-    const entry = entryPages.get(params.slug);
-    if (!entry) {
-      return {};
-    }
-    const image = entryImage(entry);
-    return seo({
-      title: `${entryTitle(entry)} · ${SITE.name}`,
-      description: entrySummary(entry),
-      path: entryPath(entry),
-      image: image ? { ...image, alt: image.alt || entryTitle(entry) } : undefined,
-      type: 'article',
-    });
-  },
+  loader: ({ params }) => getEntry({ data: { slug: params.slug } }),
+  staleTime: Infinity,
+  head: ({ loaderData }) =>
+    loaderData
+      ? seo({
+          title: `${loaderData.title} · ${SITE.name}`,
+          description: loaderData.summary,
+          path: loaderData.entry.path,
+          image: loaderData.image,
+          type: 'article',
+        })
+      : {},
   component: EntryPage,
 });
 
 function EntryPage() {
-  const { slug } = Route.useParams();
-  const entry = entryPages.get(slug);
+  const { entry, newer, older, title } = Route.useLoaderData();
   const main = useRef<HTMLElement>(null);
   useJustify(main, TIMELINE_TEXT);
-  if (!entry) {
-    return null;
-  }
 
   return (
     <main className="tl tl-page" ref={main}>
       <nav className="tl-back">
-        <Link hash={slug} to="/">
+        <Link hash={entry.anchor} to="/">
           <span aria-hidden="true">←</span> {SITE.name}
         </Link>
       </nav>
@@ -62,7 +45,7 @@ function EntryPage() {
         </div>
       </article>
 
-      <EntryFooter entry={entry} />
+      <EntryFooter newer={newer} older={older} title={title} />
     </main>
   );
 }

@@ -1,9 +1,11 @@
 import { posts } from '../posts';
 import { entries } from './entries';
 import type { Tweet } from 'react-tweet/api';
-import type { EntryType, Image, Media, TimelineEntry } from './types';
+import { FILTERS, typesOf, type FilterId, type Order } from './filters';
+import type { Image, Media, TimelineEntry } from './types';
 
 export type { Image, Media, TimelineEntry, EntryType } from './types';
+export * from './filters';
 
 const postEntries: TimelineEntry[] = posts.map((post) => {
   const [day, month, year] = post.date.split('.');
@@ -23,46 +25,12 @@ export const timeline: TimelineEntry[] = [...entries, ...postEntries].sort((a, b
   b.date.localeCompare(a.date),
 );
 
-/** Filters above the timeline, each covering one or more entry types. */
-export const FILTERS = [
-  { id: 'writing', label: 'Writing', types: ['post', 'note', 'tweet'] },
-  { id: 'projects', label: 'Projects', types: ['project'] },
-  { id: 'work', label: 'Client work', types: ['work'] },
-  { id: 'made', label: 'Made', types: ['photo'] },
-  { id: 'experiments', label: 'Experiments', types: ['experiment'] },
-  { id: 'sport', label: 'Sport', types: ['activity'] },
-  { id: 'videos', label: 'Videos', types: ['video'] },
-  { id: 'books', label: 'Books', types: ['book'] },
-  { id: 'links', label: 'Links', types: ['link', 'collection'] },
-] as const satisfies ReadonlyArray<{ id: string; label: string; types: ReadonlyArray<EntryType> }>;
-
-export type FilterId = (typeof FILTERS)[number]['id'];
-
-function typesOf(id: FilterId): ReadonlyArray<EntryType> {
-  return FILTERS.find((filter) => filter.id === id)?.types ?? [];
-}
-
 /** Filters that match at least one entry, with how many they match. Empty ones are not shown. */
 export const availableFilters = FILTERS.map((filter) => ({
   id: filter.id as FilterId,
   label: filter.label,
   count: timeline.filter((entry) => typesOf(filter.id).includes(entry.type)).length,
 })).filter(({ count }) => count > 0);
-
-/**
- * Selected filters live in the URL as `?filter=projects,work`. Unknown ids are dropped
- * and the rest are put in FILTERS order, so each selection has one URL.
- */
-export function parseFilters(value: unknown): FilterId[] {
-  const ids = typeof value === 'string' ? value.split(',') : Array.isArray(value) ? value : [];
-  return availableFilters.map(({ id }) => id).filter((id) => ids.includes(id));
-}
-
-export function serializeFilters(filters: ReadonlyArray<FilterId>): string | undefined {
-  return filters.length ? parseFilters(filters.join(',')).join(',') : undefined;
-}
-
-export type Order = 'newest' | 'oldest';
 
 /** Entries of any of the selected filters, or all of them when none is selected. */
 export function filterTimeline(filters: ReadonlyArray<FilterId>, order: Order = 'newest'): TimelineEntry[] {
@@ -160,6 +128,12 @@ for (const entry of timeline) {
     throw new Error(`Timeline slug "${slug}" (${entry.id}) is already taken; rename the entry.`);
   }
   entryPages.set(slug, entry);
+}
+
+/** Where `/#<anchor>` lands on the homepage: the entry's slug, or its id if it has a page elsewhere. */
+export function entryAnchor(entry: TimelineEntry): string {
+  const slug = entryPath(entry).slice(1);
+  return entryPages.has(slug) ? slug : entry.id;
 }
 
 /** The heading an entry is known by. */

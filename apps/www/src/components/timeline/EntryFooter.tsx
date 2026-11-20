@@ -1,28 +1,24 @@
 import { useState } from 'react';
-import { entryPath, entryTitle, neighbours, type TimelineEntry } from '../../content/timeline';
+import type { Neighbour } from '../../content/timeline/types';
 
 /** Below an entry's own page: Share, and the entries just before and after it. */
-export function EntryFooter({ entry }: { entry: TimelineEntry }) {
-  const { newer, older } = neighbours(entry);
-
+export function EntryFooter({ newer, older, title }: { newer?: Neighbour; older?: Neighbour; title: string }) {
   return (
     <>
-      <ShareButton title={entryTitle(entry)} />
+      <ShareButton title={title} />
       <nav aria-label="More from the timeline" className="tl-pager">
-        {older ? <Neighbour direction="Older" entry={older} /> : <span />}
-        {newer ? <Neighbour direction="Newer" entry={newer} /> : null}
+        {older ? <NeighbourLink direction="Older" entry={older} /> : <span />}
+        {newer ? <NeighbourLink direction="Newer" entry={newer} /> : null}
       </nav>
     </>
   );
 }
 
-function Neighbour({ direction, entry }: { direction: 'Older' | 'Newer'; entry: TimelineEntry }) {
-  const path = entryPath(entry);
-
+function NeighbourLink({ direction, entry }: { direction: 'Older' | 'Newer'; entry: Neighbour }) {
   return (
-    <a className="tl-neighbour" data-direction={direction.toLowerCase()} href={path}>
+    <a className="tl-neighbour" data-direction={direction.toLowerCase()} href={entry.path}>
       <span className="tl-neighbour-label">{direction}</span>
-      <span className="tl-neighbour-title">{entryTitle(entry)}</span>
+      <span className="tl-neighbour-title">{entry.title}</span>
     </a>
   );
 }

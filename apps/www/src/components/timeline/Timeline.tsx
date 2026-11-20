@@ -182,13 +182,14 @@ export function EntryBody({ entry }: { entry: TimelineEntry }) {
       );
     case 'project': {
       const repo = entry.repo && entry.repo !== entry.href ? entry.repo : undefined;
+      // With a picture of it, the address goes below the picture, as its source.
+      const url = entry.href && !isFigure(entry.media) ? entry.href : undefined;
       return (
-        <LinkedCard href={entry.href} media={entry.media} title={entry.title}>
+        <LinkedCard href={entry.href} media={entry.media} source={entry.href} title={entry.title}>
           <p className="tl-text">{entry.description}</p>
-          {entry.href || entry.language || entry.stars ? (
+          {url || entry.stars || repo ? (
             <p className="tl-facts">
-              {entry.href ? <UrlLink github={entry.href === entry.repo} href={entry.href} /> : null}
-              {entry.language ? <span>{entry.language}</span> : null}
+              {url ? <UrlLink github={url === entry.repo} href={url} /> : null}
               {entry.stars ? (
                 <span className="tl-stars">
                   <StarIcon />
@@ -209,7 +210,7 @@ export function EntryBody({ entry }: { entry: TimelineEntry }) {
     }
     case 'work':
       return (
-        <LinkedCard href={entry.href} media={entry.media} title={entry.client}>
+        <LinkedCard href={entry.href} media={entry.media} source={entry.href} title={entry.client}>
           <p className="tl-role">{entry.role}</p>
           <p className="tl-text">{entry.description}</p>
           <p className="tl-facts tl-stack">
@@ -217,7 +218,7 @@ export function EntryBody({ entry }: { entry: TimelineEntry }) {
               <span key={tool}>{tool}</span>
             ))}
           </p>
-          {entry.href ? (
+          {entry.href && !isFigure(entry.media) ? (
             <p className="tl-facts">
               <UrlLink href={entry.href} />
             </p>
@@ -271,12 +272,15 @@ export function EntryBody({ entry }: { entry: TimelineEntry }) {
       );
     case 'note':
       return <p className="tl-note">{entry.text}</p>;
-    case 'activity':
+    case 'activity': {
+      const href = `https://www.strava.com/activities/${entry.stravaId}`;
       return (
-        <OutLink className="tl-card" href={`https://www.strava.com/activities/${entry.stravaId}`}>
+        <div className="tl-card tl-card-linked" onClick={followCardLink}>
           <Heading>
-            {entry.title}
-            <Arrow />
+            <a className="tl-card-link" href={href} rel="noreferrer" target="_blank">
+              {entry.title}
+              <Arrow />
+            </a>
           </Heading>
           {entry.stats ? (
             <dl className="tl-stats">
@@ -302,8 +306,10 @@ export function EntryBody({ entry }: { entry: TimelineEntry }) {
               ))}
             </span>
           ) : null}
-        </OutLink>
+          <Source href={href} />
+        </div>
       );
+    }
     case 'video':
       return <YouTube duration={entry.duration} thumbnail={entry.thumbnail} title={entry.title} youtubeId={entry.youtubeId} />;
     case 'tweet':
@@ -333,11 +339,14 @@ function LinkedCard({
   children,
   href,
   media,
+  source,
   title,
 }: {
   children: React.ReactNode;
   href?: string;
   media?: Media;
+  /** Where the media comes from, shown below it. */
+  source?: string;
   title: string;
 }) {
   return (
@@ -356,7 +365,25 @@ function LinkedCard({
         {children}
       </WithThumb>
       <EntryMedia media={media} />
+      {source && isFigure(media) ? <Source href={source} /> : null}
     </div>
+  );
+}
+
+/** Pictures and clips below the text, which get a source line; snippets and thumbnails don't. */
+function isFigure(media?: Media) {
+  return media?.kind === 'image' || media?.kind === 'gallery' || media?.kind === 'row' || media?.kind === 'video';
+}
+
+/** A figure's source line, as in a paper: the page the picture or video above comes from. */
+function Source({ href }: { href: string }) {
+  return (
+    <p className="tl-source">
+      <span className="tl-source-label">Source</span>
+      <a href={href} rel="noreferrer" target="_blank" title={href}>
+        <span className="tl-url-text">{displayUrl(href)}</span>
+      </a>
+    </p>
   );
 }
 
@@ -599,6 +626,7 @@ function YouTube({
           </button>
         )}
       </div>
+      <Source href={`https://www.youtube.com/watch?v=${youtubeId}`} />
     </div>
   );
 }

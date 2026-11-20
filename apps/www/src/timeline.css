@@ -869,8 +869,9 @@ a.tl-url:focus-visible {
   white-space: nowrap;
 }
 
-/* Photos: greyscale, colour on hover. On touch screens there is no hover, so the
-   image turns colour while it passes through the middle of the viewport. */
+/* Pictures are greyscale and turn colour while they pass through the middle of the screen, on
+   every device; hovering does nothing, so galleries can use hover for their controls. Without
+   scroll-driven animations they simply stay in colour. */
 
 .tl-figure {
   margin: 0;
@@ -886,46 +887,31 @@ a.tl-url:focus-visible {
   outline: 1px solid var(--tl-outline);
   outline-offset: -1px;
   background: var(--tl-hover);
-  filter: grayscale(1);
-  transition: filter 500ms ease;
 }
 
 .tl-figure figcaption {
   margin-top: 0.625rem;
 }
 
-@media (hover: hover) {
-  .tl-figure:hover .tl-image,
-  .tl-card:hover .tl-image {
-    filter: grayscale(0);
-  }
-}
-
-@media (hover: none) {
+@supports (animation-timeline: view()) {
   .tl-image {
-    filter: none;
-  }
-
-  @supports (animation-timeline: view()) {
-    .tl-image {
-      animation: tl-colorize linear both;
-      animation-timeline: view();
-    }
+    animation: tl-colorize linear both;
+    animation-timeline: view();
   }
 }
 
 @keyframes tl-colorize {
   0%,
-  25% {
+  20% {
     filter: grayscale(1);
   }
 
-  40%,
-  60% {
+  35%,
+  65% {
     filter: grayscale(0);
   }
 
-  75%,
+  80%,
   100% {
     filter: grayscale(1);
   }
@@ -1039,45 +1025,121 @@ a.tl-url:focus-visible {
   max-height: none;
 }
 
-/* Galleries: pictures stacked in one frame, crossfading. Both pictures share one
-   curve, since they move as a pair. */
+/* Galleries: a strip of pictures at one height, as many as fit, that slides on by one picture at a
+   time. It scrolls sideways natively, so swiping and trackpads just work, and snaps to pictures. */
 
 .tl-gallery {
   --tl-gallery-interval: 4000ms;
+  --tl-gallery-height: clamp(11rem, 48vw, 17rem);
 }
 
-.tl-gallery-frame {
-  display: grid;
-  /* One cell sized by the frame, not by the pictures, so tall ones fit inside. */
-  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
-  max-height: 22rem;
+.tl-gallery-viewport {
+  position: relative;
+}
+
+.tl-gallery-track {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
   border-radius: 0.5rem;
-  background: var(--tl-hover);
-  overflow: hidden;
 }
 
-.tl-gallery-frame .tl-gallery-image {
-  grid-area: 1 / 1;
-  width: 100%;
-  height: 100%;
+.tl-gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tl-gallery-track:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+}
+
+.tl-gallery-track .tl-image {
+  flex: none;
+  width: auto;
+  max-width: none;
+  height: var(--tl-gallery-height);
   max-height: none;
-  object-fit: contain;
-  border-radius: 0;
-  outline: none;
-  background: none;
+  scroll-snap-align: start;
+}
+
+/* Step buttons: only with a mouse, and only while hovering the strip (or tabbing to them). The
+   doubled class beats `.tl-card-linked button`, which would put them back in the flow. */
+.tl-gallery-step.tl-gallery-step {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-top: -1.125rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-panel) 88%, transparent);
+  box-shadow:
+    0 0 0 1px var(--tl-outline),
+    0 0.25rem 0.75rem rgb(0 0 0 / 0.12);
+  color: var(--tl-fg);
+  cursor: pointer;
   opacity: 0;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transform: scale(0.9);
   transition:
-    opacity 700ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    filter 500ms ease;
+    opacity 150ms ease,
+    transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.tl-gallery-image[data-active='true'] {
+.tl-gallery-step[data-direction='previous'] {
+  left: 0.5rem;
+}
+
+.tl-gallery-step[data-direction='next'] {
+  right: 0.5rem;
+}
+
+.tl-gallery-step .tl-chevron {
+  transform: rotate(90deg);
+}
+
+.tl-gallery-step[data-direction='next'] .tl-chevron {
+  transform: rotate(-90deg);
+}
+
+.tl-gallery-step:focus-visible {
   opacity: 1;
+  pointer-events: auto;
+  transform: none;
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
 }
 
+.tl-gallery-step:active {
+  transform: scale(0.94);
+}
+
+@media (hover: hover) {
+  .tl-gallery-viewport:hover .tl-gallery-step {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .tl-gallery-viewport:hover .tl-gallery-step:active {
+    transform: scale(0.94);
+  }
+}
+
+/* The bars' row keeps its height before they're measured in, so nothing below jumps. */
 .tl-gallery-bars {
   display: flex;
   gap: 0.25rem;
+  min-height: 1.25rem;
 }
 
 .tl-gallery-bar {
@@ -1138,10 +1200,6 @@ a.tl-url:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tl-gallery-frame .tl-gallery-image {
-    transition: none;
-  }
-
   .tl-gallery-bar[data-state='active'] .tl-gallery-fill {
     animation: none;
     transform: scaleX(1);
@@ -1351,9 +1409,12 @@ a.tl-url:focus-visible {
   animation: none;
 }
 
-.tl-single .tl-media.tl-image,
-.tl-single .tl-gallery-frame {
+.tl-single .tl-media.tl-image {
   max-height: min(75svh, 36rem);
+}
+
+.tl-single .tl-gallery {
+  --tl-gallery-height: clamp(14rem, 60vw, 26rem);
 }
 
 .tl-share {
@@ -1646,4 +1707,66 @@ a.tl-url:focus-visible {
   --tweet-actions-font-size: 0.8125rem;
   min-width: 0;
   max-width: none;
+}
+
+/* Running text is justified. Until the line breaker runs (src/justify), and wherever it gives up,
+   the browser justifies and hyphenates on its own; once it has, the breaks are its own, so the
+   browser's hyphenation steps aside. */
+
+.tl-intro p,
+p.tl-text,
+.tl-note {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Specific enough to beat the selectors above. */
+.tl [data-justify='on'],
+.content-page [data-justify='on'] {
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
+/* Islands (src/islands): live pieces that load near the screen, over their still picture. */
+
+.tl-island {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.tl-island > * {
+  grid-area: 1 / 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.tl-island-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 400ms ease;
+}
+
+.tl-island-live {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.tl-island[data-ready='true'] .tl-island-live {
+  opacity: 1;
+}
+
+.tl-island[data-ready='true'] .tl-island-poster {
+  opacity: 0;
+}
+
+/* p5 sizes its canvas in pixels; the island decides the size. */
+.tl-island-canvas,
+.tl-island-canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }

@@ -1,4 +1,5 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
+import { useRef } from 'react';
 import { Timeline } from '../components/timeline/Timeline';
 import {
   availableFilters,
@@ -9,6 +10,7 @@ import {
   type FilterId,
   type Order,
 } from '../content/timeline';
+import { TIMELINE_TEXT, useJustify } from '../justify/useJustify';
 import { SITE, seo } from '../seo';
 
 type Search = { filter?: string; order?: 'oldest' };
@@ -38,6 +40,8 @@ function Home() {
   const order: Order = search.order ?? 'newest';
   const entries = filterTimeline(filters, order);
   const years = groupByYear(entries);
+  const main = useRef<HTMLElement>(null);
+  useJustify(main, TIMELINE_TEXT);
 
   function update(next: { filters?: FilterId[]; order?: Order }) {
     navigate({
@@ -59,7 +63,7 @@ function Home() {
   const last = years.at(-1)?.year;
 
   return (
-    <main className="tl">
+    <main className="tl" ref={main}>
       <header className="tl-intro">
         <h1>Philip Poloczek</h1>
         <p>

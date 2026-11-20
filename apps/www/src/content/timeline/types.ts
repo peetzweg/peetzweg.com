@@ -1,4 +1,5 @@
 import type { Tweet } from 'react-tweet/api';
+import type { IslandName } from '../../islands';
 import type { FileRouteTypes } from '../../routeTree.gen';
 
 /** A path inside this site, checked against the route tree. */
@@ -36,7 +37,9 @@ export type Media =
   | { kind: 'code'; code: string }
   | { kind: 'words'; words: ReadonlyArray<readonly [word: string, translation: string]> }
   /** ISO dates (`YYYY-MM-DD`) to punch into a week-by-day card. */
-  | { kind: 'punchcard'; days: ReadonlyArray<string> };
+  | { kind: 'punchcard'; days: ReadonlyArray<string> }
+  /** Something live (see src/islands), with a still picture until it loads. */
+  | { kind: 'live'; island: IslandName; poster?: Image };
 
 export type ActivityStats = {
   /** Kilometres */

@@ -161,7 +161,7 @@ const projects: TimelineEntry[] = [
 const readingDays = [...new Set(kindle.map((time) => new Date(time).toISOString().slice(0, 10)))].sort();
 
 const experiments: TimelineEntry[] = [
-  experiment('2023-11-09', 'Generative sketches', 'DIY Chromie Squiggle and Subscapes in p5.js.', '/p5', shot('p5', 'A Chromie Squiggle drawn with p5.js')),
+  experiment('2023-11-09', 'Generative sketches', 'DIY Chromie Squiggle and Subscapes in p5.js.', '/p5', { kind: 'live', island: 'squiggle', poster: mediaImage('p5', 'A Chromie Squiggle drawn with p5.js') }),
   experiment('2023-11-09', '3D models', '3D in the browser, starting with a tulip.', '/models', shot('models', 'A bunch of tulips rendered in 3D')),
   experiment('2024-01-26', 'Vocabulary', 'Words I looked up while reading, with translations and definitions.', '/vocabulary', {
     kind: 'words',

@@ -9,6 +9,8 @@
   --tl-hover: rgb(0 0 0 / 0.04);
   --tl-outline: rgb(0 0 0 / 0.08);
   --tl-line: rgb(0 0 0 / 0.1);
+  --tl-chip: rgb(0 0 0 / 0.045);
+  --tl-chip-hover: rgb(0 0 0 / 0.08);
   --tl-gutter: 7rem;
   --tl-gap: 1.5rem;
   /* Mobile: content sits this far right of the line. */
@@ -41,6 +43,8 @@
     --tl-hover: rgb(255 255 255 / 0.05);
     --tl-outline: rgb(255 255 255 / 0.1);
     --tl-line: rgb(255 255 255 / 0.12);
+    --tl-chip: rgb(255 255 255 / 0.07);
+    --tl-chip-hover: rgb(255 255 255 / 0.11);
   }
 }
 
@@ -84,55 +88,184 @@
   }
 }
 
-/* Filters: a row of pills that scrolls sideways on narrow screens. */
+/* Filters: chips that switch on and off. Any number can be on; with none on, everything
+   shows. Chips wrap, so every filter is visible at a glance. */
+
+.tl-controls {
+  margin-bottom: clamp(2rem, 8vw, 3.5rem);
+}
 
 .tl-filters {
   display: flex;
-  gap: 0.375rem;
-  margin: 0 -1.25rem clamp(2rem, 8vw, 3.5rem);
-  padding: 0.25rem 1.25rem;
-  overflow-x: auto;
-  scrollbar-width: none;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.tl-filters::-webkit-scrollbar {
-  display: none;
-}
-
-.tl-filter {
+.tl-chip {
+  position: relative;
   display: inline-flex;
-  flex: none;
   align-items: center;
-  min-height: 2.5rem;
-  padding: 0 0.9375rem;
+  gap: 0.4375rem;
+  min-height: 2.25rem;
+  padding: 0 0.875rem;
+  border: 0;
   border-radius: 999px;
-  box-shadow: inset 0 0 0 1px var(--tl-outline);
-  color: var(--tl-muted);
+  background: var(--tl-chip);
+  color: var(--tl-fg);
+  font: inherit;
   font-size: 0.875rem;
-  text-decoration: none;
-  white-space: nowrap;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  transition: color 150ms ease, background-color 150ms ease, transform 150ms ease-out;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.tl-filter[aria-current='page'] {
-  background-color: var(--tl-fg);
-  box-shadow: none;
+/* 44px tall hit area around the 36px chip, shared with the gap. */
+.tl-chip::before {
+  content: '';
+  position: absolute;
+  inset: -0.25rem -0.125rem;
+}
+
+.tl-chip-count {
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  transition: color 200ms ease;
+}
+
+/* The × grows in from nothing, so a chip widens smoothly as it switches on. */
+.tl-chip-x {
+  display: grid;
+  place-items: center;
+  width: 0;
+  margin-left: -0.4375rem;
+  opacity: 0;
+  filter: blur(2px);
+  transform: scale(0.4);
+  transition:
+    width 250ms cubic-bezier(0.23, 1, 0.32, 1),
+    margin 250ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 250ms cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 200ms ease,
+    filter 200ms ease;
+}
+
+.tl-chip[aria-pressed='true'] {
+  background: var(--tl-fg);
   color: var(--color-bg);
 }
 
-.tl-filter:active {
-  transform: scale(0.97);
+.tl-chip[aria-pressed='true'] .tl-chip-count {
+  color: color-mix(in srgb, var(--color-bg) 55%, transparent);
 }
 
-.tl-filter:focus-visible {
+.tl-chip[aria-pressed='true'] .tl-chip-x {
+  width: 10px;
+  margin-left: 0;
+  opacity: 0.75;
+  filter: none;
+  transform: none;
+}
+
+/* Once something is picked, the rest step back. */
+.tl-filters:has([aria-pressed='true']) .tl-chip:not([aria-pressed='true']) {
+  color: var(--tl-muted);
+}
+
+.tl-chip:active {
+  transform: scale(0.96);
+}
+
+.tl-chip:focus-visible {
   outline: 2px solid var(--tl-fg);
   outline-offset: 2px;
 }
 
 @media (hover: hover) {
-  .tl-filter:not([aria-current='page']):hover {
-    background-color: var(--tl-hover);
+  .tl-chip:not([aria-pressed='true']):hover {
+    background: var(--tl-chip-hover);
+    color: var(--tl-fg);
+  }
+}
+
+.tl-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.tl-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.875rem;
+  margin: 0;
+}
+
+.tl-clear,
+.tl-sort {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--tl-muted);
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 150ms ease;
+}
+
+.tl-clear::before,
+.tl-sort::before {
+  content: '';
+  position: absolute;
+  inset: -0.75rem -0.5rem;
+}
+
+.tl-clear {
+  text-decoration: underline;
+  text-decoration-color: var(--tl-line);
+  text-underline-offset: 0.25em;
+}
+
+.tl-sort {
+  flex: none;
+}
+
+.tl-sort svg {
+  transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tl-sort[data-order='oldest'] svg {
+  transform: rotate(180deg);
+}
+
+.tl-clear:focus-visible,
+.tl-sort:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+@media (hover: hover) {
+  .tl-clear:hover,
+  .tl-sort:hover {
     color: var(--tl-fg);
   }
 }
@@ -157,7 +290,7 @@
   mask-image: linear-gradient(to bottom, #000 calc(100% - 6rem), transparent);
 }
 
-.tl-year-label::before,
+.tl-year-head::before,
 .tl-entry::before {
   content: '';
   position: absolute;
@@ -170,31 +303,256 @@
   margin-top: 2.5rem;
 }
 
-.tl-year-label {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  margin: 0 -1.25rem 0 calc(-1.25rem - var(--tl-indent));
-  padding: calc(env(safe-area-inset-top) + 0.75rem) 1.25rem 0.75rem calc(1.25rem + var(--tl-indent));
-  background: color-mix(in srgb, var(--color-bg) 82%, transparent);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  color: var(--tl-muted);
-  font-family: var(--tl-mono);
-  font-size: 0.75rem;
-  font-variant-numeric: tabular-nums;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+.tl-year {
+  scroll-margin-top: 0;
 }
 
-.tl-year-label::before {
-  top: calc(env(safe-area-inset-top) + 0.75rem + 0.5625rem - 4.5px);
+/* The year stays at the top while its entries scroll beneath it. A soft, progressive
+   blur below it lets entries fade under instead of being cut off. */
+.tl-year-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -1.25rem 0 calc(-1.25rem - var(--tl-indent));
+  padding: calc(env(safe-area-inset-top) + 0.625rem) 1.25rem 0.625rem calc(1.25rem + var(--tl-indent));
+  background: color-mix(in srgb, var(--color-bg) 84%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.tl-year-head::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  height: 1.25rem;
+  background: linear-gradient(color-mix(in srgb, var(--color-bg) 84%, transparent), transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  -webkit-mask-image: linear-gradient(#000, transparent);
+  mask-image: linear-gradient(#000, transparent);
+  pointer-events: none;
+}
+
+.tl-year-label {
+  margin: 0;
+  color: var(--tl-fg);
+  font-family: var(--tl-mono);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.5rem;
+}
+
+.tl-year-head::before {
+  top: calc(env(safe-area-inset-top) + 0.625rem + 0.75rem - 4.5px);
   left: calc(1.25rem + var(--tl-rail) - 4.5px);
   width: 9px;
   height: 9px;
-  box-shadow: inset 0 0 0 1.5px var(--tl-muted);
+  box-shadow: inset 0 0 0 1.5px var(--tl-fg);
   background: var(--color-bg);
+}
+
+.tl-jump-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--tl-muted);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tl-jump-button::before {
+  content: '';
+  position: absolute;
+  inset: -0.75rem -0.5rem;
+}
+
+.tl-jump-button:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+/* Go to year: a sheet near the thumb on phones. */
+.tl-jump {
+  position: fixed;
+  inset: auto 0.75rem calc(0.75rem + env(safe-area-inset-bottom));
+  width: auto;
+  max-width: 26rem;
+  margin: 0 auto;
+  padding: 1rem 0.75rem 0.75rem;
+  border: 0;
+  border-radius: 1.25rem;
+  background: var(--color-panel);
+  box-shadow:
+    0 0 0 1px var(--tl-outline),
+    0 1.5rem 3rem rgb(0 0 0 / 0.16);
+  color: var(--tl-fg);
+  font-family: var(--tl-sans);
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(1rem) scale(0.98);
+  transition:
+    opacity 200ms ease,
+    filter 200ms ease,
+    transform 300ms cubic-bezier(0.32, 0.72, 0, 1),
+    overlay 300ms allow-discrete,
+    display 300ms allow-discrete;
+}
+
+.tl-jump:popover-open {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+@starting-style {
+  .tl-jump:popover-open {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(1rem) scale(0.98);
+  }
+}
+
+.tl-jump::backdrop {
+  background: rgb(0 0 0 / 0);
+  transition:
+    background-color 200ms ease,
+    overlay 200ms allow-discrete,
+    display 200ms allow-discrete;
+}
+
+.tl-jump:popover-open::backdrop {
+  background: rgb(0 0 0 / 0.14);
+}
+
+@starting-style {
+  .tl-jump:popover-open::backdrop {
+    background: rgb(0 0 0 / 0);
+  }
+}
+
+.tl-jump-title {
+  margin: 0 0.25rem 0.75rem;
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+}
+
+.tl-jump-years {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.25rem;
+}
+
+.tl-jump-years a {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.125rem;
+  min-height: 3.25rem;
+  border-radius: 0.75rem;
+  color: var(--tl-fg);
+  font-family: var(--tl-mono);
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 150ms ease,
+    transform 150ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tl-jump-years a:active {
+  background: var(--tl-hover);
+  transform: scale(0.96);
+}
+
+.tl-jump-years a[aria-current='true'] {
+  background: var(--tl-fg);
+  color: var(--color-bg);
+}
+
+.tl-jump-count {
+  color: var(--tl-faint);
+  font-size: 0.625rem;
+}
+
+.tl-jump-years a[aria-current='true'] .tl-jump-count {
+  color: color-mix(in srgb, var(--color-bg) 55%, transparent);
+}
+
+/* Years beside the timeline, on screens wide enough to have room for them. */
+.tl-yearnav {
+  display: none;
+}
+
+@media (min-width: 76rem) {
+  .tl-yearnav {
+    position: fixed;
+    top: 50%;
+    left: calc(50% + 17rem + 4rem);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    font-family: var(--tl-mono);
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tl-yearnav a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.1875rem 0;
+    color: var(--tl-faint);
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+
+  /* A tick that grows for the year in view. */
+  .tl-yearnav a::before {
+    content: '';
+    width: 0.375rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+    transition:
+      width 250ms cubic-bezier(0.23, 1, 0.32, 1),
+      opacity 150ms ease;
+  }
+
+  .tl-yearnav a[aria-current='true'] {
+    color: var(--tl-fg);
+  }
+
+  .tl-yearnav a[aria-current='true']::before {
+    width: 1rem;
+    opacity: 1;
+  }
+
+  .tl-yearnav a:hover {
+    color: var(--tl-fg);
+  }
+
+  .tl-yearnav a:focus-visible {
+    outline: 2px solid var(--tl-fg);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
 }
 
 .tl-entries {
@@ -210,6 +568,13 @@
   display: grid;
   gap: 0.375rem;
   padding-block: 1.125rem;
+  scroll-margin-top: 3rem;
+}
+
+/* An entry linked as `/#slug` gets a short highlight on its dot. */
+.tl-entry:target::before {
+  background: var(--tl-fg);
+  box-shadow: 0 0 0 4px var(--tl-chip-hover);
 }
 
 .tl-entry::before {
@@ -236,6 +601,34 @@
   font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
   line-height: 1.5;
+}
+
+.tl-date {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.tl-date::before {
+  content: '';
+  position: absolute;
+  inset: -0.5rem -0.375rem;
+}
+
+.tl-date:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+@media (hover: hover) {
+  .tl-date:hover {
+    color: var(--tl-fg);
+    text-decoration: underline;
+    text-decoration-color: var(--tl-line);
+    text-underline-offset: 0.25em;
+  }
 }
 
 .tl-kind::before {
@@ -315,15 +708,26 @@
   margin: 0;
 }
 
+/* Long addresses truncate instead of widening the page. */
+.tl-card-inline > *,
+.tl-facts {
+  min-width: 0;
+  max-width: 100%;
+}
+
 a.tl-card:focus-visible,
 .tl-card-linked:has(.tl-card-link:focus-visible) {
   outline: 2px solid var(--tl-fg);
   outline-offset: 2px;
 }
 
-a.tl-card:active,
-.tl-card-linked:has(.tl-card-link:active) {
-  background-color: var(--tl-hover);
+/* Only with a mouse: on touch screens every scroll starts with a press, which would
+   flash the surface on whatever card the finger lands on. */
+@media (hover: hover) {
+  a.tl-card:active,
+  .tl-card-linked:has(.tl-card-link:active) {
+    background-color: var(--tl-hover);
+  }
 }
 
 /* Linked cards: the title link covers the card, and links or buttons inside the card
@@ -354,6 +758,35 @@ a.tl-card:active,
 .tl-card-linked button {
   position: relative;
   z-index: 1;
+}
+
+.tl-url {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--tl-muted);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.tl-url-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.tl-url::before {
+  content: '';
+  position: absolute;
+  inset: -0.625rem -0.375rem;
+}
+
+a.tl-url:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
 
 .tl-repo {
@@ -402,8 +835,15 @@ a.tl-card:active,
     background-color: var(--tl-hover);
   }
 
-  .tl-repo:hover {
+  .tl-repo:hover,
+  a.tl-url:hover {
     color: var(--tl-fg);
+  }
+
+  a.tl-url:hover .tl-url-text {
+    text-decoration: underline;
+    text-decoration-color: var(--tl-line);
+    text-underline-offset: 0.25em;
   }
 
   a.tl-card:hover .tl-arrow,
@@ -754,11 +1194,13 @@ a.tl-card:active,
 @keyframes tl-enter {
   from {
     opacity: 0;
+    filter: blur(4px);
     transform: translateY(0.75rem);
   }
 
   to {
     opacity: 1;
+    filter: none;
     transform: none;
   }
 }
@@ -774,26 +1216,57 @@ a.tl-card:active,
     left: calc(-0.5 * var(--tl-gap) - 0.5px);
   }
 
-  .tl-year-label,
+  .tl-year-head,
   .tl-entry {
     margin-left: calc(-1 * (var(--tl-gutter) + var(--tl-gap)));
   }
 
-  /* The year sits at the top of the margin and stays there while its entries scroll,
-     with a fade so dates passing beneath it don't collide with it. */
-  .tl-year-label {
+  /* The year sits large at the top of the margin and stays there while its entries
+     scroll, with a fade so dates passing beneath it don't collide with it. */
+  .tl-year-head {
+    z-index: 4;
+    justify-content: flex-end;
     width: var(--tl-gutter);
     margin-right: 0;
-    padding: 1.5rem 0 1.25rem;
-    background: linear-gradient(var(--color-bg) 70%, transparent);
+    padding: 1.25rem 0 1.5rem;
+    background: linear-gradient(var(--color-bg) 72%, transparent);
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
-    text-align: right;
   }
 
-  .tl-year-label::before {
-    top: calc(1.5rem + 0.5625rem - 4.5px);
+  .tl-year-head::after,
+  .tl-jump-button {
+    display: none;
+  }
+
+  .tl-year-label {
+    font-family: var(--tl-sans);
+    font-size: 1.625rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 2rem;
+  }
+
+  .tl-year-head::before {
+    top: calc(1.25rem + 1rem - 4.5px);
     left: calc(var(--tl-gutter) + 0.5 * var(--tl-gap) - 4.5px);
+  }
+
+  /* Content scrolling off the top blurs out instead of being cut off. */
+  .tl::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: 1.5rem;
+    background: linear-gradient(var(--color-bg), transparent);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    -webkit-mask-image: linear-gradient(#000 30%, transparent);
+    mask-image: linear-gradient(#000 30%, transparent);
+    pointer-events: none;
   }
 
   .tl-entry::before {
@@ -820,5 +1293,248 @@ a.tl-card:active,
   .tl-kind {
     color: var(--tl-faint);
     opacity: 0.7;
+  }
+}
+
+/* Entry pages: one entry, larger, with its neighbours below. */
+
+.tl-back {
+  margin: 0 -0.5rem clamp(2.5rem, 10vw, 4.5rem);
+  font-size: 0.875rem;
+}
+
+.tl-back a {
+  display: inline-flex;
+  gap: 0.375rem;
+  padding: 0.625rem 0.5rem;
+  color: var(--tl-muted);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.tl-single {
+  display: grid;
+  gap: 0.625rem;
+}
+
+/* The date stays above the entry here, even where the timeline hangs it in the margin. */
+.tl-single .tl-meta {
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: baseline;
+  padding-top: 0;
+}
+
+.tl-single .tl-kind::before {
+  content: '·';
+}
+
+.tl-single .tl-kind {
+  opacity: 1;
+}
+
+.tl-single .tl-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.tl-single .tl-text,
+.tl-single .tl-note {
+  font-size: 1.0625rem;
+}
+
+/* On its own page an entry is the subject, so its pictures keep their colour. */
+.tl-single .tl-image {
+  filter: none;
+  animation: none;
+}
+
+.tl-single .tl-media.tl-image,
+.tl-single .tl-gallery-frame {
+  max-height: min(75svh, 36rem);
+}
+
+.tl-share {
+  justify-self: start;
+  margin-top: 2rem;
+  min-height: 2.25rem;
+  padding: 0 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--tl-chip);
+  color: var(--tl-fg);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 200ms ease,
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tl-share:active {
+  transform: scale(0.96);
+}
+
+.tl-share:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+}
+
+.tl-pager {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--tl-line);
+}
+
+.tl-neighbour {
+  display: grid;
+  align-content: start;
+  gap: 0.25rem;
+  margin: -0.625rem -0.75rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem;
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 150ms ease;
+}
+
+.tl-neighbour[data-direction='newer'] {
+  grid-column: 2;
+  text-align: right;
+}
+
+.tl-neighbour-label {
+  color: var(--tl-faint);
+  font-family: var(--tl-mono);
+  font-size: 0.75rem;
+}
+
+.tl-neighbour-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--tl-fg);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (hover: hover) {
+  .tl-back a:hover {
+    color: var(--tl-fg);
+  }
+
+  .tl-share:hover,
+  .tl-neighbour:hover {
+    background: var(--tl-chip-hover);
+  }
+}
+
+/* First paint: the intro, the filters and the timeline settle in one after another. */
+
+@media (prefers-reduced-motion: no-preference) {
+  .tl-intro > *,
+  .tl-controls,
+  .tl-years,
+  .tl-back,
+  .tl-single,
+  .tl-share,
+  .tl-pager {
+    animation: tl-rise 700ms cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .tl-intro > :nth-child(2),
+  .tl-single {
+    animation-delay: 60ms;
+  }
+
+  .tl-intro > :nth-child(3),
+  .tl-share {
+    animation-delay: 120ms;
+  }
+
+  .tl-controls,
+  .tl-pager {
+    animation-delay: 180ms;
+  }
+
+  .tl-years {
+    animation-delay: 240ms;
+  }
+}
+
+@keyframes tl-rise {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(0.5rem);
+  }
+}
+
+/* Changing filters or order: the timeline blurs out and the new one blurs in, while
+   the intro and the filters stay put. */
+
+.tl-intro {
+  view-transition-name: tl-intro;
+}
+
+.tl-controls {
+  view-transition-name: tl-controls;
+}
+
+.tl-yearnav {
+  view-transition-name: tl-yearnav;
+}
+
+::view-transition-group(tl-intro),
+::view-transition-group(tl-controls),
+::view-transition-group(tl-yearnav),
+::view-transition-new(tl-intro),
+::view-transition-new(tl-controls),
+::view-transition-new(tl-yearnav) {
+  animation: none;
+}
+
+::view-transition-old(tl-intro),
+::view-transition-old(tl-controls),
+::view-transition-old(tl-yearnav) {
+  display: none;
+}
+
+::view-transition-old(root) {
+  animation: tl-blur-out 160ms ease-in both;
+}
+
+::view-transition-new(root) {
+  animation: tl-blur-in 420ms cubic-bezier(0.23, 1, 0.32, 1) 60ms both;
+}
+
+@keyframes tl-blur-out {
+  to {
+    opacity: 0;
+    filter: blur(6px);
+  }
+}
+
+@keyframes tl-blur-in {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(0.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
   }
 }

@@ -1,22 +1,27 @@
 import { HeadContent, Outlet, Scripts, createRootRoute } from '@tanstack/react-router';
+import { SITE, seo } from '../seo';
 import appCss from '../styles.css?url';
+
+/**
+ * Defaults for every page; routes override them tag by tag. The URL and canonical link
+ * come from each route, since a default would point every page at the homepage.
+ */
+const defaults = seo({ title: SITE.title, description: SITE.description, path: '/' }).meta.filter(
+  (tag) => !('property' in tag && tag.property === 'og:url'),
+);
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
-      { name: 'theme-color', content: '#f7f7f2', media: '(prefers-color-scheme: light)' },
-      { name: 'theme-color', content: '#10120f', media: '(prefers-color-scheme: dark)' },
-      {
-        name: 'description',
-        content: 'This is the personal website of Philip Poloczek',
-      },
-      { name: 'keywords', content: 'developer, profile, resume' },
-      { title: 'peet.sh / Philip Poloczek' },
+      { name: 'author', content: SITE.name },
+      ...defaults,
     ],
     links: [
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      { rel: 'me', href: 'https://github.com/peetzweg' },
+      { rel: 'me', href: 'https://bsky.app/profile/peet.sh' },
       { rel: 'stylesheet', href: appCss },
     ],
     scripts: [
@@ -34,6 +39,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Written out here: route head tags keep only one meta per name, and there are two. */}
+        <meta content="#f7f7f2" media="(prefers-color-scheme: light)" name="theme-color" />
+        <meta content="#10120f" media="(prefers-color-scheme: dark)" name="theme-color" />
         <HeadContent />
       </head>
       <body>

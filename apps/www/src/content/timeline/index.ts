@@ -1,5 +1,6 @@
 import { posts } from '../posts';
 import { entries } from './entries';
+import type { Tweet } from 'react-tweet/api';
 import type { EntryType, Image, Media, TimelineEntry } from './types';
 
 export type { Image, Media, TimelineEntry, EntryType } from './types';
@@ -24,12 +25,13 @@ export const timeline: TimelineEntry[] = [...entries, ...postEntries].sort((a, b
 
 /** Filters above the timeline, each covering one or more entry types. */
 export const FILTERS = [
-  { id: 'writing', label: 'Writing', types: ['post', 'note'] },
+  { id: 'writing', label: 'Writing', types: ['post', 'note', 'tweet'] },
   { id: 'projects', label: 'Projects', types: ['project'] },
   { id: 'work', label: 'Client work', types: ['work'] },
   { id: 'made', label: 'Made', types: ['photo'] },
   { id: 'experiments', label: 'Experiments', types: ['experiment'] },
   { id: 'sport', label: 'Sport', types: ['activity'] },
+  { id: 'videos', label: 'Videos', types: ['video'] },
   { id: 'books', label: 'Books', types: ['book'] },
   { id: 'links', label: 'Links', types: ['link', 'collection'] },
 ] as const satisfies ReadonlyArray<{ id: string; label: string; types: ReadonlyArray<EntryType> }>;
@@ -133,6 +135,7 @@ function entrySlug(entry: TimelineEntry): string {
     case 'photo':
       return entry.id.replace(/^hardware-/, '');
     case 'note':
+    case 'tweet':
       return entry.id;
     case 'post':
       return entry.slug;
@@ -167,10 +170,28 @@ export function entryTitle(entry: TimelineEntry): string {
     case 'photo':
       return entry.caption;
     case 'note':
-      return entry.text.length > 60 ? `${entry.text.slice(0, 59)}…` : entry.text;
+      return truncate(entry.text, 60);
+    case 'tweet':
+      return truncate(tweetText(entry.tweet), 60);
     default:
       return entry.title;
   }
+}
+
+function truncate(text: string, length: number) {
+  return text.length > length ? `${text.slice(0, length - 1).trimEnd()}…` : text;
+}
+
+/** A tweet's own words, without the trailing t.co link to its media. */
+function tweetText(tweet: Tweet) {
+  const [start, end] = tweet.display_text_range;
+  return [...tweet.text]
+    .slice(start, end)
+    .join('')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .trim();
 }
 
 /** One or two sentences about an entry, for search results and link previews. */
@@ -190,6 +211,10 @@ export function entrySummary(entry: TimelineEntry): string {
       return entry.note ? `${entry.note}: ${entry.title}` : entry.title;
     case 'note':
       return entry.text;
+    case 'tweet':
+      return tweetText(entry.tweet);
+    case 'video':
+      return `${entry.title}. A video on YouTube.`;
     case 'book':
       return `${entry.title} by ${entry.author}`;
     case 'activity': {
@@ -225,6 +250,19 @@ export function entryImage(entry: TimelineEntry): Image | undefined {
       return entry.map;
     case 'book':
       return entry.cover;
+    case 'video':
+      return entry.thumbnail;
+    case 'tweet': {
+      const media = entry.tweet.mediaDetails?.[0];
+      return media
+        ? {
+            src: media.media_url_https,
+            alt: tweetText(entry.tweet),
+            width: media.original_info.width,
+            height: media.original_info.height,
+          }
+        : undefined;
+    }
     case 'project':
     case 'work':
     case 'experiment':

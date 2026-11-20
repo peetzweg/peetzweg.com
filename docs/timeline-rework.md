@@ -2,7 +2,8 @@
 
 The homepage is a single timeline of everything made, written and saved, newest first.
 Entries live in `apps/www/src/content/timeline/entries.ts`; posts come from MDX.
-Filters above the timeline (`?filter=writing|projects|made|experiments|sport|books|links`) narrow it down by entry type.
+Filters above the timeline are chips that switch on and off; any number can be on (`?filter=projects,work`), and with none on everything shows. `?order=oldest` flips the order.
+Every entry has a page: posts, experiments and collections their existing routes, everything else `/<slug>` (from its title, see `entryPath` in `content/timeline/index.ts`), all prerendered.
 
 ## Content to correct
 
@@ -29,6 +30,12 @@ Filters above the timeline (`?filter=writing|projects|made|experiments|sport|boo
 - [ ] 10 of the 11 monthly Spotify playlists (2019-08 to 2020-06) return 404, so they are private or deleted. Only Hype 2020.01 is listed. Make them public again to bring them back: `4T8B45N4PfSSGGy44XapPf`, `66WfauOx6VLoaVhAD3NVOI`, `1mBpXfM0xWXyxdCcVULzR9`, `1l3h8FIMTadft71KTPGPCP`, `4bzzBlVTwvN2Rzszs4BJZJ`, `1RuE5bOqKSJ3GoXZlN6srm`, `7K8VtjkGc0hStLFkkzs4hG`, `710E0jCXYWXKXyTTRnEj8N`, `2DSDS3yNDjMogrSKwbZoC4`, `6pjzD4VwszhPdBbmsFgKEG`.
 - [ ] `src/content/kindle.json` is a copy of `libs/db/src/data/kindle.json` and ships to the client (~8 KB gzipped) for the punchcard. Moves to the database later.
 
+## Tweets and videos
+
+- [ ] Pick the tweets that mattered and send their IDs or URLs. `pnpm tweets:pull <id or URL>` saves each one to `content/timeline/tweets/<id>.json`; then add `tweet('<id>')` to `tweets` in `entries.ts`. They render with react-tweet in X's layout, with their photos and videos, under Writing.
+- [ ] Tweet media still loads from pbs.twimg.com and video.twimg.com, so it breaks if a tweet is deleted. Download it next to the JSON if that matters.
+- [ ] All 7 videos from youtube.com/@peetzweg are listed (6 OpenDisplay demos and a gravel ride). Remove the ones that don't belong; new ones need a `youtube(...)` line and a `youtube-<id>.webp` thumbnail from `i.ytimg.com/vi/<id>/maxresdefault.jpg`.
+
 ## Books
 
 - [ ] Goodreads shelves need a login (profile 150027885, 472 books; RSS and shelf pages return "Sign in"). Either make the shelves public or export the library as CSV (My Books → Import and export) and commit it.
@@ -40,6 +47,13 @@ Filters above the timeline (`?filter=writing|projects|made|experiments|sport|boo
 - [ ] The second Berlin Marathon 2022 photo on Strava is a watermarked Sportograf proof, so it's left out.
 - [ ] `/running` and `/strava` are no longer linked from the homepage; merge or retire them.
 
+## SEO and sharing
+
+- [x] Repo description and topics updated on GitHub (2026-11-20).
+- [ ] `public/og.png` is a rendered card and `public/og.mp4` a 7-second scroll through projects and client work, both taken on 2026-11-20. Retake them when the site changes much.
+- [ ] Entry pages use the entry's own picture as `og:image`. Those are WebP, which X, Facebook, Slack and iMessage show but LinkedIn may not.
+- [x] `/sitemap.xml` (a prerendered server route) lists every entry page; `robots.txt` points to it.
+
 ## Next steps
 
 - [ ] Load entries in pages as you scroll, rendering the first page on the server.
@@ -48,6 +62,6 @@ Filters above the timeline (`?filter=writing|projects|made|experiments|sport|boo
 - [ ] `POST /api/ingest` server route: Standard Webhooks signature, dedupe on `source.platform + source.id`, download media to a volume.
 - [ ] Crosswind: webhook destination (`WebhookGateway`, `MirrorPostToWebhookJob`, routes `x→webhook` and `bluesky→webhook`, update `docs/mirroring-rules.md`).
 - [ ] Media entries: image grids, video, GIFs (muted loop), link cards, quotes.
-- [ ] iOS Shortcut that posts photos and links to the ingest API.
+- [ ] iOS Shortcut that posts photos and links to the ingest API, so a photo can go from the phone's share sheet straight onto the timeline.
 - [ ] Mermaid in MDX posts, loaded only on posts that use it.
 - [ ] Move hosting to Coolify (Node server, SQLite on a volume). Check coollabsio/coolify#11534 before using Compose previews there.

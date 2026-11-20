@@ -104,6 +104,11 @@ $ matcrawl search "<query>" --limit 20`),
   Crosswind: shot('crosswind', 'The Crosswind homepage: Post anywhere. Sync everywhere.'),
   calcfile: shot('calcfile', 'A calcfile with travel costs and their totals'),
   bookblitz: shot('bookblitz', 'bookblitz showing a single word'),
+  'peetzweg.com, redesigned': gallery(
+    ['redesign-old-desktop', 'The old peetzweg.com: a gradient circle with links to software, client work, hardware and posts'],
+    ['redesign-old-desktop-playground', 'The old playground below it: days spent reading as rows of x and o'],
+    ['redesign-new-desktop', 'The new peetzweg.com: a timeline with filters and years'],
+  ),
 };
 
 /** `repo` is the GitHub repository name under github.com/peetzweg. Stars as of 2026-11-19. */
@@ -144,6 +149,7 @@ const projects: TimelineEntry[] = [
   project('2026-08-06', 'Crosswind', 'Minimal account-to-account mirror for X, Bluesky, LinkedIn and Instagram.', { href: 'https://crosswind.social' }),
   project('2026-08-09', 'calcfile', 'An open, local-first plain-text format and editor for calculations.', { href: 'https://peetzweg.github.io/calcfile/', repo: 'calcfile', language: 'TypeScript' }),
   project('2026-10-27', 'bookblitz', 'Speed-read your own EPUBs, one word at a time.', { href: 'https://peetzweg.github.io/bookblitz/', repo: 'bookblitz', language: 'TypeScript' }),
+  project('2026-11-20', 'peetzweg.com, redesigned', 'From a gradient circle with a list of links to one timeline of everything I made, wrote and saved, with a page for each entry.', { href: 'https://peetzweg.com', repo: 'peetzweg.com', language: 'TypeScript' }),
 ];
 
 /** Days with Kindle activity, from the reading log behind /punchcard. */

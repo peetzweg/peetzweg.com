@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router';
-import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
-import type { Image, Media, TimelineEntry, TimelineYear } from '../../content/timeline';
+import { createContext, useContext, useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { entryPages, entryPath, type Image, type Media, type TimelineEntry, type TimelineYear } from '../../content/timeline';
 
 const LABELS: Record<TimelineEntry['type'], string> = {
   post: 'Writing',
@@ -16,47 +16,162 @@ const LABELS: Record<TimelineEntry['type'], string> = {
 };
 
 export function Timeline({ years }: { years: TimelineYear[] }) {
+  const current = useCurrentYear(years);
+
   return (
-    <div className="tl-years">
-      {years.map(({ year, entries }) => (
-        <section aria-labelledby={`year-${year}`} className="tl-year" key={year}>
-          <h2 className="tl-year-label" id={`year-${year}`}>
-            {year}
-          </h2>
-          <ol className="tl-entries">
-            {entries.map((entry) => (
-              <li className="tl-entry" data-type={entry.type} key={entry.id}>
-                <EntryMeta entry={entry} />
-                <div className="tl-body">
-                  <EntryBody entry={entry} />
-                </div>
-              </li>
-            ))}
-          </ol>
-        </section>
-      ))}
-    </div>
+    <>
+      <div className="tl-years">
+        {years.map(({ year, entries }) => (
+          <section aria-labelledby={`year-${year}`} className="tl-year" id={year} key={year}>
+            <div className="tl-year-head">
+              <h2 className="tl-year-label" id={`year-${year}`}>
+                {year}
+              </h2>
+              {years.length > 1 ? (
+                <button className="tl-jump-button" popoverTarget="tl-jump" type="button">
+                  Go to year
+                  <Chevron />
+                </button>
+              ) : null}
+            </div>
+            <ol className="tl-entries">
+              {entries.map((entry) => (
+                <li className="tl-entry" data-type={entry.type} id={anchorOf(entry)} key={entry.id}>
+                  <EntryMeta entry={entry} />
+                  <div className="tl-body">
+                    <EntryBody entry={entry} />
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))}
+      </div>
+      {years.length > 1 ? <YearNav current={current} years={years} /> : null}
+    </>
   );
 }
 
-function EntryMeta({ entry }: { entry: TimelineEntry }) {
+/** Where `/#<anchor>` lands on the homepage: the entry's slug, or its id if it has a page elsewhere. */
+function anchorOf(entry: TimelineEntry) {
+  const path = entryPath(entry);
+  return entryPages.has(path.slice(1)) ? path.slice(1) : entry.id;
+}
+
+/**
+ * Years to jump to. On wide screens a list beside the timeline that marks the year in
+ * view; on narrow ones a sheet opened from the sticky year header.
+ */
+function YearNav({ current, years }: { current?: string; years: TimelineYear[] }) {
+  const sheet = useRef<HTMLDivElement>(null);
+
+  return (
+    <>
+      <nav aria-label="Years" className="tl-yearnav">
+        {years.map(({ year }) => (
+          <a aria-current={year === current ? 'true' : undefined} href={`#${year}`} key={year}>
+            {year}
+          </a>
+        ))}
+      </nav>
+      <div aria-label="Go to year" className="tl-jump" id="tl-jump" popover="auto" ref={sheet} role="dialog">
+        <p className="tl-jump-title">Go to year</p>
+        <nav aria-label="Years" className="tl-jump-years">
+          {years.map(({ entries, year }) => (
+            <a
+              aria-current={year === current ? 'true' : undefined}
+              href={`#${year}`}
+              key={year}
+              onClick={() => sheet.current?.hidePopover()}
+            >
+              {year}
+              <span className="tl-jump-count">{entries.length}</span>
+            </a>
+          ))}
+        </nav>
+      </div>
+    </>
+  );
+}
+
+/** The year whose section crosses a line a quarter down the viewport. */
+function useCurrentYear(years: TimelineYear[]) {
+  const [current, setCurrent] = useState<string>();
+  const keys = years.map(({ year }) => year).join();
+
+  useEffect(() => {
+    const sections = keys.split(',').flatMap((year) => document.getElementById(year) ?? []);
+    const observer = new IntersectionObserver(
+      (records) => {
+        for (const record of records) {
+          if (record.isIntersecting) {
+            setCurrent(record.target.id);
+          }
+        }
+      },
+      { rootMargin: '-25% 0px -74% 0px' },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [keys]);
+
+  // Above the first section, the first year is the one coming up.
+  return current ?? years[0]?.year;
+}
+
+/** Entry titles are h3 under the year on the timeline, and the page's h1 on an entry page. */
+export const HeadingLevel = createContext<'h1' | 'h3'>('h3');
+
+function Heading({ children }: { children: React.ReactNode }) {
+  const Tag = useContext(HeadingLevel);
+  return <Tag className="tl-title">{children}</Tag>;
+}
+
+export function EntryMeta({ entry, withYear }: { entry: TimelineEntry; withYear?: boolean }) {
   return (
     <p className="tl-meta">
-      <time dateTime={entry.date} title={entry.approximate ? 'Approximate date' : undefined}>
-        {entry.approximate ? '~' : ''}
-        {formatDate(entry.date)}
-      </time>
+      <EntryLink className="tl-date" entry={entry}>
+        <time dateTime={entry.date} title={entry.approximate ? 'Approximate date' : undefined}>
+          {entry.approximate ? '~' : ''}
+          {formatDate(entry.date, withYear)}
+        </time>
+      </EntryLink>
       <span className="tl-kind">{entry.type === 'activity' ? entry.sport : LABELS[entry.type]}</span>
     </p>
   );
 }
 
-function EntryBody({ entry }: { entry: TimelineEntry }) {
+/** A link to the entry's own page, like a tweet's timestamp. */
+function EntryLink({ children, className, entry }: { children: React.ReactNode; className?: string; entry: TimelineEntry }) {
+  switch (entry.type) {
+    case 'post':
+      return (
+        <Link className={className} params={{ slug: entry.slug }} to="/posts/$slug">
+          {children}
+        </Link>
+      );
+    case 'experiment':
+    case 'collection':
+      return (
+        <Link className={className} to={entry.to}>
+          {children}
+        </Link>
+      );
+    default:
+      return (
+        <Link className={className} params={{ slug: entryPath(entry).slice(1) }} to="/$slug">
+          {children}
+        </Link>
+      );
+  }
+}
+
+export function EntryBody({ entry }: { entry: TimelineEntry }) {
   switch (entry.type) {
     case 'post':
       return (
         <Link className="tl-card" params={{ slug: entry.slug }} to="/posts/$slug">
-          <h3 className="tl-title">{entry.title}</h3>
+          <Heading>{entry.title}</Heading>
           <p className="tl-text">{entry.excerpt}</p>
         </Link>
       );
@@ -65,8 +180,9 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
       return (
         <LinkedCard href={entry.href} media={entry.media} title={entry.title}>
           <p className="tl-text">{entry.description}</p>
-          {entry.language || entry.stars || repo ? (
+          {entry.href || entry.language || entry.stars ? (
             <p className="tl-facts">
+              {entry.href ? <UrlLink github={entry.href === entry.repo} href={entry.href} /> : null}
               {entry.language ? <span>{entry.language}</span> : null}
               {entry.stars ? (
                 <span className="tl-stars">
@@ -96,6 +212,11 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
               <span key={tool}>{tool}</span>
             ))}
           </p>
+          {entry.href ? (
+            <p className="tl-facts">
+              <UrlLink href={entry.href} />
+            </p>
+          ) : null}
         </LinkedCard>
       );
     case 'photo':
@@ -108,7 +229,7 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
     case 'experiment':
       return (
         <Link className="tl-card" to={entry.to}>
-          <h3 className="tl-title">{entry.title}</h3>
+          <Heading>{entry.title}</Heading>
           <p className="tl-text">{entry.description}</p>
           <EntryMedia media={entry.media} />
         </Link>
@@ -121,7 +242,12 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
               {entry.title}
               <Arrow />
             </span>
-            {entry.note ? <span className="tl-facts">{entry.note}</span> : null}
+            <span className="tl-facts">
+              {entry.note ? <span>{entry.note}</span> : null}
+              <span className="tl-url">
+                <span className="tl-url-text">{displayUrl(entry.href)}</span>
+              </span>
+            </span>
           </WithThumb>
           <EntryMedia media={entry.media} />
         </OutLink>
@@ -129,7 +255,7 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
     case 'collection':
       return (
         <Link className="tl-card" to={entry.to}>
-          <h3 className="tl-title">{entry.title}</h3>
+          <Heading>{entry.title}</Heading>
           <p className="tl-text">{entry.description}</p>
           <ul className="tl-preview">
             {entry.preview.map((title) => (
@@ -143,10 +269,10 @@ function EntryBody({ entry }: { entry: TimelineEntry }) {
     case 'activity':
       return (
         <OutLink className="tl-card" href={`https://www.strava.com/activities/${entry.stravaId}`}>
-          <h3 className="tl-title">
+          <Heading>
             {entry.title}
             <Arrow />
-          </h3>
+          </Heading>
           {entry.stats ? (
             <dl className="tl-stats">
               <div>
@@ -204,7 +330,7 @@ function LinkedCard({
   return (
     <div className={href ? 'tl-card tl-card-linked' : 'tl-card'}>
       <WithThumb media={media}>
-        <h3 className="tl-title">
+        <Heading>
           {href ? (
             <a className="tl-card-link" href={href} rel="noreferrer" target="_blank">
               {title}
@@ -213,7 +339,7 @@ function LinkedCard({
           ) : (
             title
           )}
-        </h3>
+        </Heading>
         {children}
       </WithThumb>
       <EntryMedia media={media} />
@@ -461,6 +587,23 @@ function Punchcard({ days }: { days: ReadonlyArray<string> }) {
   );
 }
 
+/** The address a card opens, shown so you can see where it goes before you click. */
+function UrlLink({ github, href }: { github?: boolean; href: string }) {
+  return (
+    <a className="tl-url" href={href} rel="noreferrer" target="_blank" title={href}>
+      {github ? <GitHubIcon /> : null}
+      <span className="tl-url-text">{displayUrl(href)}</span>
+    </a>
+  );
+}
+
+/** `https://www.example.com/path/` → `example.com/path`. */
+function displayUrl(href: string) {
+  const url = new URL(href);
+  const path = `${url.pathname}${url.search}`.replace(/\/$/, '');
+  return `${url.hostname.replace(/^www\./, '')}${path}`;
+}
+
 function OutLink({ children, className, href }: { children: React.ReactNode; className: string; href?: string }) {
   if (!href) {
     return <div className={className}>{children}</div>;
@@ -470,6 +613,14 @@ function OutLink({ children, className, href }: { children: React.ReactNode; cla
     <a className={className} href={href} rel="noreferrer" target="_blank">
       {children}
     </a>
+  );
+}
+
+function Chevron() {
+  return (
+    <svg aria-hidden="true" className="tl-chevron" fill="none" height="12" viewBox="0 0 12 12" width="12">
+      <path d="M3 4.5 6 7.5 9 4.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.25" />
+    </svg>
   );
 }
 
@@ -504,13 +655,14 @@ function StarIcon() {
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-/** The year is the section heading, so entries only show month and day. */
-function formatDate(date: string) {
-  const [, month, day] = date.split('-');
+/** On the timeline the year is the section heading, so entries only show month and day. */
+function formatDate(date: string, withYear?: boolean) {
+  const [year, month, day] = date.split('-');
   if (!month) {
-    return '';
+    return year;
   }
   const name = MONTHS[Number(month) - 1];
+  const monthDay = day ? `${name} ${Number(day)}` : name;
 
-  return day ? `${name} ${Number(day)}` : name;
+  return withYear ? `${monthDay}, ${year}` : monthDay;
 }

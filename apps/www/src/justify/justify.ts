@@ -1,4 +1,4 @@
-import { breakLines } from './breakLines';
+import { SHRINK, breakLines } from './breakLines';
 
 /**
  * Justified paragraphs with line breaks chosen for the whole paragraph (see breakLines.ts), applied
@@ -24,6 +24,7 @@ type Plan = {
   pieces: Segment[][];
   separators: Separator[];
   breaks: number[];
+  space: number;
 };
 
 const NBSP = ' ';
@@ -67,6 +68,7 @@ function textNodes(element: HTMLElement) {
 }
 
 function restore(element: HTMLElement) {
+  element.style.wordSpacing = '';
   for (const node of textNodes(element)) {
     const text = original.get(node);
     if (text !== undefined && node.data !== text) node.data = text;
@@ -141,7 +143,7 @@ function plan(element: HTMLElement, hyphenate: Hyphenate): Plan | undefined {
     // Leaves room for rounding, so a full line never spills over and breaks somewhere unplanned.
     lineWidth: lineWidth - 1,
   });
-  return { element, pieces, separators, breaks };
+  return { element, pieces, separators, breaks, space };
 }
 
 /** Offsets of the soft hyphens in a hyphenated word, counted in the word without them. */
@@ -196,7 +198,10 @@ function glyphWidths(style: CSSStyleDeclaration) {
   return widths;
 }
 
-function apply({ breaks, separators }: Plan) {
+function apply({ breaks, element, separators, space }: Plan) {
+  // Spaces start out shrunk as far as the plan allows; the browser's justify stretches each line
+  // back out to the measure.
+  element.style.wordSpacing = `${(-space * SHRINK).toFixed(2)}px`;
   const lineEnds = new Set(breaks.slice(0, -1).map((end) => end - 1));
   // Edits per text node, applied from the end so earlier offsets stay valid.
   const edits = new Map<Text, Array<{ offset: number; remove: number; insert: string }>>();

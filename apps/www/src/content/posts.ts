@@ -52,6 +52,7 @@ export function getPostMeta(slug: string) {
   return {
     author: post.author,
     date: post.date,
+    description: post.description,
     slug: post.slug,
     title: post.title,
   };

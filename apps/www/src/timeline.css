@@ -1722,8 +1722,7 @@ p.tl-text,
 }
 
 /* Specific enough to beat the selectors above. */
-.tl [data-justify='on'],
-.content-page [data-justify='on'] {
+.tl [data-justify='on'] {
   -webkit-hyphens: manual;
   hyphens: manual;
 }
@@ -1769,4 +1768,131 @@ p.tl-text,
   display: block;
   width: 100% !important;
   height: 100% !important;
+}
+
+/* Posts: long-form text in the timeline's column and type. */
+
+.tl-page-title {
+  margin: 0 0 clamp(1.5rem, 6vw, 2.5rem);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.tl-prose {
+  margin-top: 1.25rem;
+  color: var(--tl-fg);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.tl-prose > * {
+  margin: 0;
+}
+
+.tl-prose > * + * {
+  margin-top: 1.1em;
+}
+
+.tl-prose p,
+.tl-prose li {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.tl-prose h2,
+.tl-prose h3 {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.tl-prose h2 {
+  margin-top: 2.25em;
+  font-size: 1.25rem;
+}
+
+.tl-prose h3 {
+  margin-top: 1.75em;
+  font-size: 1.0625rem;
+}
+
+.tl-prose h2 + *,
+.tl-prose h3 + * {
+  margin-top: 0.6em;
+}
+
+.tl-prose a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--tl-line);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 150ms ease;
+}
+
+@media (hover: hover) {
+  .tl-prose a:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+.tl-prose ul,
+.tl-prose ol {
+  padding-left: 1.25em;
+}
+
+.tl-prose li + li {
+  margin-top: 0.4em;
+}
+
+.tl-prose li::marker {
+  color: var(--tl-faint);
+}
+
+.tl-prose blockquote {
+  padding-left: 1rem;
+  border-left: 2px solid var(--tl-line);
+  color: var(--tl-muted);
+}
+
+.tl-prose code {
+  padding: 0.1em 0.3em;
+  border-radius: 0.25rem;
+  background: var(--tl-chip);
+  font-family: var(--tl-mono);
+  font-size: 0.85em;
+}
+
+.tl-prose pre {
+  padding: 0.875rem 1rem;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0 1px var(--tl-outline);
+  font-size: 0.8125rem;
+  line-height: 1.65;
+}
+
+.tl-prose pre code {
+  padding: 0;
+  background: none;
+  font-size: inherit;
+}
+
+.tl-prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.tl-prose hr {
+  margin-block: 2.5em;
+  border: 0;
+  border-top: 1px solid var(--tl-line);
+}
+
+.tl-prose .tl-island {
+  margin-block: 1.75em;
 }

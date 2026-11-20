@@ -5,19 +5,22 @@
  * that keep every line's spacing as even as possible. Adapted from bookblitz's src/ui/justify.ts, with
  * hyphenation points added.
  *
- * Spaces only stretch, never shrink: the browser does the final justifying, and it can't squeeze a
- * line narrower than its natural width. No fitness classes; it's a shortest path over break positions,
- * scored with TeX's badness and demerits.
+ * The browser does the final justifying, and it can only stretch spaces. So justified paragraphs get
+ * a slightly negative word-spacing (see justify.ts): their natural spaces are the shrunk ones, and a
+ * line planned at "normal" spacing is one the browser stretches a little. No fitness classes; it's a
+ * shortest path over break positions, scored with TeX's badness and demerits.
  */
 
 /** How far a space may stretch, as a share of its natural width, before a line counts as loose. */
-const STRETCH = 0.5;
+const STRETCH = 1;
+/** How far a space may shrink. Kept small, since the last line of a paragraph shows it unstretched. */
+export const SHRINK = 0.15;
 /** Cost added to every line, so fewer lines win when spacing is otherwise equal (TeX's \linepenalty). */
 const LINE_PENALTY = 10;
 /** Cost of ending a line with a hyphen (TeX's \hyphenpenalty). */
-const HYPHEN_PENALTY = 50;
+const HYPHEN_PENALTY = 80;
 /** Extra demerits for two hyphenated lines in a row (TeX's \doublehyphendemerits). */
-const DOUBLE_HYPHEN = 3000;
+const DOUBLE_HYPHEN = 12000;
 /** Extra demerits for a last line shorter than this share of the measure, a lonely word at the end. */
 const RUNT = 0.15;
 const RUNT_DEMERITS = 2000;
@@ -61,8 +64,9 @@ export function breakLines({ widths, after, space, hyphen, lineWidth }: Paragrap
       // Spaces strictly inside the line; a space at its end disappears into the break.
       const gaps = spaces[j - 1] - spaces[i];
       const natural = width[j] - width[i] + gaps * space + (endsWithHyphen(j) ? hyphen : 0);
+      const tightest = natural - gaps * space * SHRINK;
       // A single piece too wide for the line still has to go somewhere.
-      if (natural > lineWidth && j > i + 1) break;
+      if (tightest > lineWidth && j > i + 1) break;
 
       let cost: number;
       if (j === n) {
@@ -71,7 +75,12 @@ export function breakLines({ widths, after, space, hyphen, lineWidth }: Paragrap
         const slack = lineWidth - natural;
         // A line with no spaces can't be justified; it's fine only if the word nearly fills it,
         // like a long URL, and otherwise as bad as an overly loose line.
-        const ratio = gaps === 0 ? (natural > lineWidth * 0.8 ? 0 : Infinity) : slack / (gaps * space * STRETCH);
+        const ratio =
+          gaps === 0
+            ? natural > lineWidth * 0.8
+              ? 0
+              : Infinity
+            : slack / (gaps * space * (slack < 0 ? SHRINK : STRETCH));
         const badness = 100 * Math.abs(ratio) ** 3;
         cost = (LINE_PENALTY + Math.min(badness, 10000)) ** 2 + (ratio > LOOSE_LIMIT ? 1e8 : 0);
         if (endsWithHyphen(j)) {

@@ -50,12 +50,12 @@ Every entry has a page: posts, experiments and collections their existing routes
 ## Typography and interaction
 
 - [x] Running text (intro, descriptions, notes, posts) is justified with whole-paragraph line breaks and hyphenation (`src/justify`, Knuth-Plass as in bookblitz). Pretext isn't used: it measures with canvas, which is unreliable for system fonts like SF Pro.
-- [ ] Posts still use the old monospace page style; justified mono on a phone leaves wide gaps. Move posts to the timeline's typography.
+- [x] Posts use the timeline's column and type, justified, with Share and older/newer links; `/posts` is the timeline's writing.
 - [x] Pictures turn colour in the middle of the screen on every device; hover no longer does.
 - [x] Galleries are a strip of pictures that slides on one at a time; swipe or scroll it, or use the buttons that appear on hover.
 - [x] Weighted wheel scrolling (Lenis) and a rubber band at the page's ends, for mouse and trackpad only (`src/scroll`). Try it and decide whether it stays.
 - [x] Islands (`src/islands`): live pieces that load only near the screen, over a still picture. The p5 entry and `/p5` run the sketches live. Add one by writing a component that takes `IslandProps` and listing it in `src/islands/index.ts`.
-- [ ] Use islands in MDX posts (`<Island name="…" />` through an MDXProvider).
+- [x] Islands work in MDX posts: `<Island name="squiggle" />`.
 - [ ] The tulip from `/models` as an island (three.js, from `features/portfolio-models`).
 - [ ] The homepage ships all of `hyperlinks.json` (60 KB gzipped) for a count and four titles. Precompute those.
 - [ ] Some hardware photos are 450–780 KB JPEGs (bench, pillow, bike wall mount). Convert them to WebP like the rest.
@@ -77,4 +77,4 @@ Every entry has a page: posts, experiments and collections their existing routes
 - [ ] Media entries: image grids, video, GIFs (muted loop), link cards, quotes.
 - [ ] iOS Shortcut that posts photos and links to the ingest API, so a photo can go from the phone's share sheet straight onto the timeline.
 - [ ] Mermaid in MDX posts, loaded only on posts that use it.
-- [ ] Move hosting to Coolify (Node server, SQLite on a volume). Check coollabsio/coolify#11534 before using Compose previews there.
+- [ ] Move hosting to Coolify: the repo is ready (`Dockerfile`, `DEPLOY_TARGET=node`); the steps are in peetzweg/devops#13.

@@ -69,7 +69,7 @@ const projectMedia: Record<string, Media> = {
   breathpacer: shot('breathpacer', 'A single circle pacing the breath'),
   Monota: row(['monota-1', 'Monota showing the one task to do now'], ['monota-2', 'Adding a task with a deadline in Monota']),
   Globe: shot('globe', 'Transactions of an Ethereum address on an iPhone'),
-  'Parcel Explorer': shot('parcel-explorer', 'A Decentraland parcel on an iPhone'),
+  'Parcel Explorer': video('parcel-explorer', 'Browsing Decentraland parcels on an iPhone'),
   Airbox: gallery(
     ['airbox-1', 'Sketch of Airbox on a smart speaker'],
     ['airbox-2', 'Voice messages arriving on a smart speaker'],
@@ -102,12 +102,20 @@ $ trmnl send --content '<div class="layout">Hello TRMNL!</div>'`),
   matcrawl: code(`$ brew install peetzweg/tap/matcrawl
 $ matcrawl sync --backfill
 $ matcrawl search "<query>" --limit 20`),
-  'Open Display': shot('open-display', 'The Open Display homepage'),
+  'Open Display': video('open-display', 'A Mac extending its display onto a tablet'),
   'Commit History': shot('commit-history', 'Commit History with a search field and recently looked up users'),
   sonics: shot('sonics', 'The sonics playground with a waveform of the selected sound'),
   Crosswind: shot('crosswind', 'The Crosswind homepage: Post anywhere. Sync everywhere.'),
   calcfile: shot('calcfile', 'A calcfile with travel costs and their totals'),
-  bookblitz: shot('bookblitz', 'bookblitz showing a single word'),
+  bookblitz: video('bookblitz', 'bookblitz flashing a book one word at a time'),
+  mediablitz: thumb('mediablitz', 'mediablitz app icon'),
+  Otomo: video('otomo', 'Otomo’s rain radar, climbs and maps along the Tour de Friends stages in Japan'),
+  'QR Code Pocket': row(
+    ['qr-code-pocket-stack', 'Upcoming tickets in QR Code Pocket: a train, a museum, sumo and dinner'],
+    ['qr-code-pocket-ticket', 'A Shinkansen ticket with its QR code, ready to scan'],
+    ['qr-code-pocket-cards', 'Saved cards: hotel Wi-Fi and a loyalty card with its barcode'],
+    ['qr-code-pocket-night-flood', 'The ticket at full brightness for the scanner'],
+  ),
   'peetzweg.com, redesigned': gallery(
     ['redesign-old-desktop', 'The old peetzweg.com: a gradient circle with links to software, client work, hardware and posts'],
     ['redesign-old-desktop-playground', 'The old playground below it: days spent reading as rows of x and o'],
@@ -154,6 +162,9 @@ const projects: TimelineEntry[] = [
   project('2026-08-06', 'Crosswind', 'Minimal account-to-account mirror for X, Bluesky, LinkedIn and Instagram.', { href: 'https://crosswind.social' }),
   project('2026-08-09', 'calcfile', 'An open, local-first plain-text format and editor for calculations.', { href: 'https://peetzweg.github.io/calcfile/', repo: 'calcfile', language: 'TypeScript' }),
   project('2026-10-27', 'bookblitz', 'Speed-read your own EPUBs, one word at a time.', { href: 'https://peetzweg.github.io/bookblitz/', repo: 'bookblitz', language: 'TypeScript' }),
+  project('2026-10-31', 'mediablitz', 'Crop, trim, cut and stamp videos on your phone. A local-first web app, nothing gets uploaded.', { language: 'TypeScript' }),
+  project('2026-11-02', 'Otomo', 'Companion app for Rad Race’s Tour de Friends Japan: rain radar along every stage, the climbs, and where you are.', { href: 'https://peetzweg.github.io/otomo/', repo: 'otomo', language: 'TypeScript' }),
+  project('2026-11-08', 'QR Code Pocket', 'Every QR code in one offline app: tickets, boarding passes, bookings, loyalty cards and Wi-Fi. It reads the details for you.', { href: 'https://peetzweg.github.io/qr-code-pocket/', repo: 'qr-code-pocket', language: 'TypeScript' }),
   project('2026-11-20', 'peetzweg.com, redesigned', 'From a gradient circle with a list of links to one timeline of everything I made, wrote and saved, with a page for each entry.', { href: 'https://peetzweg.com', repo: 'peetzweg.com', language: 'TypeScript' }),
 ];
 

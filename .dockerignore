@@ -1,0 +1,11 @@
+**/node_modules
+**/dist
+**/.output
+**/.netlify
+**/.tanstack
+**/.env
+.git
+features
+libs
+tools
+docs

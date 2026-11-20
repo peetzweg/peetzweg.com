@@ -16,6 +16,7 @@ import { Route as HardwareRouteImport } from './routes/hardware'
 import { Route as ModelsRouteImport } from './routes/models'
 import { Route as P5RouteImport } from './routes/p5'
 import { Route as PunchcardRouteImport } from './routes/punchcard'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as RunningRouteImport } from './routes/running'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as StravaRouteImport } from './routes/strava'
@@ -57,6 +58,11 @@ const P5Route = P5RouteImport.update({
 const PunchcardRoute = PunchcardRouteImport.update({
   id: '/punchcard',
   path: '/punchcard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RunningRoute = RunningRouteImport.update({
@@ -103,6 +109,7 @@ export interface FileRoutesByFullPath {
   '/models': typeof ModelsRoute
   '/p5': typeof P5Route
   '/punchcard': typeof PunchcardRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/running': typeof RunningRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/strava': typeof StravaRoute
@@ -119,6 +126,7 @@ export interface FileRoutesByTo {
   '/models': typeof ModelsRoute
   '/p5': typeof P5Route
   '/punchcard': typeof PunchcardRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/running': typeof RunningRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/strava': typeof StravaRoute
@@ -136,6 +144,7 @@ export interface FileRoutesById {
   '/models': typeof ModelsRoute
   '/p5': typeof P5Route
   '/punchcard': typeof PunchcardRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/running': typeof RunningRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/strava': typeof StravaRoute
@@ -154,6 +163,7 @@ export interface FileRouteTypes {
     | '/models'
     | '/p5'
     | '/punchcard'
+    | '/robots.txt'
     | '/running'
     | '/sitemap.xml'
     | '/strava'
@@ -170,6 +180,7 @@ export interface FileRouteTypes {
     | '/models'
     | '/p5'
     | '/punchcard'
+    | '/robots.txt'
     | '/running'
     | '/sitemap.xml'
     | '/strava'
@@ -186,6 +197,7 @@ export interface FileRouteTypes {
     | '/models'
     | '/p5'
     | '/punchcard'
+    | '/robots.txt'
     | '/running'
     | '/sitemap.xml'
     | '/strava'
@@ -203,6 +215,7 @@ export interface RootRouteChildren {
   ModelsRoute: typeof ModelsRoute
   P5Route: typeof P5Route
   PunchcardRoute: typeof PunchcardRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
   RunningRoute: typeof RunningRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StravaRoute: typeof StravaRoute
@@ -261,6 +274,13 @@ declare module '@tanstack/react-router' {
       path: '/punchcard'
       fullPath: '/punchcard'
       preLoaderRoute: typeof PunchcardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/running': {
@@ -323,6 +343,7 @@ const rootRouteChildren: RootRouteChildren = {
   ModelsRoute: ModelsRoute,
   P5Route: P5Route,
   PunchcardRoute: PunchcardRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
   RunningRoute: RunningRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   StravaRoute: StravaRoute,

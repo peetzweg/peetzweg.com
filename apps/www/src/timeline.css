@@ -1194,7 +1194,7 @@ a.tl-url:focus-visible {
 @keyframes tl-enter {
   from {
     opacity: 0;
-    filter: blur(4px);
+    filter: blur(3px);
     transform: translateY(0.75rem);
   }
 
@@ -1537,4 +1537,113 @@ a.tl-url:focus-visible {
   ::view-transition-new(root) {
     animation: none;
   }
+}
+
+/* YouTube: a picture with a play button until pressed, then the player in its place. */
+
+.tl-youtube {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  background: var(--tl-hover);
+  overflow: hidden;
+}
+
+.tl-youtube iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.tl-youtube-poster {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tl-youtube-poster .tl-image {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+}
+
+.tl-youtube-poster:focus-visible {
+  outline: 2px solid var(--tl-fg);
+  outline-offset: 2px;
+}
+
+.tl-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin: -1.625rem 0 0 -1.625rem;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.82);
+  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.16);
+  color: #111;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Optically centred: a triangle's weight sits left of its box's centre. */
+.tl-play svg {
+  margin-left: 2px;
+}
+
+.tl-youtube-poster:active .tl-play {
+  transform: scale(0.94);
+}
+
+.tl-duration {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  background: rgb(0 0 0 / 0.62);
+  color: #fff;
+  font-family: var(--tl-mono);
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+
+@media (hover: hover) {
+  .tl-youtube-poster:hover .tl-play {
+    transform: scale(1.06);
+  }
+}
+
+/* Tweets keep X's own layout, in the timeline's type and colours. */
+
+.tl-tweet .react-tweet-theme {
+  --tweet-container-margin: 0;
+  --tweet-font-family: var(--tl-sans);
+  --tweet-font-color: var(--tl-fg);
+  --tweet-font-color-secondary: var(--tl-muted);
+  --tweet-bg-color: transparent;
+  --tweet-bg-color-hover: var(--tl-hover);
+  --tweet-border: 1px solid var(--tl-outline);
+  --tweet-body-font-size: 1rem;
+  --tweet-body-line-height: 1.6;
+  --tweet-header-font-size: 0.9375rem;
+  --tweet-info-font-size: 0.8125rem;
+  --tweet-actions-font-size: 0.8125rem;
+  min-width: 0;
+  max-width: none;
 }

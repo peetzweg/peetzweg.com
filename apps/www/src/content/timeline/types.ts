@@ -1,3 +1,4 @@
+import type { Tweet } from 'react-tweet/api';
 import type { FileRouteTypes } from '../../routeTree.gen';
 
 /** A path inside this site, checked against the route tree. */
@@ -86,6 +87,10 @@ export type TimelineEntry = EntryBase &
         stats?: ActivityStats;
       }
     | { type: 'book'; title: string; author: string; cover?: Image; href?: string }
+    /** A YouTube video, played in place once you press play. Duration in seconds. */
+    | { type: 'video'; title: string; youtubeId: string; duration: number; thumbnail: Image }
+    /** A post on X, saved by `pnpm tweets:pull` and drawn like the real thing. */
+    | { type: 'tweet'; tweet: Tweet }
   );
 
 export type EntryType = TimelineEntry['type'];

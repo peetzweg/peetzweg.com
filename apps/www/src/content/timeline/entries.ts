@@ -15,6 +15,7 @@ import Shades from '../../components/hardware/assets/shades.jpg';
 import hyperlinks from '../hyperlinks.json';
 import kindle from '../kindle.json';
 import { code, gallery, mediaImage, row, shot, thumb, video } from './media';
+import type { Tweet } from 'react-tweet/api';
 import type { ActivityStats, Media, SitePath, TimelineEntry } from './types';
 import { work } from './work';
 
@@ -26,6 +27,9 @@ import { work } from './work';
  * repo creation date (or the date from the old profile-terminal list), experiments use
  * the commit that added them. `approximate` entries are guesses to correct later.
  */
+
+/** Tweets saved by `pnpm tweets:pull`; see tweet() below. */
+const savedTweets = import.meta.glob<Tweet>('./tweets/*.json', { eager: true, import: 'default' });
 
 const hardware: TimelineEntry[] = [
   photo('2017-11-19', 'curtain-pole', CurtainPole, 960, 1280, 'Hangers for my curtains made from heating pipes'),
@@ -107,6 +111,7 @@ $ matcrawl search "<query>" --limit 20`),
   'peetzweg.com, redesigned': gallery(
     ['redesign-old-desktop', 'The old peetzweg.com: a gradient circle with links to software, client work, hardware and posts'],
     ['redesign-old-desktop-playground', 'The old playground below it: days spent reading as rows of x and o'],
+    ['redesign-old-mobile', 'The old peetzweg.com on a phone'],
     ['redesign-new-desktop', 'The new peetzweg.com: a timeline with filters and years'],
   ),
 };
@@ -214,6 +219,20 @@ const activities: TimelineEntry[] = [
   activity('2026-11-06', '20878565596', 'Ride', 'TdF 9 Japan, Stage 4', 2),
 ];
 
+/** From youtube.com/@peetzweg, dated by upload (Pacific time). */
+const videos: TimelineEntry[] = [
+  youtube('2026-09-02', 'wyEUkMgH3zw', 'OpenDisplay demo', 47),
+  youtube('2026-09-02', 'W3dGq8yXOcA', 'OpenDisplay Mac Receiver Demo', 12),
+  youtube('2026-09-03', 'WsFs9zTlVSQ', 'OpenDisplay Receiver Demo 3 MacBooks', 18),
+  youtube('2026-09-07', 'XHQ1IFU43_E', 'OpenDisplay screen extension from MacBook M5Pro to 5K iMac2017', 15),
+  youtube('2026-09-30', 'AS_gBrAYV3A', 'Gravel Ride in September', 249),
+  youtube('2026-10-27', 'enXuDWPipcQ', 'iPhone Duo Support is coming to OpenDisplay 1.30.0', 26),
+  youtube('2026-10-27', 'PoUIk0ngcyY', 'OpenDisplay Sender and Receiver for Linux are now available', 38),
+];
+
+/** Posts on X that mattered. Save one with `pnpm tweets:pull <id>`, then list it here. */
+const tweets: TimelineEntry[] = [];
+
 export const entries: TimelineEntry[] = [
   ...hardware,
   ...projects,
@@ -222,6 +241,8 @@ export const entries: TimelineEntry[] = [
   ...playlists,
   ...writing,
   ...activities,
+  ...videos,
+  ...tweets,
 ];
 
 function photo(date: string, id: string, src: string, width: number, height: number, caption: string): TimelineEntry {
@@ -272,4 +293,26 @@ function activity(
 
 function experiment(date: string, title: string, description: string, to: SitePath, media?: Media): TimelineEntry {
   return { id: `experiment-${to.slice(1)}`, type: 'experiment', date, title, description, to, media };
+}
+
+/** The thumbnail is `youtube-<id>.webp`, from YouTube's own. */
+function youtube(date: string, youtubeId: string, title: string, duration: number): TimelineEntry {
+  return {
+    id: `youtube-${youtubeId}`,
+    type: 'video',
+    date,
+    title,
+    youtubeId,
+    duration,
+    thumbnail: mediaImage(`youtube-${youtubeId}`, title),
+  };
+}
+
+/** A tweet saved in ./tweets by `pnpm tweets:pull`. */
+export function tweet(id: string): TimelineEntry {
+  const data = savedTweets[`./tweets/${id}.json`];
+  if (!data) {
+    throw new Error(`Missing tweet ${id}: run pnpm tweets:pull ${id}`);
+  }
+  return { id: `tweet-${id}`, type: 'tweet', date: data.created_at.slice(0, 10), tweet: data };
 }

@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router';
+import { EmbeddedTweet } from 'react-tweet';
 import { createContext, useContext, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { entryPages, entryPath, type Image, type Media, type TimelineEntry, type TimelineYear } from '../../content/timeline';
 
@@ -13,6 +14,8 @@ const LABELS: Record<TimelineEntry['type'], string> = {
   note: 'Note',
   activity: 'Sport',
   book: 'Book',
+  video: 'Video',
+  tweet: 'Post on X',
 };
 
 export function Timeline({ years }: { years: TimelineYear[] }) {
@@ -299,6 +302,14 @@ export function EntryBody({ entry }: { entry: TimelineEntry }) {
           ) : null}
         </OutLink>
       );
+    case 'video':
+      return <YouTube duration={entry.duration} thumbnail={entry.thumbnail} title={entry.title} youtubeId={entry.youtubeId} />;
+    case 'tweet':
+      return (
+        <div className="tl-tweet">
+          <EmbeddedTweet tweet={entry.tweet} />
+        </div>
+      );
     case 'book':
       return (
         <OutLink className="tl-card tl-row" href={entry.href}>
@@ -474,6 +485,61 @@ function Gallery({ images }: { images: ReadonlyArray<Image> }) {
       </div>
     </div>
   );
+}
+
+/**
+ * A YouTube video that stays a plain picture until you press play; only then does the
+ * player (and YouTube) load, from the privacy-enhanced domain.
+ */
+function YouTube({
+  duration,
+  thumbnail,
+  title,
+  youtubeId,
+}: {
+  duration: number;
+  thumbnail: Image;
+  title: string;
+  youtubeId: string;
+}) {
+  const [playing, setPlaying] = useState(false);
+
+  return (
+    <div className="tl-card">
+      <Heading>
+        <a className="tl-card-link" href={`https://www.youtube.com/watch?v=${youtubeId}`} rel="noreferrer" target="_blank">
+          {title}
+          <Arrow />
+        </a>
+      </Heading>
+      <div className="tl-media tl-youtube" data-playing={playing}>
+        {playing ? (
+          <iframe
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+            allowFullScreen
+            src={`https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&playsinline=1&rel=0`}
+            title={title}
+          />
+        ) : (
+          <button aria-label={`Play ${title} (${formatDuration(duration)})`} className="tl-youtube-poster" onClick={() => setPlaying(true)} type="button">
+            <Picture decorative image={thumbnail} />
+            <span aria-hidden="true" className="tl-play">
+              <svg fill="currentColor" height="14" viewBox="0 0 14 14" width="14">
+                <path d="M3.5 1.9v10.2c0 .6.7 1 1.2.7l8-5.1a.8.8 0 0 0 0-1.4l-8-5.1c-.5-.3-1.2.1-1.2.7Z" />
+              </svg>
+            </span>
+            <span aria-hidden="true" className="tl-duration">
+              {formatDuration(duration)}
+            </span>
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function formatDuration(seconds: number) {
+  return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
 }
 
 /** A silent loop that only plays while on screen, and not at all with reduced motion. */

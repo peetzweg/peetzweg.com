@@ -17,6 +17,7 @@ import { Route as ModelsRouteImport } from './routes/models'
 import { Route as P5RouteImport } from './routes/p5'
 import { Route as PunchcardRouteImport } from './routes/punchcard'
 import { Route as RunningRouteImport } from './routes/running'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as StravaRouteImport } from './routes/strava'
 import { Route as VocabularyRouteImport } from './routes/vocabulary'
 import { Route as HyperlinksIndexRouteImport } from './routes/hyperlinks/index'
@@ -63,6 +64,11 @@ const RunningRoute = RunningRouteImport.update({
   path: '/running',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StravaRoute = StravaRouteImport.update({
   id: '/strava',
   path: '/strava',
@@ -98,6 +104,7 @@ export interface FileRoutesByFullPath {
   '/p5': typeof P5Route
   '/punchcard': typeof PunchcardRoute
   '/running': typeof RunningRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/strava': typeof StravaRoute
   '/vocabulary': typeof VocabularyRoute
   '/posts/$slug': typeof PostsSlugRoute
@@ -113,6 +120,7 @@ export interface FileRoutesByTo {
   '/p5': typeof P5Route
   '/punchcard': typeof PunchcardRoute
   '/running': typeof RunningRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/strava': typeof StravaRoute
   '/vocabulary': typeof VocabularyRoute
   '/posts/$slug': typeof PostsSlugRoute
@@ -129,6 +137,7 @@ export interface FileRoutesById {
   '/p5': typeof P5Route
   '/punchcard': typeof PunchcardRoute
   '/running': typeof RunningRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/strava': typeof StravaRoute
   '/vocabulary': typeof VocabularyRoute
   '/posts/$slug': typeof PostsSlugRoute
@@ -146,6 +155,7 @@ export interface FileRouteTypes {
     | '/p5'
     | '/punchcard'
     | '/running'
+    | '/sitemap.xml'
     | '/strava'
     | '/vocabulary'
     | '/posts/$slug'
@@ -161,6 +171,7 @@ export interface FileRouteTypes {
     | '/p5'
     | '/punchcard'
     | '/running'
+    | '/sitemap.xml'
     | '/strava'
     | '/vocabulary'
     | '/posts/$slug'
@@ -176,6 +187,7 @@ export interface FileRouteTypes {
     | '/p5'
     | '/punchcard'
     | '/running'
+    | '/sitemap.xml'
     | '/strava'
     | '/vocabulary'
     | '/posts/$slug'
@@ -192,6 +204,7 @@ export interface RootRouteChildren {
   P5Route: typeof P5Route
   PunchcardRoute: typeof PunchcardRoute
   RunningRoute: typeof RunningRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StravaRoute: typeof StravaRoute
   VocabularyRoute: typeof VocabularyRoute
   PostsSlugRoute: typeof PostsSlugRoute
@@ -257,6 +270,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RunningRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/strava': {
       id: '/strava'
       path: '/strava'
@@ -304,6 +324,7 @@ const rootRouteChildren: RootRouteChildren = {
   P5Route: P5Route,
   PunchcardRoute: PunchcardRoute,
   RunningRoute: RunningRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   StravaRoute: StravaRoute,
   VocabularyRoute: VocabularyRoute,
   PostsSlugRoute: PostsSlugRoute,

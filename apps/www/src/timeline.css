@@ -1781,6 +1781,43 @@ a.tl-url:focus-visible {
   display: none;
 }
 
+/* The years beside the timeline each have their own transition (Timeline.tsx): those that
+   stay slide to their new place, as the list re-centres; those filtered out fade away, and
+   those coming back fade in. */
+
+.tl-yearnav a {
+  view-transition-class: tl-yearnav-year;
+}
+
+::view-transition-group(*.tl-yearnav-year) {
+  animation-duration: 360ms;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+::view-transition-old(*.tl-yearnav-year):only-child {
+  animation: tl-year-out 180ms ease-in both;
+}
+
+::view-transition-new(*.tl-yearnav-year):only-child {
+  animation: tl-year-in 300ms cubic-bezier(0.23, 1, 0.32, 1) 120ms both;
+}
+
+@keyframes tl-year-out {
+  to {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(0.375rem);
+  }
+}
+
+@keyframes tl-year-in {
+  from {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(0.375rem);
+  }
+}
+
 ::view-transition-old(root) {
   animation: tl-blur-out 160ms ease-in both;
 }
@@ -1806,7 +1843,10 @@ a.tl-url:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-old(root),
-  ::view-transition-new(root) {
+  ::view-transition-new(root),
+  ::view-transition-group(*.tl-yearnav-year),
+  ::view-transition-old(*.tl-yearnav-year),
+  ::view-transition-new(*.tl-yearnav-year) {
     animation: none;
   }
 }

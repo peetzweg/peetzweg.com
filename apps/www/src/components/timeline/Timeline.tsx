@@ -268,6 +268,8 @@ function YearNav({ current, hold, pages, years }: { current?: string; hold: (ren
             onClick={jump(year)}
             onFocus={prefetch(year)}
             onPointerEnter={prefetch(year)}
+            // Its own view transition, so years slide, leave and arrive when filters change (CSS).
+            style={{ viewTransitionName: `tl-yearnav-${year.year}` }}
           >
             {year.year}
           </a>

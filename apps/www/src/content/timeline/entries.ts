@@ -118,7 +118,7 @@ $ matcrawl search "<query>" --limit 20`),
   ),
   'peetzweg.com, redesigned': scroll(
     'redesign-site',
-    'The new peetzweg.com on a desktop, from the top: intro, products, filters and the latest months of the timeline',
+    'The old peetzweg.com on a desktop, top to bottom: the gradient circle with links, days spent reading, Strava rides, kilometres run, 3D flowers, generative sketches and a terminal of projects',
   ),
 };
 

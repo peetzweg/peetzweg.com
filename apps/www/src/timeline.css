@@ -1176,7 +1176,8 @@ a.tl-url:focus-visible {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .tl-scroll .tl-image {
+  /* Specific enough to win over `.tl-single .tl-image`, which stills pictures on entry pages. */
+  .tl-media.tl-scroll .tl-image {
     animation: tl-scroll var(--tl-scroll-duration, 40s) infinite alternate;
     animation-play-state: paused;
   }

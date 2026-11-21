@@ -5,7 +5,8 @@
 FROM node:24.22.1-alpine AS build
 RUN corepack enable
 WORKDIR /repo
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+# apps/www/tsconfig.json extends tsconfig.base.json, so the type check needs it too.
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml tsconfig.base.json ./
 COPY apps/www/package.json apps/www/
 # The root postinstall builds libs/*, which the site doesn't use.
 RUN pnpm install --frozen-lockfile --filter www... --ignore-scripts

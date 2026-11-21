@@ -154,8 +154,6 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.5625rem;
-  outline: 1px solid var(--tl-outline);
-  outline-offset: -1px;
 }
 
 .tl-featured-name {

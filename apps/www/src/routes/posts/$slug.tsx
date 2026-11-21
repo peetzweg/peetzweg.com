@@ -7,7 +7,7 @@ import { getPost, getPostMeta } from '../../content/posts';
 import { getEntry } from '../../content/timeline/api';
 import { Island } from '../../islands/Island';
 import { useJustify } from '../../justify/useJustify';
-import { SITE, seo } from '../../seo';
+import { SITE, creativeWork, seo } from '../../seo';
 
 export const Route = createFileRoute('/posts/$slug')({
   loader: async ({ params }) => {
@@ -26,16 +26,17 @@ export const Route = createFileRoute('/posts/$slug')({
       return {};
     }
     const [day, month, year] = loaderData.date.split('.');
-    const page = seo({
+    const published = `${year}-${month}-${day}`;
+    const description = loaderData.description ?? loaderData.title;
+    const path = `/posts/${loaderData.slug}`;
+    return seo({
       title: `${loaderData.title} · ${SITE.name}`,
-      description: loaderData.description ?? loaderData.title,
-      path: `/posts/${loaderData.slug}`,
+      description,
+      path,
       type: 'article',
+      published,
+      data: creativeWork({ kind: 'post', title: loaderData.title, description, path, date: published }),
     });
-    return {
-      ...page,
-      meta: [...page.meta, { property: 'article:published_time', content: `${year}-${month}-${day}` }],
-    };
   },
   component: PostPage,
 });

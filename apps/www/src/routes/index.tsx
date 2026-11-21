@@ -4,7 +4,7 @@ import { Timeline } from '../components/timeline/Timeline';
 import { getFeatured, getTimeline } from '../content/timeline/api';
 import { parseFilters, serializeFilters, type FilterId, type Order } from '../content/timeline/filters';
 import { TIMELINE_TEXT, useJustify } from '../justify/useJustify';
-import { SITE, seo } from '../seo';
+import { PROFILES, SITE, SUPPORT, profilePage, seo } from '../seo';
 
 type Search = { filter?: string; order?: 'oldest' };
 
@@ -19,20 +19,10 @@ export const Route = createFileRoute('/')({
     return { index, featured };
   },
   staleTime: Infinity,
-  head: () => seo({ title: SITE.title, description: SITE.description, path: '/', video: SITE.video, type: 'profile' }),
+  head: () =>
+    seo({ title: SITE.title, description: SITE.description, path: '/', video: SITE.video, type: 'profile', data: profilePage() }),
   component: Home,
 });
-
-const PROFILES = [
-  { label: 'X', href: 'https://x.com/peetzweg' },
-  { label: 'Bluesky', href: 'https://bsky.app/profile/peetzweg.com' },
-  { label: 'GitHub', href: 'https://github.com/peetzweg' },
-  { label: 'Strava', href: 'https://www.strava.com/athletes/18353420' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/peetzweg/' },
-  { label: 'Ko-fi', href: 'https://ko-fi.com/peetzweg' },
-];
-
-const SPONSOR = 'https://github.com/sponsors/peetzweg';
 
 const FEATURED_GROUPS = [
   { group: 'products', title: 'Products' },
@@ -69,25 +59,27 @@ function Home() {
 
   return (
     <main className="tl" ref={main}>
-      <header className="tl-intro">
-        <h1>Philip Poloczek</h1>
-        <p>
+      {/* An h-card (microformats): name, note, site and profiles, for IndieWeb tools and rel="me" checks. */}
+      <header className="tl-intro h-card">
+        <h1 className="p-name">Philip Poloczek</h1>
+        <p className="p-note">
           Building software, interfaces, tools and small experiments. This is everything I made, wrote
           and saved, from my first side projects to today.
         </p>
         <nav aria-label="Profiles" className="tl-profiles">
           {PROFILES.map(({ href, label }) => (
+            <a className="u-url" href={href} key={label} rel="me noreferrer" target="_blank">
+              {label}
+            </a>
+          ))}
+          {SUPPORT.map(({ href, label }) => (
             <a href={href} key={label} rel="noreferrer" target="_blank">
               {label}
             </a>
           ))}
-          <a className="tl-sponsor" href={SPONSOR} rel="noreferrer" target="_blank">
-            <svg aria-hidden="true" fill="currentColor" height="12" viewBox="0 0 16 16" width="12">
-              <path d="M8 14.25s-5.75-3.4-5.75-7.6A3.15 3.15 0 0 1 8 4.8a3.15 3.15 0 0 1 5.75 1.85c0 4.2-5.75 7.6-5.75 7.6Z" />
-            </svg>
-            Sponsor
-          </a>
         </nav>
+        <data className="u-url u-uid" hidden value={`${SITE.url}/`} />
+        <data className="p-locality" hidden value="Berlin" />
       </header>
 
       <div className="tl-featured">

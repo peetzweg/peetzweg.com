@@ -88,16 +88,6 @@
   }
 }
 
-.tl-sponsor {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3125rem;
-}
-
-.tl-sponsor svg {
-  color: #db61a2;
-}
-
 /* Projects: the few I'd show first, as icon, name and one line, in groups (Products, Upcoming
    Products). Two columns once there's room. */
 
@@ -1435,6 +1425,7 @@ a.tl-url:focus-visible {
   flex: none;
   width: 3.5rem;
   border-radius: 0.375rem;
+  outline: none;
 }
 
 .tl-cover {

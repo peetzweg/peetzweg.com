@@ -36,6 +36,15 @@ Every entry has a page: posts, experiments and collections their existing routes
 - [x] The redesign entry scrolls through the old peetzweg.com, captured on desktop (1440 × 900 at 2×) from production on 2026-11-21, before the switch (`media/redesign-site.webp`, its first screen as `-poster`). A full-page screenshot leaves the Strava embeds blank, so that section was shot on screen and put in its place. Lossless copy: `docs/archive/peetzweg.com-2026-11-21-desktop.webp`.
 - [x] Sponsor link to github.com/sponsors/peetzweg beside the profiles.
 
+## Search engines and the IndieWeb
+
+- [x] schema.org data (JSON-LD, `apps/www/src/seo.ts`): the homepage is a ProfilePage about a Person (profiles as `sameAs`), entry pages are CreativeWorks and posts BlogPostings, all with the person as author.
+- [x] h-card on the intro (name, note, site, profiles, Berlin) and `rel="me"` on every profile link.
+- [x] `/feed.xml`: RSS of the newest 50 entries, tweets left out, linked from every page's head.
+- [x] `og:locale`, `profile:*` on the homepage, `article:published_time` on entries, `color-scheme`, Apple touch icon and web manifest.
+- [ ] A downloadable vCard (`.vcf`) only makes sense with contact details (an email); add one once there's an address to publish.
+- [ ] Regenerate `og.png` / `og.mp4` for the new look (still the old design).
+
 ## Tweets and videos
 
 - [x] Tweets with media from the X API: `pnpm tweets:pull --api` (needs `X_BEARER_TOKEN`; X bills each post it lists). On 2026-11-21 it listed 1113 posts back to July 2021 and saved the 288 with a photo, video or GIF, leaving out retweets and replies to other people. Run it again now and then: it only lists posts newer than the newest saved one (`--all` lists everything again). Every saved tweet is on the timeline, under Writing, in X's layout (react-tweet). Delete its file in `content/timeline/tweets/` to drop one. Single tweets: `pnpm tweets:pull <id or URL>`.

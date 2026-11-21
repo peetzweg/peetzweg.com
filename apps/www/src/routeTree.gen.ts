@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SlugRouteImport } from './routes/$slug'
 import { Route as EpubRouteImport } from './routes/epub'
+import { Route as FeedDotxmlRouteImport } from './routes/feed[.]xml'
 import { Route as HardwareRouteImport } from './routes/hardware'
 import { Route as ModelsRouteImport } from './routes/models'
 import { Route as P5RouteImport } from './routes/p5'
@@ -38,6 +39,11 @@ const SlugRoute = SlugRouteImport.update({
 const EpubRoute = EpubRouteImport.update({
   id: '/epub',
   path: '/epub',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeedDotxmlRoute = FeedDotxmlRouteImport.update({
+  id: '/feed.xml',
+  path: '/feed.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HardwareRoute = HardwareRouteImport.update({
@@ -105,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$slug': typeof SlugRoute
   '/epub': typeof EpubRoute
+  '/feed.xml': typeof FeedDotxmlRoute
   '/hardware': typeof HardwareRoute
   '/models': typeof ModelsRoute
   '/p5': typeof P5Route
@@ -122,6 +129,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$slug': typeof SlugRoute
   '/epub': typeof EpubRoute
+  '/feed.xml': typeof FeedDotxmlRoute
   '/hardware': typeof HardwareRoute
   '/models': typeof ModelsRoute
   '/p5': typeof P5Route
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$slug': typeof SlugRoute
   '/epub': typeof EpubRoute
+  '/feed.xml': typeof FeedDotxmlRoute
   '/hardware': typeof HardwareRoute
   '/models': typeof ModelsRoute
   '/p5': typeof P5Route
@@ -159,6 +168,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$slug'
     | '/epub'
+    | '/feed.xml'
     | '/hardware'
     | '/models'
     | '/p5'
@@ -176,6 +186,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$slug'
     | '/epub'
+    | '/feed.xml'
     | '/hardware'
     | '/models'
     | '/p5'
@@ -193,6 +204,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$slug'
     | '/epub'
+    | '/feed.xml'
     | '/hardware'
     | '/models'
     | '/p5'
@@ -211,6 +223,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SlugRoute: typeof SlugRoute
   EpubRoute: typeof EpubRoute
+  FeedDotxmlRoute: typeof FeedDotxmlRoute
   HardwareRoute: typeof HardwareRoute
   ModelsRoute: typeof ModelsRoute
   P5Route: typeof P5Route
@@ -246,6 +259,13 @@ declare module '@tanstack/react-router' {
       path: '/epub'
       fullPath: '/epub'
       preLoaderRoute: typeof EpubRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feed.xml': {
+      id: '/feed.xml'
+      path: '/feed.xml'
+      fullPath: '/feed.xml'
+      preLoaderRoute: typeof FeedDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hardware': {
@@ -339,6 +359,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SlugRoute: SlugRoute,
   EpubRoute: EpubRoute,
+  FeedDotxmlRoute: FeedDotxmlRoute,
   HardwareRoute: HardwareRoute,
   ModelsRoute: ModelsRoute,
   P5Route: P5Route,

@@ -4,7 +4,7 @@ import { EntryFooter } from '../components/timeline/EntryFooter';
 import { EntryBody, EntryMeta, HeadingLevel } from '../components/timeline/Timeline';
 import { getEntry } from '../content/timeline/api';
 import { TIMELINE_TEXT, useJustify } from '../justify/useJustify';
-import { SITE, seo } from '../seo';
+import { SITE, creativeWork, seo } from '../seo';
 
 /** One timeline entry on its own page, at a short dateless URL like `/papr`. */
 export const Route = createFileRoute('/$slug')({
@@ -18,6 +18,15 @@ export const Route = createFileRoute('/$slug')({
           path: loaderData.entry.path,
           image: loaderData.image,
           type: 'article',
+          published: loaderData.entry.date,
+          data: creativeWork({
+            kind: loaderData.entry.type === 'post' ? 'post' : 'other',
+            title: loaderData.title,
+            description: loaderData.summary,
+            path: loaderData.entry.path,
+            date: loaderData.entry.date,
+            image: loaderData.image,
+          }),
         })
       : {},
   component: EntryPage,

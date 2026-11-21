@@ -10,7 +10,7 @@ Every entry has a page: posts, experiments and collections their existing routes
 - [ ] Approximate dates (shown with `~`): bed and Potence lamp (`2022-09`, from the commit that added them).
 - [ ] Hardware dates come from photo file creation dates; check they match when each piece was made.
 - [ ] Project dates are GitHub repo creation dates; some projects started earlier or shipped later.
-- [ ] Repos left out because they have no description: sunshine, wavcraft, ui, obsidian-plugin, shadow-overlay, siikafish, status-saver, playgrounds. Add descriptions to include them.
+- [ ] Repos left out because they have no description: wavcraft, ui, obsidian-plugin, shadow-overlay, siikafish, status-saver, playgrounds. Add descriptions to include them.
 - [ ] Crosswind is listed and links to crosswind.social although its repo is private. Keep?
 - [ ] Star counts are a snapshot from 2026-11-19. Fetch at build time?
 - [ ] Experiment descriptions (p5, models, vocabulary, punchcard, epub) still point at placeholder pages from the Start rebuild.

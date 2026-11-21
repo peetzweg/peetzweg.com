@@ -20,7 +20,7 @@ export const Route = createFileRoute('/')({
   },
   staleTime: Infinity,
   head: () =>
-    seo({ title: SITE.title, description: SITE.description, path: '/', video: SITE.video, type: 'profile', data: profilePage() }),
+    seo({ title: SITE.title, description: SITE.description, path: '/', type: 'profile', data: profilePage() }),
   component: Home,
 });
 

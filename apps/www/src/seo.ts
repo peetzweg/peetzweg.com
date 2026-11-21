@@ -5,9 +5,11 @@ export const SITE = {
   description:
     'Philip Poloczek is a software engineer in Berlin building apps, developer tools, smart contracts and small web experiments. A timeline of everything he made, wrote and shipped since 2013.',
   handle: '@peetzweg',
-  /** 1200×630, in /public. */
-  image: { src: '/og.png', width: 1200, height: 630, alt: 'Philip Poloczek: a timeline of everything I made' },
-  video: { src: '/og.mp4', width: 1200, height: 630 },
+  /**
+   * 1200×630, in /public; made from scripts/og/card.html with scripts/og/render.sh. Bump `v` after
+   * re-rendering: link previews cache the picture by its URL.
+   */
+  image: { src: '/og.png?v=2', width: 1200, height: 630, alt: 'Philip Poloczek, peetzweg.com' },
 } as const;
 
 /** Profiles elsewhere, linked from the homepage with rel="me" and listed as `sameAs` for search engines. */

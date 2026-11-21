@@ -1273,37 +1273,47 @@ a.tl-url:focus-visible {
   z-index: 1;
   display: grid;
   place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  margin-top: -1.125rem;
+  width: 2rem;
+  height: 2rem;
+  margin-top: -1rem;
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--color-panel) 88%, transparent);
-  box-shadow:
-    0 0 0 1px var(--tl-outline),
-    0 0.25rem 0.75rem rgb(0 0 0 / 0.12);
-  color: var(--tl-fg);
+  /* Dark glass over the picture, a hairline for its edge, no shadow. */
+  background: rgb(18 18 16 / 0.42);
+  box-shadow: inset 0 0 0 0.5px rgb(255 255 255 / 0.22);
+  color: #fff;
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  transform: scale(0.9);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  backdrop-filter: blur(12px) saturate(1.4);
   transition:
-    opacity 150ms ease,
-    transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+    opacity 180ms ease,
+    transform 220ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 150ms ease;
+}
+
+/* A bigger target than it looks. */
+.tl-gallery-step::before {
+  content: '';
+  position: absolute;
+  inset: -0.375rem;
 }
 
 .tl-gallery-step[data-direction='previous'] {
-  left: 0.5rem;
+  left: 0.75rem;
+  transform: translateX(0.25rem);
 }
 
 .tl-gallery-step[data-direction='next'] {
-  right: 0.5rem;
+  right: 0.75rem;
+  transform: translateX(-0.25rem);
 }
 
 .tl-gallery-step .tl-chevron {
+  width: 0.875rem;
+  height: 0.875rem;
   transform: rotate(90deg);
 }
 
@@ -1319,8 +1329,8 @@ a.tl-url:focus-visible {
   outline-offset: 2px;
 }
 
-.tl-gallery-step:active {
-  transform: scale(0.94);
+.tl-gallery-step.tl-gallery-step:active {
+  transform: scale(0.92);
 }
 
 @media (hover: hover) {
@@ -1330,8 +1340,12 @@ a.tl-url:focus-visible {
     transform: none;
   }
 
+  .tl-gallery-viewport:hover .tl-gallery-step:hover {
+    background: rgb(18 18 16 / 0.6);
+  }
+
   .tl-gallery-viewport:hover .tl-gallery-step:active {
-    transform: scale(0.94);
+    transform: scale(0.92);
   }
 }
 
@@ -1959,6 +1973,56 @@ a.tl-url:focus-visible {
   --tweet-actions-font-size: 0.8125rem;
   min-width: 0;
   max-width: none;
+}
+
+/* The line with the time, react-tweet's own markup and styles (see Tweet.tsx). */
+
+.tl-tweet-info {
+  display: flex;
+  align-items: center;
+  margin-top: 0.125rem;
+  color: var(--tweet-font-color-secondary);
+  overflow-wrap: break-word;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tl-tweet-time {
+  color: inherit;
+  font-size: var(--tweet-info-font-size);
+  line-height: var(--tweet-info-line-height);
+  text-decoration: none;
+}
+
+.tl-tweet-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tweet-actions-icon-wrapper-size);
+  height: var(--tweet-actions-icon-wrapper-size);
+  margin-right: -4px;
+  margin-left: auto;
+  border-radius: 9999px;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+.tl-tweet-about svg {
+  height: var(--tweet-actions-icon-size);
+  fill: currentColor;
+  user-select: none;
+}
+
+@media (hover: hover) {
+  .tl-tweet-time:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  .tl-tweet-about:hover {
+    background-color: var(--tweet-color-blue-secondary-hover);
+    color: var(--tweet-color-blue-secondary);
+  }
 }
 
 /* Running text is justified. Until the line breaker runs (src/justify), and wherever it gives up,

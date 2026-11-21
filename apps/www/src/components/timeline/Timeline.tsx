@@ -1,11 +1,11 @@
 import { Link, useLocation, useNavigate } from '@tanstack/react-router';
 import { useServerFn } from '@tanstack/react-start';
-import { EmbeddedTweet } from 'react-tweet';
 import { createContext, useContext, useEffect, useReducer, useRef, useState } from 'react';
 import { useInView, useReducedMotion } from '../../hooks';
 import { Island } from '../../islands/Island';
 import { findTimelineEntry, getTimelinePages, type TimelineQuery } from '../../content/timeline/api';
 import type { Image, Media, TimelineIndex, TimelineItem } from '../../content/timeline/types';
+import { Tweet } from './Tweet';
 
 const LABELS: Record<TimelineItem['type'], string> = {
   post: 'Writing',
@@ -512,7 +512,7 @@ export function EntryBody({ entry }: { entry: TimelineItem }) {
     case 'tweet':
       return (
         <div className="tl-tweet">
-          <EmbeddedTweet tweet={entry.tweet} />
+          <Tweet tweet={entry.tweet} />
         </div>
       );
     case 'book':

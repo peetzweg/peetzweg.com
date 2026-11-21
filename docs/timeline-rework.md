@@ -43,7 +43,7 @@ Every entry has a page: posts, experiments and collections their existing routes
 - [x] `/feed.xml`: RSS of the newest 50 entries, tweets left out, linked from every page's head.
 - [x] `og:locale`, `profile:*` on the homepage, `article:published_time` on entries, `color-scheme`, Apple touch icon and web manifest.
 - [ ] A downloadable vCard (`.vcf`) only makes sense with contact details (an email); add one once there's an address to publish.
-- [x] New share image: name, X profile picture and the GitHub avatar's ochre (#CDA763), from `apps/www/scripts/og/card.html` (`scripts/og/render.sh`). The old `og.mp4` preview video is gone.
+- [x] New share image: `peetzweg` over `Philip Poloczek` in white, the X profile picture and the GitHub avatar's ochre (#CDA763), from `apps/www/scripts/og/card.html` (`scripts/og/render.sh`). The old `og.mp4` preview video is gone.
 
 ## Tweets and videos
 

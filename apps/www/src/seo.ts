@@ -9,7 +9,7 @@ export const SITE = {
    * 1200×630, in /public; made from scripts/og/card.html with scripts/og/render.sh. Bump `v` after
    * re-rendering: link previews cache the picture by its URL.
    */
-  image: { src: '/og.png?v=3', width: 1200, height: 630, alt: 'peetzweg: Philip Poloczek' },
+  image: { src: '/og.png?v=4', width: 1200, height: 630, alt: 'peetzweg: Philip Poloczek' },
 } as const;
 
 /** Profiles elsewhere, linked from the homepage with rel="me" and listed as `sameAs` for search engines. */

@@ -39,6 +39,14 @@ export function row(...pictures: Picture[]): Media {
   return { kind: 'row', images: pictures.map(([name, alt]) => mediaImage(name, alt)) };
 }
 
+/**
+ * A full-page screenshot, scrolled through in a window-shaped frame, with `<name>-poster.webp`
+ * (its first screen) for link previews.
+ */
+export function scroll(name: string, alt: string): Media {
+  return { kind: 'scroll', image: mediaImage(name, alt), poster: mediaImage(`${name}-poster`, alt) };
+}
+
 /** A silent looping clip, with `<name>-poster.webp` as its still frame. */
 export function video(name: string, alt: string): Media {
   const src = files[`./media/${name}.mp4`];

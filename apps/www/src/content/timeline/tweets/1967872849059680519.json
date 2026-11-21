@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-09-16T08:47:03.000Z",
+  "display_text_range": [
+    0,
+    267
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/sjGP3PC0Mo",
+        "expanded_url": "https://x.com/peetzweg/status/1967872849059680519/photo/1",
+        "indices": [
+          268,
+          291
+        ],
+        "url": "https://t.co/sjGP3PC0Mo"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "837600574531059712",
+        "indices": [
+          85,
+          97
+        ],
+        "name": "Aranet Home",
+        "screen_name": "aranet_home"
+      }
+    ]
+  },
+  "id_str": "1967872849059680519",
+  "text": "Late to the party. Are CO2 sensor still trendy? Finally gave in the recent sale from @aranet_home. Been a 12 days since I got it, max value I had indoor is 924, not even leaving the green indication. Curious how this will change in winter with less constant aeration. https://t.co/sjGP3PC0Mo",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1967872849059680519"
+    ],
+    "editable_until_msecs": "1758016023000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/sjGP3PC0Mo",
+      "expanded_url": "https://x.com/peetzweg/status/1967872849059680519/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        268,
+        291
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G09J7P_XIAAyJv-.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1673,
+            "w": 2988,
+            "x": 0,
+            "y": 433
+          },
+          {
+            "h": 2988,
+            "w": 2988,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2988,
+            "w": 2621,
+            "x": 258,
+            "y": 0
+          },
+          {
+            "h": 2988,
+            "w": 1494,
+            "x": 821,
+            "y": 0
+          },
+          {
+            "h": 2988,
+            "w": 2988,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 2988,
+        "width": 2988
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/sjGP3PC0Mo"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1673,
+          "w": 2988,
+          "x": 0,
+          "y": 433
+        },
+        {
+          "h": 2988,
+          "w": 2988,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2988,
+          "w": 2621,
+          "x": 258,
+          "y": 0
+        },
+        {
+          "h": 2988,
+          "w": 1494,
+          "x": 821,
+          "y": 0
+        },
+        {
+          "h": 2988,
+          "w": 2988,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1967872849059680519/photo/1",
+      "url": "https://pbs.twimg.com/media/G09J7P_XIAAyJv-.jpg",
+      "width": 2988,
+      "height": 2988
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

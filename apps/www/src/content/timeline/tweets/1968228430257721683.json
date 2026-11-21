@@ -1,0 +1,223 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-09-17T08:20:00.000Z",
+  "display_text_range": [
+    0,
+    196
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/YFM0n5XdFw",
+        "expanded_url": "https://x.com/peetzweg/status/1968228430257721683/video/1",
+        "indices": [
+          197,
+          220
+        ],
+        "url": "https://t.co/YFM0n5XdFw"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1966536188690383187",
+        "indices": [
+          173,
+          196
+        ],
+        "url": "https://t.co/cbGIaD9qcL"
+      }
+    ]
+  },
+  "id_str": "1968228430257721683",
+  "text": "TIL I know to nothing about HDR formats. \nMacOS's native screenrecorder, Quicktime, does not record HDR. Maybe with Tahoe it can? \n\nThis was recorded using QuickRecorder. \n\nhttps://t.co/cbGIaD9qcL https://t.co/YFM0n5XdFw",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1968228430257721683"
+    ],
+    "editable_until_msecs": "1758100800000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/YFM0n5XdFw",
+      "expanded_url": "https://x.com/peetzweg/status/1968228430257721683/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        197,
+        220
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1967855190435831808/img/J0TURme62nxg8mAw.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 944,
+        "width": 1512
+      },
+      "sizes": {
+        "large": {
+          "h": 944,
+          "resize": "fit",
+          "w": 1512
+        },
+        "medium": {
+          "h": 749,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 425,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/YFM0n5XdFw",
+      "video_info": {
+        "aspect_ratio": [
+          189,
+          118
+        ],
+        "duration_millis": 38858,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/1967855190435831808/pl/RAClgzcvgeGfFE29.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1967855190435831808/vid/avc1/432x270/rnh9820I8TXlkB-y.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1967855190435831808/vid/avc1/576x360/T4l9tYe7hERCW5JT.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1967855190435831808/vid/avc1/1152x720/Lk63od40BPDX2uDM.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      189,
+      118
+    ],
+    "contentType": "media_entity",
+    "durationMs": 38858,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/1967855190435831808/img/J0TURme62nxg8mAw.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/1967855190435831808/pl/RAClgzcvgeGfFE29.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1967855190435831808/vid/avc1/432x270/rnh9820I8TXlkB-y.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1967855190435831808/vid/avc1/576x360/T4l9tYe7hERCW5JT.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1967855190435831808/vid/avc1/1152x720/Lk63od40BPDX2uDM.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1968228430257721683"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 0,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2025-09-12T16:15:38.000Z",
+    "display_text_range": [
+      0,
+      86
+    ],
+    "entities": {
+      "urls": [
+        {
+          "display_url": "greggman.github.io/HDR-draw/",
+          "expanded_url": "https://greggman.github.io/HDR-draw/",
+          "indices": [
+            46,
+            69
+          ],
+          "url": "https://t.co/PQRbnQUQrd"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "11781582",
+          "indices": [
+            74,
+            83
+          ],
+          "name": "greggman",
+          "screen_name": "greggman"
+        }
+      ]
+    },
+    "id_str": "1966536188690383187",
+    "text": "Next ui design hyped feature, HDR highlights?\nhttps://t.co/PQRbnQUQrd\n\ncc @greggman 👍",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1966536188690383187"
+      ],
+      "editable_until_msecs": "1757697338000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

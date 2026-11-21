@@ -1,0 +1,342 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 3,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-11-02T18:54:03.000Z",
+  "display_text_range": [
+    0,
+    75
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/TgWXsaR8pA",
+        "expanded_url": "https://x.com/peetzweg/status/1985057836892569664/video/1",
+        "indices": [
+          76,
+          99
+        ],
+        "url": "https://t.co/TgWXsaR8pA"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1975264491777777707",
+        "indices": [
+          52,
+          75
+        ],
+        "url": "https://t.co/vjBQpVBxL7"
+      }
+    ]
+  },
+  "id_str": "1985057836892569664",
+  "text": "Experimenting with navigating the hyperlink cards.\n\nhttps://t.co/vjBQpVBxL7 https://t.co/TgWXsaR8pA",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1985057836892569664"
+    ],
+    "editable_until_msecs": "1762113243000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/TgWXsaR8pA",
+      "expanded_url": "https://x.com/peetzweg/status/1985057836892569664/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        76,
+        99
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1985057558663462912/img/9lNjVSZGkU9_NcV2.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1392,
+        "width": 2702
+      },
+      "sizes": {
+        "large": {
+          "h": 1055,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 618,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 350,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/TgWXsaR8pA",
+      "video_info": {
+        "aspect_ratio": [
+          1351,
+          696
+        ],
+        "duration_millis": 15464,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/1985057558663462912/pl/jdQHz9moG1CjjC0U.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1985057558663462912/vid/avc1/524x270/c0EogF-ng5HmWs1r.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1985057558663462912/vid/avc1/698x360/F7pFhoqEWS_yP6YM.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1985057558663462912/vid/avc1/1396x720/1hn2WbvNADFvp5Hm.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      1351,
+      696
+    ],
+    "contentType": "media_entity",
+    "durationMs": 15464,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/1985057558663462912/img/9lNjVSZGkU9_NcV2.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/1985057558663462912/pl/jdQHz9moG1CjjC0U.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1985057558663462912/vid/avc1/524x270/c0EogF-ng5HmWs1r.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1985057558663462912/vid/avc1/698x360/F7pFhoqEWS_yP6YM.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1985057558663462912/vid/avc1/1396x720/1hn2WbvNADFvp5Hm.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1985057836892569664"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 0,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2025-10-06T18:18:48.000Z",
+    "display_text_range": [
+      0,
+      124
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/PVq1i5w02k",
+          "expanded_url": "https://x.com/peetzweg/status/1975264491777777707/photo/1",
+          "indices": [
+            125,
+            148
+          ],
+          "url": "https://t.co/PVq1i5w02k"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "x.com/peetzweg/statu…",
+          "expanded_url": "https://x.com/peetzweg/status/1973803729410314419",
+          "indices": [
+            101,
+            124
+          ],
+          "url": "https://t.co/jBifsodrjw"
+        }
+      ]
+    },
+    "id_str": "1975264491777777707",
+    "text": "Continued some minor cooking. Want it to work vertical but og/twitter card images are in landscape.\n\nhttps://t.co/jBifsodrjw https://t.co/PVq1i5w02k",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1975264491777777707"
+      ],
+      "editable_until_msecs": "1759778328000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/PVq1i5w02k",
+        "expanded_url": "https://x.com/peetzweg/status/1975264491777777707/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          125,
+          148
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/G2mMbmZXwAARqfR.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 1319,
+              "w": 2356,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1426,
+              "w": 1426,
+              "x": 874,
+              "y": 0
+            },
+            {
+              "h": 1426,
+              "w": 1251,
+              "x": 962,
+              "y": 0
+            },
+            {
+              "h": 1426,
+              "w": 713,
+              "x": 1231,
+              "y": 0
+            },
+            {
+              "h": 1426,
+              "w": 2356,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 1426,
+          "width": 2356
+        },
+        "sizes": {
+          "large": {
+            "h": 1240,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 726,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 412,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/PVq1i5w02k"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 1319,
+            "w": 2356,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1426,
+            "w": 1426,
+            "x": 874,
+            "y": 0
+          },
+          {
+            "h": 1426,
+            "w": 1251,
+            "x": 962,
+            "y": 0
+          },
+          {
+            "h": 1426,
+            "w": 713,
+            "x": 1231,
+            "y": 0
+          },
+          {
+            "h": 1426,
+            "w": 2356,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/1975264491777777707/photo/1",
+        "url": "https://pbs.twimg.com/media/G2mMbmZXwAARqfR.jpg",
+        "width": 2356,
+        "height": 1426
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

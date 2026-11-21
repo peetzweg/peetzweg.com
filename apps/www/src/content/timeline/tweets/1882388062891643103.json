@@ -1,0 +1,186 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-01-23T11:21:01.000Z",
+  "display_text_range": [
+    0,
+    279
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/ZYUtCH889X",
+        "expanded_url": "https://x.com/peetzweg/status/1882388062891643103/photo/1",
+        "indices": [
+          280,
+          303
+        ],
+        "url": "https://t.co/ZYUtCH889X"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "4600040954",
+        "indices": [
+          208,
+          223
+        ],
+        "name": "Home Assistant",
+        "screen_name": "home_assistant"
+      },
+      {
+        "id_str": "1778479521421053952",
+        "indices": [
+          232,
+          245
+        ],
+        "name": "Open Home Foundation",
+        "screen_name": "openhomefndn"
+      }
+    ]
+  },
+  "id_str": "1882388062891643103",
+  "text": "Have a mixed system of Philips Hue and IKEA Tradfri gear. Bought a new tradfri bulb and it wasn't able to be paired with my Philips Hue bridge. But why?\n\nThis tipped me over to switch to a custom bridge with @home_assistant. Thanks @openhomefndn for this great piece of software! https://t.co/ZYUtCH889X",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1882388062891643103"
+    ],
+    "editable_until_msecs": "1737634861000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/ZYUtCH889X",
+      "expanded_url": "https://x.com/peetzweg/status/1882388062891643103/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        280,
+        303
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/Gh-V96aXMAARegO.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 538,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1094,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 640,
+            "x": 96,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1280,
+        "width": 960
+      },
+      "sizes": {
+        "large": {
+          "h": 1280,
+          "resize": "fit",
+          "w": 960
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 900
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 510
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/ZYUtCH889X"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 538,
+          "w": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1094,
+          "w": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 640,
+          "x": 96,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 960,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1882388062891643103/photo/1",
+      "url": "https://pbs.twimg.com/media/Gh-V96aXMAARegO.jpg",
+      "width": 960,
+      "height": 1280
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

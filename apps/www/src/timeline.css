@@ -88,6 +88,88 @@
   }
 }
 
+.tl-sponsor {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+
+.tl-sponsor svg {
+  color: #db61a2;
+}
+
+/* Projects: the few I'd show first, as icon, name and one line, in groups (Products, Upcoming
+   Products). Two columns once there's room. */
+
+.tl-featured {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: clamp(2rem, 8vw, 3rem);
+}
+
+.tl-featured h2 {
+  margin: 0 0 0.5rem;
+  color: var(--tl-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.tl-featured ul {
+  display: grid;
+  gap: 0.25rem 1rem;
+  /* Negative margin cancels the cards' padding, so icons line up with the text above. */
+  margin: 0 -0.625rem;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 34rem) {
+  .tl-featured ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tl-featured a {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  column-gap: 0.75rem;
+  align-content: start;
+  padding: 0.5rem 0.625rem;
+  border-radius: 0.625rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+
+@media (hover: hover) {
+  .tl-featured a:hover {
+    background: var(--tl-hover);
+  }
+}
+
+.tl-featured img {
+  grid-row: span 2;
+  align-self: start;
+  margin-top: 0.125rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5625rem;
+  outline: 1px solid var(--tl-outline);
+  outline-offset: -1px;
+}
+
+.tl-featured-name {
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.tl-featured-line {
+  color: var(--tl-muted);
+  font-size: 0.875rem;
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+
 /* Filters: chips that switch on and off. Any number can be on; with none on, everything
    shows. Chips wrap, so every filter is visible at a glance. */
 
@@ -1073,6 +1155,63 @@ a.tl-url:focus-visible {
   max-height: 20rem;
 }
 
+/* Scroll: a full-page screenshot in a 16:10 frame. 62.5cqw is the frame's height, so the
+   picture moves up by its own height less one frame. */
+
+.tl-scroll {
+  container-type: inline-size;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  outline: 1px solid var(--tl-outline);
+  outline-offset: -1px;
+  background: var(--tl-hover);
+}
+
+.tl-scroll .tl-image {
+  width: 100%;
+  max-height: none;
+  border-radius: 0;
+  outline: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tl-scroll .tl-image {
+    animation: tl-scroll var(--tl-scroll-duration, 40s) infinite alternate;
+    animation-play-state: paused;
+  }
+
+  .tl-scroll[data-playing] .tl-image {
+    animation-play-state: running;
+  }
+
+  @media (hover: hover) {
+    .tl-scroll:hover .tl-image {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tl-scroll {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
+@keyframes tl-scroll {
+  0%,
+  6% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+  }
+
+  94%,
+  100% {
+    transform: translateY(calc(-100% + 62.5cqw));
+  }
+}
+
 .tl-clip {
   width: 100%;
   height: auto;
@@ -1563,6 +1702,7 @@ a.tl-url:focus-visible {
 
 @media (prefers-reduced-motion: no-preference) {
   .tl-intro > *,
+  .tl-featured,
   .tl-controls,
   .tl-years,
   .tl-back,
@@ -1580,6 +1720,10 @@ a.tl-url:focus-visible {
   .tl-intro > :nth-child(3),
   .tl-share {
     animation-delay: 120ms;
+  }
+
+  .tl-featured {
+    animation-delay: 150ms;
   }
 
   .tl-controls,
@@ -1607,6 +1751,10 @@ a.tl-url:focus-visible {
   view-transition-name: tl-intro;
 }
 
+.tl-featured {
+  view-transition-name: tl-featured;
+}
+
 .tl-controls {
   view-transition-name: tl-controls;
 }
@@ -1616,15 +1764,18 @@ a.tl-url:focus-visible {
 }
 
 ::view-transition-group(tl-intro),
+::view-transition-group(tl-featured),
 ::view-transition-group(tl-controls),
 ::view-transition-group(tl-yearnav),
 ::view-transition-new(tl-intro),
+::view-transition-new(tl-featured),
 ::view-transition-new(tl-controls),
 ::view-transition-new(tl-yearnav) {
   animation: none;
 }
 
 ::view-transition-old(tl-intro),
+::view-transition-old(tl-featured),
 ::view-transition-old(tl-controls),
 ::view-transition-old(tl-yearnav) {
   display: none;

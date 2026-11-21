@@ -1,0 +1,186 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-08-09T17:05:07.000Z",
+  "display_text_range": [
+    0,
+    255
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/zziFZEK3Qz",
+        "expanded_url": "https://x.com/peetzweg/status/2086499023238598895/photo/1",
+        "indices": [
+          256,
+          279
+        ],
+        "url": "https://t.co/zziFZEK3Qz"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "2247686810",
+        "indices": [
+          4,
+          14
+        ],
+        "name": "Andras Bacsai",
+        "screen_name": "heyandras"
+      },
+      {
+        "id_str": "1689746440405278720",
+        "indices": [
+          15,
+          25
+        ],
+        "name": "Coolify",
+        "screen_name": "coolifyio"
+      }
+    ]
+  },
+  "id_str": "2086499023238598895",
+  "text": "Hey @heyandras @coolifyio , can we have streaming output for tasks? I have long running scheduled tasks, couple of hours. I can't see any output here until it's done. Would be great to follow the logs here during execution, or is my usage an anti pattern? https://t.co/zziFZEK3Qz",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2086499023238598895"
+    ],
+    "editable_until_msecs": "1786298707000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/zziFZEK3Qz",
+      "expanded_url": "https://x.com/peetzweg/status/2086499023238598895/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        256,
+        279
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HPS7jjpWEAA1FzV.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 475,
+            "w": 848,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 614,
+            "w": 614,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 614,
+            "w": 539,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 614,
+            "w": 307,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 614,
+            "w": 848,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 614,
+        "width": 848
+      },
+      "sizes": {
+        "large": {
+          "h": 614,
+          "resize": "fit",
+          "w": 848
+        },
+        "medium": {
+          "h": 614,
+          "resize": "fit",
+          "w": 848
+        },
+        "small": {
+          "h": 492,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/zziFZEK3Qz"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 475,
+          "w": 848,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 614,
+          "w": 614,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 614,
+          "w": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 614,
+          "w": 307,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 614,
+          "w": 848,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2086499023238598895/photo/1",
+      "url": "https://pbs.twimg.com/media/HPS7jjpWEAA1FzV.png",
+      "width": 848,
+      "height": 614
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

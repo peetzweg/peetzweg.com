@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-08T13:34:00.000Z",
+  "display_text_range": [
+    0,
+    208
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/iYvSHgPdF6",
+        "expanded_url": "https://x.com/peetzweg/status/2020491303369543746/photo/1",
+        "indices": [
+          209,
+          232
+        ],
+        "url": "https://t.co/iYvSHgPdF6"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1995710751097659392",
+        "indices": [
+          40,
+          49
+        ],
+        "name": "OpenClaw🦞",
+        "screen_name": "openclaw"
+      }
+    ]
+  },
+  "id_str": "2020491303369543746",
+  "text": "Was hesitant using multiple agents with @openclaw at first. Now I already have 4. One dedicated to just building. He has his own GitHub account now and is shipping away. Creating, updating and closing issues. https://t.co/iYvSHgPdF6",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2020491303369543746"
+    ],
+    "editable_until_msecs": "1770561240000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/iYvSHgPdF6",
+      "expanded_url": "https://x.com/peetzweg/status/2020491303369543746/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        209,
+        232
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HAovk_0WEAEXB95.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1338,
+            "w": 2389,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1338,
+            "w": 1338,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1338,
+            "w": 1174,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1338,
+            "w": 669,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1338,
+            "w": 2518,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1338,
+        "width": 2518
+      },
+      "sizes": {
+        "large": {
+          "h": 1088,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 638,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 361,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/iYvSHgPdF6"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1338,
+          "w": 2389,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1338,
+          "w": 1338,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1338,
+          "w": 1174,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1338,
+          "w": 669,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1338,
+          "w": 2518,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2020491303369543746/photo/1",
+      "url": "https://pbs.twimg.com/media/HAovk_0WEAEXB95.jpg",
+      "width": 2518,
+      "height": 1338
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

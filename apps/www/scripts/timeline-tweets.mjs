@@ -7,6 +7,9 @@
 //                                           the archive X sends you (Settings → Your account →
 //                                           Download an archive of your data). Add --dry-run to
 //                                           only list them, --text to include tweets without media.
+//   pnpm tweets:pull --api                  the same, from the X API: your posts newer than the newest
+//                                           saved one (--all for your latest 3200, the most X lists).
+//                                           Needs X_BEARER_TOKEN; X bills each post it lists.
 //
 // Retweets and replies to other people are left out; replies in your own threads are kept.
 // Tweets already saved are skipped, so the archive can be pulled again after a new export.
@@ -21,11 +24,15 @@ const args = process.argv.slice(2);
 const flag = (name) => args.includes(name);
 const archiveAt = args.indexOf('--archive');
 
-const ids = archiveAt === -1 ? args.map((arg) => arg.match(/(\d{8,})/)?.[1]).filter(Boolean) : fromArchive(args[archiveAt + 1]);
+const ids = flag('--api')
+  ? await fromApi()
+  : archiveAt === -1
+    ? args.map((arg) => arg.match(/(\d{8,})/)?.[1]).filter(Boolean)
+    : fromArchive(args[archiveAt + 1]);
 
 if (!ids.length) {
-  console.error('Usage: pnpm tweets:pull <id or URL>... | --archive <zip or dir> [--dry-run] [--text]');
-  process.exit(1);
+  console.error(flag('--api') ? 'Nothing new on X.' : 'Usage: pnpm tweets:pull <id or URL>... | --archive <zip or dir> | --api [--all] [--dry-run] [--text]');
+  process.exit(flag('--api') ? 0 : 1);
 }
 
 const todo = ids.filter((id) => !existsSync(new URL(`${id}.json`, dir)));
@@ -87,6 +94,55 @@ function fromArchive(path) {
   });
   console.log(`Archive of @${account?.username ?? '?'}: ${tweets.length} tweets, keeping ${kept.length}`);
   return kept.sort((a, b) => new Date(a.created_at) - new Date(b.created_at)).map((tweet) => tweet.id_str);
+}
+
+/**
+ * IDs of the posts worth keeping from the X API, oldest first. The API only lists posts; each is
+ * then saved from the embed API like any other, so saved tweets look the same wherever they came from.
+ */
+async function fromApi() {
+  const token = process.env.X_BEARER_TOKEN;
+  if (!token) {
+    console.error('Set X_BEARER_TOKEN to the bearer token of your app in the X developer console.');
+    process.exit(1);
+  }
+  const call = async (path, params) => {
+    const response = await fetch(`https://api.x.com/2/${path}?${new URLSearchParams(params)}`, {
+      headers: { authorization: `Bearer ${token}` },
+    });
+    const body = await response.json();
+    if (!response.ok) {
+      console.error(`X API ${response.status}: ${JSON.stringify(body.errors ?? body)}`);
+      process.exit(1);
+    }
+    return body;
+  };
+
+  const username = process.env.X_USERNAME ?? 'peetzweg';
+  const { data: user } = await call(`users/by/username/${username}`, {});
+  const saved = readdirSync(dir).flatMap((name) => name.match(/^(\d+)\.json$/)?.[1] ?? []);
+  const newest = saved.sort((a, b) => (BigInt(a) < BigInt(b) ? -1 : 1)).at(-1);
+
+  const posts = [];
+  let page;
+  do {
+    const body = await call(`users/${user.id}/tweets`, {
+      max_results: '100',
+      exclude: 'retweets',
+      'tweet.fields': 'created_at,attachments,in_reply_to_user_id',
+      ...(newest && !flag('--all') ? { since_id: newest } : {}),
+      ...(page ? { pagination_token: page } : {}),
+    });
+    posts.push(...(body.data ?? []));
+    page = body.meta?.next_token;
+  } while (page);
+
+  const kept = posts.filter((post) => {
+    const replyToOthers = post.in_reply_to_user_id && post.in_reply_to_user_id !== user.id;
+    return !replyToOthers && (post.attachments?.media_keys?.length > 0 || flag('--text'));
+  });
+  console.log(`@${username} on X: ${posts.length} posts${newest && !flag('--all') ? ' since the newest saved' : ''}, keeping ${kept.length}`);
+  return kept.reverse().map((post) => post.id);
 }
 
 /** The archive as X sends it (a zip) or unzipped. */

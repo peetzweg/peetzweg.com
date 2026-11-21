@@ -1,0 +1,158 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-08-08T10:38:02.000Z",
+  "display_text_range": [
+    0,
+    282
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/ClR27n0Jwz",
+        "expanded_url": "https://x.com/peetzweg/status/1556590552677761024/photo/1",
+        "indices": [
+          283,
+          306
+        ],
+        "url": "https://t.co/ClR27n0Jwz"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "buff.ly/3bEE7Fs",
+        "expanded_url": "https://buff.ly/3bEE7Fs",
+        "indices": [
+          259,
+          282
+        ],
+        "url": "https://t.co/cEejnu0HVS"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "3167734591",
+        "indices": [
+          15,
+          20
+        ],
+        "name": "Visual Studio Code",
+        "screen_name": "code"
+      },
+      {
+        "id_str": "2312333412",
+        "indices": [
+          73,
+          82
+        ],
+        "name": "Ethereum",
+        "screen_name": "ethereum"
+      }
+    ]
+  },
+  "id_str": "1556590552677761024",
+  "text": "Build a VSCode @code extension to highlight and validate the checksum of @ethereum style addresses. Furthermore, it offers convenient links to blockchain explorers on hover. \nJust search for `Crypto Address Lens` on the Marketplace or grab it from here -&gt;\nhttps://t.co/cEejnu0HVS https://t.co/ClR27n0Jwz",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1556590552677761024"
+    ],
+    "editable_until_msecs": "1659956882000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/ClR27n0Jwz",
+      "expanded_url": "https://x.com/peetzweg/status/1556590552677761024/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        283,
+        306
+      ],
+      "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/FZoe23kXkAEuNMW.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 156,
+        "width": 900
+      },
+      "sizes": {
+        "large": {
+          "h": 156,
+          "resize": "fit",
+          "w": 900
+        },
+        "medium": {
+          "h": 156,
+          "resize": "fit",
+          "w": 900
+        },
+        "small": {
+          "h": 118,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "animated_gif",
+      "url": "https://t.co/ClR27n0Jwz",
+      "video_info": {
+        "aspect_ratio": [
+          75,
+          13
+        ],
+        "variants": [
+          {
+            "bitrate": 0,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/tweet_video/FZoe23kXkAEuNMW.mp4"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      75,
+      13
+    ],
+    "contentType": "gif",
+    "durationMs": 0,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/tweet_video_thumb/FZoe23kXkAEuNMW.jpg",
+    "variants": [
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/tweet_video/FZoe23kXkAEuNMW.mp4"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1556590552677761024"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

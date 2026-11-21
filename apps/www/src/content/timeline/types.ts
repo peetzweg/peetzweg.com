@@ -34,6 +34,8 @@ export type Media =
   | { kind: 'gallery'; images: ReadonlyArray<Image> }
   | { kind: 'row'; images: ReadonlyArray<Image> }
   | { kind: 'video'; src: string; poster: Image }
+  /** A full-page screenshot, scrolled through slowly in a window-shaped frame. `poster` is its top. */
+  | { kind: 'scroll'; image: Image; poster: Image }
   | { kind: 'code'; code: string }
   | { kind: 'words'; words: ReadonlyArray<readonly [word: string, translation: string]> }
   /** ISO dates (`YYYY-MM-DD`) to punch into a week-by-day card. */
@@ -129,3 +131,6 @@ export type TimelineIndex = {
 
 /** An entry just before or after another, linked below an entry's page. */
 export type Neighbour = { path: string; title: string };
+
+/** A project at the top of the homepage. `href` is its own site, or its timeline page without one. */
+export type Featured = { title: string; tagline: string; href: string; icon: Image; group: 'products' | 'upcoming' };

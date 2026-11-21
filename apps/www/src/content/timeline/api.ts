@@ -15,7 +15,8 @@ import {
   timeline,
   type Order,
 } from '.';
-import type { Neighbour, TimelineEntry, TimelineIndex, TimelineItem, TimelinePageRef } from './types';
+import { featured } from './featured';
+import type { Featured, Neighbour, TimelineEntry, TimelineIndex, TimelineItem, TimelinePageRef } from './types';
 
 /*
  * The timeline reaches the browser through these server functions, never as a bundle: the
@@ -125,6 +126,12 @@ export const getTimeline = createServerFn({ method: 'GET' })
     }
     return { ...index, pages: first };
   });
+
+/** The projects at the top of the homepage. */
+export const getFeatured = createServerFn({ method: 'GET' }).handler((): Featured[] => {
+  cacheable();
+  return featured;
+});
 
 /** More pages, by key. */
 export const getTimelinePages = createServerFn({ method: 'GET' })

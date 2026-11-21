@@ -1,0 +1,351 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-11-03T18:43:19.000Z",
+  "display_text_range": [
+    0,
+    262
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/HMCWlRDnLe",
+        "expanded_url": "https://x.com/peetzweg/status/1985417522431344893/photo/1",
+        "indices": [
+          263,
+          286
+        ],
+        "url": "https://t.co/HMCWlRDnLe"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "breathing.peet.sh",
+        "expanded_url": "http://breathing.peet.sh",
+        "indices": [
+          214,
+          237
+        ],
+        "url": "https://t.co/2qODCtw9zR"
+      },
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1969439921371808011",
+        "indices": [
+          239,
+          262
+        ],
+        "url": "https://t.co/XIsaeXuOS1"
+      }
+    ]
+  },
+  "id_str": "1985417522431344893",
+  "text": "As a proof of concept I made my breathing app work offline. You only need to visit it once online, it will then cache itself for the next visit, even if offline. \nVery straight forward to do for client side apps.\n\nhttps://t.co/2qODCtw9zR\n\nhttps://t.co/XIsaeXuOS1 https://t.co/HMCWlRDnLe",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1985417522431344893"
+    ],
+    "editable_until_msecs": "1762198999000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/HMCWlRDnLe",
+      "expanded_url": "https://x.com/peetzweg/status/1985417522431344893/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        263,
+        286
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G42eNPdXYAA5iN7.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 727,
+            "w": 1298,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1018,
+            "w": 1018,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1018,
+            "w": 893,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1018,
+            "w": 509,
+            "x": 102,
+            "y": 0
+          },
+          {
+            "h": 1018,
+            "w": 1298,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1018,
+        "width": 1298
+      },
+      "sizes": {
+        "large": {
+          "h": 1018,
+          "resize": "fit",
+          "w": 1298
+        },
+        "medium": {
+          "h": 941,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 533,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/HMCWlRDnLe"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 727,
+          "w": 1298,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1018,
+          "w": 1018,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1018,
+          "w": 893,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1018,
+          "w": 509,
+          "x": 102,
+          "y": 0
+        },
+        {
+          "h": 1018,
+          "w": 1298,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1985417522431344893/photo/1",
+      "url": "https://pbs.twimg.com/media/G42eNPdXYAA5iN7.jpg",
+      "width": 1298,
+      "height": 1018
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 1,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2025-09-20T16:34:02.000Z",
+    "display_text_range": [
+      0,
+      238
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/0iALMQ9rly",
+          "expanded_url": "https://x.com/peetzweg/status/1969439921371808011/photo/1",
+          "indices": [
+            239,
+            262
+          ],
+          "url": "https://t.co/0iALMQ9rly"
+        }
+      ]
+    },
+    "id_str": "1969439921371808011",
+    "text": "It's pretty neat that you can use the youtube website itself offline to watch your downloaded videos. No need to install it as a PWA. Just visit youtube when you are offline. \n\nDo you know about any other websites which just work offline? https://t.co/0iALMQ9rly",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1969439921371808011"
+      ],
+      "editable_until_msecs": "1758389642000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/0iALMQ9rly",
+        "expanded_url": "https://x.com/peetzweg/status/1969439921371808011/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          239,
+          262
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/G1TbK8zXEAArtI2.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 1432,
+              "w": 2558,
+              "x": 0,
+              "y": 114
+            },
+            {
+              "h": 1668,
+              "w": 1668,
+              "x": 445,
+              "y": 0
+            },
+            {
+              "h": 1668,
+              "w": 1463,
+              "x": 548,
+              "y": 0
+            },
+            {
+              "h": 1668,
+              "w": 834,
+              "x": 862,
+              "y": 0
+            },
+            {
+              "h": 1668,
+              "w": 2558,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 1668,
+          "width": 2558
+        },
+        "sizes": {
+          "large": {
+            "h": 1335,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 782,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 443,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/0iALMQ9rly"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 1432,
+            "w": 2558,
+            "x": 0,
+            "y": 114
+          },
+          {
+            "h": 1668,
+            "w": 1668,
+            "x": 445,
+            "y": 0
+          },
+          {
+            "h": 1668,
+            "w": 1463,
+            "x": 548,
+            "y": 0
+          },
+          {
+            "h": 1668,
+            "w": 834,
+            "x": 862,
+            "y": 0
+          },
+          {
+            "h": 1668,
+            "w": 2558,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/1969439921371808011/photo/1",
+        "url": "https://pbs.twimg.com/media/G1TbK8zXEAArtI2.jpg",
+        "width": 2558,
+        "height": 1668
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

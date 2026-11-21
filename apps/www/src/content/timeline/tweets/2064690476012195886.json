@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 21,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-10T12:45:44.000Z",
+  "display_text_range": [
+    0,
+    147
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/ujiSTc3BAg",
+        "expanded_url": "https://x.com/peetzweg/status/2064690476012195886/video/1",
+        "indices": [
+          148,
+          171
+        ],
+        "url": "https://t.co/ujiSTc3BAg"
+      }
+    ]
+  },
+  "id_str": "2064690476012195886",
+  "text": "Fable basically one shotted me this Duet app clone which allows me to use my Girlfriend's iPad as a Second Monitor for free instead of paying 100$+ https://t.co/ujiSTc3BAg",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2064690476012195886"
+    ],
+    "editable_until_msecs": "1781099144000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/ujiSTc3BAg",
+      "expanded_url": "https://x.com/peetzweg/status/2064690476012195886/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        148,
+        171
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2064689404434599936/img/ZE1yoNhtYCHDAcDL.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 2160,
+        "width": 3840
+      },
+      "sizes": {
+        "large": {
+          "h": 1152,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 675,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/ujiSTc3BAg",
+      "video_info": {
+        "aspect_ratio": [
+          16,
+          9
+        ],
+        "duration_millis": 32388,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/2064689404434599936/pl/5OLa6lZH0r0K8VO0.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2064689404434599936/vid/avc1/480x270/x6aKdSvII5EiDNK_.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2064689404434599936/vid/avc1/640x360/6kDih8yP9eUNUI9P.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2064689404434599936/vid/avc1/1280x720/9mGCOyRSxjHzz1Az.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      16,
+      9
+    ],
+    "contentType": "media_entity",
+    "durationMs": 32388,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/2064689404434599936/img/ZE1yoNhtYCHDAcDL.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/2064689404434599936/pl/5OLa6lZH0r0K8VO0.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2064689404434599936/vid/avc1/480x270/x6aKdSvII5EiDNK_.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2064689404434599936/vid/avc1/640x360/6kDih8yP9eUNUI9P.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2064689404434599936/vid/avc1/1280x720/9mGCOyRSxjHzz1Az.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2064690476012195886"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 3,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

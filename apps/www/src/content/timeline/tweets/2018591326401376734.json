@@ -1,0 +1,245 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-03T07:44:10.000Z",
+  "display_text_range": [
+    0,
+    68
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/sQzcOV6RoC",
+        "expanded_url": "https://x.com/peetzweg/status/2018591326401376734/photo/1",
+        "indices": [
+          69,
+          92
+        ],
+        "url": "https://t.co/sQzcOV6RoC"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/shadcn/status/…",
+        "expanded_url": "https://x.com/shadcn/status/2018283934618882537",
+        "indices": [
+          45,
+          68
+        ],
+        "url": "https://t.co/eazv4ACTRL"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "50339173",
+        "indices": [
+          4,
+          13
+        ],
+        "name": "Dr. Kitze ❤️ healthmaxx.app",
+        "screen_name": "thekitze"
+      }
+    ]
+  },
+  "id_str": "2018591326401376734",
+  "text": "The @thekitze assembly quite the crew here.\n\nhttps://t.co/eazv4ACTRL https://t.co/sQzcOV6RoC",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2018591326401376734"
+    ],
+    "editable_until_msecs": "1770108250000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/sQzcOV6RoC",
+      "expanded_url": "https://x.com/peetzweg/status/2018591326401376734/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        69,
+        92
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HAN6EnkXsAAY4Ph.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 660,
+            "w": 1179,
+            "x": 0,
+            "y": 268
+          },
+          {
+            "h": 1179,
+            "w": 1179,
+            "x": 0,
+            "y": 9
+          },
+          {
+            "h": 1344,
+            "w": 1179,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1843,
+            "w": 922,
+            "x": 45,
+            "y": 0
+          },
+          {
+            "h": 1843,
+            "w": 1179,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1843,
+        "width": 1179
+      },
+      "sizes": {
+        "large": {
+          "h": 1843,
+          "resize": "fit",
+          "w": 1179
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 768
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 435
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/sQzcOV6RoC"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 660,
+          "w": 1179,
+          "x": 0,
+          "y": 268
+        },
+        {
+          "h": 1179,
+          "w": 1179,
+          "x": 0,
+          "y": 9
+        },
+        {
+          "h": 1344,
+          "w": 1179,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1843,
+          "w": 922,
+          "x": 45,
+          "y": 0
+        },
+        {
+          "h": 1843,
+          "w": 1179,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2018591326401376734/photo/1",
+      "url": "https://pbs.twimg.com/media/HAN6EnkXsAAY4Ph.jpg",
+      "width": 1179,
+      "height": 1843
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 343,
+    "lang": "en",
+    "reply_count": 22,
+    "retweet_count": 5,
+    "created_at": "2026-02-02T11:22:42.000Z",
+    "display_text_range": [
+      0,
+      118
+    ],
+    "entities": {
+      "user_mentions": [
+        {
+          "id_str": "50339173",
+          "indices": [
+            9,
+            18
+          ],
+          "name": "Dr. Kitze ❤️ healthmaxx.app",
+          "screen_name": "thekitze"
+        }
+      ]
+    },
+    "id_str": "2018283934618882537",
+    "text": "I joined @thekitze Tinkerer Club. tbh I'm still figuring out OpenClaw but the energy in his discord is something else.",
+    "user": {
+      "id_str": "31206819",
+      "name": "shadcn",
+      "screen_name": "shadcn",
+      "is_blue_verified": true,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1593304942210478080/TUYae5z7_normal.jpg",
+      "highlighted_label": {
+        "badge": {
+          "url": "https://pbs.twimg.com/profile_images/1767351110228918272/3Pndc5OT_bigger.png"
+        },
+        "description": "Vercel",
+        "url": {
+          "url": "https://twitter.com/vercel",
+          "url_type": "DeepLink"
+        },
+        "user_label_display_type": "Badge",
+        "user_label_type": "BusinessLabel"
+      }
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2018283934618882537"
+      ],
+      "editable_until_msecs": "1770034962000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

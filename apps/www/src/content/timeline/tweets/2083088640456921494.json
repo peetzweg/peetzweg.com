@@ -1,0 +1,204 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-07-31T07:13:28.000Z",
+  "display_text_range": [
+    0,
+    119
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/6mvODFuPW6",
+        "expanded_url": "https://x.com/peetzweg/status/2083088640456921494/photo/1",
+        "indices": [
+          120,
+          143
+        ],
+        "url": "https://t.co/6mvODFuPW6"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1695890961094909952",
+        "indices": [
+          5,
+          15
+        ],
+        "name": "Cursor",
+        "screen_name": "cursor_ai"
+      },
+      {
+        "id_str": "1661523610111193088",
+        "indices": [
+          24,
+          33
+        ],
+        "name": "",
+        "screen_name": "spacexai"
+      },
+      {
+        "id_str": "44196397",
+        "indices": [
+          35,
+          44
+        ],
+        "name": "Elon Musk",
+        "screen_name": "elonmusk"
+      },
+      {
+        "id_str": "1720665183188922368",
+        "indices": [
+          113,
+          118
+        ],
+        "name": "Grok",
+        "screen_name": "grok"
+      }
+    ]
+  },
+  "id_str": "2083088640456921494",
+  "text": "With @cursor_ai joining @spacexai, @elonmusk should make Cursor pins into Star Trek like communicator badges for @grok. https://t.co/6mvODFuPW6",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2083088640456921494"
+    ],
+    "editable_until_msecs": "1785485608000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/6mvODFuPW6",
+      "expanded_url": "https://x.com/peetzweg/status/2083088640456921494/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        120,
+        143
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HOidjHjXQAAVTvj.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 538,
+            "w": 960,
+            "x": 0,
+            "y": 467
+          },
+          {
+            "h": 960,
+            "w": 960,
+            "x": 0,
+            "y": 256
+          },
+          {
+            "h": 1094,
+            "w": 960,
+            "x": 0,
+            "y": 186
+          },
+          {
+            "h": 1280,
+            "w": 640,
+            "x": 96,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1280,
+        "width": 960
+      },
+      "sizes": {
+        "large": {
+          "h": 1280,
+          "resize": "fit",
+          "w": 960
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 900
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 510
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/6mvODFuPW6"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 538,
+          "w": 960,
+          "x": 0,
+          "y": 467
+        },
+        {
+          "h": 960,
+          "w": 960,
+          "x": 0,
+          "y": 256
+        },
+        {
+          "h": 1094,
+          "w": 960,
+          "x": 0,
+          "y": 186
+        },
+        {
+          "h": 1280,
+          "w": 640,
+          "x": 96,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 960,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2083088640456921494/photo/1",
+      "url": "https://pbs.twimg.com/media/HOidjHjXQAAVTvj.jpg",
+      "width": 960,
+      "height": 1280
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

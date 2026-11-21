@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 3,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-08-09T12:40:12.000Z",
+  "display_text_range": [
+    0,
+    268
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/mQpAPARtuc",
+        "expanded_url": "https://x.com/peetzweg/status/2086432358157197517/photo/1",
+        "indices": [
+          268,
+          291
+        ],
+        "url": "https://t.co/mQpAPARtuc"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "300842250",
+        "indices": [
+          132,
+          144
+        ],
+        "name": "Ko-fi",
+        "screen_name": "kofi_button"
+      }
+    ]
+  },
+  "id_str": "2086432358157197517",
+  "text": "A bit more than a month ago. OpenDisplay went live in the App Store completely free. On the GitHub page and  Website I linked to my @kofi_button page. \n30 people donated a total of $431! Mind blowing to me. Never made money on the internet before. Super motivating. 🙌 https://t.co/mQpAPARtuc",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2086432358157197517"
+    ],
+    "editable_until_msecs": "1786282812000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/mQpAPARtuc",
+      "expanded_url": "https://x.com/peetzweg/status/2086432358157197517/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        268,
+        291
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HPR-rYmXcAAocDI.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 842,
+            "w": 1504,
+            "x": 0,
+            "y": 322
+          },
+          {
+            "h": 1164,
+            "w": 1164,
+            "x": 170,
+            "y": 0
+          },
+          {
+            "h": 1164,
+            "w": 1021,
+            "x": 242,
+            "y": 0
+          },
+          {
+            "h": 1164,
+            "w": 582,
+            "x": 461,
+            "y": 0
+          },
+          {
+            "h": 1164,
+            "w": 1504,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1164,
+        "width": 1504
+      },
+      "sizes": {
+        "large": {
+          "h": 1164,
+          "resize": "fit",
+          "w": 1504
+        },
+        "medium": {
+          "h": 929,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 526,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/mQpAPARtuc"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 842,
+          "w": 1504,
+          "x": 0,
+          "y": 322
+        },
+        {
+          "h": 1164,
+          "w": 1164,
+          "x": 170,
+          "y": 0
+        },
+        {
+          "h": 1164,
+          "w": 1021,
+          "x": 242,
+          "y": 0
+        },
+        {
+          "h": 1164,
+          "w": 582,
+          "x": 461,
+          "y": 0
+        },
+        {
+          "h": 1164,
+          "w": 1504,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2086432358157197517/photo/1",
+      "url": "https://pbs.twimg.com/media/HPR-rYmXcAAocDI.jpg",
+      "width": 1504,
+      "height": 1164
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

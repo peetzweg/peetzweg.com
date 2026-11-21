@@ -1,0 +1,342 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-12-18T16:54:03.000Z",
+  "display_text_range": [
+    0,
+    203
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/yS5aJFOWj3",
+        "expanded_url": "https://x.com/peetzweg/status/2001697480233357539/photo/1",
+        "indices": [
+          204,
+          227
+        ],
+        "url": "https://t.co/yS5aJFOWj3"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2001038249460924912",
+        "indices": [
+          180,
+          203
+        ],
+        "url": "https://t.co/KWndk30JiK"
+      }
+    ]
+  },
+  "id_str": "2001697480233357539",
+  "text": "The version I'm settling with for now. I see potential. Don't had the time to fully polish, more vibed than anything. Let's see how it looks in print. \nMake it exist first right?\n\nhttps://t.co/KWndk30JiK https://t.co/yS5aJFOWj3",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2001697480233357539"
+    ],
+    "editable_until_msecs": "1766080443000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/yS5aJFOWj3",
+      "expanded_url": "https://x.com/peetzweg/status/2001697480233357539/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        204,
+        227
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G8d064FWoAE3hlp.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1084,
+            "w": 1936,
+            "x": 0,
+            "y": 377
+          },
+          {
+            "h": 1588,
+            "w": 1588,
+            "x": 222,
+            "y": 0
+          },
+          {
+            "h": 1588,
+            "w": 1393,
+            "x": 320,
+            "y": 0
+          },
+          {
+            "h": 1588,
+            "w": 794,
+            "x": 619,
+            "y": 0
+          },
+          {
+            "h": 1588,
+            "w": 1936,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1588,
+        "width": 1936
+      },
+      "sizes": {
+        "large": {
+          "h": 1588,
+          "resize": "fit",
+          "w": 1936
+        },
+        "medium": {
+          "h": 984,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 558,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/yS5aJFOWj3"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1084,
+          "w": 1936,
+          "x": 0,
+          "y": 377
+        },
+        {
+          "h": 1588,
+          "w": 1588,
+          "x": 222,
+          "y": 0
+        },
+        {
+          "h": 1588,
+          "w": 1393,
+          "x": 320,
+          "y": 0
+        },
+        {
+          "h": 1588,
+          "w": 794,
+          "x": 619,
+          "y": 0
+        },
+        {
+          "h": 1588,
+          "w": 1936,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2001697480233357539/photo/1",
+      "url": "https://pbs.twimg.com/media/G8d064FWoAE3hlp.jpg",
+      "width": 1936,
+      "height": 1588
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 1,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2025-12-16T21:14:30.000Z",
+    "display_text_range": [
+      0,
+      203
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/WsZ7WzobNR",
+          "expanded_url": "https://x.com/peetzweg/status/2001038249460924912/photo/1",
+          "indices": [
+            204,
+            227
+          ],
+          "url": "https://t.co/WsZ7WzobNR"
+        }
+      ]
+    },
+    "id_str": "2001038249460924912",
+    "text": "Drafting how to turn my childhood home into a little emblem for a christmas present. I dig the style but it needs way more refinement. But could work. Not sure if I have enough time to craft a decent v1. https://t.co/WsZ7WzobNR",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2001038249460924912"
+      ],
+      "editable_until_msecs": "1765923270000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/WsZ7WzobNR",
+        "expanded_url": "https://x.com/peetzweg/status/2001038249460924912/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          204,
+          227
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/G8Udrv2WIAAjf44.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 1057,
+              "w": 1888,
+              "x": 0,
+              "y": 27
+            },
+            {
+              "h": 1084,
+              "w": 1084,
+              "x": 402,
+              "y": 0
+            },
+            {
+              "h": 1084,
+              "w": 951,
+              "x": 469,
+              "y": 0
+            },
+            {
+              "h": 1084,
+              "w": 542,
+              "x": 673,
+              "y": 0
+            },
+            {
+              "h": 1084,
+              "w": 1888,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 1084,
+          "width": 1888
+        },
+        "sizes": {
+          "large": {
+            "h": 1084,
+            "resize": "fit",
+            "w": 1888
+          },
+          "medium": {
+            "h": 689,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 390,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/WsZ7WzobNR"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 1057,
+            "w": 1888,
+            "x": 0,
+            "y": 27
+          },
+          {
+            "h": 1084,
+            "w": 1084,
+            "x": 402,
+            "y": 0
+          },
+          {
+            "h": 1084,
+            "w": 951,
+            "x": 469,
+            "y": 0
+          },
+          {
+            "h": 1084,
+            "w": 542,
+            "x": 673,
+            "y": 0
+          },
+          {
+            "h": 1084,
+            "w": 1888,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/2001038249460924912/photo/1",
+        "url": "https://pbs.twimg.com/media/G8Udrv2WIAAjf44.jpg",
+        "width": 1888,
+        "height": 1084
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

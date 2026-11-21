@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-10-28T17:06:11.000Z",
+  "display_text_range": [
+    0,
+    39
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/G2pU2RE31T",
+        "expanded_url": "https://x.com/peetzweg/status/1983218752427524391/video/1",
+        "indices": [
+          40,
+          63
+        ],
+        "url": "https://t.co/G2pU2RE31T"
+      }
+    ]
+  },
+  "id_str": "1983218752427524391",
+  "text": "POV going for a run in Kyoto in October https://t.co/G2pU2RE31T",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1983218752427524391"
+    ],
+    "editable_until_msecs": "1761674771000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/G2pU2RE31T",
+      "expanded_url": "https://x.com/peetzweg/status/1983218752427524391/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        40,
+        63
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1983217753591812097/img/PRnvx5T0Punpms31.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 3840,
+        "width": 2160
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 1152
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 675
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 383
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/G2pU2RE31T",
+      "video_info": {
+        "aspect_ratio": [
+          9,
+          16
+        ],
+        "duration_millis": 84681,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/1983217753591812097/pl/Dbs51y4RxNjfE5R9.m3u8?tag=14"
+          },
+          {
+            "bitrate": 632000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1983217753591812097/vid/avc1/320x568/tkD8RuSR1hhkP-R6.mp4?tag=14"
+          },
+          {
+            "bitrate": 950000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1983217753591812097/vid/avc1/480x852/ykrLgH3lvNNboGGe.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1983217753591812097/vid/avc1/720x1280/j733Lsd2LCJqQJbV.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      9,
+      16
+    ],
+    "contentType": "media_entity",
+    "durationMs": 84681,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/1983217753591812097/img/PRnvx5T0Punpms31.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/1983217753591812097/pl/Dbs51y4RxNjfE5R9.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1983217753591812097/vid/avc1/320x568/tkD8RuSR1hhkP-R6.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1983217753591812097/vid/avc1/480x852/ykrLgH3lvNNboGGe.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1983217753591812097/vid/avc1/720x1280/j733Lsd2LCJqQJbV.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1983218752427524391"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

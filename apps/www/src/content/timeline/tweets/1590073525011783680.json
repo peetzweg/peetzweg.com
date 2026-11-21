@@ -1,0 +1,191 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-11-08T20:07:25.000Z",
+  "display_text_range": [
+    0,
+    56
+  ],
+  "entities": {
+    "hashtags": [
+      {
+        "indices": [
+          34,
+          43
+        ],
+        "text": "Ethereum"
+      },
+      {
+        "indices": [
+          44,
+          55
+        ],
+        "text": "ultrasound"
+      }
+    ],
+    "media": [
+      {
+        "display_url": "pic.x.com/plQtfy80WT",
+        "expanded_url": "https://x.com/peetzweg/status/1590073525011783680/photo/1",
+        "indices": [
+          56,
+          79
+        ],
+        "url": "https://t.co/plQtfy80WT"
+      }
+    ],
+    "symbols": [
+      {
+        "indices": [
+          29,
+          33
+        ],
+        "text": "ETH"
+      }
+    ]
+  },
+  "id_str": "1590073525011783680",
+  "text": "See you on the other side. 🫡\n$ETH #Ethereum #ultrasound https://t.co/plQtfy80WT",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1590073525011783680"
+    ],
+    "editable_until_msecs": "1667939845000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/plQtfy80WT",
+      "expanded_url": "https://x.com/peetzweg/status/1590073525011783680/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        56,
+        79
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FhETUd-WAAIaiAq.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 740,
+            "w": 1321,
+            "x": 103,
+            "y": 0
+          },
+          {
+            "h": 740,
+            "w": 740,
+            "x": 684,
+            "y": 0
+          },
+          {
+            "h": 740,
+            "w": 649,
+            "x": 775,
+            "y": 0
+          },
+          {
+            "h": 740,
+            "w": 370,
+            "x": 1054,
+            "y": 0
+          },
+          {
+            "h": 740,
+            "w": 1424,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 740,
+        "width": 1424
+      },
+      "sizes": {
+        "large": {
+          "h": 740,
+          "resize": "fit",
+          "w": 1424
+        },
+        "medium": {
+          "h": 624,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 353,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/plQtfy80WT"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 740,
+          "w": 1321,
+          "x": 103,
+          "y": 0
+        },
+        {
+          "h": 740,
+          "w": 740,
+          "x": 684,
+          "y": 0
+        },
+        {
+          "h": 740,
+          "w": 649,
+          "x": 775,
+          "y": 0
+        },
+        {
+          "h": 740,
+          "w": 370,
+          "x": 1054,
+          "y": 0
+        },
+        {
+          "h": 740,
+          "w": 1424,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1590073525011783680/photo/1",
+      "url": "https://pbs.twimg.com/media/FhETUd-WAAIaiAq.jpg",
+      "width": 1424,
+      "height": 740
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

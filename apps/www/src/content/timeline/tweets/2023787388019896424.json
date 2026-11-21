@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 6,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-17T15:51:28.000Z",
+  "display_text_range": [
+    0,
+    164
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/eo9WdLlEdA",
+        "expanded_url": "https://x.com/peetzweg/status/2023787388019896424/video/1",
+        "indices": [
+          165,
+          188
+        ],
+        "url": "https://t.co/eo9WdLlEdA"
+      }
+    ]
+  },
+  "id_str": "2023787388019896424",
+  "text": "Telegram chat group vibecoded DnD multiplayer online game with AI Dungeon Master with TTS, Spectator mode, skill checks and basic combat. \n\nWhat should we add next? https://t.co/eo9WdLlEdA",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2023787388019896424"
+    ],
+    "editable_until_msecs": "1771347088000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/eo9WdLlEdA",
+      "expanded_url": "https://x.com/peetzweg/status/2023787388019896424/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        165,
+        188
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2023787231266435073/img/fqFmngquAiUT8pi9.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1920,
+        "width": 3840
+      },
+      "sizes": {
+        "large": {
+          "h": 1024,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 600,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 340,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/eo9WdLlEdA",
+      "video_info": {
+        "aspect_ratio": [
+          2,
+          1
+        ],
+        "duration_millis": 67850,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/2023787231266435073/pl/k0J-vVI3lPtBBKlN.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2023787231266435073/vid/avc1/540x270/fVyyCqHhn3VM3L2D.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2023787231266435073/vid/avc1/720x360/J5UDdIY0W_5d_T5N.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2023787231266435073/vid/avc1/1440x720/zbt6kGR-Xq0OYQ9x.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      2,
+      1
+    ],
+    "contentType": "media_entity",
+    "durationMs": 67850,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/2023787231266435073/img/fqFmngquAiUT8pi9.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/2023787231266435073/pl/k0J-vVI3lPtBBKlN.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2023787231266435073/vid/avc1/540x270/fVyyCqHhn3VM3L2D.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2023787231266435073/vid/avc1/720x360/J5UDdIY0W_5d_T5N.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2023787231266435073/vid/avc1/1440x720/zbt6kGR-Xq0OYQ9x.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2023787388019896424"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 3,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

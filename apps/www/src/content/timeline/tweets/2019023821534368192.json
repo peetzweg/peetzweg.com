@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-04T12:22:45.000Z",
+  "display_text_range": [
+    0,
+    120
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/msVsrbnaTy",
+        "expanded_url": "https://x.com/peetzweg/status/2019023821534368192/photo/1",
+        "indices": [
+          121,
+          144
+        ],
+        "url": "https://t.co/msVsrbnaTy"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1246459310638616582",
+        "indices": [
+          108,
+          117
+        ],
+        "name": "Graphite",
+        "screen_name": "graphite"
+      }
+    ]
+  },
+  "id_str": "2019023821534368192",
+  "text": "Absolute insanity. It's something github 2.0 needs to get right for all repo out of the box. Looking at you @graphite :) https://t.co/msVsrbnaTy",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2019023821534368192"
+    ],
+    "editable_until_msecs": "1770211365000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/msVsrbnaTy",
+      "expanded_url": "https://x.com/peetzweg/status/2019023821534368192/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        121,
+        144
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HAUDWYvXAAAyzFj.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 326,
+            "w": 582,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 326,
+            "w": 326,
+            "x": 83,
+            "y": 0
+          },
+          {
+            "h": 326,
+            "w": 286,
+            "x": 103,
+            "y": 0
+          },
+          {
+            "h": 326,
+            "w": 163,
+            "x": 165,
+            "y": 0
+          },
+          {
+            "h": 326,
+            "w": 656,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 326,
+        "width": 656
+      },
+      "sizes": {
+        "large": {
+          "h": 326,
+          "resize": "fit",
+          "w": 656
+        },
+        "medium": {
+          "h": 326,
+          "resize": "fit",
+          "w": 656
+        },
+        "small": {
+          "h": 326,
+          "resize": "fit",
+          "w": 656
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/msVsrbnaTy"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 326,
+          "w": 582,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 326,
+          "w": 326,
+          "x": 83,
+          "y": 0
+        },
+        {
+          "h": 326,
+          "w": 286,
+          "x": 103,
+          "y": 0
+        },
+        {
+          "h": 326,
+          "w": 163,
+          "x": 165,
+          "y": 0
+        },
+        {
+          "h": 326,
+          "w": 656,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2019023821534368192/photo/1",
+      "url": "https://pbs.twimg.com/media/HAUDWYvXAAAyzFj.png",
+      "width": 656,
+      "height": 326
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

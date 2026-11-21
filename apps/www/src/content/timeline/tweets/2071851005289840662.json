@@ -1,0 +1,401 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-30T06:59:07.000Z",
+  "display_text_range": [
+    0,
+    143
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/7eCbuHgzab",
+        "expanded_url": "https://x.com/peetzweg/status/2071851005289840662/photo/1",
+        "indices": [
+          144,
+          167
+        ],
+        "url": "https://t.co/7eCbuHgzab"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2001352098277994514",
+        "indices": [
+          120,
+          143
+        ],
+        "url": "https://t.co/nY2d8ND6UJ"
+      }
+    ]
+  },
+  "id_str": "2071851005289840662",
+  "text": "Graph showing the recent heatwave rolling over Berlin. You can see the base temp of bedroom raises steadily each day. \n\nhttps://t.co/nY2d8ND6UJ https://t.co/7eCbuHgzab",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2071851005289840662"
+    ],
+    "editable_until_msecs": "1782806347000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/7eCbuHgzab",
+      "expanded_url": "https://x.com/peetzweg/status/2071851005289840662/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        144,
+        167
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HMCxV-7W8AAbm_9.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 636,
+            "w": 1136,
+            "x": 0,
+            "y": 80
+          },
+          {
+            "h": 716,
+            "w": 716,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 716,
+            "w": 628,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 716,
+            "w": 358,
+            "x": 132,
+            "y": 0
+          },
+          {
+            "h": 716,
+            "w": 1136,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 716,
+        "width": 1136
+      },
+      "sizes": {
+        "large": {
+          "h": 716,
+          "resize": "fit",
+          "w": 1136
+        },
+        "medium": {
+          "h": 716,
+          "resize": "fit",
+          "w": 1136
+        },
+        "small": {
+          "h": 429,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/7eCbuHgzab"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 636,
+          "w": 1136,
+          "x": 0,
+          "y": 80
+        },
+        {
+          "h": 716,
+          "w": 716,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 716,
+          "w": 628,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 716,
+          "w": 358,
+          "x": 132,
+          "y": 0
+        },
+        {
+          "h": 716,
+          "w": 1136,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2071851005289840662/photo/1",
+      "url": "https://pbs.twimg.com/media/HMCxV-7W8AAbm_9.jpg",
+      "width": 1136,
+      "height": 716
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 1,
+    "in_reply_to_screen_name": "peetzweg",
+    "in_reply_to_status_id_str": "2001352095102849320",
+    "in_reply_to_user_id_str": "1370705514271797250",
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 1,
+    "retweet_count": 0,
+    "created_at": "2025-12-17T18:01:38.000Z",
+    "display_text_range": [
+      83,
+      352
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/RhImMWNyFh",
+          "expanded_url": "https://x.com/peetzweg/status/2001352098277994514/photo/1",
+          "indices": [
+            353,
+            376
+          ],
+          "url": "https://t.co/RhImMWNyFh"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "47621619",
+          "indices": [
+            0,
+            13
+          ],
+          "name": "Lumie Light Therapy",
+          "screen_name": "Lumie_lights"
+        },
+        {
+          "id_str": "1635208006077136896",
+          "indices": [
+            14,
+            28
+          ],
+          "name": "一保堂茶舗 Ippodo Tea",
+          "screen_name": "ippodo_tea_jp"
+        },
+        {
+          "id_str": "972487558151262210",
+          "indices": [
+            29,
+            40
+          ],
+          "name": "Dope Ropes",
+          "screen_name": "jump_ropes"
+        },
+        {
+          "id_str": "1455988653361094665",
+          "indices": [
+            41,
+            53
+          ],
+          "name": "Xero Shoes EU",
+          "screen_name": "XeroShoesEU"
+        },
+        {
+          "id_str": "56637618",
+          "indices": [
+            54,
+            65
+          ],
+          "name": "LOVERAMICS",
+          "screen_name": "Loveramics"
+        },
+        {
+          "id_str": "134448403",
+          "indices": [
+            66,
+            82
+          ],
+          "name": "teenage engineering",
+          "screen_name": "jugendingenieur"
+        }
+      ]
+    },
+    "id_str": "2001352098277994514",
+    "text": "@Lumie_lights @ippodo_tea_jp @jump_ropes @XeroShoesEU @Loveramics @jugendingenieur 9. Air Quality Sensor\nLiving in Berlin I'm conscious cared about outdoor air quality and this year I started monitoring indoors. Bought two CO2 and particle sensors. Both are great for different purposes. However, competition not sleeping with cheaper and good options. https://t.co/RhImMWNyFh",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2001352098277994514"
+      ],
+      "editable_until_msecs": "1765998098000",
+      "edits_remaining": "5",
+      "is_edit_eligible": false
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/RhImMWNyFh",
+        "expanded_url": "https://x.com/peetzweg/status/2001352098277994514/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          353,
+          376
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/G8Y7G8NXoAAAgPs.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 1675,
+              "w": 2991,
+              "x": 0,
+              "y": 882
+            },
+            {
+              "h": 2991,
+              "w": 2991,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2991,
+              "w": 2624,
+              "x": 108,
+              "y": 0
+            },
+            {
+              "h": 2991,
+              "w": 1496,
+              "x": 672,
+              "y": 0
+            },
+            {
+              "h": 2991,
+              "w": 2991,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 2991,
+          "width": 2991
+        },
+        "sizes": {
+          "large": {
+            "h": 2048,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/RhImMWNyFh"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 1675,
+            "w": 2991,
+            "x": 0,
+            "y": 882
+          },
+          {
+            "h": 2991,
+            "w": 2991,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2991,
+            "w": 2624,
+            "x": 108,
+            "y": 0
+          },
+          {
+            "h": 2991,
+            "w": 1496,
+            "x": 672,
+            "y": 0
+          },
+          {
+            "h": 2991,
+            "w": 2991,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/2001352098277994514/photo/1",
+        "url": "https://pbs.twimg.com/media/G8Y7G8NXoAAAgPs.jpg",
+        "width": 2991,
+        "height": 2991
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,222 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-09-22T09:36:45.000Z",
+  "display_text_range": [
+    0,
+    264
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/JwxmrXQyMO",
+        "expanded_url": "https://x.com/peetzweg/status/1970059686448673200/video/1",
+        "indices": [
+          265,
+          288
+        ],
+        "url": "https://t.co/JwxmrXQyMO"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1968625679655731532",
+        "indices": [
+          241,
+          264
+        ],
+        "url": "https://t.co/sVM8fCRcdy"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1711764162290847745",
+        "indices": [
+          176,
+          179
+        ],
+        "name": "v0",
+        "screen_name": "v0"
+      }
+    ]
+  },
+  "id_str": "1970059686448673200",
+  "text": "Do you know what an .ase file is? \n\nMe neither a few minutes ago. Turns out it is a Adobe Color Swatch Exchange format. \n\nI wasn't able to open it with any tool on my machine. @v0 built me a viewer &amp; JSON exporter in literally seconds.\n\nhttps://t.co/sVM8fCRcdy https://t.co/JwxmrXQyMO",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1970059686448673200"
+    ],
+    "editable_until_msecs": "1758537405000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/JwxmrXQyMO",
+      "expanded_url": "https://x.com/peetzweg/status/1970059686448673200/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        265,
+        288
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1970059072842903552/img/RkEh2owvhpdd_xl2.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1964,
+        "width": 3024
+      },
+      "sizes": {
+        "large": {
+          "h": 1330,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 779,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 442,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/JwxmrXQyMO",
+      "video_info": {
+        "aspect_ratio": [
+          756,
+          491
+        ],
+        "duration_millis": 15191,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/1970059072842903552/pl/jknF6KV5izER0A2d.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1970059072842903552/vid/avc1/414x270/ybuCAe4lQkIcMGBI.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1970059072842903552/vid/avc1/554x360/J69dNWF3bp5vSiNS.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1970059072842903552/vid/avc1/1108x720/ZLBbcozpqflFwFWF.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      756,
+      491
+    ],
+    "contentType": "media_entity",
+    "durationMs": 15191,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/1970059072842903552/img/RkEh2owvhpdd_xl2.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/1970059072842903552/pl/jknF6KV5izER0A2d.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1970059072842903552/vid/avc1/414x270/ybuCAe4lQkIcMGBI.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1970059072842903552/vid/avc1/554x360/J69dNWF3bp5vSiNS.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1970059072842903552/vid/avc1/1108x720/ZLBbcozpqflFwFWF.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1970059686448673200"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 1,
+    "lang": "en",
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2025-09-18T10:38:31.000Z",
+    "display_text_range": [
+      0,
+      280
+    ],
+    "entities": {
+      "user_mentions": [
+        {
+          "id_str": "1711764162290847745",
+          "indices": [
+            224,
+            227
+          ],
+          "name": "v0",
+          "screen_name": "v0"
+        }
+      ]
+    },
+    "id_str": "1968625679655731532",
+    "text": "Do you know this when you quickly need to convert a file or open a weird file type or check a color etc. You find an add invested ugly app, which does the trick but one feels ashamed using it.\n\nIt's crazy that I can now ask @v0 for the app I need and get a good enough app aswell.",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1968625679655731532"
+      ],
+      "editable_until_msecs": "1758195511000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

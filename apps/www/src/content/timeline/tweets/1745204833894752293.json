@@ -1,0 +1,199 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2024-01-10T22:03:51.000Z",
+  "display_text_range": [
+    0,
+    164
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/xHx6s6JjOb",
+        "expanded_url": "https://x.com/peetzweg/status/1745204833894752293/photo/1",
+        "indices": [
+          165,
+          188
+        ],
+        "url": "https://t.co/xHx6s6JjOb"
+      }
+    ]
+  },
+  "id_str": "1745204833894752293",
+  "text": "Spontaneously decided to participate in the celebrations for the 15th anniversary of the “Running Bitcoin Day”. \n\nToday feels like another historic day for Bitcoin. https://t.co/xHx6s6JjOb",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1745204833894752293"
+    ],
+    "editable_until_msecs": "1704927831000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/xHx6s6JjOb",
+      "expanded_url": "https://x.com/peetzweg/status/1745204833894752293/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        165,
+        188
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GDg2i3iXsAAKuv4.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 660,
+            "w": 1179,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1179,
+            "w": 1179,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1344,
+            "w": 1179,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1483,
+            "w": 742,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1483,
+            "w": 1179,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1483,
+        "width": 1179
+      },
+      "sizes": {
+        "large": {
+          "h": 1483,
+          "resize": "fit",
+          "w": 1179
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 954
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 541
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/xHx6s6JjOb"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 660,
+          "w": 1179,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1179,
+          "w": 1179,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1344,
+          "w": 1179,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1483,
+          "w": 742,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1483,
+          "w": 1179,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1745204833894752293/photo/1",
+      "url": "https://pbs.twimg.com/media/GDg2i3iXsAAKuv4.jpg",
+      "width": 1179,
+      "height": 1483
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 132886,
+    "lang": "en",
+    "reply_count": 11706,
+    "retweet_count": 44236,
+    "created_at": "2009-01-11T03:33:52.000Z",
+    "display_text_range": [
+      0,
+      15
+    ],
+    "entities": {},
+    "id_str": "1110302988",
+    "text": "Running bitcoin",
+    "user": {
+      "id_str": "9253672",
+      "name": "halfin",
+      "screen_name": "halfin",
+      "is_blue_verified": true,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/287413224/hal_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1110302988"
+      ],
+      "editable_until_msecs": "1231646632000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

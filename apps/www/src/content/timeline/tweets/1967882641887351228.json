@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-09-16T09:25:57.000Z",
+  "display_text_range": [
+    0,
+    61
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/LLmSrk50qi",
+        "expanded_url": "https://x.com/peetzweg/status/1967882641887351228/video/1",
+        "indices": [
+          62,
+          85
+        ],
+        "url": "https://t.co/LLmSrk50qi"
+      }
+    ]
+  },
+  "id_str": "1967882641887351228",
+  "text": "Cyberpunk style Braindances are coming sooner than you think. https://t.co/LLmSrk50qi",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1967882641887351228"
+    ],
+    "editable_until_msecs": "1758018357000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/LLmSrk50qi",
+      "expanded_url": "https://x.com/peetzweg/status/1967882641887351228/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        62,
+        85
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1967882345479811072/img/eEOD-RIB0ADEemdk.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 798,
+        "width": 1280
+      },
+      "sizes": {
+        "large": {
+          "h": 798,
+          "resize": "fit",
+          "w": 1280
+        },
+        "medium": {
+          "h": 748,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 424,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/LLmSrk50qi",
+      "video_info": {
+        "aspect_ratio": [
+          640,
+          399
+        ],
+        "duration_millis": 33400,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/1967882345479811072/pl/a8zY_88FuqaJB9DX.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1967882345479811072/vid/avc1/432x270/8GuFfG3bQqD7P1Q-.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1967882345479811072/vid/avc1/576x360/VfxH_sHuAJfxEtQU.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1967882345479811072/vid/avc1/1154x720/BKZerrSVc0xML2QL.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      640,
+      399
+    ],
+    "contentType": "media_entity",
+    "durationMs": 33400,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/1967882345479811072/img/eEOD-RIB0ADEemdk.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/1967882345479811072/pl/a8zY_88FuqaJB9DX.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1967882345479811072/vid/avc1/432x270/8GuFfG3bQqD7P1Q-.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1967882345479811072/vid/avc1/576x360/VfxH_sHuAJfxEtQU.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1967882345479811072/vid/avc1/1154x720/BKZerrSVc0xML2QL.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1967882641887351228"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

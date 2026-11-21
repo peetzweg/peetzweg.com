@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 5,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-09-18T06:35:00.000Z",
+  "display_text_range": [
+    0,
+    253
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/Kwc4aHAuc8",
+        "expanded_url": "https://x.com/peetzweg/status/2100835964377866285/photo/1",
+        "indices": [
+          254,
+          277
+        ],
+        "url": "https://t.co/Kwc4aHAuc8"
+      }
+    ]
+  },
+  "id_str": "2100835964377866285",
+  "text": "OpenDisplay has no analytics or crash reporting. I'm do not want anybody to think I'm spying on them.\n\nSo it is such privilege for me to have so many users reporting issues and implementing fixes and features in pull requests. \n\nOpen source is the best! https://t.co/Kwc4aHAuc8",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2100835964377866285"
+    ],
+    "editable_until_msecs": "1789716900000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/Kwc4aHAuc8",
+      "expanded_url": "https://x.com/peetzweg/status/2100835964377866285/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        254,
+        277
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HSeqE5FXAAA3jRK.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 671,
+            "w": 1199,
+            "x": 0,
+            "y": 39
+          },
+          {
+            "h": 710,
+            "w": 710,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 710,
+            "w": 623,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 710,
+            "w": 355,
+            "x": 32,
+            "y": 0
+          },
+          {
+            "h": 710,
+            "w": 1199,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 710,
+        "width": 1199
+      },
+      "sizes": {
+        "large": {
+          "h": 710,
+          "resize": "fit",
+          "w": 1199
+        },
+        "medium": {
+          "h": 710,
+          "resize": "fit",
+          "w": 1199
+        },
+        "small": {
+          "h": 403,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/Kwc4aHAuc8"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 671,
+          "w": 1199,
+          "x": 0,
+          "y": 39
+        },
+        {
+          "h": 710,
+          "w": 710,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 710,
+          "w": 623,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 710,
+          "w": 355,
+          "x": 32,
+          "y": 0
+        },
+        {
+          "h": 710,
+          "w": 1199,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2100835964377866285/photo/1",
+      "url": "https://pbs.twimg.com/media/HSeqE5FXAAA3jRK.jpg",
+      "width": 1199,
+      "height": 710
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

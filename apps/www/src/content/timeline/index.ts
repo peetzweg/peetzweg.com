@@ -210,6 +210,7 @@ function firstImage(media?: Media): Image | undefined {
       return media.images[0];
     case 'video':
     case 'live':
+    case 'scroll':
       return media.poster;
     default:
       return undefined;

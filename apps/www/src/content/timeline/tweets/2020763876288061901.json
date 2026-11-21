@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-09T07:37:06.000Z",
+  "display_text_range": [
+    0,
+    270
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/zR2T6FYGuF",
+        "expanded_url": "https://x.com/peetzweg/status/2020763876288061901/video/1",
+        "indices": [
+          271,
+          294
+        ],
+        "url": "https://t.co/zR2T6FYGuF"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "jmail.world",
+        "expanded_url": "http://jmail.world",
+        "indices": [
+          21,
+          44
+        ],
+        "url": "https://t.co/dtw8D1haz5"
+      }
+    ]
+  },
+  "id_str": "2020763876288061901",
+  "text": "Wow, just discovered https://t.co/dtw8D1haz5. A masterclass on how to present this dataset to the public.\n\nIt’s basically a mock of Jeffrey's Gmail, Drive, iMessage and more in the browser. Even with its own AI assistant called “Jemini”.\n\nHilarious and honestly amazing. https://t.co/zR2T6FYGuF",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2020763876288061901"
+    ],
+    "editable_until_msecs": "1770626226000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/zR2T6FYGuF",
+      "expanded_url": "https://x.com/peetzweg/status/2020763876288061901/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        271,
+        294
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2020763675620196352/img/vzCw-z2h2Mg9RZg9.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1061,
+        "width": 1624
+      },
+      "sizes": {
+        "large": {
+          "h": 1061,
+          "resize": "fit",
+          "w": 1624
+        },
+        "medium": {
+          "h": 784,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 444,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/zR2T6FYGuF",
+      "video_info": {
+        "aspect_ratio": [
+          1624,
+          1061
+        ],
+        "duration_millis": 4966,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/2020763675620196352/pl/7o-o6RPGg9IrmITt.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2020763675620196352/vid/avc1/412x270/GLrucn99CANAWPpX.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2020763675620196352/vid/avc1/550x360/JZ7DylM4q4NiLn43.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2020763675620196352/vid/avc1/1102x720/_Xqd4-2ykiHlMV1M.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      1624,
+      1061
+    ],
+    "contentType": "media_entity",
+    "durationMs": 4966,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/2020763675620196352/img/vzCw-z2h2Mg9RZg9.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/2020763675620196352/pl/7o-o6RPGg9IrmITt.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2020763675620196352/vid/avc1/412x270/GLrucn99CANAWPpX.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2020763675620196352/vid/avc1/550x360/JZ7DylM4q4NiLn43.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2020763675620196352/vid/avc1/1102x720/_Xqd4-2ykiHlMV1M.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2020763876288061901"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

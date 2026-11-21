@@ -1,0 +1,193 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2021-07-09T10:12:26.000Z",
+  "display_text_range": [
+    0,
+    246
+  ],
+  "entities": {
+    "hashtags": [
+      {
+        "indices": [
+          81,
+          90
+        ],
+        "text": "Bitcraft"
+      },
+      {
+        "indices": [
+          167,
+          171
+        ],
+        "text": "DLT"
+      }
+    ],
+    "media": [
+      {
+        "display_url": "pic.x.com/LMnDL6QFxv",
+        "expanded_url": "https://x.com/peetzweg/status/1413440901968404480/photo/1",
+        "indices": [
+          247,
+          270
+        ],
+        "url": "https://t.co/LMnDL6QFxv"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1105250605688184832",
+        "indices": [
+          212,
+          227
+        ],
+        "name": "Clockwork Labs",
+        "screen_name": "clockwork_labs"
+      }
+    ]
+  },
+  "id_str": "1413440901968404480",
+  "text": "Was a sucker for MMORPGs back in early 2000s. Not a lot has been published about #Bitcraft but this art style mashup between Catan, Journey &amp; BOTW built on top of #DLT get's me hyped more than it should yet.\n@clockwork_labs keep me posted! :) https://t.co/LMnDL6QFxv",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1413440901968404480"
+    ],
+    "editable_until_msecs": "1625827346148",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/LMnDL6QFxv",
+      "expanded_url": "https://x.com/peetzweg/status/1413440901968404480/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        247,
+        270
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/E52L3qwVgAEL84S.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1715,
+            "w": 3062,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1840,
+            "w": 1840,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1840,
+            "w": 1614,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1840,
+            "w": 920,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1840,
+            "w": 3062,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1840,
+        "width": 3062
+      },
+      "sizes": {
+        "large": {
+          "h": 1231,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 721,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 409,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/LMnDL6QFxv"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1715,
+          "w": 3062,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1840,
+          "w": 1840,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1840,
+          "w": 1614,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1840,
+          "w": 920,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1840,
+          "w": 3062,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1413440901968404480/photo/1",
+      "url": "https://pbs.twimg.com/media/E52L3qwVgAEL84S.png",
+      "width": 3062,
+      "height": 1840
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-23T19:42:51.000Z",
+  "display_text_range": [
+    0,
+    74
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/ODhGyW0sm6",
+        "expanded_url": "https://x.com/peetzweg/status/2069506489828393271/video/1",
+        "indices": [
+          75,
+          98
+        ],
+        "url": "https://t.co/ODhGyW0sm6"
+      }
+    ]
+  },
+  "id_str": "2069506489828393271",
+  "text": "Trying to come up with a more fun app icon for OpenSidecar than Apple did. https://t.co/ODhGyW0sm6",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2069506489828393271"
+    ],
+    "editable_until_msecs": "1782247371000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/ODhGyW0sm6",
+      "expanded_url": "https://x.com/peetzweg/status/2069506489828393271/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        75,
+        98
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2069506393250402305/img/JtkfzI_8avCYYeuT.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1080,
+        "width": 1080
+      },
+      "sizes": {
+        "large": {
+          "h": 1080,
+          "resize": "fit",
+          "w": 1080
+        },
+        "medium": {
+          "h": 1080,
+          "resize": "fit",
+          "w": 1080
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/ODhGyW0sm6",
+      "video_info": {
+        "aspect_ratio": [
+          1,
+          1
+        ],
+        "duration_millis": 36200,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/2069506393250402305/pl/wjF_YXz3WLjCZgNA.m3u8?tag=14"
+          },
+          {
+            "bitrate": 432000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2069506393250402305/vid/avc1/320x320/V0dl8bPUkCQFO-lu.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2069506393250402305/vid/avc1/540x540/0IJpZubJqyUxi_nJ.mp4?tag=14"
+          },
+          {
+            "bitrate": 1280000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2069506393250402305/vid/avc1/720x720/1Lnma7dSF3QHHwLE.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      1,
+      1
+    ],
+    "contentType": "media_entity",
+    "durationMs": 36200,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/2069506393250402305/img/JtkfzI_8avCYYeuT.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/2069506393250402305/pl/wjF_YXz3WLjCZgNA.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2069506393250402305/vid/avc1/320x320/V0dl8bPUkCQFO-lu.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2069506393250402305/vid/avc1/540x540/0IJpZubJqyUxi_nJ.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2069506393250402305/vid/avc1/720x720/1Lnma7dSF3QHHwLE.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2069506489828393271"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

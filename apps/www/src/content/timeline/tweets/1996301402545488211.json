@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-12-03T19:31:58.000Z",
+  "display_text_range": [
+    0,
+    127
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/55Clz6mF3R",
+        "expanded_url": "https://x.com/peetzweg/status/1996301402545488211/video/1",
+        "indices": [
+          128,
+          151
+        ],
+        "url": "https://t.co/55Clz6mF3R"
+      }
+    ]
+  },
+  "id_str": "1996301402545488211",
+  "text": "Getting into creative coding again. Learning some new tricks step by step.\nOne goal is to get a nice print for our living room. https://t.co/55Clz6mF3R",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1996301402545488211"
+    ],
+    "editable_until_msecs": "1764793918000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/55Clz6mF3R",
+      "expanded_url": "https://x.com/peetzweg/status/1996301402545488211/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        128,
+        151
+      ],
+      "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1996301338746003457/pu/img/nhH5GyW3EmYwIJed.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1710,
+        "width": 1710
+      },
+      "sizes": {
+        "large": {
+          "h": 1710,
+          "resize": "fit",
+          "w": 1710
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/55Clz6mF3R",
+      "video_info": {
+        "aspect_ratio": [
+          1,
+          1
+        ],
+        "duration_millis": 66900,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/ext_tw_video/1996301338746003457/pu/pl/mhL7cuokCWDNNCnl.m3u8?tag=12"
+          },
+          {
+            "bitrate": 432000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1996301338746003457/pu/vid/avc1/320x320/PCNHoksrTFcQzjaH.mp4?tag=12"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1996301338746003457/pu/vid/avc1/540x540/OL8S5rKmezJfN7N0.mp4?tag=12"
+          },
+          {
+            "bitrate": 1280000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1996301338746003457/pu/vid/avc1/720x720/NsjfHVDkfrN6krid.mp4?tag=12"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      1,
+      1
+    ],
+    "contentType": "media_entity",
+    "durationMs": 66900,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1996301338746003457/pu/img/nhH5GyW3EmYwIJed.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/ext_tw_video/1996301338746003457/pu/pl/mhL7cuokCWDNNCnl.m3u8?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1996301338746003457/pu/vid/avc1/320x320/PCNHoksrTFcQzjaH.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1996301338746003457/pu/vid/avc1/540x540/OL8S5rKmezJfN7N0.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1996301338746003457/pu/vid/avc1/720x720/NsjfHVDkfrN6krid.mp4?tag=12"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1996301402545488211"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

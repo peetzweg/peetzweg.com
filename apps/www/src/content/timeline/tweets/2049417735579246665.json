@@ -1,0 +1,300 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 4,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-04-29T09:17:19.000Z",
+  "display_text_range": [
+    0,
+    201
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/ntqCu8szTd",
+        "expanded_url": "https://x.com/peetzweg/status/1989071021786427747/video/1",
+        "indices": [
+          178,
+          201
+        ],
+        "url": "https://t.co/ntqCu8szTd"
+      },
+      {
+        "display_url": "pic.x.com/8rRprX04sL",
+        "expanded_url": "https://x.com/peetzweg/status/2049417735579246665/photo/1",
+        "indices": [
+          202,
+          225
+        ],
+        "url": "https://t.co/8rRprX04sL"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "peetzweg.github.io/sunshine/",
+        "expanded_url": "https://peetzweg.github.io/sunshine/",
+        "indices": [
+          153,
+          176
+        ],
+        "url": "https://t.co/LSykeIVTSJ"
+      },
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1989071021786427747/video/1",
+        "indices": [
+          178,
+          201
+        ],
+        "url": "https://t.co/ntqCu8szTd"
+      }
+    ]
+  },
+  "id_str": "2049417735579246665",
+  "text": "Packaged this as a Chrome/Firefox extension. You can activate Sunshine on a site by site basis or globally. \n\nCheck out the demo and install links here:\nhttps://t.co/LSykeIVTSJ\n\nhttps://t.co/ntqCu8szTd https://t.co/8rRprX04sL",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2049417735579246665"
+    ],
+    "editable_until_msecs": "1777457839000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/ntqCu8szTd",
+      "expanded_url": "https://x.com/peetzweg/status/1989071021786427747/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        178,
+        201
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1989069752984100864/img/cIY9Gk0stDD0WXuz.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1890,
+        "width": 3024
+      },
+      "sizes": {
+        "large": {
+          "h": 1280,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 750,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 425,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/ntqCu8szTd",
+      "video_info": {
+        "aspect_ratio": [
+          8,
+          5
+        ],
+        "duration_millis": 20710,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/1989069752984100864/pl/2onHjn4pW6Fem7Iv.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/432x270/D5uUsDkpJmJiGhQ3.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/576x360/S-CakKUd1pgmjdEP.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/1152x720/iyRh43CDdP0u6puP.mp4?tag=14"
+          }
+        ]
+      }
+    },
+    {
+      "display_url": "pic.x.com/8rRprX04sL",
+      "expanded_url": "https://x.com/peetzweg/status/2049417735579246665/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        202,
+        225
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HHD-SkCX0AAlF-i.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 717,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 800,
+            "w": 800,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 800,
+            "w": 702,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 800,
+            "w": 400,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 800,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 800,
+        "width": 1280
+      },
+      "sizes": {
+        "large": {
+          "h": 800,
+          "resize": "fit",
+          "w": 1280
+        },
+        "medium": {
+          "h": 750,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 425,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/8rRprX04sL"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 717,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 800,
+          "w": 800,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 800,
+          "w": 702,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 800,
+          "w": 400,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 800,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2049417735579246665/photo/1",
+      "url": "https://pbs.twimg.com/media/HHD-SkCX0AAlF-i.jpg",
+      "width": 1280,
+      "height": 800
+    }
+  ],
+  "video": {
+    "aspectRatio": [
+      8,
+      5
+    ],
+    "contentType": "media_entity",
+    "durationMs": 20710,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/1989069752984100864/img/cIY9Gk0stDD0WXuz.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/1989069752984100864/pl/2onHjn4pW6Fem7Iv.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/432x270/D5uUsDkpJmJiGhQ3.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/576x360/S-CakKUd1pgmjdEP.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/1152x720/iyRh43CDdP0u6puP.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2049417735579246665"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

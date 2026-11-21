@@ -567,7 +567,13 @@ function LinkedCard({
 
 /** Pictures and clips below the text, which get a source line; snippets and thumbnails don't. */
 function isFigure(media?: Media) {
-  return media?.kind === 'image' || media?.kind === 'gallery' || media?.kind === 'row' || media?.kind === 'video';
+  return (
+    media?.kind === 'image' ||
+    media?.kind === 'gallery' ||
+    media?.kind === 'row' ||
+    media?.kind === 'video' ||
+    media?.kind === 'scroll'
+  );
 }
 
 /** A figure's source line, as in a paper: the page the picture or video above comes from. */
@@ -627,6 +633,8 @@ function EntryMedia({ media }: { media?: Media }) {
       );
     case 'video':
       return <Clip poster={media.poster} src={media.src} />;
+    case 'scroll':
+      return <Scroll image={media.image} />;
     case 'code':
       return (
         <pre className="tl-media tl-code">
@@ -831,6 +839,28 @@ function formatDuration(seconds: number) {
 }
 
 /** A silent loop that only plays while on screen, and not at all with reduced motion. */
+/**
+ * A whole page in a window-shaped frame, scrolling down to its end and back up while in view,
+ * slower the taller it is. Hovering pauses it. With reduced motion it stays put and the frame
+ * scrolls by hand instead.
+ */
+function Scroll({ image }: { image: Image }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, 0.5);
+  const seconds = Math.round((image.height / image.width) * 6);
+
+  return (
+    <div
+      className="tl-media tl-scroll"
+      data-playing={inView || undefined}
+      ref={ref}
+      style={{ '--tl-scroll-duration': `${seconds}s` } as React.CSSProperties}
+    >
+      <Picture image={image} />
+    </div>
+  );
+}
+
 function Clip({ poster, src }: { poster: Image; src: string }) {
   const ref = useRef<HTMLVideoElement>(null);
   const inView = useInView(ref, 0.5);

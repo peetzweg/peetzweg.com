@@ -1,0 +1,188 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 5,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-26T20:13:00.000Z",
+  "display_text_range": [
+    0,
+    146
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/ztQdfshGAx",
+        "expanded_url": "https://x.com/peetzweg/status/2070601242150154534/photo/1",
+        "indices": [
+          146,
+          169
+        ],
+        "url": "https://t.co/ztQdfshGAx"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "commit-history.com",
+        "expanded_url": "https://commit-history.com/",
+        "indices": [
+          122,
+          145
+        ],
+        "url": "https://t.co/nXt7a2Niyw"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1577241403",
+        "indices": [
+          15,
+          24
+        ],
+        "name": "@levelsio",
+        "screen_name": "levelsio"
+      }
+    ]
+  },
+  "id_str": "2070601242150154534",
+  "text": "Insane lead by @levelsio on *private* contributions on GitHub. But everyone knows only public contributions are legit. 😉\n\nhttps://t.co/nXt7a2Niyw https://t.co/ztQdfshGAx",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2070601242150154534"
+    ],
+    "editable_until_msecs": "1782508380000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/ztQdfshGAx",
+      "expanded_url": "https://x.com/peetzweg/status/2070601242150154534/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        146,
+        169
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HLxAmbkXYAAZ2sw.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1139,
+            "w": 2034,
+            "x": 0,
+            "y": 91
+          },
+          {
+            "h": 1658,
+            "w": 1658,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1658,
+            "w": 1454,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1658,
+            "w": 829,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1658,
+            "w": 2034,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1658,
+        "width": 2034
+      },
+      "sizes": {
+        "large": {
+          "h": 1658,
+          "resize": "fit",
+          "w": 2034
+        },
+        "medium": {
+          "h": 978,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 554,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/ztQdfshGAx"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1139,
+          "w": 2034,
+          "x": 0,
+          "y": 91
+        },
+        {
+          "h": 1658,
+          "w": 1658,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1658,
+          "w": 1454,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1658,
+          "w": 829,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1658,
+          "w": 2034,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2070601242150154534/photo/1",
+      "url": "https://pbs.twimg.com/media/HLxAmbkXYAAZ2sw.jpg",
+      "width": 2034,
+      "height": 1658
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

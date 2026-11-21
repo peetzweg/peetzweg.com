@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-11-20T18:39:18.000Z",
+  "display_text_range": [
+    0,
+    162
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/JQsDT5afi5",
+        "expanded_url": "https://x.com/peetzweg/status/2123848676867023118/video/1",
+        "indices": [
+          162,
+          185
+        ],
+        "url": "https://t.co/JQsDT5afi5"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "15339201",
+        "indices": [
+          95,
+          102
+        ],
+        "name": "iFixit",
+        "screen_name": "iFixit"
+      }
+    ]
+  },
+  "id_str": "2123848676867023118",
+  "text": "Not cool.\n\nJust did what felt like an open heart surgery on my oldest friend and realised that @iFixit's \"Essential Electronics Kit\" does not include a T3 bit. 😵 https://t.co/JQsDT5afi5",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2123848676867023118"
+    ],
+    "editable_until_msecs": "1795203558000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/JQsDT5afi5",
+      "expanded_url": "https://x.com/peetzweg/status/2123848676867023118/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        162,
+        185
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2123848007124713472/img/RfEVOZmEm46QsHTP.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1080,
+        "width": 1920
+      },
+      "sizes": {
+        "large": {
+          "h": 1080,
+          "resize": "fit",
+          "w": 1920
+        },
+        "medium": {
+          "h": 675,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/JQsDT5afi5",
+      "video_info": {
+        "aspect_ratio": [
+          16,
+          9
+        ],
+        "duration_millis": 23733,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/2123848007124713472/pl/GfT8KCYeb7Rs9_4c.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2123848007124713472/vid/avc1/480x270/fSgwZpp7pZm8wig_.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2123848007124713472/vid/avc1/640x360/QLK1jMFo9HQaEYSN.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2123848007124713472/vid/avc1/1280x720/ualtzIobDcFT6j8l.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      16,
+      9
+    ],
+    "contentType": "media_entity",
+    "durationMs": 23733,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/2123848007124713472/img/RfEVOZmEm46QsHTP.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/2123848007124713472/pl/GfT8KCYeb7Rs9_4c.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2123848007124713472/vid/avc1/480x270/fSgwZpp7pZm8wig_.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2123848007124713472/vid/avc1/640x360/QLK1jMFo9HQaEYSN.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2123848007124713472/vid/avc1/1280x720/ualtzIobDcFT6j8l.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2123848676867023118"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

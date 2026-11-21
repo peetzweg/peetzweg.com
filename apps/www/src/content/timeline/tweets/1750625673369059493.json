@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2024-01-25T21:04:20.000Z",
+  "display_text_range": [
+    0,
+    274
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/KbNfOyDmFq",
+        "expanded_url": "https://x.com/peetzweg/status/1750625673369059493/video/1",
+        "indices": [
+          275,
+          298
+        ],
+        "url": "https://t.co/KbNfOyDmFq"
+      }
+    ]
+  },
+  "id_str": "1750625673369059493",
+  "text": "Ever since I found out that my ebook reader actually collects the words I looked up during reading, I wanted to regulary revisit them to expand my english vocabulary more permanently.  \n\nToday I extracted the data and expanded the data with defintions and translations. wip. https://t.co/KbNfOyDmFq",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1750625673369059493"
+    ],
+    "editable_until_msecs": "1706220260000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/KbNfOyDmFq",
+      "expanded_url": "https://x.com/peetzweg/status/1750625673369059493/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        275,
+        298
+      ],
+      "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1750625576858050560/pu/img/aifgxLNuTCwMrhZN.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1046,
+        "width": 1612
+      },
+      "sizes": {
+        "large": {
+          "h": 1046,
+          "resize": "fit",
+          "w": 1612
+        },
+        "medium": {
+          "h": 779,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 441,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/KbNfOyDmFq",
+      "video_info": {
+        "aspect_ratio": [
+          806,
+          523
+        ],
+        "duration_millis": 21312,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/ext_tw_video/1750625576858050560/pu/pl/J7o6Uz5A1YW9a_-9.m3u8?tag=12"
+          },
+          {
+            "bitrate": 256000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1750625576858050560/pu/vid/avc1/416x270/5I8_bchXK6WAxKDI.mp4?tag=12"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1750625576858050560/pu/vid/avc1/554x360/SYttlqxIzOSE-QJ6.mp4?tag=12"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1750625576858050560/pu/vid/avc1/1108x720/xG6DC4nULa7InI9w.mp4?tag=12"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      806,
+      523
+    ],
+    "contentType": "media_entity",
+    "durationMs": 21312,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1750625576858050560/pu/img/aifgxLNuTCwMrhZN.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/ext_tw_video/1750625576858050560/pu/pl/J7o6Uz5A1YW9a_-9.m3u8?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1750625576858050560/pu/vid/avc1/416x270/5I8_bchXK6WAxKDI.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1750625576858050560/pu/vid/avc1/554x360/SYttlqxIzOSE-QJ6.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1750625576858050560/pu/vid/avc1/1108x720/xG6DC4nULa7InI9w.mp4?tag=12"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1750625673369059493"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

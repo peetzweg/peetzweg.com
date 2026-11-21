@@ -1,0 +1,158 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-08-17T20:36:37.000Z",
+  "display_text_range": [
+    0,
+    185
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/EvjUwXWmaW",
+        "expanded_url": "https://x.com/peetzweg/status/1560002680612950022/photo/1",
+        "indices": [
+          186,
+          209
+        ],
+        "url": "https://t.co/EvjUwXWmaW"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "buff.ly/3bEE7Fs",
+        "expanded_url": "https://buff.ly/3bEE7Fs",
+        "indices": [
+          162,
+          185
+        ],
+        "url": "https://t.co/cEejnu0HVS"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1078199034899238912",
+        "indices": [
+          12,
+          20
+        ],
+        "name": "GitLens",
+        "screen_name": "gitlens"
+      },
+      {
+        "id_str": "3167734591",
+        "indices": [
+          150,
+          155
+        ],
+        "name": "Visual Studio Code",
+        "screen_name": "code"
+      }
+    ]
+  },
+  "id_str": "1560002680612950022",
+  "text": "Inspired by @gitlens I've added a feature to 0.4.0 \"Crypto Address Lens\", which shows the \"symbol()\" value of the selected address inline. Get it for @code here: https://t.co/cEejnu0HVS https://t.co/EvjUwXWmaW",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1560002680612950022"
+    ],
+    "editable_until_msecs": "1660770397000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/EvjUwXWmaW",
+      "expanded_url": "https://x.com/peetzweg/status/1560002680612950022/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        186,
+        209
+      ],
+      "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/FaY-FR8XEAEwtCg.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 250,
+        "width": 912
+      },
+      "sizes": {
+        "large": {
+          "h": 250,
+          "resize": "fit",
+          "w": 912
+        },
+        "medium": {
+          "h": 250,
+          "resize": "fit",
+          "w": 912
+        },
+        "small": {
+          "h": 186,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "animated_gif",
+      "url": "https://t.co/EvjUwXWmaW",
+      "video_info": {
+        "aspect_ratio": [
+          456,
+          125
+        ],
+        "variants": [
+          {
+            "bitrate": 0,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/tweet_video/FaY-FR8XEAEwtCg.mp4"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      456,
+      125
+    ],
+    "contentType": "gif",
+    "durationMs": 0,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/tweet_video_thumb/FaY-FR8XEAEwtCg.jpg",
+    "variants": [
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/tweet_video/FaY-FR8XEAEwtCg.mp4"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1560002680612950022"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

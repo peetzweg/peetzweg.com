@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-10-26T16:34:01.000Z",
+  "display_text_range": [
+    0,
+    240
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/S4ImRgFEO1",
+        "expanded_url": "https://x.com/peetzweg/status/1585308781596090369/photo/1",
+        "indices": [
+          241,
+          264
+        ],
+        "url": "https://t.co/S4ImRgFEO1"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "github.com/ethereumbook/e…",
+        "expanded_url": "https://github.com/ethereumbook/ethereumbook",
+        "indices": [
+          217,
+          240
+        ],
+        "url": "https://t.co/F06UIQUlmx"
+      }
+    ]
+  },
+  "id_str": "1585308781596090369",
+  "text": "Just this year I reread `Mastering Ethereum` from 2018. I wonder why it's not recommended more as it's open source.\nIt's well written and easy to digest. Great chapter on Smart Contract Security in Solidity as well. \nhttps://t.co/F06UIQUlmx https://t.co/S4ImRgFEO1",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1585308781596090369"
+    ],
+    "editable_until_msecs": "1666803841000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/S4ImRgFEO1",
+      "expanded_url": "https://x.com/peetzweg/status/1585308781596090369/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        241,
+        264
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FgAl72VWAAAQOza.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 84,
+            "w": 150,
+            "x": 0,
+            "y": 51
+          },
+          {
+            "h": 150,
+            "w": 150,
+            "x": 0,
+            "y": 18
+          },
+          {
+            "h": 171,
+            "w": 150,
+            "x": 0,
+            "y": 8
+          },
+          {
+            "h": 197,
+            "w": 99,
+            "x": 26,
+            "y": 0
+          },
+          {
+            "h": 197,
+            "w": 150,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 197,
+        "width": 150
+      },
+      "sizes": {
+        "large": {
+          "h": 197,
+          "resize": "fit",
+          "w": 150
+        },
+        "medium": {
+          "h": 197,
+          "resize": "fit",
+          "w": 150
+        },
+        "small": {
+          "h": 197,
+          "resize": "fit",
+          "w": 150
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/S4ImRgFEO1"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 84,
+          "w": 150,
+          "x": 0,
+          "y": 51
+        },
+        {
+          "h": 150,
+          "w": 150,
+          "x": 0,
+          "y": 18
+        },
+        {
+          "h": 171,
+          "w": 150,
+          "x": 0,
+          "y": 8
+        },
+        {
+          "h": 197,
+          "w": 99,
+          "x": 26,
+          "y": 0
+        },
+        {
+          "h": 197,
+          "w": 150,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1585308781596090369/photo/1",
+      "url": "https://pbs.twimg.com/media/FgAl72VWAAAQOza.jpg",
+      "width": 150,
+      "height": 197
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

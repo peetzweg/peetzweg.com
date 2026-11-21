@@ -1,0 +1,281 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 6,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-08-30T14:40:46.000Z",
+  "display_text_range": [
+    0,
+    81
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/b8Wkuc5HfB",
+        "expanded_url": "https://x.com/peetzweg/status/1961801270370443504/photo/1",
+        "indices": [
+          81,
+          104
+        ],
+        "url": "https://t.co/b8Wkuc5HfB"
+      }
+    ]
+  },
+  "id_str": "1961801270370443504",
+  "text": "Slowing down on a Saturday with family, baking my favourite cake from grandma. 🙏 https://t.co/b8Wkuc5HfB",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1961801270370443504"
+    ],
+    "editable_until_msecs": "1756568446000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/b8Wkuc5HfB",
+      "expanded_url": "https://x.com/peetzweg/status/1961801270370443504/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        81,
+        104
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/Gzm32tJXIAEfn0A.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1147,
+            "w": 2048,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1536,
+            "w": 1536,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1536,
+            "w": 1347,
+            "x": 95,
+            "y": 0
+          },
+          {
+            "h": 1536,
+            "w": 768,
+            "x": 384,
+            "y": 0
+          },
+          {
+            "h": 1536,
+            "w": 2048,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1536,
+        "width": 2048
+      },
+      "sizes": {
+        "large": {
+          "h": 1536,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/b8Wkuc5HfB"
+    },
+    {
+      "display_url": "pic.x.com/b8Wkuc5HfB",
+      "expanded_url": "https://x.com/peetzweg/status/1961801270370443504/photo/2",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        81,
+        104
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/Gzm32tKWMAAQdaF.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1147,
+            "w": 2048,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1536,
+            "w": 1536,
+            "x": 102,
+            "y": 0
+          },
+          {
+            "h": 1536,
+            "w": 1347,
+            "x": 197,
+            "y": 0
+          },
+          {
+            "h": 1536,
+            "w": 768,
+            "x": 486,
+            "y": 0
+          },
+          {
+            "h": 1536,
+            "w": 2048,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1536,
+        "width": 2048
+      },
+      "sizes": {
+        "large": {
+          "h": 1536,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/b8Wkuc5HfB"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1147,
+          "w": 2048,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1536,
+          "w": 1536,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1536,
+          "w": 1347,
+          "x": 95,
+          "y": 0
+        },
+        {
+          "h": 1536,
+          "w": 768,
+          "x": 384,
+          "y": 0
+        },
+        {
+          "h": 1536,
+          "w": 2048,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1961801270370443504/photo/1",
+      "url": "https://pbs.twimg.com/media/Gzm32tJXIAEfn0A.jpg",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1147,
+          "w": 2048,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1536,
+          "w": 1536,
+          "x": 102,
+          "y": 0
+        },
+        {
+          "h": 1536,
+          "w": 1347,
+          "x": 197,
+          "y": 0
+        },
+        {
+          "h": 1536,
+          "w": 768,
+          "x": 486,
+          "y": 0
+        },
+        {
+          "h": 1536,
+          "w": 2048,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1961801270370443504/photo/2",
+      "url": "https://pbs.twimg.com/media/Gzm32tKWMAAQdaF.jpg",
+      "width": 2048,
+      "height": 1536
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

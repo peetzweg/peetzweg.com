@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 4,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-10-16T15:44:14.000Z",
+  "display_text_range": [
+    0,
+    132
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/8qEsunDBZt",
+        "expanded_url": "https://x.com/peetzweg/status/2111121043528233128/video/1",
+        "indices": [
+          133,
+          156
+        ],
+        "url": "https://t.co/8qEsunDBZt"
+      }
+    ]
+  },
+  "id_str": "2111121043528233128",
+  "text": "Best accessory. Almost got the OB-4 but would have been overkill for my use case. This is portable, cheap and robust. Can recommend. https://t.co/8qEsunDBZt",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2111121043528233128"
+    ],
+    "editable_until_msecs": "1792169054000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/8qEsunDBZt",
+      "expanded_url": "https://x.com/peetzweg/status/2111121043528233128/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        133,
+        156
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2111120716808531968/img/NXlyRImqHk3d-tRu.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 720,
+        "width": 1280
+      },
+      "sizes": {
+        "large": {
+          "h": 720,
+          "resize": "fit",
+          "w": 1280
+        },
+        "medium": {
+          "h": 675,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/8qEsunDBZt",
+      "video_info": {
+        "aspect_ratio": [
+          16,
+          9
+        ],
+        "duration_millis": 107114,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/2111120716808531968/pl/DtHbOyB96lwNbeDZ.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2111120716808531968/vid/avc1/480x270/sXSVjoIDbUFgeKH_.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2111120716808531968/vid/avc1/640x360/-jFkakxbVn1FuVA4.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2111120716808531968/vid/avc1/1280x720/TLNcUQGLxeosoJKj.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      16,
+      9
+    ],
+    "contentType": "media_entity",
+    "durationMs": 107114,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/2111120716808531968/img/NXlyRImqHk3d-tRu.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/2111120716808531968/pl/DtHbOyB96lwNbeDZ.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2111120716808531968/vid/avc1/480x270/sXSVjoIDbUFgeKH_.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2111120716808531968/vid/avc1/640x360/-jFkakxbVn1FuVA4.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2111120716808531968/vid/avc1/1280x720/TLNcUQGLxeosoJKj.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2111121043528233128"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,225 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-08-04T19:38:02.000Z",
+  "display_text_range": [
+    0,
+    158
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/pS64bL83KP",
+        "expanded_url": "https://x.com/peetzweg/status/2084725566876406041/photo/1",
+        "indices": [
+          159,
+          182
+        ],
+        "url": "https://t.co/pS64bL83KP"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2081673074060021848",
+        "indices": [
+          135,
+          158
+        ],
+        "url": "https://t.co/tXrlt7GmRM"
+      }
+    ]
+  },
+  "id_str": "2084725566876406041",
+  "text": "Go home app store connect, you are drunk. What a shame that this platform is as bad as it has been a decade ago when I first used it.\n\nhttps://t.co/tXrlt7GmRM https://t.co/pS64bL83KP",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2084725566876406041"
+    ],
+    "editable_until_msecs": "1785875882000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/pS64bL83KP",
+      "expanded_url": "https://x.com/peetzweg/status/2084725566876406041/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        159,
+        182
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HO5ukwMWwAAnhWU.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 660,
+            "w": 1179,
+            "x": 0,
+            "y": 170
+          },
+          {
+            "h": 1174,
+            "w": 1174,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1174,
+            "w": 1030,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1174,
+            "w": 587,
+            "x": 30,
+            "y": 0
+          },
+          {
+            "h": 1174,
+            "w": 1179,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1174,
+        "width": 1179
+      },
+      "sizes": {
+        "large": {
+          "h": 1174,
+          "resize": "fit",
+          "w": 1179
+        },
+        "medium": {
+          "h": 1174,
+          "resize": "fit",
+          "w": 1179
+        },
+        "small": {
+          "h": 677,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/pS64bL83KP"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 660,
+          "w": 1179,
+          "x": 0,
+          "y": 170
+        },
+        {
+          "h": 1174,
+          "w": 1174,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1174,
+          "w": 1030,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1174,
+          "w": 587,
+          "x": 30,
+          "y": 0
+        },
+        {
+          "h": 1174,
+          "w": 1179,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2084725566876406041/photo/1",
+      "url": "https://pbs.twimg.com/media/HO5ukwMWwAAnhWU.jpg",
+      "width": 1179,
+      "height": 1174
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 3,
+    "in_reply_to_screen_name": "DanielLockyer",
+    "in_reply_to_status_id_str": "2081649842653102235",
+    "in_reply_to_user_id_str": "230209403",
+    "lang": "en",
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2026-07-27T09:28:31.000Z",
+    "display_text_range": [
+      15,
+      41
+    ],
+    "entities": {
+      "user_mentions": [
+        {
+          "id_str": "230209403",
+          "indices": [
+            0,
+            14
+          ],
+          "name": "Daniel Lockyer",
+          "screen_name": "DanielLockyer"
+        }
+      ]
+    },
+    "id_str": "2081673074060021848",
+    "text": "@DanielLockyer Apple App Store Connect 😅",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2081673074060021848"
+      ],
+      "editable_until_msecs": "1785148111000",
+      "edits_remaining": "5",
+      "is_edit_eligible": false
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

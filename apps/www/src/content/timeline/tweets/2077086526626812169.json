@@ -1,0 +1,188 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 3,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-07-14T17:43:13.000Z",
+  "display_text_range": [
+    0,
+    252
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/BC0qe84jc3",
+        "expanded_url": "https://x.com/peetzweg/status/2077086526626812169/photo/1",
+        "indices": [
+          253,
+          276
+        ],
+        "url": "https://t.co/BC0qe84jc3"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "Miren.dev",
+        "expanded_url": "http://Miren.dev",
+        "indices": [
+          122,
+          145
+        ],
+        "url": "https://t.co/GSqlNg1Xmc"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1689746440405278720",
+        "indices": [
+          74,
+          84
+        ],
+        "name": "Coolify",
+        "screen_name": "coolifyio"
+      }
+    ]
+  },
+  "id_str": "2077086526626812169",
+  "text": "commit-history lead me down the self hosting rabbit hole. Glad stuff like @coolifyio exists. Last week I also looked into https://t.co/GSqlNg1Xmc, looks very promising as well. Bit of a different philosophie than coolify. Still under heavy development. https://t.co/BC0qe84jc3",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2077086526626812169"
+    ],
+    "editable_until_msecs": "1784054593000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/BC0qe84jc3",
+      "expanded_url": "https://x.com/peetzweg/status/2077086526626812169/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        253,
+        276
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HNNLKWVXAAA2B18.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 717,
+            "w": 1280,
+            "x": 0,
+            "y": 122
+          },
+          {
+            "h": 960,
+            "w": 960,
+            "x": 192,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 842,
+            "x": 251,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 480,
+            "x": 432,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 960,
+        "width": 1280
+      },
+      "sizes": {
+        "large": {
+          "h": 960,
+          "resize": "fit",
+          "w": 1280
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/BC0qe84jc3"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 717,
+          "w": 1280,
+          "x": 0,
+          "y": 122
+        },
+        {
+          "h": 960,
+          "w": 960,
+          "x": 192,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 842,
+          "x": 251,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 480,
+          "x": 432,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2077086526626812169/photo/1",
+      "url": "https://pbs.twimg.com/media/HNNLKWVXAAA2B18.jpg",
+      "width": 1280,
+      "height": 960
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,234 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-10T08:18:36.000Z",
+  "display_text_range": [
+    0,
+    73
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/KRsCzSb3zf",
+        "expanded_url": "https://x.com/peetzweg/status/2021136705714077771/photo/1",
+        "indices": [
+          74,
+          97
+        ],
+        "url": "https://t.co/KRsCzSb3zf"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2019055782940020774",
+        "indices": [
+          50,
+          73
+        ],
+        "url": "https://t.co/P1NQQ1DBYF"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1995710751097659392",
+        "indices": [
+          15,
+          24
+        ],
+        "name": "OpenClaw🦞",
+        "screen_name": "openclaw"
+      }
+    ]
+  },
+  "id_str": "2021136705714077771",
+  "text": "My first PR to @openclaw got merged. Let's goo! \n\nhttps://t.co/P1NQQ1DBYF https://t.co/KRsCzSb3zf",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2021136705714077771"
+    ],
+    "editable_until_msecs": "1770715116000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/KRsCzSb3zf",
+      "expanded_url": "https://x.com/peetzweg/status/2021136705714077771/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        74,
+        97
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HAyE4dTXQAAMpjZ.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 830,
+            "w": 1482,
+            "x": 0,
+            "y": 66
+          },
+          {
+            "h": 1196,
+            "w": 1196,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1196,
+            "w": 1049,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1196,
+            "w": 598,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1196,
+            "w": 1482,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1196,
+        "width": 1482
+      },
+      "sizes": {
+        "large": {
+          "h": 1196,
+          "resize": "fit",
+          "w": 1482
+        },
+        "medium": {
+          "h": 968,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 549,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/KRsCzSb3zf"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 830,
+          "w": 1482,
+          "x": 0,
+          "y": 66
+        },
+        {
+          "h": 1196,
+          "w": 1196,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1196,
+          "w": 1049,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1196,
+          "w": 598,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1196,
+          "w": 1482,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2021136705714077771/photo/1",
+      "url": "https://pbs.twimg.com/media/HAyE4dTXQAAMpjZ.jpg",
+      "width": 1482,
+      "height": 1196
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 2,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 2,
+    "retweet_count": 0,
+    "created_at": "2026-02-04T14:29:45.000Z",
+    "display_text_range": [
+      0,
+      111
+    ],
+    "entities": {
+      "urls": [
+        {
+          "display_url": "x.com/peetzweg/statu…",
+          "expanded_url": "https://x.com/peetzweg/status/2019023821534368192",
+          "indices": [
+            88,
+            111
+          ],
+          "url": "https://t.co/ByVCRuxIPi"
+        }
+      ]
+    },
+    "id_str": "2019055782940020774",
+    "text": "Made my first PR to openclaw yesterday. Fingers crossed it gets included anytime soon.\n\nhttps://t.co/ByVCRuxIPi",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2019055782940020774"
+      ],
+      "editable_until_msecs": "1770218985000",
+      "edits_remaining": "5",
+      "is_edit_eligible": false
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

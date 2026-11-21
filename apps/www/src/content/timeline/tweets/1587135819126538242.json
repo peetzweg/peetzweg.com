@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-10-31T17:34:01.000Z",
+  "display_text_range": [
+    0,
+    272
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/TP7xucx7cD",
+        "expanded_url": "https://x.com/peetzweg/status/1587135819126538242/photo/1",
+        "indices": [
+          273,
+          296
+        ],
+        "url": "https://t.co/TP7xucx7cD"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "3003743254",
+        "indices": [
+          16,
+          28
+        ],
+        "name": "React Native",
+        "screen_name": "reactnative"
+      }
+    ]
+  },
+  "id_str": "1587135819126538242",
+  "text": "Have been using @reactnative for the last 4-5 years. I'm glad it exists, but I also had my worst headaches with it fixing these super fragile iOS builds of it. \nJust now one resolved uff. Searching through issues, it amazes me how many stars, open PRs &amp; Issues it has. https://t.co/TP7xucx7cD",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1587135819126538242"
+    ],
+    "editable_until_msecs": "1667239441000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/TP7xucx7cD",
+      "expanded_url": "https://x.com/peetzweg/status/1587135819126538242/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        273,
+        296
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FgajnbNWYAASC5w.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1010,
+            "w": 1804,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1010,
+            "w": 1010,
+            "x": 303,
+            "y": 0
+          },
+          {
+            "h": 1010,
+            "w": 886,
+            "x": 365,
+            "y": 0
+          },
+          {
+            "h": 1010,
+            "w": 505,
+            "x": 556,
+            "y": 0
+          },
+          {
+            "h": 1010,
+            "w": 1906,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1010,
+        "width": 1906
+      },
+      "sizes": {
+        "large": {
+          "h": 1010,
+          "resize": "fit",
+          "w": 1906
+        },
+        "medium": {
+          "h": 636,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 360,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/TP7xucx7cD"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1010,
+          "w": 1804,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1010,
+          "w": 1010,
+          "x": 303,
+          "y": 0
+        },
+        {
+          "h": 1010,
+          "w": 886,
+          "x": 365,
+          "y": 0
+        },
+        {
+          "h": 1010,
+          "w": 505,
+          "x": 556,
+          "y": 0
+        },
+        {
+          "h": 1010,
+          "w": 1906,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1587135819126538242/photo/1",
+      "url": "https://pbs.twimg.com/media/FgajnbNWYAASC5w.jpg",
+      "width": 1906,
+      "height": 1010
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

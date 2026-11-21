@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-29T18:31:45.000Z",
+  "display_text_range": [
+    0,
+    72
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/jksGPx54AF",
+        "expanded_url": "https://x.com/peetzweg/status/2071662923970134023/photo/1",
+        "indices": [
+          73,
+          96
+        ],
+        "url": "https://t.co/jksGPx54AF"
+      }
+    ]
+  },
+  "id_str": "2071662923970134023",
+  "text": "Surprised I am still in the Top 200 among all these legends on the page. https://t.co/jksGPx54AF",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2071662923970134023"
+    ],
+    "editable_until_msecs": "1782761505000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/jksGPx54AF",
+      "expanded_url": "https://x.com/peetzweg/status/2071662923970134023/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        73,
+        96
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HMAGNRgXkAA0pI_.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1005,
+            "w": 1794,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1374,
+            "w": 1374,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1374,
+            "w": 1205,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1374,
+            "w": 687,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1374,
+            "w": 1794,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1374,
+        "width": 1794
+      },
+      "sizes": {
+        "large": {
+          "h": 1374,
+          "resize": "fit",
+          "w": 1794
+        },
+        "medium": {
+          "h": 919,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 521,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/jksGPx54AF"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1005,
+          "w": 1794,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1374,
+          "w": 1374,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1374,
+          "w": 1205,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1374,
+          "w": 687,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1374,
+          "w": 1794,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2071662923970134023/photo/1",
+      "url": "https://pbs.twimg.com/media/HMAGNRgXkAA0pI_.jpg",
+      "width": 1794,
+      "height": 1374
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

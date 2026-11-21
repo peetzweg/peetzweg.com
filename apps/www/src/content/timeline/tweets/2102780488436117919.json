@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 6,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-09-23T15:21:50.000Z",
+  "display_text_range": [
+    0,
+    177
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/7HwHFgOZf7",
+        "expanded_url": "https://x.com/peetzweg/status/2102780488436117919/photo/1",
+        "indices": [
+          177,
+          200
+        ],
+        "url": "https://t.co/7HwHFgOZf7"
+      }
+    ]
+  },
+  "id_str": "2102780488436117919",
+  "text": "Just got a generous donation from Gary for OpenDisplay, today.\n\nDonations are great but also great to collect all these happy supporter messages on my ko-fi page.\n\nThank you. 🙏 https://t.co/7HwHFgOZf7",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2102780488436117919"
+    ],
+    "editable_until_msecs": "1790180510000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/7HwHFgOZf7",
+      "expanded_url": "https://x.com/peetzweg/status/2102780488436117919/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        177,
+        200
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HS5x3Z-X0AAqdFQ.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 524,
+            "w": 936,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 524,
+            "w": 524,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 524,
+            "w": 460,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 524,
+            "w": 262,
+            "x": 11,
+            "y": 0
+          },
+          {
+            "h": 524,
+            "w": 1144,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 524,
+        "width": 1144
+      },
+      "sizes": {
+        "large": {
+          "h": 524,
+          "resize": "fit",
+          "w": 1144
+        },
+        "medium": {
+          "h": 524,
+          "resize": "fit",
+          "w": 1144
+        },
+        "small": {
+          "h": 311,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/7HwHFgOZf7"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 524,
+          "w": 936,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 524,
+          "w": 524,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 524,
+          "w": 460,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 524,
+          "w": 262,
+          "x": 11,
+          "y": 0
+        },
+        {
+          "h": 524,
+          "w": 1144,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2102780488436117919/photo/1",
+      "url": "https://pbs.twimg.com/media/HS5x3Z-X0AAqdFQ.jpg",
+      "width": 1144,
+      "height": 524
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

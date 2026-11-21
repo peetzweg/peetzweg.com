@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
 import { useRef } from 'react';
 import { Timeline } from '../components/timeline/Timeline';
-import { getTimeline } from '../content/timeline/api';
+import { getFeatured, getTimeline } from '../content/timeline/api';
 import { parseFilters, serializeFilters, type FilterId, type Order } from '../content/timeline/filters';
 import { TIMELINE_TEXT, useJustify } from '../justify/useJustify';
 import { SITE, seo } from '../seo';
@@ -14,7 +14,10 @@ export const Route = createFileRoute('/')({
     return { ...(filter ? { filter } : {}), ...(search.order === 'oldest' ? { order: 'oldest' } : {}) };
   },
   loaderDeps: ({ search }) => search,
-  loader: ({ deps }) => getTimeline({ data: deps }),
+  loader: async ({ deps }) => {
+    const [index, featured] = await Promise.all([getTimeline({ data: deps }), getFeatured()]);
+    return { index, featured };
+  },
   staleTime: Infinity,
   head: () => seo({ title: SITE.title, description: SITE.description, path: '/', video: SITE.video, type: 'profile' }),
   component: Home,
@@ -29,12 +32,19 @@ const PROFILES = [
   { label: 'Ko-fi', href: 'https://ko-fi.com/peetzweg' },
 ];
 
+const SPONSOR = 'https://github.com/sponsors/peetzweg';
+
+const FEATURED_GROUPS = [
+  { group: 'products', title: 'Products' },
+  { group: 'upcoming', title: 'Upcoming Products' },
+] as const;
+
 function Home() {
   const search = Route.useSearch();
   const navigate = useNavigate({ from: '/' });
   const filters = parseFilters(search.filter);
   const order: Order = search.order ?? 'newest';
-  const index = Route.useLoaderData();
+  const { featured, index } = Route.useLoaderData();
   const main = useRef<HTMLElement>(null);
   useJustify(main, TIMELINE_TEXT);
 
@@ -71,8 +81,39 @@ function Home() {
               {label}
             </a>
           ))}
+          <a className="tl-sponsor" href={SPONSOR} rel="noreferrer" target="_blank">
+            <svg aria-hidden="true" fill="currentColor" height="12" viewBox="0 0 16 16" width="12">
+              <path d="M8 14.25s-5.75-3.4-5.75-7.6A3.15 3.15 0 0 1 8 4.8a3.15 3.15 0 0 1 5.75 1.85c0 4.2-5.75 7.6-5.75 7.6Z" />
+            </svg>
+            Sponsor
+          </a>
         </nav>
       </header>
+
+      <div className="tl-featured">
+        {FEATURED_GROUPS.map(({ group, title }) => (
+          <section aria-labelledby={`tl-featured-${group}`} className="tl-featured-group" key={group}>
+            <h2 id={`tl-featured-${group}`}>{title}</h2>
+            <ul>
+              {featured
+                .filter((project) => project.group === group)
+                .map(({ href, icon, tagline, title }) => (
+                  <li key={title}>
+                    <a
+                      href={href}
+                      rel={href.startsWith('/') ? undefined : 'noreferrer'}
+                      target={href.startsWith('/') ? undefined : '_blank'}
+                    >
+                      <img alt="" height={icon.height} loading="lazy" src={icon.src} width={icon.width} />
+                      <span className="tl-featured-name">{title}</span>
+                      <span className="tl-featured-line">{tagline}</span>
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </section>
+        ))}
+      </div>
 
       <div className="tl-controls">
         <div aria-label="Show only" className="tl-filters" role="group">

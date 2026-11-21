@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-08-09T18:53:54.000Z",
+  "display_text_range": [
+    0,
+    235
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/s2NsN8z0BN",
+        "expanded_url": "https://x.com/peetzweg/status/2086526402782777819/video/1",
+        "indices": [
+          236,
+          259
+        ],
+        "url": "https://t.co/s2NsN8z0BN"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "numbr.dev",
+        "expanded_url": "http://numbr.dev",
+        "indices": [
+          25,
+          48
+        ],
+        "url": "https://t.co/ZdVHRN76jc"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "2719083782",
+        "indices": [
+          7,
+          15
+        ],
+        "name": "Numi",
+        "screen_name": "numiapp"
+      }
+    ]
+  },
+  "id_str": "2086526402782777819",
+  "text": "I love @numiapp, user of https://t.co/ZdVHRN76jc,  numara is great too but why does it not have a open source core and spec? Everyone seems to built their own flavor of this and nothing is compatible with each other and not file first. https://t.co/s2NsN8z0BN",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2086526402782777819"
+    ],
+    "editable_until_msecs": "1786305234000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/s2NsN8z0BN",
+      "expanded_url": "https://x.com/peetzweg/status/2086526402782777819/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        236,
+        259
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2086526370306281472/img/OTdlE5b1CDeS-XuE.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 660,
+        "width": 660
+      },
+      "sizes": {
+        "large": {
+          "h": 660,
+          "resize": "fit",
+          "w": 660
+        },
+        "medium": {
+          "h": 660,
+          "resize": "fit",
+          "w": 660
+        },
+        "small": {
+          "h": 660,
+          "resize": "fit",
+          "w": 660
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/s2NsN8z0BN",
+      "video_info": {
+        "aspect_ratio": [
+          1,
+          1
+        ],
+        "duration_millis": 44566,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/2086526370306281472/pl/qsq2hPXW8i9nDgnA.m3u8?tag=14"
+          },
+          {
+            "bitrate": 432000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2086526370306281472/vid/avc1/320x320/ehmKiKUul0JZNV6L.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2086526370306281472/vid/avc1/540x540/omKdC4_mXkg2c6CT.mp4?tag=14"
+          },
+          {
+            "bitrate": 1280000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2086526370306281472/vid/avc1/660x660/CiIRkpSDysnMucqJ.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      1,
+      1
+    ],
+    "contentType": "media_entity",
+    "durationMs": 44566,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/2086526370306281472/img/OTdlE5b1CDeS-XuE.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/2086526370306281472/pl/qsq2hPXW8i9nDgnA.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2086526370306281472/vid/avc1/320x320/ehmKiKUul0JZNV6L.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2086526370306281472/vid/avc1/540x540/omKdC4_mXkg2c6CT.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2086526370306281472/vid/avc1/660x660/CiIRkpSDysnMucqJ.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2086526402782777819"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

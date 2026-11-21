@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-11-22T09:50:58.000Z",
+  "display_text_range": [
+    0,
+    59
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/qHI30ZF3Qq",
+        "expanded_url": "https://x.com/peetzweg/status/1727263394796106181/photo/1",
+        "indices": [
+          60,
+          83
+        ],
+        "url": "https://t.co/qHI30ZF3Qq"
+      }
+    ]
+  },
+  "id_str": "1727263394796106181",
+  "text": "Urrgh, who merged this into iOS? Almost got a heart attack. https://t.co/qHI30ZF3Qq",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1727263394796106181"
+    ],
+    "editable_until_msecs": "1700650258000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/qHI30ZF3Qq",
+      "expanded_url": "https://x.com/peetzweg/status/1727263394796106181/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        60,
+        83
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/F_h4oCQXEAArm7B.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 660,
+            "w": 1178,
+            "x": 0,
+            "y": 170
+          },
+          {
+            "h": 982,
+            "w": 982,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 982,
+            "w": 861,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 982,
+            "w": 491,
+            "x": 78,
+            "y": 0
+          },
+          {
+            "h": 982,
+            "w": 1178,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 982,
+        "width": 1178
+      },
+      "sizes": {
+        "large": {
+          "h": 982,
+          "resize": "fit",
+          "w": 1178
+        },
+        "medium": {
+          "h": 982,
+          "resize": "fit",
+          "w": 1178
+        },
+        "small": {
+          "h": 567,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/qHI30ZF3Qq"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 660,
+          "w": 1178,
+          "x": 0,
+          "y": 170
+        },
+        {
+          "h": 982,
+          "w": 982,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 982,
+          "w": 861,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 982,
+          "w": 491,
+          "x": 78,
+          "y": 0
+        },
+        {
+          "h": 982,
+          "w": 1178,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1727263394796106181/photo/1",
+      "url": "https://pbs.twimg.com/media/F_h4oCQXEAArm7B.jpg",
+      "width": 1178,
+      "height": 982
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

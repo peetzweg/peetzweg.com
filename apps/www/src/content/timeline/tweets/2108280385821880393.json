@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-10-08T19:36:28.000Z",
+  "display_text_range": [
+    0,
+    117
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/KZvwdPfWgO",
+        "expanded_url": "https://x.com/peetzweg/status/2108280385821880393/video/1",
+        "indices": [
+          118,
+          141
+        ],
+        "url": "https://t.co/KZvwdPfWgO"
+      }
+    ]
+  },
+  "id_str": "2108280385821880393",
+  "text": "As cool as AI is for game development, just imagine how cool it is for VR Game development.\n\nI'm starting to believe. https://t.co/KZvwdPfWgO",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2108280385821880393"
+    ],
+    "editable_until_msecs": "1791491788000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/KZvwdPfWgO",
+      "expanded_url": "https://x.com/peetzweg/status/2108280385821880393/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        118,
+        141
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2108280106988748800/img/is1YsfkpUlimhEAG.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1080,
+        "width": 1920
+      },
+      "sizes": {
+        "large": {
+          "h": 1080,
+          "resize": "fit",
+          "w": 1920
+        },
+        "medium": {
+          "h": 675,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/KZvwdPfWgO",
+      "video_info": {
+        "aspect_ratio": [
+          16,
+          9
+        ],
+        "duration_millis": 50488,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/2108280106988748800/pl/QESkp2HUVGjSPMpO.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2108280106988748800/vid/avc1/480x270/1Jr1FMj60boQ9fVI.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2108280106988748800/vid/avc1/640x360/LQrLDtcrfsITwKgL.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2108280106988748800/vid/avc1/1280x720/tkcnKDYHHiBimouj.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      16,
+      9
+    ],
+    "contentType": "media_entity",
+    "durationMs": 50488,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/2108280106988748800/img/is1YsfkpUlimhEAG.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/2108280106988748800/pl/QESkp2HUVGjSPMpO.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2108280106988748800/vid/avc1/480x270/1Jr1FMj60boQ9fVI.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2108280106988748800/vid/avc1/640x360/LQrLDtcrfsITwKgL.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2108280106988748800/vid/avc1/1280x720/tkcnKDYHHiBimouj.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2108280385821880393"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 2,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

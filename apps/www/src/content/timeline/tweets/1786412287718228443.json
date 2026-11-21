@@ -1,0 +1,393 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2024-05-03T15:07:33.000Z",
+  "display_text_range": [
+    0,
+    253
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/y5BKmhAyHc",
+        "expanded_url": "https://x.com/peetzweg/status/1786412287718228443/photo/1",
+        "indices": [
+          254,
+          277
+        ],
+        "url": "https://t.co/y5BKmhAyHc"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "github.com",
+        "expanded_url": "http://github.com",
+        "indices": [
+          179,
+          202
+        ],
+        "url": "https://t.co/unvOwx2Ahv"
+      },
+      {
+        "display_url": "gist.github.com/peetzweg/36f9a…",
+        "expanded_url": "https://gist.github.com/peetzweg/36f9a97dd59b3e60b8349d07de90c06b",
+        "indices": [
+          205,
+          228
+        ],
+        "url": "https://t.co/i9FkGc0vT9"
+      },
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1641099086643314688",
+        "indices": [
+          230,
+          253
+        ],
+        "url": "https://t.co/qUH1gwlq6T"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "13334762",
+        "indices": [
+          79,
+          86
+        ],
+        "name": "GitHub",
+        "screen_name": "github"
+      }
+    ]
+  },
+  "id_str": "1786412287718228443",
+  "text": "This shell function saves me so much time daily navigating to my repository on @github. \n\nCan't imagine how I ever worked without it. \n\nJust type `repo` to open cwd's git repo on https://t.co/unvOwx2Ahv.\n\nhttps://t.co/i9FkGc0vT9\n\nhttps://t.co/qUH1gwlq6T https://t.co/y5BKmhAyHc",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1786412287718228443"
+    ],
+    "editable_until_msecs": "1714752453000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/y5BKmhAyHc",
+      "expanded_url": "https://x.com/peetzweg/status/1786412287718228443/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        254,
+        277
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GMqbqTsXoAAXK9n.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 880,
+            "w": 1572,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1136,
+            "w": 1136,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1136,
+            "w": 996,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1136,
+            "w": 568,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1136,
+            "w": 1572,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1136,
+        "width": 1572
+      },
+      "sizes": {
+        "large": {
+          "h": 1136,
+          "resize": "fit",
+          "w": 1572
+        },
+        "medium": {
+          "h": 867,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 491,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/y5BKmhAyHc"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 880,
+          "w": 1572,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1136,
+          "w": 1136,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1136,
+          "w": 996,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1136,
+          "w": 568,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1136,
+          "w": 1572,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1786412287718228443/photo/1",
+      "url": "https://pbs.twimg.com/media/GMqbqTsXoAAXK9n.jpg",
+      "width": 1572,
+      "height": 1136
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 1,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2023-03-29T15:24:47.000Z",
+    "display_text_range": [
+      0,
+      218
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/GDkP9Uuwzi",
+          "expanded_url": "https://x.com/peetzweg/status/1641099086643314688/photo/1",
+          "indices": [
+            219,
+            242
+          ],
+          "url": "https://t.co/GDkP9Uuwzi"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "gist.github.com/peetzweg/ef1ce…",
+          "expanded_url": "https://gist.github.com/peetzweg/ef1ceea425bab38acf4886d9f049bc18",
+          "indices": [
+            195,
+            218
+          ],
+          "url": "https://t.co/oMP04TG1bz"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "13334762",
+          "indices": [
+            79,
+            86
+          ],
+          "name": "GitHub",
+          "screen_name": "github"
+        }
+      ]
+    },
+    "id_str": "1641099086643314688",
+    "text": "Just today I wrote this little `zsh` function to open the current repository's @github issues page.\n\nUsed it a lot today. Can recommend an adapted version to open the Pull Request page as well!\n\nhttps://t.co/oMP04TG1bz https://t.co/GDkP9Uuwzi",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1641099086643314688"
+      ],
+      "editable_until_msecs": "1680105287000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/GDkP9Uuwzi",
+        "expanded_url": "https://x.com/peetzweg/status/1641099086643314688/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          219,
+          242
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/FsZZjYmWwAIwmLs.png",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 305,
+              "w": 544,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 306,
+              "w": 306,
+              "x": 51,
+              "y": 0
+            },
+            {
+              "h": 306,
+              "w": 268,
+              "x": 70,
+              "y": 0
+            },
+            {
+              "h": 306,
+              "w": 153,
+              "x": 128,
+              "y": 0
+            },
+            {
+              "h": 306,
+              "w": 544,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 306,
+          "width": 544
+        },
+        "sizes": {
+          "large": {
+            "h": 306,
+            "resize": "fit",
+            "w": 544
+          },
+          "medium": {
+            "h": 306,
+            "resize": "fit",
+            "w": 544
+          },
+          "small": {
+            "h": 306,
+            "resize": "fit",
+            "w": 544
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/GDkP9Uuwzi"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 305,
+            "w": 544,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 306,
+            "w": 306,
+            "x": 51,
+            "y": 0
+          },
+          {
+            "h": 306,
+            "w": 268,
+            "x": 70,
+            "y": 0
+          },
+          {
+            "h": 306,
+            "w": 153,
+            "x": 128,
+            "y": 0
+          },
+          {
+            "h": 306,
+            "w": 544,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/1641099086643314688/photo/1",
+        "url": "https://pbs.twimg.com/media/FsZZjYmWwAIwmLs.png",
+        "width": 544,
+        "height": 306
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-06T13:22:13.000Z",
+  "display_text_range": [
+    0,
+    18
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/G1riCj773y",
+        "expanded_url": "https://x.com/peetzweg/status/2019763563946975693/photo/1",
+        "indices": [
+          19,
+          42
+        ],
+        "url": "https://t.co/G1riCj773y"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1566463268",
+        "indices": [
+          10,
+          18
+        ],
+        "name": "React",
+        "screen_name": "reactjs"
+      }
+    ]
+  },
+  "id_str": "2019763563946975693",
+  "text": "Next stop @reactjs https://t.co/G1riCj773y",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2019763563946975693"
+    ],
+    "editable_until_msecs": "1770387733000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/G1riCj773y",
+      "expanded_url": "https://x.com/peetzweg/status/2019763563946975693/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        19,
+        42
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HAekPIqXcAA8BtJ.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 793,
+            "w": 1416,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 982,
+            "w": 982,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 982,
+            "w": 861,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 982,
+            "w": 491,
+            "x": 2,
+            "y": 0
+          },
+          {
+            "h": 982,
+            "w": 1416,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 982,
+        "width": 1416
+      },
+      "sizes": {
+        "large": {
+          "h": 982,
+          "resize": "fit",
+          "w": 1416
+        },
+        "medium": {
+          "h": 832,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 472,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/G1riCj773y"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 793,
+          "w": 1416,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 982,
+          "w": 982,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 982,
+          "w": 861,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 982,
+          "w": 491,
+          "x": 2,
+          "y": 0
+        },
+        {
+          "h": 982,
+          "w": 1416,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2019763563946975693/photo/1",
+      "url": "https://pbs.twimg.com/media/HAekPIqXcAA8BtJ.jpg",
+      "width": 1416,
+      "height": 982
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

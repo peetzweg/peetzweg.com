@@ -1,0 +1,400 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 31,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-09-20T20:33:06.000Z",
+  "display_text_range": [
+    0,
+    224
+  ],
+  "entities": {
+    "hashtags": [
+      {
+        "indices": [
+          163,
+          174
+        ],
+        "text": "QQLcontest"
+      }
+    ],
+    "media": [
+      {
+        "display_url": "pic.x.com/IjxRQr2Ln0",
+        "expanded_url": "https://x.com/peetzweg/status/1572322986547630080/photo/1",
+        "indices": [
+          224,
+          247
+        ],
+        "url": "https://t.co/IjxRQr2Ln0"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "qql.art/token/0x59e885…",
+        "expanded_url": "https://qql.art/token/0x59e88503f4555bd886a6d203b5c210383e0a6833998137466d60a58ad8a04327",
+        "indices": [
+          176,
+          199
+        ],
+        "url": "https://t.co/6RtZyBy8d7"
+      },
+      {
+        "display_url": "x.com/tylerxhobbs/st…",
+        "expanded_url": "https://x.com/tylerxhobbs/status/1572261724535029761",
+        "indices": [
+          200,
+          223
+        ],
+        "url": "https://t.co/l3y977dMT9"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1716071804853268481",
+        "indices": [
+          125,
+          140
+        ],
+        "name": "Amber ❤️ $WELL 🐉 $MON 🕹️ $RCADE",
+        "screen_name": "dandelion_wist"
+      },
+      {
+        "id_str": "191580846",
+        "indices": [
+          147,
+          159
+        ],
+        "name": "Tyler Hobbs Studio",
+        "screen_name": "tylerxhobbs"
+      }
+    ]
+  },
+  "id_str": "1572322986547630080",
+  "text": "Finally got this rather interesting dimensional one. Very pleasing and thoughtful user experience and amazing art. Great job @dandelion_wist &amp; @tylerxhobbs 👏\n\n#QQLcontest \nhttps://t.co/6RtZyBy8d7\nhttps://t.co/l3y977dMT9 https://t.co/IjxRQr2Ln0",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1572322986547630080"
+    ],
+    "editable_until_msecs": "1663707786000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/IjxRQr2Ln0",
+      "expanded_url": "https://x.com/peetzweg/status/1572322986547630080/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        224,
+        247
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FdIDX1yX0AE3aLD.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1344,
+            "w": 2400,
+            "x": 0,
+            "y": 1653
+          },
+          {
+            "h": 2400,
+            "w": 2400,
+            "x": 0,
+            "y": 600
+          },
+          {
+            "h": 2736,
+            "w": 2400,
+            "x": 0,
+            "y": 264
+          },
+          {
+            "h": 3000,
+            "w": 1500,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 3000,
+            "w": 2400,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 3000,
+        "width": 2400
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 1638
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 960
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 544
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/IjxRQr2Ln0"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1344,
+          "w": 2400,
+          "x": 0,
+          "y": 1653
+        },
+        {
+          "h": 2400,
+          "w": 2400,
+          "x": 0,
+          "y": 600
+        },
+        {
+          "h": 2736,
+          "w": 2400,
+          "x": 0,
+          "y": 264
+        },
+        {
+          "h": 3000,
+          "w": 1500,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 3000,
+          "w": 2400,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1572322986547630080/photo/1",
+      "url": "https://pbs.twimg.com/media/FdIDX1yX0AE3aLD.jpg",
+      "width": 2400,
+      "height": 3000
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 5438,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 1308,
+    "retweet_count": 1513,
+    "created_at": "2022-09-20T16:29:40.000Z",
+    "display_text_range": [
+      0,
+      277
+    ],
+    "entities": {
+      "hashtags": [
+        {
+          "indices": [
+            144,
+            155
+          ],
+          "text": "QQLcontest"
+        }
+      ],
+      "media": [
+        {
+          "display_url": "pic.x.com/3iJA3nrzwk",
+          "expanded_url": "https://x.com/tylerxhobbs/status/1572261724535029761/photo/1",
+          "indices": [
+            276,
+            299
+          ],
+          "url": "https://t.co/3iJA3nrzwk"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "qql.art",
+          "expanded_url": "https://qql.art",
+          "indices": [
+            72,
+            95
+          ],
+          "url": "https://t.co/A4Lm5zWYJy"
+        }
+      ]
+    },
+    "id_str": "1572261724535029761",
+    "text": "🔴⭕QQL Contest⭕🔴\n⭕️Win a QQL Mint Pass⭕️\n\nHow to enter\n1) Create QQLs on https://t.co/A4Lm5zWYJy\n2) Choose 1 to submit\n3) QT this tweet with:\n - #QQLcontest\n - Your QQL URL\n - An image of your QQL\n\n1 entry per person\nCutoff 9/25 Noon CT\nWinners announced 9/27\n\nFAQ on site\nex: https://t.co/3iJA3nrzwk",
+    "user": {
+      "id_str": "191580846",
+      "name": "Tyler Hobbs Studio",
+      "screen_name": "tylerxhobbs",
+      "is_blue_verified": true,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1349165550627336192/PzaCVkHu_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1572261724535029761"
+      ],
+      "editable_until_msecs": "1663693180000",
+      "edits_remaining": "5",
+      "is_edit_eligible": false
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/3iJA3nrzwk",
+        "expanded_url": "https://x.com/tylerxhobbs/status/1572261724535029761/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          276,
+          299
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/FdHLib_X0AA-qFV.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 594,
+              "w": 1061,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1061,
+              "w": 1061,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1210,
+              "w": 1061,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1605,
+              "w": 803,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1605,
+              "w": 1061,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 1605,
+          "width": 1061
+        },
+        "sizes": {
+          "large": {
+            "h": 1605,
+            "resize": "fit",
+            "w": 1061
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 793
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 450
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/3iJA3nrzwk"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 594,
+            "w": 1061,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1061,
+            "w": 1061,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1210,
+            "w": 1061,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1605,
+            "w": 803,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1605,
+            "w": 1061,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/tylerxhobbs/status/1572261724535029761/photo/1",
+        "url": "https://pbs.twimg.com/media/FdHLib_X0AA-qFV.jpg",
+        "width": 1061,
+        "height": 1605
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

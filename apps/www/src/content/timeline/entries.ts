@@ -14,7 +14,7 @@ import Rack01 from '../../components/hardware/assets/Rack01.jpg';
 import Shades from '../../components/hardware/assets/shades.jpg';
 import hyperlinks from '../hyperlinks.json';
 import kindle from '../kindle.json';
-import { code, gallery, mediaImage, row, shot, thumb, video } from './media';
+import { code, gallery, mediaImage, row, scroll, shot, thumb, video } from './media';
 import type { Tweet } from 'react-tweet/api';
 import type { ActivityStats, Media, SitePath, TimelineEntry } from './types';
 import { work } from './work';
@@ -116,11 +116,9 @@ $ matcrawl search "<query>" --limit 20`),
     ['qr-code-pocket-cards', 'Saved cards: hotel Wi-Fi and a loyalty card with its barcode'],
     ['qr-code-pocket-night-flood', 'The ticket at full brightness for the scanner'],
   ),
-  'peetzweg.com, redesigned': gallery(
-    ['redesign-old-desktop', 'The old peetzweg.com: a gradient circle with links to software, client work, hardware and posts'],
-    ['redesign-old-desktop-playground', 'The old playground below it: days spent reading as rows of x and o'],
-    ['redesign-old-mobile', 'The old peetzweg.com on a phone'],
-    ['redesign-new-desktop', 'The new peetzweg.com: a timeline with filters and years'],
+  'peetzweg.com, redesigned': scroll(
+    'redesign-site',
+    'The new peetzweg.com on a desktop, from the top: intro, products, filters and the latest months of the timeline',
   ),
 };
 

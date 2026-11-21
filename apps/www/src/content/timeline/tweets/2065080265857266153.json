@@ -1,0 +1,222 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-11T14:34:37.000Z",
+  "display_text_range": [
+    0,
+    250
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/AqwSPsvl68",
+        "expanded_url": "https://x.com/peetzweg/status/2065080265857266153/photo/1",
+        "indices": [
+          251,
+          274
+        ],
+        "url": "https://t.co/AqwSPsvl68"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2018347796428992920",
+        "indices": [
+          227,
+          250
+        ],
+        "url": "https://t.co/i5x4BlFUw2"
+      }
+    ]
+  },
+  "id_str": "2065080265857266153",
+  "text": "As GitHub is not reverting this mistake I added this permanent redirect to /feed form the gh home page in my personal browser extension.\n\nIf you follow the right people on gh, the feed is an amazing place to find great stuff!\n\nhttps://t.co/i5x4BlFUw2 https://t.co/AqwSPsvl68",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2065080265857266153"
+    ],
+    "editable_until_msecs": "1781192077000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/AqwSPsvl68",
+      "expanded_url": "https://x.com/peetzweg/status/2065080265857266153/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        251,
+        274
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HKijPbaWEAAp5Ko.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 304,
+            "w": 543,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 304,
+            "w": 304,
+            "x": 34,
+            "y": 0
+          },
+          {
+            "h": 304,
+            "w": 267,
+            "x": 53,
+            "y": 0
+          },
+          {
+            "h": 304,
+            "w": 152,
+            "x": 110,
+            "y": 0
+          },
+          {
+            "h": 304,
+            "w": 828,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 304,
+        "width": 828
+      },
+      "sizes": {
+        "large": {
+          "h": 304,
+          "resize": "fit",
+          "w": 828
+        },
+        "medium": {
+          "h": 304,
+          "resize": "fit",
+          "w": 828
+        },
+        "small": {
+          "h": 250,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/AqwSPsvl68"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 304,
+          "w": 543,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 304,
+          "w": 304,
+          "x": 34,
+          "y": 0
+        },
+        {
+          "h": 304,
+          "w": 267,
+          "x": 53,
+          "y": 0
+        },
+        {
+          "h": 304,
+          "w": 152,
+          "x": 110,
+          "y": 0
+        },
+        {
+          "h": 304,
+          "w": 828,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2065080265857266153/photo/1",
+      "url": "https://pbs.twimg.com/media/HKijPbaWEAAp5Ko.png",
+      "width": 828,
+      "height": 304
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 0,
+    "lang": "en",
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2026-02-02T15:36:28.000Z",
+    "display_text_range": [
+      0,
+      163
+    ],
+    "entities": {
+      "user_mentions": [
+        {
+          "id_str": "13334762",
+          "indices": [
+            57,
+            64
+          ],
+          "name": "GitHub",
+          "screen_name": "github"
+        }
+      ]
+    },
+    "id_str": "2018347796428992920",
+    "text": "Can we have the `Feed` back as the actual start page for @github ? I'm missing so many cool projects. The whole new startpage is rather static garbage information.",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2018347796428992920"
+      ],
+      "editable_until_msecs": "1770050188000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,375 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-02T08:49:31.000Z",
+  "display_text_range": [
+    0,
+    256
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/HfNttSxsRB",
+        "expanded_url": "https://x.com/peetzweg/status/2061731928877785388/photo/1",
+        "indices": [
+          257,
+          280
+        ],
+        "url": "https://t.co/HfNttSxsRB"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2011840391645925387",
+        "indices": [
+          233,
+          256
+        ],
+        "url": "https://t.co/ebPPSmQ9xG"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1239876481951596545",
+        "indices": [
+          58,
+          65
+        ],
+        "name": "Obsidian",
+        "screen_name": "obsdmd"
+      }
+    ]
+  },
+  "id_str": "2061731928877785388",
+  "text": "How It Started vs. How It's Going.\nUsing this calendar in @obsdmd  has grown on me. Specifically for planning what matters and big chunks in the year. Planning such events on the same detail as work calls does not make sense to me.\n\nhttps://t.co/ebPPSmQ9xG https://t.co/HfNttSxsRB",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2061731928877785388"
+    ],
+    "editable_until_msecs": "1780393771000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/HfNttSxsRB",
+      "expanded_url": "https://x.com/peetzweg/status/2061731928877785388/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        257,
+        280
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HJy-LtQW0AAS6rg.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1260,
+            "w": 2250,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1260,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1105,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 630,
+            "x": 105,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 2400,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1260,
+        "width": 2400
+      },
+      "sizes": {
+        "large": {
+          "h": 1075,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 630,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 357,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/HfNttSxsRB"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1260,
+          "w": 2250,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 1260,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 1105,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 630,
+          "x": 105,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 2400,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2061731928877785388/photo/1",
+      "url": "https://pbs.twimg.com/media/HJy-LtQW0AAS6rg.jpg",
+      "width": 2400,
+      "height": 1260
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 0,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2026-01-15T16:38:22.000Z",
+    "display_text_range": [
+      0,
+      77
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/XVCdP8W4n3",
+          "expanded_url": "https://x.com/peetzweg/status/2011840391645925387/photo/1",
+          "indices": [
+            78,
+            101
+          ],
+          "url": "https://t.co/XVCdP8W4n3"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "x.com/peetzweg/statu…",
+          "expanded_url": "https://x.com/peetzweg/status/2011066341839814989",
+          "indices": [
+            54,
+            77
+          ],
+          "url": "https://t.co/FiuIsRrOcE"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "1239876481951596545",
+          "indices": [
+            27,
+            34
+          ],
+          "name": "Obsidian",
+          "screen_name": "obsdmd"
+        }
+      ]
+    },
+    "id_str": "2011840391645925387",
+    "text": "Now bringing it with me in @obsdmd as a simple file.\n\nhttps://t.co/FiuIsRrOcE https://t.co/XVCdP8W4n3",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2011840391645925387"
+      ],
+      "editable_until_msecs": "1768498702000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/XVCdP8W4n3",
+        "expanded_url": "https://x.com/peetzweg/status/2011840391645925387/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          78,
+          101
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/G-t9_-TWkAYqKAT.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 1081,
+              "w": 1930,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1260,
+              "w": 1260,
+              "x": 335,
+              "y": 0
+            },
+            {
+              "h": 1260,
+              "w": 1105,
+              "x": 413,
+              "y": 0
+            },
+            {
+              "h": 1260,
+              "w": 630,
+              "x": 650,
+              "y": 0
+            },
+            {
+              "h": 1260,
+              "w": 1930,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 1260,
+          "width": 1930
+        },
+        "sizes": {
+          "large": {
+            "h": 1260,
+            "resize": "fit",
+            "w": 1930
+          },
+          "medium": {
+            "h": 783,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 444,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/XVCdP8W4n3"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 1081,
+            "w": 1930,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1260,
+            "x": 335,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1105,
+            "x": 413,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 630,
+            "x": 650,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1930,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/2011840391645925387/photo/1",
+        "url": "https://pbs.twimg.com/media/G-t9_-TWkAYqKAT.jpg",
+        "width": 1930,
+        "height": 1260
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

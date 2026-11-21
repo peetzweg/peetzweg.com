@@ -1,0 +1,362 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-02-16T09:20:03.000Z",
+  "display_text_range": [
+    0,
+    115
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/duYC4OKWOE",
+        "expanded_url": "https://x.com/peetzweg/status/1626149397733031941/photo/1",
+        "indices": [
+          116,
+          139
+        ],
+        "url": "https://t.co/duYC4OKWOE"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1625962357967945733",
+        "indices": [
+          92,
+          115
+        ],
+        "url": "https://t.co/OAukPnEMJC"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "2414656477",
+        "indices": [
+          50,
+          64
+        ],
+        "name": "Gravity Sketch",
+        "screen_name": "GravitySketch"
+      },
+      {
+        "id_str": "745629067874017280",
+        "indices": [
+          80,
+          88
+        ],
+        "name": "Blender 🔶",
+        "screen_name": "Blender"
+      }
+    ]
+  },
+  "id_str": "1626149397733031941",
+  "text": "Quite happy how it turned out.\nModeled in VR with @GravitySketch, rendered with @Blender. \n\nhttps://t.co/OAukPnEMJC https://t.co/duYC4OKWOE",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1626149397733031941"
+    ],
+    "editable_until_msecs": "1676541003000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/duYC4OKWOE",
+      "expanded_url": "https://x.com/peetzweg/status/1626149397733031941/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        116,
+        139
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FpE-Qe1XgAQCBWZ.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 672,
+            "w": 1200,
+            "x": 0,
+            "y": 114
+          },
+          {
+            "h": 1200,
+            "w": 1200,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1200,
+            "w": 1053,
+            "x": 147,
+            "y": 0
+          },
+          {
+            "h": 1200,
+            "w": 600,
+            "x": 570,
+            "y": 0
+          },
+          {
+            "h": 1200,
+            "w": 1200,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1200,
+        "width": 1200
+      },
+      "sizes": {
+        "large": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/duYC4OKWOE"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 672,
+          "w": 1200,
+          "x": 0,
+          "y": 114
+        },
+        {
+          "h": 1200,
+          "w": 1200,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1200,
+          "w": 1053,
+          "x": 147,
+          "y": 0
+        },
+        {
+          "h": 1200,
+          "w": 600,
+          "x": 570,
+          "y": 0
+        },
+        {
+          "h": 1200,
+          "w": 1200,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1626149397733031941/photo/1",
+      "url": "https://pbs.twimg.com/media/FpE-Qe1XgAQCBWZ.jpg",
+      "width": 1200,
+      "height": 1200
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 2,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2023-02-15T20:56:49.000Z",
+    "display_text_range": [
+      0,
+      178
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/jHxQy44kYm",
+          "expanded_url": "https://x.com/peetzweg/status/1625962357967945733/video/1",
+          "indices": [
+            177,
+            200
+          ],
+          "url": "https://t.co/jHxQy44kYm"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "2414656477",
+          "indices": [
+            29,
+            43
+          ],
+          "name": "Gravity Sketch",
+          "screen_name": "GravitySketch"
+        }
+      ]
+    },
+    "id_str": "1625962357967945733",
+    "text": "🌷Some tulips for and made in @GravitySketch.\n\nFirst time taking sketching a bit more serious. Modelling in VR is just so much fun. True next level tooling and it's even free. 🤯 https://t.co/jHxQy44kYm",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1625962357967945733"
+      ],
+      "editable_until_msecs": "1676496409000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "additional_media_info": {},
+        "display_url": "pic.x.com/jHxQy44kYm",
+        "expanded_url": "https://x.com/peetzweg/status/1625962357967945733/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          177,
+          200
+        ],
+        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1625961538375892993/pu/img/d_RXyzqhp5HGXYR2.jpg",
+        "original_info": {
+          "focus_rects": [],
+          "height": 1080,
+          "width": 1920
+        },
+        "sizes": {
+          "large": {
+            "h": 1080,
+            "resize": "fit",
+            "w": 1920
+          },
+          "medium": {
+            "h": 675,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 383,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "video",
+        "url": "https://t.co/jHxQy44kYm",
+        "video_info": {
+          "aspect_ratio": [
+            16,
+            9
+          ],
+          "duration_millis": 99668,
+          "variants": [
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/ext_tw_video/1625961538375892993/pu/pl/H9k1zsRCrP2LhfAo.m3u8?tag=12"
+            },
+            {
+              "bitrate": 256000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1625961538375892993/pu/vid/480x270/yyZfXs8bhsTHH3CG.mp4?tag=12"
+            },
+            {
+              "bitrate": 832000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1625961538375892993/pu/vid/640x360/yUlroytdKMhpDsCn.mp4?tag=12"
+            },
+            {
+              "bitrate": 2176000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1625961538375892993/pu/vid/1280x720/66q_zMTSYevIDRie.mp4?tag=12"
+            }
+          ]
+        }
+      }
+    ],
+    "photos": [],
+    "video": {
+      "aspectRatio": [
+        16,
+        9
+      ],
+      "contentType": "media_entity",
+      "durationMs": 99668,
+      "mediaAvailability": {
+        "status": "available"
+      },
+      "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1625961538375892993/pu/img/d_RXyzqhp5HGXYR2.jpg",
+      "variants": [
+        {
+          "type": "application/x-mpegURL",
+          "src": "https://video.twimg.com/ext_tw_video/1625961538375892993/pu/pl/H9k1zsRCrP2LhfAo.m3u8?tag=12"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1625961538375892993/pu/vid/480x270/yyZfXs8bhsTHH3CG.mp4?tag=12"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1625961538375892993/pu/vid/640x360/yUlroytdKMhpDsCn.mp4?tag=12"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1625961538375892993/pu/vid/1280x720/66q_zMTSYevIDRie.mp4?tag=12"
+        }
+      ],
+      "videoId": {
+        "type": "tweet",
+        "id": "1625962357967945733"
+      },
+      "viewCount": 0
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

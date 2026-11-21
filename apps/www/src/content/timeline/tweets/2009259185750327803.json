@@ -1,0 +1,243 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 3,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-01-08T13:41:34.000Z",
+  "display_text_range": [
+    0,
+    84
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/iSIAH1daTU",
+        "expanded_url": "https://x.com/peetzweg/status/2009259185750327803/photo/1",
+        "indices": [
+          85,
+          108
+        ],
+        "url": "https://t.co/iSIAH1daTU"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2008998537103856013",
+        "indices": [
+          61,
+          84
+        ],
+        "url": "https://t.co/nssbEjlvC4"
+      }
+    ]
+  },
+  "id_str": "2009259185750327803",
+  "text": "Added optimized PDFs for download of the ANSI paper formats.\nhttps://t.co/nssbEjlvC4 https://t.co/iSIAH1daTU",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2009259185750327803"
+    ],
+    "editable_until_msecs": "1767883294000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/iSIAH1daTU",
+      "expanded_url": "https://x.com/peetzweg/status/2009259185750327803/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        85,
+        108
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G-JSdWPWkAEXho8.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 696,
+            "w": 1242,
+            "x": 0,
+            "y": 20
+          },
+          {
+            "h": 716,
+            "w": 716,
+            "x": 263,
+            "y": 0
+          },
+          {
+            "h": 716,
+            "w": 628,
+            "x": 307,
+            "y": 0
+          },
+          {
+            "h": 716,
+            "w": 358,
+            "x": 442,
+            "y": 0
+          },
+          {
+            "h": 716,
+            "w": 1242,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 716,
+        "width": 1242
+      },
+      "sizes": {
+        "large": {
+          "h": 716,
+          "resize": "fit",
+          "w": 1242
+        },
+        "medium": {
+          "h": 692,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 392,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/iSIAH1daTU"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 696,
+          "w": 1242,
+          "x": 0,
+          "y": 20
+        },
+        {
+          "h": 716,
+          "w": 716,
+          "x": 263,
+          "y": 0
+        },
+        {
+          "h": 716,
+          "w": 628,
+          "x": 307,
+          "y": 0
+        },
+        {
+          "h": 716,
+          "w": 358,
+          "x": 442,
+          "y": 0
+        },
+        {
+          "h": 716,
+          "w": 1242,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2009259185750327803/photo/1",
+      "url": "https://pbs.twimg.com/media/G-JSdWPWkAEXho8.jpg",
+      "width": 1242,
+      "height": 716
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 36,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 6,
+    "retweet_count": 1,
+    "created_at": "2026-01-07T20:25:51.000Z",
+    "display_text_range": [
+      0,
+      231
+    ],
+    "entities": {
+      "urls": [
+        {
+          "display_url": "bigyear.vercel.app/?x",
+          "expanded_url": "https://bigyear.vercel.app/?x",
+          "indices": [
+            208,
+            231
+          ],
+          "url": "https://t.co/B86TFh5l27"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "14461282",
+          "indices": [
+            52,
+            68
+          ],
+          "name": "Gabriel Valdivia",
+          "screen_name": "gabrielvaldivia"
+        },
+        {
+          "id_str": "14372143",
+          "indices": [
+            143,
+            154
+          ],
+          "name": "Jason Fried",
+          "screen_name": "jasonfried"
+        }
+      ]
+    },
+    "id_str": "2008998537103856013",
+    "text": "As a sucker for paper calendars I had to implements @gabrielvaldivia 's new big year layout for my papr cli. But I used the design tweaks from @jasonfried hey implementation.\n\nDownload High Res Printable PDF\nhttps://t.co/B86TFh5l27",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2008998537103856013"
+      ],
+      "editable_until_msecs": "1767821151000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,147 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-01-20T16:57:17.000Z",
+  "display_text_range": [
+    0,
+    254
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/RasNPYqtq7",
+        "expanded_url": "https://x.com/peetzweg/status/1616479992078114817/photo/1",
+        "indices": [
+          253,
+          276
+        ],
+        "url": "https://t.co/RasNPYqtq7"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "4787260993",
+        "indices": [
+          191,
+          201
+        ],
+        "name": "RAMA WORKS®",
+        "screen_name": "ramaworks"
+      },
+      {
+        "id_str": "134448403",
+        "indices": [
+          205,
+          221
+        ],
+        "name": "teenage engineering",
+        "screen_name": "jugendingenieur"
+      }
+    ]
+  },
+  "id_str": "1616479992078114817",
+  "text": "Worked on my AI prompt game today by creating some Moka Pots. 🤖\n3D product rendering seem boring in AI with my prompts. I like the \"real world\" shots better.\nI wish I knew how to create some @ramaworks or @jugendingenieur level product shots with AI. 🤔 https://t.co/RasNPYqtq7",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1616479992078114817"
+    ],
+    "editable_until_msecs": "1674235637000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/RasNPYqtq7",
+      "expanded_url": "https://x.com/peetzweg/status/1616479992078114817/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        253,
+        276
+      ],
+      "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Fm7i5WvXwAAGhP8.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1024,
+        "width": 1024
+      },
+      "sizes": {
+        "large": {
+          "h": 1024,
+          "resize": "fit",
+          "w": 1024
+        },
+        "medium": {
+          "h": 1024,
+          "resize": "fit",
+          "w": 1024
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "animated_gif",
+      "url": "https://t.co/RasNPYqtq7",
+      "video_info": {
+        "aspect_ratio": [
+          1,
+          1
+        ],
+        "variants": [
+          {
+            "bitrate": 0,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/tweet_video/Fm7i5WvXwAAGhP8.mp4"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      1,
+      1
+    ],
+    "contentType": "gif",
+    "durationMs": 0,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/tweet_video_thumb/Fm7i5WvXwAAGhP8.jpg",
+    "variants": [
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/tweet_video/Fm7i5WvXwAAGhP8.mp4"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1616479992078114817"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

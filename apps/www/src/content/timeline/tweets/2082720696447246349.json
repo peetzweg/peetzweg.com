@@ -1,0 +1,353 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 5,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-07-30T06:51:23.000Z",
+  "display_text_range": [
+    0,
+    235
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/ZFl22uxuQ1",
+        "expanded_url": "https://x.com/peetzweg/status/2082720696447246349/photo/1",
+        "indices": [
+          236,
+          259
+        ],
+        "url": "https://t.co/ZFl22uxuQ1"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2075548268004581673",
+        "indices": [
+          212,
+          235
+        ],
+        "url": "https://t.co/Nfpgeiiang"
+      }
+    ]
+  },
+  "id_str": "2082720696447246349",
+  "text": "Okay final tweet about this. So humbled to have reach 2k Stars for OpenDisplay. Momentum of stars died down, I don't think it will reach 3k any time soon.\n\nBest thing about it, it gives old hardware a new life.\n\nhttps://t.co/Nfpgeiiang https://t.co/ZFl22uxuQ1",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2082720696447246349"
+    ],
+    "editable_until_msecs": "1785397883000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/ZFl22uxuQ1",
+      "expanded_url": "https://x.com/peetzweg/status/2082720696447246349/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        236,
+        259
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HOdPUwLXcAAbgHn.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 394,
+            "w": 704,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 394,
+            "w": 394,
+            "x": 31,
+            "y": 0
+          },
+          {
+            "h": 394,
+            "w": 346,
+            "x": 55,
+            "y": 0
+          },
+          {
+            "h": 394,
+            "w": 197,
+            "x": 130,
+            "y": 0
+          },
+          {
+            "h": 394,
+            "w": 704,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 394,
+        "width": 704
+      },
+      "sizes": {
+        "large": {
+          "h": 394,
+          "resize": "fit",
+          "w": 704
+        },
+        "medium": {
+          "h": 394,
+          "resize": "fit",
+          "w": 704
+        },
+        "small": {
+          "h": 381,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/ZFl22uxuQ1"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 394,
+          "w": 704,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 394,
+          "w": 394,
+          "x": 31,
+          "y": 0
+        },
+        {
+          "h": 394,
+          "w": 346,
+          "x": 55,
+          "y": 0
+        },
+        {
+          "h": 394,
+          "w": 197,
+          "x": 130,
+          "y": 0
+        },
+        {
+          "h": 394,
+          "w": 704,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2082720696447246349/photo/1",
+      "url": "https://pbs.twimg.com/media/HOdPUwLXcAAbgHn.png",
+      "width": 704,
+      "height": 394
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 5,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 1,
+    "retweet_count": 0,
+    "created_at": "2026-07-10T11:50:43.000Z",
+    "display_text_range": [
+      0,
+      155
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/ooYwns0M20",
+          "expanded_url": "https://x.com/peetzweg/status/2075548268004581673/photo/1",
+          "indices": [
+            155,
+            178
+          ],
+          "url": "https://t.co/ooYwns0M20"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "x.com/peetzweg/statu…",
+          "expanded_url": "https://x.com/peetzweg/status/2074112341092741603",
+          "indices": [
+            131,
+            154
+          ],
+          "url": "https://t.co/3S15gwN8Tl"
+        }
+      ]
+    },
+    "id_str": "2075548268004581673",
+    "text": "4 days later and it reached 1000 Stars. Absolutely mind blowing for me. \nSuper grateful this app is helpful for so many people. 🙏\n\nhttps://t.co/3S15gwN8Tl https://t.co/ooYwns0M20",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2075548268004581673"
+      ],
+      "editable_until_msecs": "1783687843000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/ooYwns0M20",
+        "expanded_url": "https://x.com/peetzweg/status/2075548268004581673/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          155,
+          178
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/HM3TtRlWgAEH05O.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 538,
+              "w": 961,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 538,
+              "w": 538,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 538,
+              "w": 472,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 538,
+              "w": 269,
+              "x": 74,
+              "y": 0
+            },
+            {
+              "h": 538,
+              "w": 1192,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 538,
+          "width": 1192
+        },
+        "sizes": {
+          "large": {
+            "h": 538,
+            "resize": "fit",
+            "w": 1192
+          },
+          "medium": {
+            "h": 538,
+            "resize": "fit",
+            "w": 1192
+          },
+          "small": {
+            "h": 307,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/ooYwns0M20"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 538,
+            "w": 961,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 538,
+            "w": 538,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 538,
+            "w": 472,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 538,
+            "w": 269,
+            "x": 74,
+            "y": 0
+          },
+          {
+            "h": 538,
+            "w": 1192,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/2075548268004581673/photo/1",
+        "url": "https://pbs.twimg.com/media/HM3TtRlWgAEH05O.jpg",
+        "width": 1192,
+        "height": 538
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

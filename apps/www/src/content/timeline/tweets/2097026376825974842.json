@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 328,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-09-07T18:17:03.000Z",
+  "display_text_range": [
+    0,
+    102
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/HhXOMRMbN9",
+        "expanded_url": "https://x.com/peetzweg/status/2097026376825974842/video/1",
+        "indices": [
+          103,
+          126
+        ],
+        "url": "https://t.co/HhXOMRMbN9"
+      }
+    ]
+  },
+  "id_str": "2097026376825974842",
+  "text": "Just bought an ancient 5K iMac so you don't have too. It's the worst OpenDisplay will ever be on this. https://t.co/HhXOMRMbN9",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2097026376825974842"
+    ],
+    "editable_until_msecs": "1788808623000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/HhXOMRMbN9",
+      "expanded_url": "https://x.com/peetzweg/status/2097026376825974842/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        103,
+        126
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2097026279623249920/img/VIVDnmoN94zAqg8c.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 720,
+        "width": 1280
+      },
+      "sizes": {
+        "large": {
+          "h": 720,
+          "resize": "fit",
+          "w": 1280
+        },
+        "medium": {
+          "h": 675,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/HhXOMRMbN9",
+      "video_info": {
+        "aspect_ratio": [
+          16,
+          9
+        ],
+        "duration_millis": 15033,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/2097026279623249920/pl/i4n_XbWNA3ZZKDch.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2097026279623249920/vid/avc1/480x270/_QdCETZsFxrA0-ig.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2097026279623249920/vid/avc1/640x360/bh9J0d5-zSmb28wO.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2097026279623249920/vid/avc1/1280x720/CP0k6i64GLLuxHw9.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      16,
+      9
+    ],
+    "contentType": "media_entity",
+    "durationMs": 15033,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/2097026279623249920/img/VIVDnmoN94zAqg8c.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/2097026279623249920/pl/i4n_XbWNA3ZZKDch.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2097026279623249920/vid/avc1/480x270/_QdCETZsFxrA0-ig.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2097026279623249920/vid/avc1/640x360/bh9J0d5-zSmb28wO.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2097026279623249920/vid/avc1/1280x720/CP0k6i64GLLuxHw9.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2097026376825974842"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 10,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

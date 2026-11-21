@@ -1,0 +1,186 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 4,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-10-19T14:41:37.000Z",
+  "display_text_range": [
+    0,
+    199
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/73TYACVLBb",
+        "expanded_url": "https://x.com/peetzweg/status/1582743778372091904/photo/1",
+        "indices": [
+          200,
+          223
+        ],
+        "url": "https://t.co/73TYACVLBb"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1915783633589379072",
+        "indices": [
+          23,
+          34
+        ],
+        "name": "Immersed",
+        "screen_name": "ImmersedVR"
+      },
+      {
+        "id_str": "2813448182",
+        "indices": [
+          105,
+          117
+        ],
+        "name": "SideQuest 🎊 🎉",
+        "screen_name": "SideQuestVR"
+      }
+    ]
+  },
+  "id_str": "1582743778372091904",
+  "text": "For more clarity using @ImmersedVR I can highly recommended to deactivate \"Fixed Foveated Rendering\" via @SideQuestVR . I'm using my peripheral vision on a multi monitor setup way more than expected. https://t.co/73TYACVLBb",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1582743778372091904"
+    ],
+    "editable_until_msecs": "1666192297000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/73TYACVLBb",
+      "expanded_url": "https://x.com/peetzweg/status/1582743778372091904/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        200,
+        223
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FfcIeExXoAIUdy5.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1057,
+            "w": 1888,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1062,
+            "w": 1062,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1062,
+            "w": 932,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1062,
+            "w": 531,
+            "x": 65,
+            "y": 0
+          },
+          {
+            "h": 1062,
+            "w": 1888,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1062,
+        "width": 1888
+      },
+      "sizes": {
+        "large": {
+          "h": 1062,
+          "resize": "fit",
+          "w": 1888
+        },
+        "medium": {
+          "h": 675,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/73TYACVLBb"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1057,
+          "w": 1888,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1062,
+          "w": 1062,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1062,
+          "w": 932,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1062,
+          "w": 531,
+          "x": 65,
+          "y": 0
+        },
+        {
+          "h": 1062,
+          "w": 1888,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1582743778372091904/photo/1",
+      "url": "https://pbs.twimg.com/media/FfcIeExXoAIUdy5.jpg",
+      "width": 1888,
+      "height": 1062
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

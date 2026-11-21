@@ -1,0 +1,223 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-12T16:07:07.000Z",
+  "display_text_range": [
+    0,
+    134
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/4eD0T7ezdp",
+        "expanded_url": "https://x.com/peetzweg/status/2021979388439564297/photo/1",
+        "indices": [
+          135,
+          158
+        ],
+        "url": "https://t.co/4eD0T7ezdp"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2021583576869851505",
+        "indices": [
+          111,
+          134
+        ],
+        "url": "https://t.co/zuDAOznata"
+      }
+    ]
+  },
+  "id_str": "2021979388439564297",
+  "text": "Turns out The Constructor Bot suffered from Success.\n\nToo useful, too quick that it was considered spamming. \n\nhttps://t.co/zuDAOznata https://t.co/4eD0T7ezdp",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2021979388439564297"
+    ],
+    "editable_until_msecs": "1770916027000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/4eD0T7ezdp",
+      "expanded_url": "https://x.com/peetzweg/status/2021979388439564297/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        135,
+        158
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HA-DSIgbsAg31jp.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 435,
+            "w": 776,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 462,
+            "w": 462,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 462,
+            "w": 405,
+            "x": 10,
+            "y": 0
+          },
+          {
+            "h": 462,
+            "w": 231,
+            "x": 97,
+            "y": 0
+          },
+          {
+            "h": 462,
+            "w": 776,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 462,
+        "width": 776
+      },
+      "sizes": {
+        "large": {
+          "h": 462,
+          "resize": "fit",
+          "w": 776
+        },
+        "medium": {
+          "h": 462,
+          "resize": "fit",
+          "w": 776
+        },
+        "small": {
+          "h": 405,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/4eD0T7ezdp"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 435,
+          "w": 776,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 462,
+          "w": 462,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 462,
+          "w": 405,
+          "x": 10,
+          "y": 0
+        },
+        {
+          "h": 462,
+          "w": 231,
+          "x": 97,
+          "y": 0
+        },
+        {
+          "h": 462,
+          "w": 776,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2021979388439564297/photo/1",
+      "url": "https://pbs.twimg.com/media/HA-DSIgbsAg31jp.png",
+      "width": 776,
+      "height": 462
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 1,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 1,
+    "retweet_count": 0,
+    "created_at": "2026-02-11T13:54:18.000Z",
+    "display_text_range": [
+      0,
+      157
+    ],
+    "entities": {
+      "urls": [
+        {
+          "display_url": "x.com/peetzweg/statu…",
+          "expanded_url": "https://x.com/peetzweg/status/2020491303369543746",
+          "indices": [
+            134,
+            157
+          ],
+          "url": "https://t.co/bRRTBXgxbz"
+        }
+      ]
+    },
+    "id_str": "2021583576869851505",
+    "text": "GitHub killed my agent's account.\nIt lasted 4 glorious days. \n\nWhy though? We GitHub alternative which is not discriminating agents.\n\nhttps://t.co/bRRTBXgxbz",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2021583576869851505"
+      ],
+      "editable_until_msecs": "1770821658000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

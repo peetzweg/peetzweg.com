@@ -1,0 +1,404 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "in_reply_to_screen_name": "peetzweg",
+  "in_reply_to_status_id_str": "2001352087796384020",
+  "in_reply_to_user_id_str": "1370705514271797250",
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-12-17T18:01:36.000Z",
+  "display_text_range": [
+    41,
+    296
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/uvGhB6vJlB",
+        "expanded_url": "https://x.com/peetzweg/status/2001352089595699582/photo/1",
+        "indices": [
+          297,
+          320
+        ],
+        "url": "https://t.co/uvGhB6vJlB"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "47621619",
+        "indices": [
+          0,
+          13
+        ],
+        "name": "Lumie Light Therapy",
+        "screen_name": "Lumie_lights"
+      },
+      {
+        "id_str": "1635208006077136896",
+        "indices": [
+          14,
+          28
+        ],
+        "name": "一保堂茶舗 Ippodo Tea",
+        "screen_name": "ippodo_tea_jp"
+      },
+      {
+        "id_str": "972487558151262210",
+        "indices": [
+          29,
+          40
+        ],
+        "name": "Dope Ropes",
+        "screen_name": "jump_ropes"
+      },
+      {
+        "id_str": "1455988653361094665",
+        "indices": [
+          87,
+          99
+        ],
+        "name": "Xero Shoes EU",
+        "screen_name": "xeroshoeseu"
+      }
+    ]
+  },
+  "id_str": "2001352089595699582",
+  "text": "@Lumie_lights @ippodo_tea_jp @jump_ropes 5. Xero Z-Trek Sandals\nIt's my second pair of @xeroshoeseu Sandals. Z-Trek were a game changer for running sandals for me. These felt so natural, that I even preferred them over proper shoes for a marathon. I ran my PB marathon this year in these sandals! https://t.co/uvGhB6vJlB",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2001352089595699582"
+    ],
+    "editable_until_msecs": "1765998096000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/uvGhB6vJlB",
+      "expanded_url": "https://x.com/peetzweg/status/2001352089595699582/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        297,
+        320
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G8Y7G6gWUAE_bHS.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1034,
+            "w": 1847,
+            "x": 0,
+            "y": 813
+          },
+          {
+            "h": 1847,
+            "w": 1847,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1847,
+            "w": 1620,
+            "x": 227,
+            "y": 0
+          },
+          {
+            "h": 1847,
+            "w": 924,
+            "x": 600,
+            "y": 0
+          },
+          {
+            "h": 1847,
+            "w": 1847,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1847,
+        "width": 1847
+      },
+      "sizes": {
+        "large": {
+          "h": 1847,
+          "resize": "fit",
+          "w": 1847
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/uvGhB6vJlB"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1034,
+          "w": 1847,
+          "x": 0,
+          "y": 813
+        },
+        {
+          "h": 1847,
+          "w": 1847,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1847,
+          "w": 1620,
+          "x": 227,
+          "y": 0
+        },
+        {
+          "h": 1847,
+          "w": 924,
+          "x": 600,
+          "y": 0
+        },
+        {
+          "h": 1847,
+          "w": 1847,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2001352089595699582/photo/1",
+      "url": "https://pbs.twimg.com/media/G8Y7G6gWUAE_bHS.jpg",
+      "width": 1847,
+      "height": 1847
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "parent": {
+    "favorite_count": 0,
+    "in_reply_to_screen_name": "peetzweg",
+    "in_reply_to_status_id_str": "2001352085577556308",
+    "in_reply_to_user_id_str": "1370705514271797250",
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 1,
+    "retweet_count": 0,
+    "created_at": "2025-12-17T18:01:35.000Z",
+    "display_text_range": [
+      29,
+      297
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/IWU3QW8dq9",
+          "expanded_url": "https://x.com/peetzweg/status/2001352087796384020/photo/1",
+          "indices": [
+            298,
+            321
+          ],
+          "url": "https://t.co/IWU3QW8dq9"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "47621619",
+          "indices": [
+            0,
+            13
+          ],
+          "name": "Lumie Light Therapy",
+          "screen_name": "Lumie_lights"
+        },
+        {
+          "id_str": "1635208006077136896",
+          "indices": [
+            14,
+            28
+          ],
+          "name": "一保堂茶舗 Ippodo Tea",
+          "screen_name": "ippodo_tea_jp"
+        },
+        {
+          "id_str": "972487558151262210",
+          "indices": [
+            50,
+            61
+          ],
+          "name": "Dope Ropes",
+          "screen_name": "jump_ropes"
+        }
+      ]
+    },
+    "id_str": "2001352087796384020",
+    "text": "@Lumie_lights @ippodo_tea_jp 4. 1lb (0.5kg) Heavy @jump_ropes  \nGot into jump roping this year. Progression is fast, which makes it addicting. Furthermore easier to convince myself todo a 30min Jump Rope session than 30 min run. A heavy rope is ideal for beginners as it is slower and more robust. https://t.co/IWU3QW8dq9",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2001352087796384020"
+      ],
+      "editable_until_msecs": "1765998095000",
+      "edits_remaining": "5",
+      "is_edit_eligible": false
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/IWU3QW8dq9",
+        "expanded_url": "https://x.com/peetzweg/status/2001352087796384020/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          298,
+          321
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/G8Y7G0pWAAAceeJ.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 783,
+              "w": 1399,
+              "x": 0,
+              "y": 616
+            },
+            {
+              "h": 1399,
+              "w": 1399,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1399,
+              "w": 1227,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1399,
+              "w": 700,
+              "x": 244,
+              "y": 0
+            },
+            {
+              "h": 1399,
+              "w": 1399,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 1399,
+          "width": 1399
+        },
+        "sizes": {
+          "large": {
+            "h": 1399,
+            "resize": "fit",
+            "w": 1399
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/IWU3QW8dq9"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 783,
+            "w": 1399,
+            "x": 0,
+            "y": 616
+          },
+          {
+            "h": 1399,
+            "w": 1399,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1399,
+            "w": 1227,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1399,
+            "w": 700,
+            "x": 244,
+            "y": 0
+          },
+          {
+            "h": 1399,
+            "w": 1399,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/2001352087796384020/photo/1",
+        "url": "https://pbs.twimg.com/media/G8Y7G0pWAAAceeJ.jpg",
+        "width": 1399,
+        "height": 1399
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

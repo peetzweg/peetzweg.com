@@ -30,9 +30,16 @@ Every entry has a page: posts, experiments and collections their existing routes
 - [ ] 10 of the 11 monthly Spotify playlists (2019-08 to 2020-06) return 404, so they are private or deleted. Only Hype 2020.01 is listed. Make them public again to bring them back: `4T8B45N4PfSSGGy44XapPf`, `66WfauOx6VLoaVhAD3NVOI`, `1mBpXfM0xWXyxdCcVULzR9`, `1l3h8FIMTadft71KTPGPCP`, `4bzzBlVTwvN2Rzszs4BJZJ`, `1RuE5bOqKSJ3GoXZlN6srm`, `7K8VtjkGc0hStLFkkzs4hG`, `710E0jCXYWXKXyTTRnEj8N`, `2DSDS3yNDjMogrSKwbZoC4`, `6pjzD4VwszhPdBbmsFgKEG`.
 - [ ] `src/content/kindle.json` is a copy of `libs/db/src/data/kindle.json` and ships to the client (~8 KB gzipped) for the punchcard. Moves to the database later.
 
+## Homepage top
+
+- [x] Projects under the intro, as icon, name and one line, linking to their sites, in two groups (`content/timeline/featured.ts`; icons are `media/icon-<name>.webp`). Products: Open Display, Commit History. Upcoming Products: Crosswind, QR Code Pocket, bookblitz, Otomo.
+- [x] The redesign entry scrolls through a desktop screenshot of the homepage's first 14,000 px (`media/redesign-site.webp`, its first screen as `-poster`). Retake it after big changes: capture it with entry fade-in, the grey-until-centred effect, the fixed year list and the sticky year heads switched off, twice, so the entry in the shot shows its own frame.
+- [x] Sponsor link to github.com/sponsors/peetzweg beside the profiles.
+
 ## Tweets and videos
 
-- [ ] Backfill every tweet with media. Request the archive on X (Settings → Your account → Download an archive of your data; it takes a day or so), then `pnpm tweets:pull --archive <zip>` (`--dry-run` to count first). It keeps your own tweets with a photo, video or GIF, leaves out retweets and replies to other people, and saves each to `content/timeline/tweets/<id>.json`; every saved tweet is on the timeline, under Writing, in X's layout (react-tweet). Delete a file to drop one. Single tweets: `pnpm tweets:pull <id or URL>`.
+- [x] Tweets with media from the X API: `pnpm tweets:pull --api` (needs `X_BEARER_TOKEN`; X bills each post it lists). On 2026-11-21 it listed 1113 posts back to July 2021 and saved the 288 with a photo, video or GIF, leaving out retweets and replies to other people. Run it again now and then: it only lists posts newer than the newest saved one (`--all` lists everything again). Every saved tweet is on the timeline, under Writing, in X's layout (react-tweet). Delete its file in `content/timeline/tweets/` to drop one. Single tweets: `pnpm tweets:pull <id or URL>`.
+- [ ] Tweets before July 2021: X lists only the latest posts, so older ones need the archive. Request it on X (Settings → Your account → Download an archive of your data; it takes a day or so), then `pnpm tweets:pull --archive <zip>` (`--dry-run` to count first). Tweets already saved are skipped.
 - [ ] Tweets that repeat a project (the Notion Input video is both) can go either way; delete the tweet's file or the project's media.
 - [x] Tweets cost the homepage nothing up front: the timeline loads in pages as you scroll (below).
 - [ ] Text-only tweets later, behind an approval gate in Crosswind like the one for LinkedIn: a post goes to the site's webhook only once approved. `--text` already pulls them from an archive.

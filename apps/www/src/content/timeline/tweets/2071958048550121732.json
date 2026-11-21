@@ -1,0 +1,384 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-30T14:04:28.000Z",
+  "display_text_range": [
+    0,
+    89
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/3zX62PkHux",
+        "expanded_url": "https://x.com/peetzweg/status/2071958048550121732/photo/1",
+        "indices": [
+          90,
+          113
+        ],
+        "url": "https://t.co/3zX62PkHux"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2071298537317454044",
+        "indices": [
+          66,
+          89
+        ],
+        "url": "https://t.co/7yfXsPTPf1"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "25401953",
+        "indices": [
+          4,
+          13
+        ],
+        "name": "Peter Steinberger",
+        "screen_name": "steipete"
+      }
+    ]
+  },
+  "id_str": "2071958048550121732",
+  "text": "Hey @steipete you should get an upgrade on your GitHub Profile! \n\nhttps://t.co/7yfXsPTPf1 https://t.co/3zX62PkHux",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2071958048550121732"
+    ],
+    "editable_until_msecs": "1782831868000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/3zX62PkHux",
+      "expanded_url": "https://x.com/peetzweg/status/2071958048550121732/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        90,
+        113
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HMESz8PWYAAD8WL.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 920,
+            "w": 1643,
+            "x": 63,
+            "y": 0
+          },
+          {
+            "h": 920,
+            "w": 920,
+            "x": 424,
+            "y": 0
+          },
+          {
+            "h": 920,
+            "w": 807,
+            "x": 481,
+            "y": 0
+          },
+          {
+            "h": 920,
+            "w": 460,
+            "x": 654,
+            "y": 0
+          },
+          {
+            "h": 920,
+            "w": 1768,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 920,
+        "width": 1768
+      },
+      "sizes": {
+        "large": {
+          "h": 920,
+          "resize": "fit",
+          "w": 1768
+        },
+        "medium": {
+          "h": 624,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 354,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/3zX62PkHux"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 920,
+          "w": 1643,
+          "x": 63,
+          "y": 0
+        },
+        {
+          "h": 920,
+          "w": 920,
+          "x": 424,
+          "y": 0
+        },
+        {
+          "h": 920,
+          "w": 807,
+          "x": 481,
+          "y": 0
+        },
+        {
+          "h": 920,
+          "w": 460,
+          "x": 654,
+          "y": 0
+        },
+        {
+          "h": 920,
+          "w": 1768,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2071958048550121732/photo/1",
+      "url": "https://pbs.twimg.com/media/HMESz8PWYAAD8WL.jpg",
+      "width": 1768,
+      "height": 920
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 2,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2026-06-28T18:23:48.000Z",
+    "display_text_range": [
+      0,
+      108
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/nXLWGa9uIx",
+          "expanded_url": "https://x.com/peetzweg/status/2071298537317454044/photo/1",
+          "indices": [
+            109,
+            132
+          ],
+          "url": "https://t.co/nXLWGa9uIx"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "commit-history.com/Dicklesworthst…",
+          "expanded_url": "https://commit-history.com/Dicklesworthstone%2Csteipete",
+          "indices": [
+            85,
+            108
+          ],
+          "url": "https://t.co/Zvi3D4qqhM"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "25401953",
+          "indices": [
+            53,
+            62
+          ],
+          "name": "Peter Steinberger",
+          "screen_name": "steipete"
+        },
+        {
+          "id_str": "29239591",
+          "indices": [
+            67,
+            79
+          ],
+          "name": "Jeffrey Emanuel",
+          "screen_name": "doodlestein"
+        }
+      ]
+    },
+    "id_str": "2071298537317454044",
+    "text": "Coding the singularity is getting fought out between @steipete and @doodlestein rn.\n\nhttps://t.co/Zvi3D4qqhM https://t.co/nXLWGa9uIx",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2071298537317454044"
+      ],
+      "editable_until_msecs": "1782674628000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/nXLWGa9uIx",
+        "expanded_url": "https://x.com/peetzweg/status/2071298537317454044/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          109,
+          132
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/HL66qusXkAArc6U.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 1334,
+              "w": 2382,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1334,
+              "w": 1334,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1334,
+              "w": 1170,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1334,
+              "w": 667,
+              "x": 127,
+              "y": 0
+            },
+            {
+              "h": 1334,
+              "w": 2632,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 1334,
+          "width": 2632
+        },
+        "sizes": {
+          "large": {
+            "h": 1038,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 608,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 345,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/nXLWGa9uIx"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 1334,
+            "w": 2382,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1334,
+            "w": 1334,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1334,
+            "w": 1170,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1334,
+            "w": 667,
+            "x": 127,
+            "y": 0
+          },
+          {
+            "h": 1334,
+            "w": 2632,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/2071298537317454044/photo/1",
+        "url": "https://pbs.twimg.com/media/HL66qusXkAArc6U.jpg",
+        "width": 2632,
+        "height": 1334
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-11-21T21:48:01.000Z",
+  "display_text_range": [
+    0,
+    66
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/S6u2jU74ek",
+        "expanded_url": "https://x.com/peetzweg/status/1991986987612410048/photo/1",
+        "indices": [
+          67,
+          90
+        ],
+        "url": "https://t.co/S6u2jU74ek"
+      }
+    ]
+  },
+  "id_str": "1991986987612410048",
+  "text": "Probably way to late to the party but never try never know, right? https://t.co/S6u2jU74ek",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1991986987612410048"
+    ],
+    "editable_until_msecs": "1763765281000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/S6u2jU74ek",
+      "expanded_url": "https://x.com/peetzweg/status/1991986987612410048/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        67,
+        90
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G6T1m-BXIAA67GT.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 455,
+            "w": 812,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 532,
+            "w": 532,
+            "x": 280,
+            "y": 0
+          },
+          {
+            "h": 532,
+            "w": 467,
+            "x": 345,
+            "y": 0
+          },
+          {
+            "h": 532,
+            "w": 266,
+            "x": 495,
+            "y": 0
+          },
+          {
+            "h": 532,
+            "w": 812,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 532,
+        "width": 812
+      },
+      "sizes": {
+        "large": {
+          "h": 532,
+          "resize": "fit",
+          "w": 812
+        },
+        "medium": {
+          "h": 532,
+          "resize": "fit",
+          "w": 812
+        },
+        "small": {
+          "h": 446,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/S6u2jU74ek"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 455,
+          "w": 812,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 532,
+          "w": 532,
+          "x": 280,
+          "y": 0
+        },
+        {
+          "h": 532,
+          "w": 467,
+          "x": 345,
+          "y": 0
+        },
+        {
+          "h": 532,
+          "w": 266,
+          "x": 495,
+          "y": 0
+        },
+        {
+          "h": 532,
+          "w": 812,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1991986987612410048/photo/1",
+      "url": "https://pbs.twimg.com/media/G6T1m-BXIAA67GT.jpg",
+      "width": 812,
+      "height": 532
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

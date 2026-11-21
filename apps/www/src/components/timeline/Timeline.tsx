@@ -814,6 +814,8 @@ function YouTube({
           <iframe
             allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
             allowFullScreen
+            // YouTube refuses to play embeds without a referrer (the page sends none, see __root).
+            referrerPolicy="strict-origin-when-cross-origin"
             src={`https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&playsinline=1&rel=0`}
             title={title}
           />

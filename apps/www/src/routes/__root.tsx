@@ -42,6 +42,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         {/* Written out here: route head tags keep only one meta per name, and there are two. */}
         <meta content="#f7f7f2" media="(prefers-color-scheme: light)" name="theme-color" />
         <meta content="#10120f" media="(prefers-color-scheme: dark)" name="theme-color" />
+        {/* X's video server answers 403 to requests referred by other sites, and a <video> can't
+            opt out on its own. Embeds that need a referrer (YouTube) set their own policy. */}
+        <meta content="no-referrer" name="referrer" />
         <HeadContent />
       </head>
       <body>

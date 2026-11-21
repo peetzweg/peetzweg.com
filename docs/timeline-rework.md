@@ -32,7 +32,7 @@ Every entry has a page: posts, experiments and collections their existing routes
 
 ## Homepage top
 
-- [x] Projects under the intro, as icon, name and one line, linking to their sites, in two groups (`content/timeline/featured.ts`; icons are `media/icon-<name>.webp`). Products: Open Display, Commit History. Upcoming Products: Crosswind, QR Code Pocket, bookblitz, Otomo.
+- [x] Projects under the intro, as icon, name and one line, linking to their sites, in two groups (`content/timeline/featured.ts`; icons are `media/icon-<name>.webp`). Products: Open Display, Commit History, Sunshine. Upcoming Products: Crosswind, QR Code Pocket, bookblitz, Otomo.
 - [x] The redesign entry scrolls through the old peetzweg.com, captured on desktop (1440 × 900 at 2×) from production on 2026-11-21, before the switch (`media/redesign-site.webp`, its first screen as `-poster`). A full-page screenshot leaves the Strava embeds blank, so that section was shot on screen and put in its place. Lossless copy: `docs/archive/peetzweg.com-2026-11-21-desktop.webp`.
 - [x] Sponsor link to github.com/sponsors/peetzweg beside the profiles.
 

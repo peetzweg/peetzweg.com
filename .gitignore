@@ -45,3 +45,6 @@ Thumbs.db
 
 # Nitro build output
 .output
+
+# Local state from Netlify's dev tools (location, a dev database); never commit
+.netlify

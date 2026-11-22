@@ -28,6 +28,13 @@ export const Route = createRootRoute({
       { rel: 'me', href: 'https://bsky.app/profile/peetzweg.com' },
       { rel: 'stylesheet', href: appCss },
     ],
+    scripts: [
+      {
+        defer: true,
+        'data-domain': 'peetzweg.com',
+        src: 'https://analytics.466920160.xyz/js/script.file-downloads.outbound-links.js',
+      },
+    ],
   }),
   shellComponent: RootDocument,
 });

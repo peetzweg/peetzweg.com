@@ -11,7 +11,8 @@
 //                                           saved one (--all for your latest 3200, the most X lists).
 //                                           Needs X_BEARER_TOKEN; X bills each post it lists.
 //
-// Retweets and replies to other people are left out; replies in your own threads are kept.
+// Retweets and replies are left out, replies in your own threads too: those are mostly follow-ups
+// to the first post, which the timeline links to anyway.
 // Tweets already saved are skipped, so the archive can be pulled again after a new export.
 import { execFileSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
@@ -88,9 +89,8 @@ function fromArchive(path) {
 
   const kept = tweets.filter((tweet) => {
     const retweet = tweet.retweeted || tweet.full_text.startsWith('RT @');
-    const replyToOthers = tweet.in_reply_to_user_id_str && tweet.in_reply_to_user_id_str !== account?.accountId;
     const media = tweet.extended_entities?.media?.length > 0;
-    return !retweet && !replyToOthers && (media || flag('--text'));
+    return !retweet && !tweet.in_reply_to_status_id_str && (media || flag('--text'));
   });
   console.log(`Archive of @${account?.username ?? '?'}: ${tweets.length} tweets, keeping ${kept.length}`);
   return kept.sort((a, b) => new Date(a.created_at) - new Date(b.created_at)).map((tweet) => tweet.id_str);
@@ -128,7 +128,7 @@ async function fromApi() {
   do {
     const body = await call(`users/${user.id}/tweets`, {
       max_results: '100',
-      exclude: 'retweets',
+      exclude: 'retweets,replies',
       'tweet.fields': 'created_at,attachments,in_reply_to_user_id',
       ...(newest && !flag('--all') ? { since_id: newest } : {}),
       ...(page ? { pagination_token: page } : {}),
@@ -137,10 +137,9 @@ async function fromApi() {
     page = body.meta?.next_token;
   } while (page);
 
-  const kept = posts.filter((post) => {
-    const replyToOthers = post.in_reply_to_user_id && post.in_reply_to_user_id !== user.id;
-    return !replyToOthers && (post.attachments?.media_keys?.length > 0 || flag('--text'));
-  });
+  const kept = posts.filter(
+    (post) => !post.in_reply_to_user_id && (post.attachments?.media_keys?.length > 0 || flag('--text')),
+  );
   console.log(`@${username} on X: ${posts.length} posts${newest && !flag('--all') ? ' since the newest saved' : ''}, keeping ${kept.length}`);
   return kept.reverse().map((post) => post.id);
 }

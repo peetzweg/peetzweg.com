@@ -1958,59 +1958,31 @@ a.tl-url:focus-visible {
   --tweet-body-font-size: 1rem;
   --tweet-body-line-height: 1.6;
   --tweet-header-font-size: 0.9375rem;
-  --tweet-info-font-size: 0.8125rem;
-  --tweet-actions-font-size: 0.8125rem;
   min-width: 0;
   max-width: none;
 }
 
-/* The line with the time, react-tweet's own markup and styles (see Tweet.tsx). */
+/* X's logo, floated so the first line of text runs beside it. */
 
-.tl-tweet-info {
+.tl-tweet-logo {
+  float: right;
   display: flex;
-  align-items: center;
-  margin-top: 0.125rem;
-  color: var(--tweet-font-color-secondary);
-  overflow-wrap: break-word;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.tl-tweet-time {
-  color: inherit;
-  font-size: var(--tweet-info-font-size);
-  line-height: var(--tweet-info-line-height);
-  text-decoration: none;
-}
-
-.tl-tweet-about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--tweet-actions-icon-wrapper-size);
-  height: var(--tweet-actions-icon-wrapper-size);
-  margin-right: -4px;
-  margin-left: auto;
+  margin: 0.1875rem -0.25rem 0.25rem 0.75rem;
+  padding: 0.25rem;
   border-radius: 9999px;
-  color: inherit;
+  color: var(--tl-fg);
   transition: background-color 0.2s;
 }
 
-.tl-tweet-about svg {
-  height: var(--tweet-actions-icon-size);
+.tl-tweet-logo svg {
+  width: 1.125rem;
+  height: 1.125rem;
   fill: currentColor;
-  user-select: none;
 }
 
 @media (hover: hover) {
-  .tl-tweet-time:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-  }
-
-  .tl-tweet-about:hover {
-    background-color: var(--tweet-color-blue-secondary-hover);
-    color: var(--tweet-color-blue-secondary);
+  .tl-tweet-logo:hover {
+    background-color: var(--tl-hover);
   }
 }
 

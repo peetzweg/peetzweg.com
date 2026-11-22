@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 5,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-11-05T17:25:19.000Z",
+  "display_text_range": [
+    0,
+    207
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/bmnIbOheLn",
+        "expanded_url": "https://x.com/peetzweg/status/1986122668504908190/photo/1",
+        "indices": [
+          208,
+          231
+        ],
+        "url": "https://t.co/bmnIbOheLn"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1239876481951596545",
+        "indices": [
+          20,
+          27
+        ],
+        "name": "Obsidian",
+        "screen_name": "obsdmd"
+      }
+    ]
+  },
+  "id_str": "1986122668504908190",
+  "text": "Created my personal @obsdmd plugin as we are now living in a time were it is faster and easier to just vibe code your use case into a plugin than fiddling around configuring and orchestrating someone else's. https://t.co/bmnIbOheLn",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1986122668504908190"
+    ],
+    "editable_until_msecs": "1762367119000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/bmnIbOheLn",
+      "expanded_url": "https://x.com/peetzweg/status/1986122668504908190/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        208,
+        231
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G5AgCrSXMAAQYek.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 982,
+            "w": 1754,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1104,
+            "w": 1104,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1104,
+            "w": 968,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1104,
+            "w": 552,
+            "x": 30,
+            "y": 0
+          },
+          {
+            "h": 1104,
+            "w": 1754,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1104,
+        "width": 1754
+      },
+      "sizes": {
+        "large": {
+          "h": 1104,
+          "resize": "fit",
+          "w": 1754
+        },
+        "medium": {
+          "h": 755,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 428,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/bmnIbOheLn"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 982,
+          "w": 1754,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1104,
+          "w": 1104,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1104,
+          "w": 968,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1104,
+          "w": 552,
+          "x": 30,
+          "y": 0
+        },
+        {
+          "h": 1104,
+          "w": 1754,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1986122668504908190/photo/1",
+      "url": "https://pbs.twimg.com/media/G5AgCrSXMAAQYek.jpg",
+      "width": 1754,
+      "height": 1104
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

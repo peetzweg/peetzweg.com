@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2024-04-17T12:57:12.000Z",
+  "display_text_range": [
+    0,
+    226
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/3cXnOGUxnU",
+        "expanded_url": "https://x.com/peetzweg/status/1780581278200299630/video/1",
+        "indices": [
+          227,
+          250
+        ],
+        "url": "https://t.co/3cXnOGUxnU"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "12981092",
+        "indices": [
+          187,
+          195
+        ],
+        "name": "Troy Shu",
+        "screen_name": "troyshu"
+      }
+    ]
+  },
+  "id_str": "1780581278200299630",
+  "text": "Back into using speed reading tools. Feels like downloading information to your brain like in the matrix.\n\nThis is what reading 325x2 WPM looks like. I like it even faster.\n\nSwiftRead by @troyshu is a beauty among these tools! https://t.co/3cXnOGUxnU",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1780581278200299630"
+    ],
+    "editable_until_msecs": "1713362232000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/3cXnOGUxnU",
+      "expanded_url": "https://x.com/peetzweg/status/1780581278200299630/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        227,
+        250
+      ],
+      "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1780578776763580417/pu/img/-T_dzQ5kgMra6TVi.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1160,
+        "width": 1860
+      },
+      "sizes": {
+        "large": {
+          "h": 1160,
+          "resize": "fit",
+          "w": 1860
+        },
+        "medium": {
+          "h": 748,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 424,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/3cXnOGUxnU",
+      "video_info": {
+        "aspect_ratio": [
+          93,
+          58
+        ],
+        "duration_millis": 37189,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/ext_tw_video/1780578776763580417/pu/pl/NQTHV5qNqip2_Ngt.m3u8?tag=12"
+          },
+          {
+            "bitrate": 256000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1780578776763580417/pu/vid/avc1/432x270/f_mP6nmBKwX9kHJA.mp4?tag=12"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1780578776763580417/pu/vid/avc1/576x360/UeKo6Vg4PG1M5F1J.mp4?tag=12"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1780578776763580417/pu/vid/avc1/1154x720/xxz_uKylMoxbxo8N.mp4?tag=12"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      93,
+      58
+    ],
+    "contentType": "media_entity",
+    "durationMs": 37189,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1780578776763580417/pu/img/-T_dzQ5kgMra6TVi.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/ext_tw_video/1780578776763580417/pu/pl/NQTHV5qNqip2_Ngt.m3u8?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1780578776763580417/pu/vid/avc1/432x270/f_mP6nmBKwX9kHJA.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1780578776763580417/pu/vid/avc1/576x360/UeKo6Vg4PG1M5F1J.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1780578776763580417/pu/vid/avc1/1154x720/xxz_uKylMoxbxo8N.mp4?tag=12"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1780581278200299630"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

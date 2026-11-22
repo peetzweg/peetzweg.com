@@ -1,0 +1,375 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-01-22T16:31:14.000Z",
+  "display_text_range": [
+    0,
+    276
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/MIZrFF7G6k",
+        "expanded_url": "https://x.com/peetzweg/status/1882103743065505794/photo/1",
+        "indices": [
+          277,
+          300
+        ],
+        "url": "https://t.co/MIZrFF7G6k"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1882002012755165521",
+        "indices": [
+          253,
+          276
+        ],
+        "url": "https://t.co/MfQRPhjO5Z"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1654830858098860032",
+        "indices": [
+          6,
+          15
+        ],
+        "name": "LM Studio",
+        "screen_name": "lmstudio"
+      },
+      {
+        "id_str": "1688410127378829312",
+        "indices": [
+          38,
+          45
+        ],
+        "name": "ollama",
+        "screen_name": "ollama"
+      },
+      {
+        "id_str": "1735429419010031616",
+        "indices": [
+          48,
+          58
+        ],
+        "name": "Open WebUI",
+        "screen_name": "OpenWebUI"
+      }
+    ]
+  },
+  "id_str": "1882103743065505794",
+  "text": "Seems @lmstudio is more comparable to @ollama + @OpenWebUI. \nThe LM Studio looks a cluttered because of all it's features. Whereas open-web-ui looks sleek and stylish because of no features? More chat-user focused for sure, LM Studio more dev focused.\n\nhttps://t.co/MfQRPhjO5Z https://t.co/MIZrFF7G6k",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1882103743065505794"
+    ],
+    "editable_until_msecs": "1737567074000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/MIZrFF7G6k",
+      "expanded_url": "https://x.com/peetzweg/status/1882103743065505794/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        277,
+        300
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/Gh6TFg6WAAAZjCB.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1819,
+            "w": 3248,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2112,
+            "w": 2112,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2112,
+            "w": 1853,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2112,
+            "w": 1056,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2112,
+            "w": 3248,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 2112,
+        "width": 3248
+      },
+      "sizes": {
+        "large": {
+          "h": 1332,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 780,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 442,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/MIZrFF7G6k"
+    },
+    {
+      "display_url": "pic.x.com/MIZrFF7G6k",
+      "expanded_url": "https://x.com/peetzweg/status/1882103743065505794/photo/2",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        277,
+        300
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/Gh6TGC0WYAArKHm.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1819,
+            "w": 3248,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2112,
+            "w": 2112,
+            "x": 568,
+            "y": 0
+          },
+          {
+            "h": 2112,
+            "w": 1853,
+            "x": 698,
+            "y": 0
+          },
+          {
+            "h": 2112,
+            "w": 1056,
+            "x": 1096,
+            "y": 0
+          },
+          {
+            "h": 2112,
+            "w": 3248,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 2112,
+        "width": 3248
+      },
+      "sizes": {
+        "large": {
+          "h": 1332,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 780,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 442,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/MIZrFF7G6k"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1819,
+          "w": 3248,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2112,
+          "w": 2112,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2112,
+          "w": 1853,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2112,
+          "w": 1056,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2112,
+          "w": 3248,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1882103743065505794/photo/1",
+      "url": "https://pbs.twimg.com/media/Gh6TFg6WAAAZjCB.jpg",
+      "width": 3248,
+      "height": 2112
+    },
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1819,
+          "w": 3248,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2112,
+          "w": 2112,
+          "x": 568,
+          "y": 0
+        },
+        {
+          "h": 2112,
+          "w": 1853,
+          "x": 698,
+          "y": 0
+        },
+        {
+          "h": 2112,
+          "w": 1056,
+          "x": 1096,
+          "y": 0
+        },
+        {
+          "h": 2112,
+          "w": 3248,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1882103743065505794/photo/2",
+      "url": "https://pbs.twimg.com/media/Gh6TGC0WYAArKHm.jpg",
+      "width": 3248,
+      "height": 2112
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 0,
+    "lang": "ro",
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2025-01-22T09:47:00.000Z",
+    "display_text_range": [
+      0,
+      46
+    ],
+    "entities": {
+      "user_mentions": [
+        {
+          "id_str": "1688410127378829312",
+          "indices": [
+            25,
+            32
+          ],
+          "name": "ollama",
+          "screen_name": "ollama"
+        },
+        {
+          "id_str": "1654830858098860032",
+          "indices": [
+            36,
+            45
+          ],
+          "name": "LM Studio",
+          "screen_name": "lmstudio"
+        }
+      ]
+    },
+    "id_str": "1882002012755165521",
+    "text": "For local AI development @ollama or @lmstudio?",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1882002012755165521"
+      ],
+      "editable_until_msecs": "1737542820000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

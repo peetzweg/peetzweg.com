@@ -1,0 +1,362 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-01-13T13:22:34.000Z",
+  "display_text_range": [
+    0,
+    244
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/gawDopTHlT",
+        "expanded_url": "https://x.com/peetzweg/status/2011066341839814989/photo/1",
+        "indices": [
+          245,
+          268
+        ],
+        "url": "https://t.co/gawDopTHlT"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "bigyear.vercel.app",
+        "expanded_url": "http://bigyear.vercel.app/",
+        "indices": [
+          30,
+          53
+        ],
+        "url": "https://t.co/P6XA4v48ES"
+      },
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2009985751300346237",
+        "indices": [
+          221,
+          244
+        ],
+        "url": "https://t.co/tZ2TaIB6sB"
+      }
+    ]
+  },
+  "id_str": "2011066341839814989",
+  "text": "I find the SVG version of the https://t.co/P6XA4v48ES to be pretty fun to use on collaborative digital drawing boards. \n\nI added it as a second download option. You can just drag and drop the file the canvas of any app.\n\nhttps://t.co/tZ2TaIB6sB https://t.co/gawDopTHlT",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2011066341839814989"
+    ],
+    "editable_until_msecs": "1768314154000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/gawDopTHlT",
+      "expanded_url": "https://x.com/peetzweg/status/2011066341839814989/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        245,
+        268
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G-i9bxjXUAAnPS1.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1023,
+            "w": 1826,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1260,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1105,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 630,
+            "x": 4,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1826,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1260,
+        "width": 1826
+      },
+      "sizes": {
+        "large": {
+          "h": 1260,
+          "resize": "fit",
+          "w": 1826
+        },
+        "medium": {
+          "h": 828,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 469,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/gawDopTHlT"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1023,
+          "w": 1826,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 1260,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 1105,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 630,
+          "x": 4,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 1826,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2011066341839814989/photo/1",
+      "url": "https://pbs.twimg.com/media/G-i9bxjXUAAnPS1.jpg",
+      "width": 1826,
+      "height": 1260
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 3,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2026-01-10T13:48:41.000Z",
+    "display_text_range": [
+      0,
+      90
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/q1qq9AXp5R",
+          "expanded_url": "https://x.com/peetzweg/status/2009985751300346237/photo/1",
+          "indices": [
+            91,
+            114
+          ],
+          "url": "https://t.co/q1qq9AXp5R"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "1213150329316859904",
+          "indices": [
+            59,
+            70
+          ],
+          "name": "Excalidraw",
+          "screen_name": "excalidraw"
+        }
+      ]
+    },
+    "id_str": "2009985751300346237",
+    "text": "Once exported as SVG the calendar can be easily added to a @excalidraw board, pretty neat. https://t.co/q1qq9AXp5R",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2009985751300346237"
+      ],
+      "editable_until_msecs": "1768056521000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/q1qq9AXp5R",
+        "expanded_url": "https://x.com/peetzweg/status/2009985751300346237/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          91,
+          114
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/G-TnV71WQAA5DwU.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 1260,
+              "w": 2250,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1260,
+              "w": 1260,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1260,
+              "w": 1105,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1260,
+              "w": 630,
+              "x": 225,
+              "y": 0
+            },
+            {
+              "h": 1260,
+              "w": 2400,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 1260,
+          "width": 2400
+        },
+        "sizes": {
+          "large": {
+            "h": 1075,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 630,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 357,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/q1qq9AXp5R"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 1260,
+            "w": 2250,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1260,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1105,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 630,
+            "x": 225,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 2400,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/2009985751300346237/photo/1",
+        "url": "https://pbs.twimg.com/media/G-TnV71WQAA5DwU.jpg",
+        "width": 2400,
+        "height": 1260
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

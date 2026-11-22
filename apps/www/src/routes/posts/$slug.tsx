@@ -1,0 +1,83 @@
+import { MDXProvider } from '@mdx-js/react';
+import { Link, notFound, createFileRoute } from '@tanstack/react-router';
+import { useRef } from 'react';
+import { EntryFooter } from '../../components/timeline/EntryFooter';
+import { EntryMeta } from '../../components/timeline/Timeline';
+import { getPost, getPostMeta } from '../../content/posts';
+import { getEntry } from '../../content/timeline/api';
+import { Island } from '../../islands/Island';
+import { useJustify } from '../../justify/useJustify';
+import { SITE, creativeWork, seo } from '../../seo';
+
+export const Route = createFileRoute('/posts/$slug')({
+  loader: async ({ params }) => {
+    const post = getPostMeta(params.slug);
+
+    if (!post) {
+      throw notFound();
+    }
+
+    const { entry, newer, older } = await getEntry({ data: { id: `post-${params.slug}` } });
+    return { ...post, entry, newer, older };
+  },
+  staleTime: Infinity,
+  head: ({ loaderData }) => {
+    if (!loaderData) {
+      return {};
+    }
+    const [day, month, year] = loaderData.date.split('.');
+    const published = `${year}-${month}-${day}`;
+    const description = loaderData.description ?? loaderData.title;
+    const path = `/posts/${loaderData.slug}`;
+    return seo({
+      title: `${loaderData.title} · ${SITE.name}`,
+      description,
+      path,
+      type: 'article',
+      published,
+      data: creativeWork({ kind: 'post', title: loaderData.title, description, path, date: published }),
+    });
+  },
+  component: PostPage,
+});
+
+/**
+ * What MDX posts can use besides Markdown: `<Island name="squiggle" />` puts a live piece
+ * (src/islands) in the text, loaded only when it scrolls near.
+ */
+const components = { Island };
+
+function PostPage() {
+  const { entry, newer, older, ...postMeta } = Route.useLoaderData();
+  const post = getPost(postMeta.slug);
+  const main = useRef<HTMLElement>(null);
+  useJustify(main, '.tl-prose p, .tl-prose li');
+
+  if (!post) {
+    throw notFound();
+  }
+
+  const Component = post.Component;
+
+  return (
+    <main className="tl tl-page" ref={main}>
+      <nav className="tl-back">
+        <Link hash={entry.id} to="/">
+          <span aria-hidden="true">←</span> {SITE.name}
+        </Link>
+      </nav>
+
+      <article className="tl-single">
+        <EntryMeta entry={entry} withYear />
+        <h1 className="tl-title">{postMeta.title}</h1>
+        <div className="tl-prose">
+          <MDXProvider components={components}>
+            <Component />
+          </MDXProvider>
+        </div>
+      </article>
+
+      <EntryFooter newer={newer} older={older} title={postMeta.title} />
+    </main>
+  );
+}

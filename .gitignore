@@ -7,6 +7,7 @@ tmp
 
 # dependencies
 node_modules
+node-compile-cache
 
 # IDEs and editors
 /.idea
@@ -41,3 +42,9 @@ Thumbs.db
 .astro
 
 .nx/cache
+
+# Nitro build output
+.output
+
+# Local state from Netlify's dev tools (location, a dev database); never commit
+.netlify

@@ -1,0 +1,351 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-07-24T07:04:22.000Z",
+  "display_text_range": [
+    0,
+    237
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/VqZr2whO4n",
+        "expanded_url": "https://x.com/peetzweg/status/2080549636813537494/photo/1",
+        "indices": [
+          238,
+          261
+        ],
+        "url": "https://t.co/VqZr2whO4n"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "commit-history.com/?kind=org",
+        "expanded_url": "https://commit-history.com/?kind=org",
+        "indices": [
+          189,
+          212
+        ],
+        "url": "https://t.co/fHVorz3C1m"
+      },
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2075119480380731517",
+        "indices": [
+          214,
+          237
+        ],
+        "url": "https://t.co/UK5oISnRVr"
+      }
+    ]
+  },
+  "id_str": "2080549636813537494",
+  "text": "I just opened up a new Sponsorship slot for Organization and Org internal leaderboards. \n\nCheck it out if you want to support the effort and get some dev eyeballs on your Product/Service!\n\nhttps://t.co/fHVorz3C1m\n\nhttps://t.co/UK5oISnRVr https://t.co/VqZr2whO4n",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2080549636813537494"
+    ],
+    "editable_until_msecs": "1784880262000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/VqZr2whO4n",
+      "expanded_url": "https://x.com/peetzweg/status/2080549636813537494/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        238,
+        261
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HN-YjAPXsAAsi3W.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 426,
+            "w": 760,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 428,
+            "w": 428,
+            "x": 166,
+            "y": 0
+          },
+          {
+            "h": 428,
+            "w": 375,
+            "x": 193,
+            "y": 0
+          },
+          {
+            "h": 428,
+            "w": 214,
+            "x": 273,
+            "y": 0
+          },
+          {
+            "h": 428,
+            "w": 760,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 428,
+        "width": 760
+      },
+      "sizes": {
+        "large": {
+          "h": 428,
+          "resize": "fit",
+          "w": 760
+        },
+        "medium": {
+          "h": 428,
+          "resize": "fit",
+          "w": 760
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/VqZr2whO4n"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 426,
+          "w": 760,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 428,
+          "w": 428,
+          "x": 166,
+          "y": 0
+        },
+        {
+          "h": 428,
+          "w": 375,
+          "x": 193,
+          "y": 0
+        },
+        {
+          "h": 428,
+          "w": 214,
+          "x": 273,
+          "y": 0
+        },
+        {
+          "h": 428,
+          "w": 760,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2080549636813537494/photo/1",
+      "url": "https://pbs.twimg.com/media/HN-YjAPXsAAsi3W.png",
+      "width": 760,
+      "height": 428
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 2,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 2,
+    "retweet_count": 0,
+    "created_at": "2026-07-09T07:26:52.000Z",
+    "display_text_range": [
+      0,
+      113
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/wfZTlGlnTd",
+          "expanded_url": "https://x.com/peetzweg/status/2075119480380731517/photo/1",
+          "indices": [
+            114,
+            137
+          ],
+          "url": "https://t.co/wfZTlGlnTd"
+        }
+      ]
+    },
+    "id_str": "2075119480380731517",
+    "text": "Seeding of Organization Leaderboard is happening now. Any big GitHub org comes to mind I might should not forget? https://t.co/wfZTlGlnTd",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2075119480380731517"
+      ],
+      "editable_until_msecs": "1783585612000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/wfZTlGlnTd",
+        "expanded_url": "https://x.com/peetzweg/status/2075119480380731517/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          114,
+          137
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/HMxOKsCXIAAIkzQ.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 785,
+              "w": 1402,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1402,
+              "w": 1402,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1516,
+              "w": 1330,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1516,
+              "w": 758,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1516,
+              "w": 1402,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 1516,
+          "width": 1402
+        },
+        "sizes": {
+          "large": {
+            "h": 1516,
+            "resize": "fit",
+            "w": 1402
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 1110
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 629
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/wfZTlGlnTd"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 785,
+            "w": 1402,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1402,
+            "w": 1402,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1516,
+            "w": 1330,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1516,
+            "w": 758,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1516,
+            "w": 1402,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/2075119480380731517/photo/1",
+        "url": "https://pbs.twimg.com/media/HMxOKsCXIAAIkzQ.jpg",
+        "width": 1402,
+        "height": 1516
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

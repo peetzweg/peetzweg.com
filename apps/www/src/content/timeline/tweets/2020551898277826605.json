@@ -1,0 +1,245 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 5,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-08T17:34:47.000Z",
+  "display_text_range": [
+    0,
+    223
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/QNk2LR3f80",
+        "expanded_url": "https://x.com/peetzweg/status/2020551898277826605/photo/1",
+        "indices": [
+          223,
+          246
+        ],
+        "url": "https://t.co/QNk2LR3f80"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2019801245477691420",
+        "indices": [
+          199,
+          222
+        ],
+        "url": "https://t.co/97XllAjEOT"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1995710751097659392",
+        "indices": [
+          10,
+          19
+        ],
+        "name": "OpenClaw🦞",
+        "screen_name": "openclaw"
+      }
+    ]
+  },
+  "id_str": "2020551898277826605",
+  "text": "The first @openclaw Berlin meeting concluded. We had a blast. We are all already excited for the next. \nBerlin is not yet awake to what is coming. It's the smallest it will ever be. We are early! 🦞\n\nhttps://t.co/97XllAjEOT https://t.co/QNk2LR3f80",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2020551898277826605"
+    ],
+    "editable_until_msecs": "1770575687000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/QNk2LR3f80",
+      "expanded_url": "https://x.com/peetzweg/status/2020551898277826605/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        223,
+        246
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HApwyVnagAA8cx3.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 672,
+            "w": 1200,
+            "x": 0,
+            "y": 53
+          },
+          {
+            "h": 896,
+            "w": 896,
+            "x": 304,
+            "y": 0
+          },
+          {
+            "h": 896,
+            "w": 786,
+            "x": 414,
+            "y": 0
+          },
+          {
+            "h": 896,
+            "w": 448,
+            "x": 752,
+            "y": 0
+          },
+          {
+            "h": 896,
+            "w": 1200,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 896,
+        "width": 1200
+      },
+      "sizes": {
+        "large": {
+          "h": 896,
+          "resize": "fit",
+          "w": 1200
+        },
+        "medium": {
+          "h": 896,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 508,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/QNk2LR3f80"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 672,
+          "w": 1200,
+          "x": 0,
+          "y": 53
+        },
+        {
+          "h": 896,
+          "w": 896,
+          "x": 304,
+          "y": 0
+        },
+        {
+          "h": 896,
+          "w": 786,
+          "x": 414,
+          "y": 0
+        },
+        {
+          "h": 896,
+          "w": 448,
+          "x": 752,
+          "y": 0
+        },
+        {
+          "h": 896,
+          "w": 1200,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2020551898277826605/photo/1",
+      "url": "https://pbs.twimg.com/media/HApwyVnagAA8cx3.jpg",
+      "width": 1200,
+      "height": 896
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 0,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2026-02-06T15:51:57.000Z",
+    "display_text_range": [
+      0,
+      95
+    ],
+    "entities": {
+      "urls": [
+        {
+          "display_url": "luma.com/3j4om77u",
+          "expanded_url": "https://luma.com/3j4om77u",
+          "indices": [
+            71,
+            94
+          ],
+          "url": "https://t.co/l2xAxmYn6G"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "1995710751097659392",
+          "indices": [
+            20,
+            29
+          ],
+          "name": "OpenClaw🦞",
+          "screen_name": "openclaw"
+        }
+      ]
+    },
+    "id_str": "2019801245477691420",
+    "text": "Hey if you are into @openclaw and in Berlin, lets cook this Sunday! 👋\n\nhttps://t.co/l2xAxmYn6G",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2019801245477691420"
+      ],
+      "editable_until_msecs": "1770396717000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

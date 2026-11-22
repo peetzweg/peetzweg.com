@@ -1,0 +1,197 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-28T18:23:48.000Z",
+  "display_text_range": [
+    0,
+    108
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/nXLWGa9uIx",
+        "expanded_url": "https://x.com/peetzweg/status/2071298537317454044/photo/1",
+        "indices": [
+          109,
+          132
+        ],
+        "url": "https://t.co/nXLWGa9uIx"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "commit-history.com/Dicklesworthst…",
+        "expanded_url": "https://commit-history.com/Dicklesworthstone%2Csteipete",
+        "indices": [
+          85,
+          108
+        ],
+        "url": "https://t.co/Zvi3D4qqhM"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "25401953",
+        "indices": [
+          53,
+          62
+        ],
+        "name": "Peter Steinberger",
+        "screen_name": "steipete"
+      },
+      {
+        "id_str": "29239591",
+        "indices": [
+          67,
+          79
+        ],
+        "name": "Jeffrey Emanuel",
+        "screen_name": "doodlestein"
+      }
+    ]
+  },
+  "id_str": "2071298537317454044",
+  "text": "Coding the singularity is getting fought out between @steipete and @doodlestein rn.\n\nhttps://t.co/Zvi3D4qqhM https://t.co/nXLWGa9uIx",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2071298537317454044"
+    ],
+    "editable_until_msecs": "1782674628000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/nXLWGa9uIx",
+      "expanded_url": "https://x.com/peetzweg/status/2071298537317454044/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        109,
+        132
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HL66qusXkAArc6U.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1334,
+            "w": 2382,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1334,
+            "w": 1334,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1334,
+            "w": 1170,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1334,
+            "w": 667,
+            "x": 127,
+            "y": 0
+          },
+          {
+            "h": 1334,
+            "w": 2632,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1334,
+        "width": 2632
+      },
+      "sizes": {
+        "large": {
+          "h": 1038,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 608,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 345,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/nXLWGa9uIx"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1334,
+          "w": 2382,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1334,
+          "w": 1334,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1334,
+          "w": 1170,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1334,
+          "w": 667,
+          "x": 127,
+          "y": 0
+        },
+        {
+          "h": 1334,
+          "w": 2632,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2071298537317454044/photo/1",
+      "url": "https://pbs.twimg.com/media/HL66qusXkAArc6U.jpg",
+      "width": 2632,
+      "height": 1334
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

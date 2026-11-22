@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-10-23T20:06:02.000Z",
+  "display_text_range": [
+    0,
+    176
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/jtUr56HBY7",
+        "expanded_url": "https://x.com/peetzweg/status/1981452072777048121/photo/1",
+        "indices": [
+          177,
+          200
+        ],
+        "url": "https://t.co/jtUr56HBY7"
+      }
+    ]
+  },
+  "id_str": "1981452072777048121",
+  "text": "Who is choosing colours like this? If it is not the most attractive looking device, it is best to just commit fully to the absurdity, right? \n\nIf you can’t hide it, feature it. https://t.co/jtUr56HBY7",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1981452072777048121"
+    ],
+    "editable_until_msecs": "1761253562000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/jtUr56HBY7",
+      "expanded_url": "https://x.com/peetzweg/status/1981452072777048121/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        177,
+        200
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G3-IKIvXoAAACYQ.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1268,
+            "w": 2264,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2264,
+            "w": 2264,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2264,
+            "w": 1986,
+            "x": 82,
+            "y": 0
+          },
+          {
+            "h": 2264,
+            "w": 1132,
+            "x": 509,
+            "y": 0
+          },
+          {
+            "h": 2264,
+            "w": 2264,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 2264,
+        "width": 2264
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/jtUr56HBY7"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1268,
+          "w": 2264,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2264,
+          "w": 2264,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2264,
+          "w": 1986,
+          "x": 82,
+          "y": 0
+        },
+        {
+          "h": 2264,
+          "w": 1132,
+          "x": 509,
+          "y": 0
+        },
+        {
+          "h": 2264,
+          "w": 2264,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1981452072777048121/photo/1",
+      "url": "https://pbs.twimg.com/media/G3-IKIvXoAAACYQ.jpg",
+      "width": 2264,
+      "height": 2264
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,345 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-02-10T08:19:34.000Z",
+  "display_text_range": [
+    0,
+    195
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/RUL0b3a6cY",
+        "expanded_url": "https://x.com/peetzweg/status/1623959850270031872/photo/1",
+        "indices": [
+          196,
+          219
+        ],
+        "url": "https://t.co/RUL0b3a6cY"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1560002680612950022",
+        "indices": [
+          172,
+          195
+        ],
+        "url": "https://t.co/xIW5jPSto4"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "3167734591",
+        "indices": [
+          10,
+          15
+        ],
+        "name": "Visual Studio Code",
+        "screen_name": "code"
+      }
+    ]
+  },
+  "id_str": "1623959850270031872",
+  "text": "By now my @code extension got over 200 installs! \n\nI started to dust off the codebase yesterday, to make it more maintainable, fix bugs and add a feature I always wanted.\n\nhttps://t.co/xIW5jPSto4 https://t.co/RUL0b3a6cY",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1623959850270031872"
+    ],
+    "editable_until_msecs": "1676018974000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/RUL0b3a6cY",
+      "expanded_url": "https://x.com/peetzweg/status/1623959850270031872/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        196,
+        219
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/Fol1psZXsAEJf1k.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 288,
+            "w": 514,
+            "x": 35,
+            "y": 0
+          },
+          {
+            "h": 288,
+            "w": 288,
+            "x": 148,
+            "y": 0
+          },
+          {
+            "h": 288,
+            "w": 253,
+            "x": 166,
+            "y": 0
+          },
+          {
+            "h": 288,
+            "w": 144,
+            "x": 220,
+            "y": 0
+          },
+          {
+            "h": 288,
+            "w": 900,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 288,
+        "width": 900
+      },
+      "sizes": {
+        "large": {
+          "h": 288,
+          "resize": "fit",
+          "w": 900
+        },
+        "medium": {
+          "h": 288,
+          "resize": "fit",
+          "w": 900
+        },
+        "small": {
+          "h": 218,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/RUL0b3a6cY"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 288,
+          "w": 514,
+          "x": 35,
+          "y": 0
+        },
+        {
+          "h": 288,
+          "w": 288,
+          "x": 148,
+          "y": 0
+        },
+        {
+          "h": 288,
+          "w": 253,
+          "x": 166,
+          "y": 0
+        },
+        {
+          "h": 288,
+          "w": 144,
+          "x": 220,
+          "y": 0
+        },
+        {
+          "h": 288,
+          "w": 900,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1623959850270031872/photo/1",
+      "url": "https://pbs.twimg.com/media/Fol1psZXsAEJf1k.png",
+      "width": 900,
+      "height": 288
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 0,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 1,
+    "retweet_count": 0,
+    "created_at": "2022-08-17T20:36:37.000Z",
+    "display_text_range": [
+      0,
+      185
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/EvjUwXWmaW",
+          "expanded_url": "https://x.com/peetzweg/status/1560002680612950022/photo/1",
+          "indices": [
+            186,
+            209
+          ],
+          "url": "https://t.co/EvjUwXWmaW"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "buff.ly/3bEE7Fs",
+          "expanded_url": "https://buff.ly/3bEE7Fs",
+          "indices": [
+            162,
+            185
+          ],
+          "url": "https://t.co/cEejnu0HVS"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "1078199034899238912",
+          "indices": [
+            12,
+            20
+          ],
+          "name": "GitLens",
+          "screen_name": "gitlens"
+        },
+        {
+          "id_str": "3167734591",
+          "indices": [
+            150,
+            155
+          ],
+          "name": "Visual Studio Code",
+          "screen_name": "code"
+        }
+      ]
+    },
+    "id_str": "1560002680612950022",
+    "text": "Inspired by @gitlens I've added a feature to 0.4.0 \"Crypto Address Lens\", which shows the \"symbol()\" value of the selected address inline. Get it for @code here: https://t.co/cEejnu0HVS https://t.co/EvjUwXWmaW",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1560002680612950022"
+      ],
+      "editable_until_msecs": "1660770397000",
+      "edits_remaining": "5",
+      "is_edit_eligible": false
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/EvjUwXWmaW",
+        "expanded_url": "https://x.com/peetzweg/status/1560002680612950022/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          186,
+          209
+        ],
+        "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/FaY-FR8XEAEwtCg.jpg",
+        "original_info": {
+          "focus_rects": [],
+          "height": 250,
+          "width": 912
+        },
+        "sizes": {
+          "large": {
+            "h": 250,
+            "resize": "fit",
+            "w": 912
+          },
+          "medium": {
+            "h": 250,
+            "resize": "fit",
+            "w": 912
+          },
+          "small": {
+            "h": 186,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "animated_gif",
+        "url": "https://t.co/EvjUwXWmaW",
+        "video_info": {
+          "aspect_ratio": [
+            456,
+            125
+          ],
+          "variants": [
+            {
+              "bitrate": 0,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/tweet_video/FaY-FR8XEAEwtCg.mp4"
+            }
+          ]
+        }
+      }
+    ],
+    "photos": [],
+    "video": {
+      "aspectRatio": [
+        456,
+        125
+      ],
+      "contentType": "gif",
+      "durationMs": 0,
+      "mediaAvailability": {
+        "status": "available"
+      },
+      "poster": "https://pbs.twimg.com/tweet_video_thumb/FaY-FR8XEAEwtCg.jpg",
+      "variants": [
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/tweet_video/FaY-FR8XEAEwtCg.mp4"
+        }
+      ],
+      "videoId": {
+        "type": "tweet",
+        "id": "1560002680612950022"
+      },
+      "viewCount": 0
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

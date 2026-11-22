@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-09-08T16:26:31.000Z",
+  "display_text_range": [
+    0,
+    202
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/xxF8UMSTW4",
+        "expanded_url": "https://x.com/peetzweg/status/1567912273473314819/photo/1",
+        "indices": [
+          203,
+          226
+        ],
+        "url": "https://t.co/xxF8UMSTW4"
+      }
+    ]
+  },
+  "id_str": "1567912273473314819",
+  "text": "Whats the deal with all these fake accounts messaging on twitter asking for help with their seed phrase? \nDo they want to trick you to interact with a certain contract or something with your own wallet? https://t.co/xxF8UMSTW4",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1567912273473314819"
+    ],
+    "editable_until_msecs": "1662656191000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/xxF8UMSTW4",
+      "expanded_url": "https://x.com/peetzweg/status/1567912273473314819/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        203,
+        226
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FcJXso-X0AA8IF4.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 671,
+            "w": 1198,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 842,
+            "x": 28,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 480,
+            "x": 209,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 1198,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 960,
+        "width": 1198
+      },
+      "sizes": {
+        "large": {
+          "h": 960,
+          "resize": "fit",
+          "w": 1198
+        },
+        "medium": {
+          "h": 960,
+          "resize": "fit",
+          "w": 1198
+        },
+        "small": {
+          "h": 545,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/xxF8UMSTW4"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 671,
+          "w": 1198,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 842,
+          "x": 28,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 480,
+          "x": 209,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 1198,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1567912273473314819/photo/1",
+      "url": "https://pbs.twimg.com/media/FcJXso-X0AA8IF4.jpg",
+      "width": 1198,
+      "height": 960
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

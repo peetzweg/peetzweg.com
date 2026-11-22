@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 160,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-02-23T20:28:49.000Z",
+  "display_text_range": [
+    0,
+    273
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/Fm9MfWcL03",
+        "expanded_url": "https://x.com/peetzweg/status/1628854415380602887/video/1",
+        "indices": [
+          273,
+          296
+        ],
+        "url": "https://t.co/Fm9MfWcL03"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "docs.pmnd.rs/react-three-fi…",
+        "expanded_url": "https://docs.pmnd.rs/react-three-fiber/getting-started/examples",
+        "indices": [
+          131,
+          154
+        ],
+        "url": "https://t.co/KKxo33oJYz"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1302876380561055744",
+        "indices": [
+          170,
+          177
+        ],
+        "name": "Poimandres",
+        "screen_name": "pmndrs"
+      }
+    ]
+  },
+  "id_str": "1628854415380602887",
+  "text": "How did I miss out on `React Three Fiber` for so long. 🤯\n\nThe examples are just insane. All of this runs flawless in your browser!\nhttps://t.co/KKxo33oJYz\n\nAnd the whole @pmndrs ecosystem is quite advanced as well already! Straight forward to use if you already use React. https://t.co/Fm9MfWcL03",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1628854415380602887"
+    ],
+    "editable_until_msecs": "1677185929000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/Fm9MfWcL03",
+      "expanded_url": "https://x.com/peetzweg/status/1628854415380602887/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        273,
+        296
+      ],
+      "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1628852922409779202/pu/img/etkHUOi5ll6slnGa.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1224,
+        "width": 1920
+      },
+      "sizes": {
+        "large": {
+          "h": 1224,
+          "resize": "fit",
+          "w": 1920
+        },
+        "medium": {
+          "h": 765,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 434,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/Fm9MfWcL03",
+      "video_info": {
+        "aspect_ratio": [
+          80,
+          51
+        ],
+        "duration_millis": 61791,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/ext_tw_video/1628852922409779202/pu/pl/-y-CYnLF591CgLK4.m3u8?tag=12"
+          },
+          {
+            "bitrate": 256000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1628852922409779202/pu/vid/422x270/sNw4Ek87SFvzRsib.mp4?tag=12"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1628852922409779202/pu/vid/564x360/ls6iaWVdKl100G--.mp4?tag=12"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1628852922409779202/pu/vid/1128x720/2TZ1n764UmZxsoY4.mp4?tag=12"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      80,
+      51
+    ],
+    "contentType": "media_entity",
+    "durationMs": 61791,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1628852922409779202/pu/img/etkHUOi5ll6slnGa.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/ext_tw_video/1628852922409779202/pu/pl/-y-CYnLF591CgLK4.m3u8?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1628852922409779202/pu/vid/422x270/sNw4Ek87SFvzRsib.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1628852922409779202/pu/vid/564x360/ls6iaWVdKl100G--.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1628852922409779202/pu/vid/1128x720/2TZ1n764UmZxsoY4.mp4?tag=12"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1628854415380602887"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

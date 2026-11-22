@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-01-13T17:43:29.000Z",
+  "display_text_range": [
+    0,
+    256
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/nrugl5pIbA",
+        "expanded_url": "https://x.com/peetzweg/status/1613954903327608849/video/1",
+        "indices": [
+          257,
+          280
+        ],
+        "url": "https://t.co/nrugl5pIbA"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "380749300",
+        "indices": [
+          227,
+          233
+        ],
+        "name": "Apple",
+        "screen_name": "Apple"
+      }
+    ]
+  },
+  "id_str": "1613954903327608849",
+  "text": "TIL, Quicktime also splits a video with \n`CMD + Y`, \nwhich lets you easily remove parts in the middle of the video.\n\nUntil know I just knew about trimming the start and end with `CMD + T`.\n\nI like when I can just use the stock @Apple  apps for basic tasks! https://t.co/nrugl5pIbA",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1613954903327608849"
+    ],
+    "editable_until_msecs": "1673633609000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/nrugl5pIbA",
+      "expanded_url": "https://x.com/peetzweg/status/1613954903327608849/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        257,
+        280
+      ],
+      "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1613953867103834131/pu/img/q1JWFoj_eeEgh0vj.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1276,
+        "width": 2048
+      },
+      "sizes": {
+        "large": {
+          "h": 1276,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 748,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 424,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/nrugl5pIbA",
+      "video_info": {
+        "aspect_ratio": [
+          512,
+          319
+        ],
+        "duration_millis": 16133,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/ext_tw_video/1613953867103834131/pu/pl/ahl08Dcnaz6fgF_b.m3u8?tag=12"
+          },
+          {
+            "bitrate": 256000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1613953867103834131/pu/vid/432x270/pflvzJjg1JUZQ2eK.mp4?tag=12"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1613953867103834131/pu/vid/576x360/xfEkaUB2HPKr-_2B.mp4?tag=12"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1613953867103834131/pu/vid/1154x720/7YiHy9f7DY987bD_.mp4?tag=12"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      512,
+      319
+    ],
+    "contentType": "media_entity",
+    "durationMs": 16133,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1613953867103834131/pu/img/q1JWFoj_eeEgh0vj.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/ext_tw_video/1613953867103834131/pu/pl/ahl08Dcnaz6fgF_b.m3u8?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1613953867103834131/pu/vid/432x270/pflvzJjg1JUZQ2eK.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1613953867103834131/pu/vid/576x360/xfEkaUB2HPKr-_2B.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1613953867103834131/pu/vid/1154x720/7YiHy9f7DY987bD_.mp4?tag=12"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1613954903327608849"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

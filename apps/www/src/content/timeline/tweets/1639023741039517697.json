@@ -1,0 +1,378 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-03-23T21:58:06.000Z",
+  "display_text_range": [
+    0,
+    250
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/KERzET85LR",
+        "expanded_url": "https://x.com/peetzweg/status/1639023741039517697/photo/1",
+        "indices": [
+          250,
+          273
+        ],
+        "url": "https://t.co/KERzET85LR"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "peet.sh/running/",
+        "expanded_url": "https://www.peet.sh/running/",
+        "indices": [
+          201,
+          224
+        ],
+        "url": "https://t.co/ITPHYuUXXm"
+      },
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1616104994574303236",
+        "indices": [
+          226,
+          249
+        ],
+        "url": "https://t.co/keW6pWG2TG"
+      }
+    ]
+  },
+  "id_str": "1639023741039517697",
+  "text": "Did some recreational programming today to combine the Elevate App yearly graphs into a continuous one.\n\nAdditionally marking Half- (29) and Full-Marathons (2) I did so far on my running journey.🏃‍♂️\n\nhttps://t.co/ITPHYuUXXm\n\nhttps://t.co/keW6pWG2TG https://t.co/KERzET85LR",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1639023741039517697"
+    ],
+    "editable_until_msecs": "1679610486000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/KERzET85LR",
+      "expanded_url": "https://x.com/peetzweg/status/1639023741039517697/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        250,
+        273
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/Fr747NwXsAAnN97.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1447,
+            "w": 2584,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1448,
+            "w": 1448,
+            "x": 1136,
+            "y": 0
+          },
+          {
+            "h": 1448,
+            "w": 1270,
+            "x": 1314,
+            "y": 0
+          },
+          {
+            "h": 1448,
+            "w": 724,
+            "x": 1860,
+            "y": 0
+          },
+          {
+            "h": 1448,
+            "w": 2584,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1448,
+        "width": 2584
+      },
+      "sizes": {
+        "large": {
+          "h": 1148,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 672,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 381,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/KERzET85LR"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1447,
+          "w": 2584,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1448,
+          "w": 1448,
+          "x": 1136,
+          "y": 0
+        },
+        {
+          "h": 1448,
+          "w": 1270,
+          "x": 1314,
+          "y": 0
+        },
+        {
+          "h": 1448,
+          "w": 724,
+          "x": 1860,
+          "y": 0
+        },
+        {
+          "h": 1448,
+          "w": 2584,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1639023741039517697/photo/1",
+      "url": "https://pbs.twimg.com/media/Fr747NwXsAAnN97.jpg",
+      "width": 2584,
+      "height": 1448
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 3,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2023-01-19T16:07:11.000Z",
+    "display_text_range": [
+      0,
+      219
+    ],
+    "entities": {
+      "hashtags": [
+        {
+          "indices": [
+            180,
+            197
+          ],
+          "text": "ElevateSportsApp"
+        },
+        {
+          "indices": [
+            204,
+            218
+          ],
+          "text": "ElevateStrava"
+        }
+      ],
+      "media": [
+        {
+          "display_url": "pic.x.com/yx8WGQFV2D",
+          "expanded_url": "https://x.com/peetzweg/status/1616104994574303236/photo/1",
+          "indices": [
+            220,
+            243
+          ],
+          "url": "https://t.co/yx8WGQFV2D"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "90039978",
+          "indices": [
+            150,
+            166
+          ],
+          "name": "Thomas Champagne",
+          "screen_name": "champagnethomas"
+        }
+      ]
+    },
+    "id_str": "1616104994574303236",
+    "text": "Every year I'm coming back to this graph to see how I did. \n\nIt shows the accumulated kilometers I ran per year. Simple but pleasing metric. \n\nThanks @champagnethomas for building #ElevateSportsApp &amp; #ElevateStrava. https://t.co/yx8WGQFV2D",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1616104994574303236"
+      ],
+      "editable_until_msecs": "1674146231000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/yx8WGQFV2D",
+        "expanded_url": "https://x.com/peetzweg/status/1616104994574303236/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          220,
+          243
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/Fm2N71bWIAE2dv6.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 1810,
+              "w": 3232,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 1816,
+              "w": 1816,
+              "x": 708,
+              "y": 0
+            },
+            {
+              "h": 1816,
+              "w": 1593,
+              "x": 820,
+              "y": 0
+            },
+            {
+              "h": 1816,
+              "w": 908,
+              "x": 1162,
+              "y": 0
+            },
+            {
+              "h": 1816,
+              "w": 3232,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 1816,
+          "width": 3232
+        },
+        "sizes": {
+          "large": {
+            "h": 1151,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 674,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 382,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/yx8WGQFV2D"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 1810,
+            "w": 3232,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1816,
+            "w": 1816,
+            "x": 708,
+            "y": 0
+          },
+          {
+            "h": 1816,
+            "w": 1593,
+            "x": 820,
+            "y": 0
+          },
+          {
+            "h": 1816,
+            "w": 908,
+            "x": 1162,
+            "y": 0
+          },
+          {
+            "h": 1816,
+            "w": 3232,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/1616104994574303236/photo/1",
+        "url": "https://pbs.twimg.com/media/Fm2N71bWIAE2dv6.jpg",
+        "width": 3232,
+        "height": 1816
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

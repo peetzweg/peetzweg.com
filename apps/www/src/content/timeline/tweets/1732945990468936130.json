@@ -1,0 +1,325 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-12-08T02:11:35.000Z",
+  "display_text_range": [
+    0,
+    193
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/Un3KJxfY8i",
+        "expanded_url": "https://x.com/peetzweg/status/1732945990468936130/video/1",
+        "indices": [
+          194,
+          217
+        ],
+        "url": "https://t.co/Un3KJxfY8i"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1601586407956713474",
+        "indices": [
+          170,
+          193
+        ],
+        "url": "https://t.co/RrX35dRrBi"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "2412652615",
+        "indices": [
+          16,
+          26
+        ],
+        "name": "Coingecko",
+        "screen_name": "coingecko"
+      }
+    ]
+  },
+  "id_str": "1732945990468936130",
+  "text": "I already enjoy @coingecko. Please add this single css property. It would greatly improve readability of the td elements, thanks.\n\n`font-variant-numeric: tabular-nums;`\n\nhttps://t.co/RrX35dRrBi https://t.co/Un3KJxfY8i",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1732945990468936130"
+    ],
+    "editable_until_msecs": "1702005095000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/Un3KJxfY8i",
+      "expanded_url": "https://x.com/peetzweg/status/1732945990468936130/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        194,
+        217
+      ],
+      "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1732944644646842368/pu/img/Tp-JefhdH6_gIAm1.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1690,
+        "width": 2092
+      },
+      "sizes": {
+        "large": {
+          "h": 1654,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 969,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 549,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/Un3KJxfY8i",
+      "video_info": {
+        "aspect_ratio": [
+          1046,
+          845
+        ],
+        "duration_millis": 5178,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/ext_tw_video/1732944644646842368/pu/pl/_HESy7_OJlFtC84_.m3u8?tag=12"
+          },
+          {
+            "bitrate": 256000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1732944644646842368/pu/vid/avc1/334x270/yTTp_0-G1iXaIKCE.mp4?tag=12"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1732944644646842368/pu/vid/avc1/444x360/YWkKFzXaZ9aLGgfy.mp4?tag=12"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1732944644646842368/pu/vid/avc1/890x720/QXVjxdiEAzTX7Bhl.mp4?tag=12"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      1046,
+      845
+    ],
+    "contentType": "media_entity",
+    "durationMs": 5178,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1732944644646842368/pu/img/Tp-JefhdH6_gIAm1.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/ext_tw_video/1732944644646842368/pu/pl/_HESy7_OJlFtC84_.m3u8?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1732944644646842368/pu/vid/avc1/334x270/yTTp_0-G1iXaIKCE.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1732944644646842368/pu/vid/avc1/444x360/YWkKFzXaZ9aLGgfy.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1732944644646842368/pu/vid/avc1/890x720/QXVjxdiEAzTX7Bhl.mp4?tag=12"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1732945990468936130"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 18,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 1,
+    "created_at": "2022-12-10T14:35:30.000Z",
+    "display_text_range": [
+      0,
+      159
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/rcq6Q6UeNu",
+          "expanded_url": "https://x.com/peetzweg/status/1601586407956713474/photo/1",
+          "indices": [
+            159,
+            182
+          ],
+          "url": "https://t.co/rcq6Q6UeNu"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "youtube.com/watch?v=2MrNSj…",
+          "expanded_url": "https://youtube.com/watch?v=2MrNSjJFBBI&t=989s",
+          "indices": [
+            135,
+            158
+          ],
+          "url": "https://t.co/QuO2RldOGP"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "15341579",
+          "indices": [
+            78,
+            92
+          ],
+          "name": "Raphael Schaad",
+          "screen_name": "raphaelschaad"
+        }
+      ]
+    },
+    "id_str": "1601586407956713474",
+    "text": "Today I learned about `Tabular Figures`. I always used monospaced fonts. 🤦‍♂️\n@raphaelschaad sharing some great insights here, thanks!\nhttps://t.co/QuO2RldOGP https://t.co/rcq6Q6UeNu",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1601586407956713474"
+      ],
+      "editable_until_msecs": "1670684730000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/rcq6Q6UeNu",
+        "expanded_url": "https://x.com/peetzweg/status/1601586407956713474/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          159,
+          182
+        ],
+        "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Fjn6S0KWIAIbwKF.jpg",
+        "original_info": {
+          "focus_rects": [],
+          "height": 448,
+          "width": 800
+        },
+        "sizes": {
+          "large": {
+            "h": 448,
+            "resize": "fit",
+            "w": 800
+          },
+          "medium": {
+            "h": 448,
+            "resize": "fit",
+            "w": 800
+          },
+          "small": {
+            "h": 381,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "animated_gif",
+        "url": "https://t.co/rcq6Q6UeNu",
+        "video_info": {
+          "aspect_ratio": [
+            25,
+            14
+          ],
+          "variants": [
+            {
+              "bitrate": 0,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/tweet_video/Fjn6S0KWIAIbwKF.mp4"
+            }
+          ]
+        }
+      }
+    ],
+    "photos": [],
+    "video": {
+      "aspectRatio": [
+        25,
+        14
+      ],
+      "contentType": "gif",
+      "durationMs": 0,
+      "mediaAvailability": {
+        "status": "available"
+      },
+      "poster": "https://pbs.twimg.com/tweet_video_thumb/Fjn6S0KWIAIbwKF.jpg",
+      "variants": [
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/tweet_video/Fjn6S0KWIAIbwKF.mp4"
+        }
+      ],
+      "videoId": {
+        "type": "tweet",
+        "id": "1601586407956713474"
+      },
+      "viewCount": 0
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2024-03-05T19:49:14.000Z",
+  "display_text_range": [
+    0,
+    132
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/5Ooc74FAZk",
+        "expanded_url": "https://x.com/peetzweg/status/1765102290665431330/photo/1",
+        "indices": [
+          133,
+          156
+        ],
+        "url": "https://t.co/5Ooc74FAZk"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "84249568",
+        "indices": [
+          28,
+          41
+        ],
+        "name": "Kindle",
+        "screen_name": "AmazonKindle"
+      }
+    ]
+  },
+  "id_str": "1765102290665431330",
+  "text": "Recently discovered that my @AmazonKindle clippings can reveal my reading habits. Now I'm working on a visualization for my website. https://t.co/5Ooc74FAZk",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1765102290665431330"
+    ],
+    "editable_until_msecs": "1709671754000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/5Ooc74FAZk",
+      "expanded_url": "https://x.com/peetzweg/status/1765102290665431330/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        133,
+        156
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GH7mZrlXYAAj7vp.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 656,
+            "w": 1172,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 678,
+            "w": 678,
+            "x": 276,
+            "y": 0
+          },
+          {
+            "h": 678,
+            "w": 595,
+            "x": 318,
+            "y": 0
+          },
+          {
+            "h": 678,
+            "w": 339,
+            "x": 446,
+            "y": 0
+          },
+          {
+            "h": 678,
+            "w": 1172,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 678,
+        "width": 1172
+      },
+      "sizes": {
+        "large": {
+          "h": 678,
+          "resize": "fit",
+          "w": 1172
+        },
+        "medium": {
+          "h": 678,
+          "resize": "fit",
+          "w": 1172
+        },
+        "small": {
+          "h": 393,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/5Ooc74FAZk"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 656,
+          "w": 1172,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 678,
+          "w": 678,
+          "x": 276,
+          "y": 0
+        },
+        {
+          "h": 678,
+          "w": 595,
+          "x": 318,
+          "y": 0
+        },
+        {
+          "h": 678,
+          "w": 339,
+          "x": 446,
+          "y": 0
+        },
+        {
+          "h": 678,
+          "w": 1172,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1765102290665431330/photo/1",
+      "url": "https://pbs.twimg.com/media/GH7mZrlXYAAj7vp.png",
+      "width": 1172,
+      "height": 678
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

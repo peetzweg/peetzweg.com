@@ -1,0 +1,188 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-03-29T15:24:47.000Z",
+  "display_text_range": [
+    0,
+    218
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/GDkP9Uuwzi",
+        "expanded_url": "https://x.com/peetzweg/status/1641099086643314688/photo/1",
+        "indices": [
+          219,
+          242
+        ],
+        "url": "https://t.co/GDkP9Uuwzi"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "gist.github.com/peetzweg/ef1ce…",
+        "expanded_url": "https://gist.github.com/peetzweg/ef1ceea425bab38acf4886d9f049bc18",
+        "indices": [
+          195,
+          218
+        ],
+        "url": "https://t.co/oMP04TG1bz"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "13334762",
+        "indices": [
+          79,
+          86
+        ],
+        "name": "GitHub",
+        "screen_name": "github"
+      }
+    ]
+  },
+  "id_str": "1641099086643314688",
+  "text": "Just today I wrote this little `zsh` function to open the current repository's @github issues page.\n\nUsed it a lot today. Can recommend an adapted version to open the Pull Request page as well!\n\nhttps://t.co/oMP04TG1bz https://t.co/GDkP9Uuwzi",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1641099086643314688"
+    ],
+    "editable_until_msecs": "1680105287000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/GDkP9Uuwzi",
+      "expanded_url": "https://x.com/peetzweg/status/1641099086643314688/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        219,
+        242
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FsZZjYmWwAIwmLs.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 305,
+            "w": 544,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 306,
+            "w": 306,
+            "x": 51,
+            "y": 0
+          },
+          {
+            "h": 306,
+            "w": 268,
+            "x": 70,
+            "y": 0
+          },
+          {
+            "h": 306,
+            "w": 153,
+            "x": 128,
+            "y": 0
+          },
+          {
+            "h": 306,
+            "w": 544,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 306,
+        "width": 544
+      },
+      "sizes": {
+        "large": {
+          "h": 306,
+          "resize": "fit",
+          "w": 544
+        },
+        "medium": {
+          "h": 306,
+          "resize": "fit",
+          "w": 544
+        },
+        "small": {
+          "h": 306,
+          "resize": "fit",
+          "w": 544
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/GDkP9Uuwzi"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 305,
+          "w": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 306,
+          "w": 306,
+          "x": 51,
+          "y": 0
+        },
+        {
+          "h": 306,
+          "w": 268,
+          "x": 70,
+          "y": 0
+        },
+        {
+          "h": 306,
+          "w": 153,
+          "x": 128,
+          "y": 0
+        },
+        {
+          "h": 306,
+          "w": 544,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1641099086643314688/photo/1",
+      "url": "https://pbs.twimg.com/media/FsZZjYmWwAIwmLs.png",
+      "width": 544,
+      "height": 306
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

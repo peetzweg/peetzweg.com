@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-01-26T09:47:02.000Z",
+  "display_text_range": [
+    0,
+    268
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/6RVTKXbEc9",
+        "expanded_url": "https://x.com/peetzweg/status/1883451571511361557/photo/1",
+        "indices": [
+          269,
+          292
+        ],
+        "url": "https://t.co/6RVTKXbEc9"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "33104659",
+        "indices": [
+          49,
+          62
+        ],
+        "name": "",
+        "screen_name": "shaneparrish"
+      }
+    ]
+  },
+  "id_str": "1883451571511361557",
+  "text": "Just finished The Great Mental Models, Vol. 3 by @shaneparrish &amp; co. The anecdotes felt fresh—none I would’ve thought of from my own background. Excited for Vol. 4, though a bit sad the design change means it won’t fully match the rest… unless I rebuy all of them. https://t.co/6RVTKXbEc9",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1883451571511361557"
+    ],
+    "editable_until_msecs": "1737888422000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/6RVTKXbEc9",
+      "expanded_url": "https://x.com/peetzweg/status/1883451571511361557/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        269,
+        292
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GiNdOP2XIAA2bGw.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 538,
+            "w": 960,
+            "x": 0,
+            "y": 275
+          },
+          {
+            "h": 960,
+            "w": 960,
+            "x": 0,
+            "y": 64
+          },
+          {
+            "h": 1094,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 640,
+            "x": 96,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1280,
+        "width": 960
+      },
+      "sizes": {
+        "large": {
+          "h": 1280,
+          "resize": "fit",
+          "w": 960
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 900
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 510
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/6RVTKXbEc9"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 538,
+          "w": 960,
+          "x": 0,
+          "y": 275
+        },
+        {
+          "h": 960,
+          "w": 960,
+          "x": 0,
+          "y": 64
+        },
+        {
+          "h": 1094,
+          "w": 960,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 640,
+          "x": 96,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 960,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1883451571511361557/photo/1",
+      "url": "https://pbs.twimg.com/media/GiNdOP2XIAA2bGw.jpg",
+      "width": 960,
+      "height": 1280
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

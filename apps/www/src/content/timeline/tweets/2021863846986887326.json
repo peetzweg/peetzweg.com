@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-12T08:28:00.000Z",
+  "display_text_range": [
+    0,
+    139
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/ouW1W3uzxi",
+        "expanded_url": "https://x.com/peetzweg/status/2021863846986887326/photo/1",
+        "indices": [
+          140,
+          163
+        ],
+        "url": "https://t.co/ouW1W3uzxi"
+      }
+    ]
+  },
+  "id_str": "2021863846986887326",
+  "text": "What is worth building to your own requirements and what is not. Tough decision these days as you can get something ~working in half a day. https://t.co/ouW1W3uzxi",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2021863846986887326"
+    ],
+    "editable_until_msecs": "1770888480000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/ouW1W3uzxi",
+      "expanded_url": "https://x.com/peetzweg/status/2021863846986887326/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        140,
+        163
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HA8S6MEa4AAJ-mY.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 577,
+            "w": 1030,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 750,
+            "w": 750,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 750,
+            "w": 658,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 750,
+            "w": 375,
+            "x": 96,
+            "y": 0
+          },
+          {
+            "h": 750,
+            "w": 1030,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 750,
+        "width": 1030
+      },
+      "sizes": {
+        "large": {
+          "h": 750,
+          "resize": "fit",
+          "w": 1030
+        },
+        "medium": {
+          "h": 750,
+          "resize": "fit",
+          "w": 1030
+        },
+        "small": {
+          "h": 495,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/ouW1W3uzxi"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 577,
+          "w": 1030,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 750,
+          "w": 750,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 750,
+          "w": 658,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 750,
+          "w": 375,
+          "x": 96,
+          "y": 0
+        },
+        {
+          "h": 750,
+          "w": 1030,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2021863846986887326/photo/1",
+      "url": "https://pbs.twimg.com/media/HA8S6MEa4AAJ-mY.jpg",
+      "width": 1030,
+      "height": 750
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

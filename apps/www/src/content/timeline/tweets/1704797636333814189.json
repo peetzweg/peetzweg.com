@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-09-21T10:00:04.000Z",
+  "display_text_range": [
+    0,
+    172
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/Vjv44rRsnq",
+        "expanded_url": "https://x.com/peetzweg/status/1704797636333814189/photo/1",
+        "indices": [
+          173,
+          196
+        ],
+        "url": "https://t.co/Vjv44rRsnq"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "valvesoftware.com/en/about",
+        "expanded_url": "https://www.valvesoftware.com/en/about",
+        "indices": [
+          149,
+          172
+        ],
+        "url": "https://t.co/H4gVbs5qJa"
+      }
+    ]
+  },
+  "id_str": "1704797636333814189",
+  "text": "These knolled Steam Controller prototypes shows the beauty of the iterative process.\nThe first version is just parts of controllers taped together!\n\nhttps://t.co/H4gVbs5qJa https://t.co/Vjv44rRsnq",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1704797636333814189"
+    ],
+    "editable_until_msecs": "1695294004000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/Vjv44rRsnq",
+      "expanded_url": "https://x.com/peetzweg/status/1704797636333814189/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        173,
+        196
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/F6ioaiFawAAvPe4.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 840,
+            "w": 1500,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1116,
+            "w": 1116,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1116,
+            "w": 979,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1116,
+            "w": 558,
+            "x": 58,
+            "y": 0
+          },
+          {
+            "h": 1116,
+            "w": 1500,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1116,
+        "width": 1500
+      },
+      "sizes": {
+        "large": {
+          "h": 1116,
+          "resize": "fit",
+          "w": 1500
+        },
+        "medium": {
+          "h": 893,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 506,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/Vjv44rRsnq"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 840,
+          "w": 1500,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1116,
+          "w": 1116,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1116,
+          "w": 979,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1116,
+          "w": 558,
+          "x": 58,
+          "y": 0
+        },
+        {
+          "h": 1116,
+          "w": 1500,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1704797636333814189/photo/1",
+      "url": "https://pbs.twimg.com/media/F6ioaiFawAAvPe4.jpg",
+      "width": 1500,
+      "height": 1116
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

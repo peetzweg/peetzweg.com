@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-13T21:42:00.000Z",
+  "display_text_range": [
+    0,
+    110
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/07yzOxDsJh",
+        "expanded_url": "https://x.com/peetzweg/status/2022426051733766363/photo/1",
+        "indices": [
+          111,
+          134
+        ],
+        "url": "https://t.co/07yzOxDsJh"
+      }
+    ]
+  },
+  "id_str": "2022426051733766363",
+  "text": "WW3 gargoyles carrying local inference module to outsmart the enemy even when disconnected from the mainframe. https://t.co/07yzOxDsJh",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2022426051733766363"
+    ],
+    "editable_until_msecs": "1771022520000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/07yzOxDsJh",
+      "expanded_url": "https://x.com/peetzweg/status/2022426051733766363/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        111,
+        134
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HBD-DVRWIAAX5sK.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 334,
+            "w": 596,
+            "x": 0,
+            "y": 287
+          },
+          {
+            "h": 596,
+            "w": 596,
+            "x": 0,
+            "y": 156
+          },
+          {
+            "h": 679,
+            "w": 596,
+            "x": 0,
+            "y": 115
+          },
+          {
+            "h": 957,
+            "w": 479,
+            "x": 24,
+            "y": 0
+          },
+          {
+            "h": 957,
+            "w": 596,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 957,
+        "width": 596
+      },
+      "sizes": {
+        "large": {
+          "h": 957,
+          "resize": "fit",
+          "w": 596
+        },
+        "medium": {
+          "h": 957,
+          "resize": "fit",
+          "w": 596
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 423
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/07yzOxDsJh"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 334,
+          "w": 596,
+          "x": 0,
+          "y": 287
+        },
+        {
+          "h": 596,
+          "w": 596,
+          "x": 0,
+          "y": 156
+        },
+        {
+          "h": 679,
+          "w": 596,
+          "x": 0,
+          "y": 115
+        },
+        {
+          "h": 957,
+          "w": 479,
+          "x": 24,
+          "y": 0
+        },
+        {
+          "h": 957,
+          "w": 596,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2022426051733766363/photo/1",
+      "url": "https://pbs.twimg.com/media/HBD-DVRWIAAX5sK.jpg",
+      "width": 596,
+      "height": 957
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

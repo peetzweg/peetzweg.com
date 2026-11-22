@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 13,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-29T16:31:00.000Z",
+  "display_text_range": [
+    0,
+    147
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/zYy7CZRFwk",
+        "expanded_url": "https://x.com/peetzweg/status/2071632535734612301/photo/1",
+        "indices": [
+          148,
+          171
+        ],
+        "url": "https://t.co/zYy7CZRFwk"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "commit-history.com",
+        "expanded_url": "http://commit-history.com",
+        "indices": [
+          23,
+          46
+        ],
+        "url": "https://t.co/A7qY1TVhvr"
+      }
+    ]
+  },
+  "id_str": "2071632535734612301",
+  "text": "You can now embed your https://t.co/A7qY1TVhvr graph in your GitHub Profile. You find the embed code on the website below the graph on the website. https://t.co/zYy7CZRFwk",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2071632535734612301"
+    ],
+    "editable_until_msecs": "1782754260000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/zYy7CZRFwk",
+      "expanded_url": "https://x.com/peetzweg/status/2071632535734612301/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        148,
+        171
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HL_jzjyWEAAcZ0D.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1081,
+            "w": 1930,
+            "x": 0,
+            "y": 179
+          },
+          {
+            "h": 1260,
+            "w": 1260,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1105,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 630,
+            "x": 22,
+            "y": 0
+          },
+          {
+            "h": 1260,
+            "w": 1930,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1260,
+        "width": 1930
+      },
+      "sizes": {
+        "large": {
+          "h": 1260,
+          "resize": "fit",
+          "w": 1930
+        },
+        "medium": {
+          "h": 783,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 444,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/zYy7CZRFwk"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1081,
+          "w": 1930,
+          "x": 0,
+          "y": 179
+        },
+        {
+          "h": 1260,
+          "w": 1260,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 1105,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 630,
+          "x": 22,
+          "y": 0
+        },
+        {
+          "h": 1260,
+          "w": 1930,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2071632535734612301/photo/1",
+      "url": "https://pbs.twimg.com/media/HL_jzjyWEAAcZ0D.jpg",
+      "width": 1930,
+      "height": 1260
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

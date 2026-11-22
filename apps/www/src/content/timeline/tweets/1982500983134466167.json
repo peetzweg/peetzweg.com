@@ -1,0 +1,210 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-10-26T17:34:02.000Z",
+  "display_text_range": [
+    0,
+    280
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/iqop6zDpGE",
+        "expanded_url": "https://x.com/peetzweg/status/1982500983134466167/photo/1",
+        "indices": [
+          281,
+          304
+        ],
+        "url": "https://t.co/iqop6zDpGE"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1873711290331635840",
+        "indices": [
+          257,
+          280
+        ],
+        "url": "https://t.co/WjAEVR16yJ"
+      }
+    ]
+  },
+  "id_str": "1982500983134466167",
+  "text": "Made a lucky pick for my first mouth tape in Vietnam. An unbranded blue roll of tape.\nSince it is empty, I was on a quest to find a replacement. I didn't want to buy overpriced mouth plasters. A few mispurchases later, I can recommend the Leukosilk tapes!\n\nhttps://t.co/WjAEVR16yJ https://t.co/iqop6zDpGE",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1982500983134466167"
+    ],
+    "editable_until_msecs": "1761503642000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/iqop6zDpGE",
+      "expanded_url": "https://x.com/peetzweg/status/1982500983134466167/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        281,
+        304
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G4NCI2EWMAETbP2.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 717,
+            "w": 1280,
+            "x": 0,
+            "y": 122
+          },
+          {
+            "h": 960,
+            "w": 960,
+            "x": 320,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 842,
+            "x": 438,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 480,
+            "x": 624,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 960,
+        "width": 1280
+      },
+      "sizes": {
+        "large": {
+          "h": 960,
+          "resize": "fit",
+          "w": 1280
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/iqop6zDpGE"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 717,
+          "w": 1280,
+          "x": 0,
+          "y": 122
+        },
+        {
+          "h": 960,
+          "w": 960,
+          "x": 320,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 842,
+          "x": 438,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 480,
+          "x": 624,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1982500983134466167/photo/1",
+      "url": "https://pbs.twimg.com/media/G4NCI2EWMAETbP2.jpg",
+      "width": 1280,
+      "height": 960
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 2,
+    "lang": "en",
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2024-12-30T12:42:38.000Z",
+    "display_text_range": [
+      0,
+      130
+    ],
+    "entities": {},
+    "id_str": "1873711290331635840",
+    "text": "If you’re in your 20s, try mouth taping to fix your sleep.\n\nGo into debt if you have to.\n\nIt single-handedly fixed mine in my 30s.",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1873711290331635840"
+      ],
+      "editable_until_msecs": "1735566158000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

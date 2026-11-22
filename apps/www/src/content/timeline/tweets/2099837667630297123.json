@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-09-15T12:28:07.000Z",
+  "display_text_range": [
+    0,
+    134
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/5255WSM8Lu",
+        "expanded_url": "https://x.com/peetzweg/status/2099837667630297123/photo/1",
+        "indices": [
+          135,
+          158
+        ],
+        "url": "https://t.co/5255WSM8Lu"
+      }
+    ]
+  },
+  "id_str": "2099837667630297123",
+  "text": "Want to wrap up network leaderboards for commit-history this week. So you can actually see how you compare to the accounts you follow. https://t.co/5255WSM8Lu",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2099837667630297123"
+    ],
+    "editable_until_msecs": "1789478887000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/5255WSM8Lu",
+      "expanded_url": "https://x.com/peetzweg/status/2099837667630297123/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        135,
+        158
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HSQfMOjXwAAJxb8.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 560,
+            "w": 1000,
+            "x": 0,
+            "y": 292
+          },
+          {
+            "h": 1000,
+            "w": 1000,
+            "x": 0,
+            "y": 72
+          },
+          {
+            "h": 1140,
+            "w": 1000,
+            "x": 0,
+            "y": 2
+          },
+          {
+            "h": 1348,
+            "w": 674,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1348,
+            "w": 1000,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1348,
+        "width": 1000
+      },
+      "sizes": {
+        "large": {
+          "h": 1348,
+          "resize": "fit",
+          "w": 1000
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 890
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 504
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/5255WSM8Lu"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 560,
+          "w": 1000,
+          "x": 0,
+          "y": 292
+        },
+        {
+          "h": 1000,
+          "w": 1000,
+          "x": 0,
+          "y": 72
+        },
+        {
+          "h": 1140,
+          "w": 1000,
+          "x": 0,
+          "y": 2
+        },
+        {
+          "h": 1348,
+          "w": 674,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1348,
+          "w": 1000,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2099837667630297123/photo/1",
+      "url": "https://pbs.twimg.com/media/HSQfMOjXwAAJxb8.jpg",
+      "width": 1000,
+      "height": 1348
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

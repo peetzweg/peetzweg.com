@@ -1,0 +1,338 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-11-13T20:41:01.000Z",
+  "display_text_range": [
+    0,
+    106
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/PP6rH1RwWv",
+        "expanded_url": "https://x.com/peetzweg/status/1989071021786427747/video/1",
+        "indices": [
+          107,
+          130
+        ],
+        "url": "https://t.co/PP6rH1RwWv"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/SebCornelius/s…",
+        "expanded_url": "https://x.com/SebCornelius/status/1987516302970490986",
+        "indices": [
+          83,
+          106
+        ],
+        "url": "https://t.co/5FPayPa1oj"
+      }
+    ]
+  },
+  "id_str": "1989071021786427747",
+  "text": "Had to try this effect for myself. Probably very limited use but fan of the vibe.\n\nhttps://t.co/5FPayPa1oj https://t.co/PP6rH1RwWv",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1989071021786427747"
+    ],
+    "editable_until_msecs": "1763070061000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/PP6rH1RwWv",
+      "expanded_url": "https://x.com/peetzweg/status/1989071021786427747/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        107,
+        130
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1989069752984100864/img/cIY9Gk0stDD0WXuz.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1890,
+        "width": 3024
+      },
+      "sizes": {
+        "large": {
+          "h": 1280,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 750,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 425,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/PP6rH1RwWv",
+      "video_info": {
+        "aspect_ratio": [
+          8,
+          5
+        ],
+        "duration_millis": 20710,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/1989069752984100864/pl/2onHjn4pW6Fem7Iv.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/432x270/D5uUsDkpJmJiGhQ3.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/576x360/S-CakKUd1pgmjdEP.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/1152x720/iyRh43CDdP0u6puP.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      8,
+      5
+    ],
+    "contentType": "media_entity",
+    "durationMs": 20710,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/1989069752984100864/img/cIY9Gk0stDD0WXuz.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/1989069752984100864/pl/2onHjn4pW6Fem7Iv.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/432x270/D5uUsDkpJmJiGhQ3.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/576x360/S-CakKUd1pgmjdEP.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/1989069752984100864/vid/avc1/1152x720/iyRh43CDdP0u6puP.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1989071021786427747"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 260,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 14,
+    "retweet_count": 9,
+    "created_at": "2025-11-09T13:43:07.000Z",
+    "display_text_range": [
+      0,
+      54
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/ZTWJvxppGf",
+          "expanded_url": "https://x.com/SebCornelius/status/1987516302970490986/video/1",
+          "indices": [
+            55,
+            78
+          ],
+          "url": "https://t.co/ZTWJvxppGf"
+        }
+      ]
+    },
+    "id_str": "1987516302970490986",
+    "text": "Customizable environment shadows in my document editor https://t.co/ZTWJvxppGf",
+    "user": {
+      "id_str": "1452681194001285120",
+      "name": "Seb Cornelius",
+      "screen_name": "SebCornelius",
+      "is_blue_verified": true,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1910194496966680576/wwkh7f8r_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1987516302970490986"
+      ],
+      "editable_until_msecs": "1762699387000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "additional_media_info": {},
+        "display_url": "pic.x.com/ZTWJvxppGf",
+        "expanded_url": "https://x.com/SebCornelius/status/1987516302970490986/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          55,
+          78
+        ],
+        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1987516221290692608/img/MKw2qIUSuRYKJ0jk.jpg",
+        "original_info": {
+          "focus_rects": [],
+          "height": 2160,
+          "width": 3632
+        },
+        "sizes": {
+          "large": {
+            "h": 1218,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 714,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 404,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "video",
+        "url": "https://t.co/ZTWJvxppGf",
+        "video_info": {
+          "aspect_ratio": [
+            227,
+            135
+          ],
+          "duration_millis": 8333,
+          "variants": [
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/amplify_video/1987516221290692608/pl/U0ovCSdiP68ev6Ji.m3u8"
+            },
+            {
+              "bitrate": 256000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1987516221290692608/vid/avc1/454x270/blDb_TT9WB0FntE-.mp4"
+            },
+            {
+              "bitrate": 832000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1987516221290692608/vid/avc1/604x360/VYnldWjGy_WYKI7N.mp4"
+            },
+            {
+              "bitrate": 2176000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1987516221290692608/vid/avc1/1210x720/OzRd8l5_gZnvt4kG.mp4"
+            },
+            {
+              "bitrate": 10368000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1987516221290692608/vid/avc1/1816x1080/7IY8g5AVLgMQSYBH.mp4"
+            },
+            {
+              "bitrate": 25128000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1987516221290692608/vid/avc1/3632x2160/6tEBvwqtnKH5HqC6.mp4"
+            }
+          ]
+        }
+      }
+    ],
+    "photos": [],
+    "video": {
+      "aspectRatio": [
+        227,
+        135
+      ],
+      "contentType": "media_entity",
+      "durationMs": 8333,
+      "mediaAvailability": {
+        "status": "available"
+      },
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/1987516221290692608/img/MKw2qIUSuRYKJ0jk.jpg",
+      "variants": [
+        {
+          "type": "application/x-mpegURL",
+          "src": "https://video.twimg.com/amplify_video/1987516221290692608/pl/U0ovCSdiP68ev6Ji.m3u8"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/1987516221290692608/vid/avc1/454x270/blDb_TT9WB0FntE-.mp4"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/1987516221290692608/vid/avc1/604x360/VYnldWjGy_WYKI7N.mp4"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/1987516221290692608/vid/avc1/1210x720/OzRd8l5_gZnvt4kG.mp4"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/1987516221290692608/vid/avc1/1816x1080/7IY8g5AVLgMQSYBH.mp4"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/1987516221290692608/vid/avc1/3632x2160/6tEBvwqtnKH5HqC6.mp4"
+        }
+      ],
+      "videoId": {
+        "type": "tweet",
+        "id": "1987516302970490986"
+      },
+      "viewCount": 0
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

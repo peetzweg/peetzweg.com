@@ -1,0 +1,186 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-02-07T19:50:41.000Z",
+  "display_text_range": [
+    0,
+    270
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/JIrybmClvP",
+        "expanded_url": "https://x.com/peetzweg/status/1623046611625443329/photo/1",
+        "indices": [
+          271,
+          294
+        ],
+        "url": "https://t.co/JIrybmClvP"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1747487052898418688",
+        "indices": [
+          31,
+          36
+        ],
+        "name": "Cron",
+        "screen_name": "Cron"
+      },
+      {
+        "id_str": "1263380605",
+        "indices": [
+          46,
+          55
+        ],
+        "name": "Calendly",
+        "screen_name": "Calendly"
+      }
+    ]
+  },
+  "id_str": "1623046611625443329",
+  "text": "How did I miss this feature in @Cron?!\nI like @Calendly as a service but don't schedule meetings every other day. So it's a bit overkill for me.\n\nThis \"Share availabilities\" feature in Cron offers the same scheduling experience as Calendly but on demand - super helpful. https://t.co/JIrybmClvP",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1623046611625443329"
+    ],
+    "editable_until_msecs": "1675801241000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/JIrybmClvP",
+      "expanded_url": "https://x.com/peetzweg/status/1623046611625443329/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        271,
+        294
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FoY4SPNWIAA-I1P.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1344,
+            "w": 2400,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1350,
+            "w": 1350,
+            "x": 585,
+            "y": 0
+          },
+          {
+            "h": 1350,
+            "w": 1184,
+            "x": 668,
+            "y": 0
+          },
+          {
+            "h": 1350,
+            "w": 675,
+            "x": 923,
+            "y": 0
+          },
+          {
+            "h": 1350,
+            "w": 2400,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1350,
+        "width": 2400
+      },
+      "sizes": {
+        "large": {
+          "h": 1152,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 675,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/JIrybmClvP"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1344,
+          "w": 2400,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1350,
+          "w": 1350,
+          "x": 585,
+          "y": 0
+        },
+        {
+          "h": 1350,
+          "w": 1184,
+          "x": 668,
+          "y": 0
+        },
+        {
+          "h": 1350,
+          "w": 675,
+          "x": 923,
+          "y": 0
+        },
+        {
+          "h": 1350,
+          "w": 2400,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1623046611625443329/photo/1",
+      "url": "https://pbs.twimg.com/media/FoY4SPNWIAA-I1P.jpg",
+      "width": 2400,
+      "height": 1350
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

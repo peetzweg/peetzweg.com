@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-11-16T10:28:00.000Z",
+  "display_text_range": [
+    0,
+    231
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/juk3xSp8rO",
+        "expanded_url": "https://x.com/peetzweg/status/1592826815135240193/photo/1",
+        "indices": [
+          232,
+          255
+        ],
+        "url": "https://t.co/juk3xSp8rO"
+      }
+    ]
+  },
+  "id_str": "1592826815135240193",
+  "text": "Had too many \"Join Community Chat\" problems lately. Pretty exhausting as so much research has been done before already. But it's more common that I'm not the first person to have the problem, so this flow usually ends after step 2. https://t.co/juk3xSp8rO",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1592826815135240193"
+    ],
+    "editable_until_msecs": "1668596280000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/juk3xSp8rO",
+      "expanded_url": "https://x.com/peetzweg/status/1592826815135240193/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        232,
+        255
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FhrZ_sWWAAERYgm.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1419,
+            "w": 2534,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2534,
+            "w": 2534,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2534,
+            "w": 2223,
+            "x": 156,
+            "y": 0
+          },
+          {
+            "h": 2534,
+            "w": 1267,
+            "x": 634,
+            "y": 0
+          },
+          {
+            "h": 2534,
+            "w": 2534,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 2534,
+        "width": 2534
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/juk3xSp8rO"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1419,
+          "w": 2534,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2534,
+          "w": 2534,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2534,
+          "w": 2223,
+          "x": 156,
+          "y": 0
+        },
+        {
+          "h": 2534,
+          "w": 1267,
+          "x": 634,
+          "y": 0
+        },
+        {
+          "h": 2534,
+          "w": 2534,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1592826815135240193/photo/1",
+      "url": "https://pbs.twimg.com/media/FhrZ_sWWAAERYgm.jpg",
+      "width": 2534,
+      "height": 2534
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

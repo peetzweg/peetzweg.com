@@ -1,0 +1,186 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-08-17T20:48:01.000Z",
+  "display_text_range": [
+    0,
+    155
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/nCeABPZirx",
+        "expanded_url": "https://x.com/peetzweg/status/1957182651929858488/photo/1",
+        "indices": [
+          155,
+          178
+        ],
+        "url": "https://t.co/nCeABPZirx"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "3116191",
+        "indices": [
+          43,
+          49
+        ],
+        "name": "Ruby on Rails",
+        "screen_name": "rails"
+      },
+      {
+        "id_str": "1467726470533754880",
+        "indices": [
+          61,
+          68
+        ],
+        "name": "Next.js",
+        "screen_name": "nextjs"
+      }
+    ]
+  },
+  "id_str": "1957182651929858488",
+  "text": "Are there any IPO success story similar to @rails built with @nextjs? I'm sure most of the companies in the showcases were already around before nextjs. 🤔 https://t.co/nCeABPZirx",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1957182651929858488"
+    ],
+    "editable_until_msecs": "1755467281000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/nCeABPZirx",
+      "expanded_url": "https://x.com/peetzweg/status/1957182651929858488/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        155,
+        178
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GylPP_uXsAAHlxz.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1231,
+            "w": 2198,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1246,
+            "w": 1246,
+            "x": 476,
+            "y": 0
+          },
+          {
+            "h": 1246,
+            "w": 1093,
+            "x": 553,
+            "y": 0
+          },
+          {
+            "h": 1246,
+            "w": 623,
+            "x": 788,
+            "y": 0
+          },
+          {
+            "h": 1246,
+            "w": 2198,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1246,
+        "width": 2198
+      },
+      "sizes": {
+        "large": {
+          "h": 1161,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 680,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 385,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/nCeABPZirx"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1231,
+          "w": 2198,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1246,
+          "w": 1246,
+          "x": 476,
+          "y": 0
+        },
+        {
+          "h": 1246,
+          "w": 1093,
+          "x": 553,
+          "y": 0
+        },
+        {
+          "h": 1246,
+          "w": 623,
+          "x": 788,
+          "y": 0
+        },
+        {
+          "h": 1246,
+          "w": 2198,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1957182651929858488/photo/1",
+      "url": "https://pbs.twimg.com/media/GylPP_uXsAAHlxz.jpg",
+      "width": 2198,
+      "height": 1246
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

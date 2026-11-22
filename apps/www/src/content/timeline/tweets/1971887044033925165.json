@@ -1,0 +1,353 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 3,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-09-27T10:38:01.000Z",
+  "display_text_range": [
+    0,
+    229
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/54MvvIZY5b",
+        "expanded_url": "https://x.com/peetzweg/status/1971887044033925165/photo/1",
+        "indices": [
+          230,
+          253
+        ],
+        "url": "https://t.co/54MvvIZY5b"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1967872849059680519",
+        "indices": [
+          206,
+          229
+        ],
+        "url": "https://t.co/a0hU35319m"
+      }
+    ]
+  },
+  "id_str": "1971887044033925165",
+  "text": "Another toy arrived today, scratching my HomeAssistant itch and further optimizing my life for health.  \n\nThe DIY AirGradient One. Along with CO2, I'm mainly interested in measuring PM2.5 in my apartment.\n\nhttps://t.co/a0hU35319m https://t.co/54MvvIZY5b",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1971887044033925165"
+    ],
+    "editable_until_msecs": "1758973081000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/54MvvIZY5b",
+      "expanded_url": "https://x.com/peetzweg/status/1971887044033925165/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        230,
+        253
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G12M0QCW8AAE0HZ.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 717,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 960,
+            "x": 256,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 842,
+            "x": 315,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 480,
+            "x": 496,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 960,
+        "width": 1280
+      },
+      "sizes": {
+        "large": {
+          "h": 960,
+          "resize": "fit",
+          "w": 1280
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/54MvvIZY5b"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 717,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 960,
+          "x": 256,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 842,
+          "x": 315,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 480,
+          "x": 496,
+          "y": 0
+        },
+        {
+          "h": 960,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1971887044033925165/photo/1",
+      "url": "https://pbs.twimg.com/media/G12M0QCW8AAE0HZ.jpg",
+      "width": 1280,
+      "height": 960
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 1,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2025-09-16T08:47:03.000Z",
+    "display_text_range": [
+      0,
+      267
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/sjGP3PC0Mo",
+          "expanded_url": "https://x.com/peetzweg/status/1967872849059680519/photo/1",
+          "indices": [
+            268,
+            291
+          ],
+          "url": "https://t.co/sjGP3PC0Mo"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "837600574531059712",
+          "indices": [
+            85,
+            97
+          ],
+          "name": "Aranet Home",
+          "screen_name": "aranet_home"
+        }
+      ]
+    },
+    "id_str": "1967872849059680519",
+    "text": "Late to the party. Are CO2 sensor still trendy? Finally gave in the recent sale from @aranet_home. Been a 12 days since I got it, max value I had indoor is 924, not even leaving the green indication. Curious how this will change in winter with less constant aeration. https://t.co/sjGP3PC0Mo",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1967872849059680519"
+      ],
+      "editable_until_msecs": "1758016023000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/sjGP3PC0Mo",
+        "expanded_url": "https://x.com/peetzweg/status/1967872849059680519/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          268,
+          291
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/G09J7P_XIAAyJv-.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 1673,
+              "w": 2988,
+              "x": 0,
+              "y": 433
+            },
+            {
+              "h": 2988,
+              "w": 2988,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 2988,
+              "w": 2621,
+              "x": 258,
+              "y": 0
+            },
+            {
+              "h": 2988,
+              "w": 1494,
+              "x": 821,
+              "y": 0
+            },
+            {
+              "h": 2988,
+              "w": 2988,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 2988,
+          "width": 2988
+        },
+        "sizes": {
+          "large": {
+            "h": 2048,
+            "resize": "fit",
+            "w": 2048
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/sjGP3PC0Mo"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 1673,
+            "w": 2988,
+            "x": 0,
+            "y": 433
+          },
+          {
+            "h": 2988,
+            "w": 2988,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2988,
+            "w": 2621,
+            "x": 258,
+            "y": 0
+          },
+          {
+            "h": 2988,
+            "w": 1494,
+            "x": 821,
+            "y": 0
+          },
+          {
+            "h": 2988,
+            "w": 2988,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/1967872849059680519/photo/1",
+        "url": "https://pbs.twimg.com/media/G09J7P_XIAAyJv-.jpg",
+        "width": 2988,
+        "height": 2988
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

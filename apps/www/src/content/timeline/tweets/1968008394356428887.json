@@ -1,0 +1,352 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 7,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-09-16T17:45:39.000Z",
+  "display_text_range": [
+    0,
+    134
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/fkB6js0CpT",
+        "expanded_url": "https://x.com/peetzweg/status/1968008394356428887/photo/1",
+        "indices": [
+          134,
+          157
+        ],
+        "url": "https://t.co/fkB6js0CpT"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/skate/status/1…",
+        "expanded_url": "https://x.com/skate/status/1967999697773269283",
+        "indices": [
+          110,
+          133
+        ],
+        "url": "https://t.co/SNt6sJpTtD"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "18912434",
+        "indices": [
+          11,
+          17
+        ],
+        "name": "skate.",
+        "screen_name": "skate"
+      }
+    ]
+  },
+  "id_str": "1968008394356428887",
+  "text": "Oh come on @skate, no support for the Steamdeck &amp; Linux. \n\nFirst thing to get right this early access. 🤞\n\nhttps://t.co/SNt6sJpTtD https://t.co/fkB6js0CpT",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1968008394356428887"
+    ],
+    "editable_until_msecs": "1758048339000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/fkB6js0CpT",
+      "expanded_url": "https://x.com/peetzweg/status/1968008394356428887/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        134,
+        157
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G0_E91UWwAAdoJa.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 717,
+            "w": 1280,
+            "x": 0,
+            "y": 186
+          },
+          {
+            "h": 1280,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 1123,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 640,
+            "x": 160,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1280,
+        "width": 1280
+      },
+      "sizes": {
+        "large": {
+          "h": 1280,
+          "resize": "fit",
+          "w": 1280
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/fkB6js0CpT"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 717,
+          "w": 1280,
+          "x": 0,
+          "y": 186
+        },
+        {
+          "h": 1280,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 1123,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 640,
+          "x": 160,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1968008394356428887/photo/1",
+      "url": "https://pbs.twimg.com/media/G0_E91UWwAAdoJa.jpg",
+      "width": 1280,
+      "height": 1280
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 4598,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 1257,
+    "retweet_count": 632,
+    "created_at": "2025-09-16T17:11:06.000Z",
+    "display_text_range": [
+      0,
+      108
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/WCbVyJUl2u",
+          "expanded_url": "https://x.com/skate/status/1967999697773269283/video/1",
+          "indices": [
+            108,
+            131
+          ],
+          "url": "https://t.co/WCbVyJUl2u"
+        }
+      ]
+    },
+    "id_str": "1967999697773269283",
+    "text": "skate. is now in Early Access and available to play worldwide. Drop in to San Vansterdam and get skating! 🛹 https://t.co/WCbVyJUl2u",
+    "user": {
+      "id_str": "18912434",
+      "name": "skate.",
+      "screen_name": "skate",
+      "is_blue_verified": false,
+      "profile_image_shape": "Square",
+      "verified": false,
+      "verified_type": "Business",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1800166268793659392/iuowc7mu_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1967999697773269283"
+      ],
+      "editable_until_msecs": "1758046266000",
+      "edits_remaining": "5",
+      "is_edit_eligible": false
+    },
+    "mediaDetails": [
+      {
+        "additional_media_info": {},
+        "display_url": "pic.x.com/WCbVyJUl2u",
+        "expanded_url": "https://x.com/skate/status/1967999697773269283/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          108,
+          131
+        ],
+        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1967991274260029440/img/OIr7veeG3MwnEYAS.jpg",
+        "original_info": {
+          "focus_rects": [],
+          "height": 1080,
+          "width": 1920
+        },
+        "sizes": {
+          "large": {
+            "h": 1080,
+            "resize": "fit",
+            "w": 1920
+          },
+          "medium": {
+            "h": 675,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 383,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "video",
+        "url": "https://t.co/WCbVyJUl2u",
+        "video_info": {
+          "aspect_ratio": [
+            16,
+            9
+          ],
+          "duration_millis": 30000,
+          "variants": [
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/amplify_video/1967991274260029440/pl/7u4SoWxQL6WdO7H2.m3u8?v=6c6"
+            },
+            {
+              "bitrate": 256000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1967991274260029440/vid/avc1/480x270/YMM4TN1tX0ef9KFV.mp4"
+            },
+            {
+              "bitrate": 832000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1967991274260029440/vid/avc1/640x360/JyfuQR2JuiPU2UR5.mp4"
+            },
+            {
+              "bitrate": 2176000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1967991274260029440/vid/avc1/1280x720/9VixMCZKtEQIvaa9.mp4"
+            },
+            {
+              "bitrate": 10368000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1967991274260029440/vid/avc1/1920x1080/pplm9PRWYuzwHACp.mp4"
+            }
+          ]
+        }
+      }
+    ],
+    "photos": [],
+    "video": {
+      "aspectRatio": [
+        16,
+        9
+      ],
+      "contentType": "media_entity",
+      "durationMs": 30000,
+      "mediaAvailability": {
+        "status": "available"
+      },
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/1967991274260029440/img/OIr7veeG3MwnEYAS.jpg",
+      "variants": [
+        {
+          "type": "application/x-mpegURL",
+          "src": "https://video.twimg.com/amplify_video/1967991274260029440/pl/7u4SoWxQL6WdO7H2.m3u8?v=6c6"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/1967991274260029440/vid/avc1/480x270/YMM4TN1tX0ef9KFV.mp4"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/1967991274260029440/vid/avc1/640x360/JyfuQR2JuiPU2UR5.mp4"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/1967991274260029440/vid/avc1/1280x720/9VixMCZKtEQIvaa9.mp4"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/1967991274260029440/vid/avc1/1920x1080/pplm9PRWYuzwHACp.mp4"
+        }
+      ],
+      "videoId": {
+        "type": "tweet",
+        "id": "1967999697773269283"
+      },
+      "viewCount": 0
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

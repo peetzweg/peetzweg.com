@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-07-09T07:26:52.000Z",
+  "display_text_range": [
+    0,
+    113
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/wfZTlGlnTd",
+        "expanded_url": "https://x.com/peetzweg/status/2075119480380731517/photo/1",
+        "indices": [
+          114,
+          137
+        ],
+        "url": "https://t.co/wfZTlGlnTd"
+      }
+    ]
+  },
+  "id_str": "2075119480380731517",
+  "text": "Seeding of Organization Leaderboard is happening now. Any big GitHub org comes to mind I might should not forget? https://t.co/wfZTlGlnTd",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2075119480380731517"
+    ],
+    "editable_until_msecs": "1783585612000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/wfZTlGlnTd",
+      "expanded_url": "https://x.com/peetzweg/status/2075119480380731517/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        114,
+        137
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HMxOKsCXIAAIkzQ.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 785,
+            "w": 1402,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1402,
+            "w": 1402,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1516,
+            "w": 1330,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1516,
+            "w": 758,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1516,
+            "w": 1402,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1516,
+        "width": 1402
+      },
+      "sizes": {
+        "large": {
+          "h": 1516,
+          "resize": "fit",
+          "w": 1402
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1110
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 629
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/wfZTlGlnTd"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 785,
+          "w": 1402,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1402,
+          "w": 1402,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1516,
+          "w": 1330,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1516,
+          "w": 758,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1516,
+          "w": 1402,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2075119480380731517/photo/1",
+      "url": "https://pbs.twimg.com/media/HMxOKsCXIAAIkzQ.jpg",
+      "width": 1402,
+      "height": 1516
+    }
+  ],
+  "conversation_count": 2,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

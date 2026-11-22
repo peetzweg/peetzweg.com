@@ -1,0 +1,10 @@
+**/node_modules
+**/dist
+**/.output
+**/.tanstack
+**/.env
+.git
+features
+libs
+tools
+docs

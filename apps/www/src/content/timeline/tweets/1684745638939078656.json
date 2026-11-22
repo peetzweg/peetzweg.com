@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-07-28T02:00:36.000Z",
+  "display_text_range": [
+    0,
+    237
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/GeU5i9yRiB",
+        "expanded_url": "https://x.com/peetzweg/status/1684745638939078656/video/1",
+        "indices": [
+          237,
+          260
+        ],
+        "url": "https://t.co/GeU5i9yRiB"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "2877269376",
+        "indices": [
+          20,
+          32
+        ],
+        "name": "Grant Sanderson",
+        "screen_name": "3blue1brown"
+      }
+    ]
+  },
+  "id_str": "1684745638939078656",
+  "text": "My first time using @3blue1brown's `manim` animation engine to create this visualization of how to get a merkle root of a sentence.\n\nHad more trouble installing it, than creating the animation. \n\nAwesome tool to add to my collection. 🛠️ https://t.co/GeU5i9yRiB",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1684745638939078656"
+    ],
+    "editable_until_msecs": "1690513236000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/GeU5i9yRiB",
+      "expanded_url": "https://x.com/peetzweg/status/1684745638939078656/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        237,
+        260
+      ],
+      "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1684745524946345984/pu/img/LB6512bd-rTD3_oh.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1080,
+        "width": 1920
+      },
+      "sizes": {
+        "large": {
+          "h": 1080,
+          "resize": "fit",
+          "w": 1920
+        },
+        "medium": {
+          "h": 675,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/GeU5i9yRiB",
+      "video_info": {
+        "aspect_ratio": [
+          16,
+          9
+        ],
+        "duration_millis": 25000,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/ext_tw_video/1684745524946345984/pu/pl/jYe374q2UxZqMUB2.m3u8?tag=12"
+          },
+          {
+            "bitrate": 256000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1684745524946345984/pu/vid/480x270/GOrCkyFtG0-b_RTG.mp4?tag=12"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1684745524946345984/pu/vid/640x360/tc0QJV9Ez9nQncp-.mp4?tag=12"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1684745524946345984/pu/vid/1280x720/guq1t__3qEfRI-SS.mp4?tag=12"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      16,
+      9
+    ],
+    "contentType": "media_entity",
+    "durationMs": 25000,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1684745524946345984/pu/img/LB6512bd-rTD3_oh.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/ext_tw_video/1684745524946345984/pu/pl/jYe374q2UxZqMUB2.m3u8?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1684745524946345984/pu/vid/480x270/GOrCkyFtG0-b_RTG.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1684745524946345984/pu/vid/640x360/tc0QJV9Ez9nQncp-.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1684745524946345984/pu/vid/1280x720/guq1t__3qEfRI-SS.mp4?tag=12"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1684745638939078656"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

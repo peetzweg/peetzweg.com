@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2024-10-06T12:51:56.000Z",
+  "display_text_range": [
+    0,
+    251
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/YjGHOpevj9",
+        "expanded_url": "https://x.com/peetzweg/status/1842910664601579865/video/1",
+        "indices": [
+          252,
+          275
+        ],
+        "url": "https://t.co/YjGHOpevj9"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1258303237695795201",
+        "indices": [
+          22,
+          32
+        ],
+        "name": "CapCut",
+        "screen_name": "capcutapp"
+      }
+    ]
+  },
+  "id_str": "1842910664601579865",
+  "text": "I thought I knew what @capcutapp is but during my Japan trip I started to use it extensively. \nCrazy capable and the templates feature is insane. Feels to me like the backbone and driver of TikTok’s content.\nAfaik Meta does not offer a competitor yet. https://t.co/YjGHOpevj9",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1842910664601579865"
+    ],
+    "editable_until_msecs": "1728222716000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/YjGHOpevj9",
+      "expanded_url": "https://x.com/peetzweg/status/1842910664601579865/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        252,
+        275
+      ],
+      "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1842910624273281024/pu/img/NZy59xbSnx22HAAd.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 720,
+        "width": 720
+      },
+      "sizes": {
+        "large": {
+          "h": 720,
+          "resize": "fit",
+          "w": 720
+        },
+        "medium": {
+          "h": 720,
+          "resize": "fit",
+          "w": 720
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/YjGHOpevj9",
+      "video_info": {
+        "aspect_ratio": [
+          1,
+          1
+        ],
+        "duration_millis": 9875,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/ext_tw_video/1842910624273281024/pu/pl/luVwjRBPT9Nxfo6D.m3u8?tag=12"
+          },
+          {
+            "bitrate": 432000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1842910624273281024/pu/vid/avc1/320x320/8_Pj89TaOpLSfecr.mp4?tag=12"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1842910624273281024/pu/vid/avc1/540x540/Jws1JlLXn1UYtVKk.mp4?tag=12"
+          },
+          {
+            "bitrate": 1280000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1842910624273281024/pu/vid/avc1/720x720/UQbEGSrv-icusASK.mp4?tag=12"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      1,
+      1
+    ],
+    "contentType": "media_entity",
+    "durationMs": 9875,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1842910624273281024/pu/img/NZy59xbSnx22HAAd.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/ext_tw_video/1842910624273281024/pu/pl/luVwjRBPT9Nxfo6D.m3u8?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1842910624273281024/pu/vid/avc1/320x320/8_Pj89TaOpLSfecr.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1842910624273281024/pu/vid/avc1/540x540/Jws1JlLXn1UYtVKk.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1842910624273281024/pu/vid/avc1/720x720/UQbEGSrv-icusASK.mp4?tag=12"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1842910664601579865"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

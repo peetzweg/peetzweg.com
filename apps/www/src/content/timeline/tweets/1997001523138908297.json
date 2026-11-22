@@ -1,0 +1,353 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-12-05T17:54:00.000Z",
+  "display_text_range": [
+    0,
+    151
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/JGwa21Z3VC",
+        "expanded_url": "https://x.com/peetzweg/status/1997001523138908297/photo/1",
+        "indices": [
+          152,
+          175
+        ],
+        "url": "https://t.co/JGwa21Z3VC"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1743207711116829000",
+        "indices": [
+          128,
+          151
+        ],
+        "url": "https://t.co/H01OS4yRek"
+      }
+    ]
+  },
+  "id_str": "1997001523138908297",
+  "text": "I find this style of print out calendars to layout personal key events for the next year far superior to any digital solution.\n\nhttps://t.co/H01OS4yRek https://t.co/JGwa21Z3VC",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1997001523138908297"
+    ],
+    "editable_until_msecs": "1764960840000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/JGwa21Z3VC",
+      "expanded_url": "https://x.com/peetzweg/status/1997001523138908297/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        152,
+        175
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G7a3KGDXEAAzDZz.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 2258,
+            "w": 4032,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 3024,
+            "w": 3024,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 3024,
+            "w": 2653,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 3024,
+            "w": 1512,
+            "x": 352,
+            "y": 0
+          },
+          {
+            "h": 3024,
+            "w": 4032,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 3024,
+        "width": 4032
+      },
+      "sizes": {
+        "large": {
+          "h": 1536,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/JGwa21Z3VC"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 2258,
+          "w": 4032,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 3024,
+          "w": 3024,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 3024,
+          "w": 2653,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 3024,
+          "w": 1512,
+          "x": 352,
+          "y": 0
+        },
+        {
+          "h": 3024,
+          "w": 4032,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1997001523138908297/photo/1",
+      "url": "https://pbs.twimg.com/media/G7a3KGDXEAAzDZz.jpg",
+      "width": 4032,
+      "height": 3024
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 1,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 1,
+    "created_at": "2024-01-05T09:48:00.000Z",
+    "display_text_range": [
+      0,
+      183
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/PgyBSnto7M",
+          "expanded_url": "https://x.com/peetzweg/status/1743207711116829000/photo/1",
+          "indices": [
+            184,
+            207
+          ],
+          "url": "https://t.co/PgyBSnto7M"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "github.com/peetzweg/papr",
+          "expanded_url": "https://github.com/peetzweg/papr",
+          "indices": [
+            160,
+            183
+          ],
+          "url": "https://t.co/mVoIhNVs2R"
+        }
+      ]
+    },
+    "id_str": "1743207711116829000",
+    "text": "10 years ago I wrote a python script to generate print out calendar templates. Still using it a few times a year. So cool that software is basically immortal.\n\nhttps://t.co/mVoIhNVs2R https://t.co/PgyBSnto7M",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1743207711116829000"
+      ],
+      "editable_until_msecs": "1704451680000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/PgyBSnto7M",
+        "expanded_url": "https://x.com/peetzweg/status/1743207711116829000/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          184,
+          207
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/GDEPHm2WIAA_vTn.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 538,
+              "w": 960,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 960,
+              "w": 960,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 960,
+              "w": 842,
+              "x": 59,
+              "y": 0
+            },
+            {
+              "h": 960,
+              "w": 480,
+              "x": 240,
+              "y": 0
+            },
+            {
+              "h": 960,
+              "w": 960,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 960,
+          "width": 960
+        },
+        "sizes": {
+          "large": {
+            "h": 960,
+            "resize": "fit",
+            "w": 960
+          },
+          "medium": {
+            "h": 960,
+            "resize": "fit",
+            "w": 960
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/PgyBSnto7M"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 538,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 842,
+            "x": 59,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 480,
+            "x": 240,
+            "y": 0
+          },
+          {
+            "h": 960,
+            "w": 960,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/peetzweg/status/1743207711116829000/photo/1",
+        "url": "https://pbs.twimg.com/media/GDEPHm2WIAA_vTn.jpg",
+        "width": 960,
+        "height": 960
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

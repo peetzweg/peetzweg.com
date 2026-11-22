@@ -1,0 +1,155 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-10-27T17:39:49.000Z",
+  "display_text_range": [
+    0,
+    119
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/JBTeh6DGaJ",
+        "expanded_url": "https://x.com/peetzweg/status/2115136397812416815/video/1",
+        "indices": [
+          120,
+          143
+        ],
+        "url": "https://t.co/JBTeh6DGaJ"
+      }
+    ]
+  },
+  "id_str": "2115136397812416815",
+  "text": "OpenDisplay iPhone Duo support is coming along nicely. If you have a Duo watch out for the update for the iOS app soon! https://t.co/JBTeh6DGaJ",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2115136397812416815"
+    ],
+    "editable_until_msecs": "1793126389000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/JBTeh6DGaJ",
+      "expanded_url": "https://x.com/peetzweg/status/2115136397812416815/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        120,
+        143
+      ],
+      "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2115135844428226560/img/v7v-ocmMTj9cGNXq.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 1378,
+        "width": 2452
+      },
+      "sizes": {
+        "large": {
+          "h": 1151,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 674,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 382,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/JBTeh6DGaJ",
+      "video_info": {
+        "aspect_ratio": [
+          1226,
+          689
+        ],
+        "duration_millis": 25503,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/2115135844428226560/pl/HMAomHT5ujytvXXa.m3u8?tag=14"
+          },
+          {
+            "bitrate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2115135844428226560/vid/avc1/480x270/3gsk6e3MKEOQmKKA.mp4?tag=14"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2115135844428226560/vid/avc1/640x360/P7RI1ERQ5aoWHCdd.mp4?tag=14"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/2115135844428226560/vid/avc1/1280x720/OKiJ38kFHDAn6Y7a.mp4?tag=14"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      1226,
+      689
+    ],
+    "contentType": "media_entity",
+    "durationMs": 25503,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/amplify_video_thumb/2115135844428226560/img/v7v-ocmMTj9cGNXq.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/amplify_video/2115135844428226560/pl/HMAomHT5ujytvXXa.m3u8?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2115135844428226560/vid/avc1/480x270/3gsk6e3MKEOQmKKA.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2115135844428226560/vid/avc1/640x360/P7RI1ERQ5aoWHCdd.mp4?tag=14"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/amplify_video/2115135844428226560/vid/avc1/1280x720/OKiJ38kFHDAn6Y7a.mp4?tag=14"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "2115136397812416815"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

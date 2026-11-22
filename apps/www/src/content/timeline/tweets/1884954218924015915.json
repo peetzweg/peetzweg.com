@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 3,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-01-30T13:18:01.000Z",
+  "display_text_range": [
+    0,
+    277
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/vrNaLeYTcv",
+        "expanded_url": "https://x.com/peetzweg/status/1884954218924015915/photo/1",
+        "indices": [
+          278,
+          301
+        ],
+        "url": "https://t.co/vrNaLeYTcv"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "lumie.com",
+        "expanded_url": "http://lumie.com",
+        "indices": [
+          150,
+          173
+        ],
+        "url": "https://t.co/nN0S5CirMv"
+      }
+    ]
+  },
+  "id_str": "1884954218924015915",
+  "text": "Further \"johnsoned\" my live by getting a 10.000 LUX lamp for the dark winter mornings. Was way overdue to get one here in germany.\n\nI bought one from https://t.co/nN0S5CirMv. Got good ratings and the look and feel is pretty nice. Wish they would offer a wireless option though. https://t.co/vrNaLeYTcv",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1884954218924015915"
+    ],
+    "editable_until_msecs": "1738246681000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/vrNaLeYTcv",
+      "expanded_url": "https://x.com/peetzweg/status/1884954218924015915/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        278,
+        301
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/Giiz32tXkAA3Py8.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 717,
+            "w": 1280,
+            "x": 0,
+            "y": 563
+          },
+          {
+            "h": 1280,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 1123,
+            "x": 157,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 640,
+            "x": 640,
+            "y": 0
+          },
+          {
+            "h": 1280,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1280,
+        "width": 1280
+      },
+      "sizes": {
+        "large": {
+          "h": 1280,
+          "resize": "fit",
+          "w": 1280
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/vrNaLeYTcv"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 717,
+          "w": 1280,
+          "x": 0,
+          "y": 563
+        },
+        {
+          "h": 1280,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 1123,
+          "x": 157,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 640,
+          "x": 640,
+          "y": 0
+        },
+        {
+          "h": 1280,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1884954218924015915/photo/1",
+      "url": "https://pbs.twimg.com/media/Giiz32tXkAA3Py8.jpg",
+      "width": 1280,
+      "height": 1280
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

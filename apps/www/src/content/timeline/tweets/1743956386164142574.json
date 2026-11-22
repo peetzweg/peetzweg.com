@@ -1,0 +1,281 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2024-01-07T11:22:58.000Z",
+  "display_text_range": [
+    0,
+    111
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/5CnYJnGttm",
+        "expanded_url": "https://x.com/peetzweg/status/1743956386164142574/photo/1",
+        "indices": [
+          112,
+          135
+        ],
+        "url": "https://t.co/5CnYJnGttm"
+      }
+    ]
+  },
+  "id_str": "1743956386164142574",
+  "text": "On a Berlin Christmas Market I saw this simple but yet complex play of colors and light created with a curtain. https://t.co/5CnYJnGttm",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1743956386164142574"
+    ],
+    "editable_until_msecs": "1704630178000",
+    "edits_remaining": "5",
+    "is_edit_eligible": false
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/5CnYJnGttm",
+      "expanded_url": "https://x.com/peetzweg/status/1743956386164142574/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        112,
+        135
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GDPG4EoXsAErVJE.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1412,
+            "w": 2521,
+            "x": 0,
+            "y": 491
+          },
+          {
+            "h": 2521,
+            "w": 2521,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2521,
+            "w": 2211,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 2521,
+            "w": 1261,
+            "x": 63,
+            "y": 0
+          },
+          {
+            "h": 2521,
+            "w": 2521,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 2521,
+        "width": 2521
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/5CnYJnGttm"
+    },
+    {
+      "display_url": "pic.x.com/5CnYJnGttm",
+      "expanded_url": "https://x.com/peetzweg/status/1743956386164142574/photo/2",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        112,
+        135
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GDPG4xHXUAAPkMB.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 2206,
+            "w": 3939,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 3939,
+            "w": 3939,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 3939,
+            "w": 3455,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 3939,
+            "w": 1970,
+            "x": 689,
+            "y": 0
+          },
+          {
+            "h": 3939,
+            "w": 3939,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 3939,
+        "width": 3939
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/5CnYJnGttm"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1412,
+          "w": 2521,
+          "x": 0,
+          "y": 491
+        },
+        {
+          "h": 2521,
+          "w": 2521,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2521,
+          "w": 2211,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 2521,
+          "w": 1261,
+          "x": 63,
+          "y": 0
+        },
+        {
+          "h": 2521,
+          "w": 2521,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1743956386164142574/photo/1",
+      "url": "https://pbs.twimg.com/media/GDPG4EoXsAErVJE.jpg",
+      "width": 2521,
+      "height": 2521
+    },
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 2206,
+          "w": 3939,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 3939,
+          "w": 3939,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 3939,
+          "w": 3455,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 3939,
+          "w": 1970,
+          "x": 689,
+          "y": 0
+        },
+        {
+          "h": 3939,
+          "w": 3939,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1743956386164142574/photo/2",
+      "url": "https://pbs.twimg.com/media/GDPG4xHXUAAPkMB.jpg",
+      "width": 3939,
+      "height": 3939
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

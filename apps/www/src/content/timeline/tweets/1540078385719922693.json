@@ -1,0 +1,166 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-06-23T21:04:35.000Z",
+  "display_text_range": [
+    0,
+    139
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/UlAbbWq0gG",
+        "expanded_url": "https://x.com/peetzweg/status/1540078385719922693/video/1",
+        "indices": [
+          140,
+          163
+        ],
+        "url": "https://t.co/UlAbbWq0gG"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "708915428454576128",
+        "indices": [
+          56,
+          65
+        ],
+        "name": "Notion",
+        "screen_name": "NotionHQ"
+      }
+    ]
+  },
+  "id_str": "1540078385719922693",
+  "text": "Development chores. Setting up the authorization of the @NotionHQ integration. Next up finally some user experience related coding again. ✨ https://t.co/UlAbbWq0gG",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1540078385719922693"
+    ],
+    "editable_until_msecs": "1656020075000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/UlAbbWq0gG",
+      "expanded_url": "https://x.com/peetzweg/status/1540078385719922693/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        140,
+        163
+      ],
+      "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1540077733316886530/pu/img/QdFSMFYBeDP38jG6.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 2048,
+        "width": 1086
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 1086
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 636
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 361
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/UlAbbWq0gG",
+      "video_info": {
+        "aspect_ratio": [
+          543,
+          1024
+        ],
+        "duration_millis": 22369,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/ext_tw_video/1540077733316886530/pu/pl/MCiu0lyDRoU-dkSl.m3u8?tag=12"
+          },
+          {
+            "bitrate": 632000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1540077733316886530/pu/vid/320x602/zbdysgpYKf9n6yRv.mp4?tag=12"
+          },
+          {
+            "bitrate": 950000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1540077733316886530/pu/vid/480x904/pahn1UmLO85WzWs1.mp4?tag=12"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1540077733316886530/pu/vid/720x1356/A5GRA2gxGuw7CJYf.mp4?tag=12"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      543,
+      1024
+    ],
+    "contentType": "media_entity",
+    "durationMs": 22369,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1540077733316886530/pu/img/QdFSMFYBeDP38jG6.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/ext_tw_video/1540077733316886530/pu/pl/MCiu0lyDRoU-dkSl.m3u8?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1540077733316886530/pu/vid/320x602/zbdysgpYKf9n6yRv.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1540077733316886530/pu/vid/480x904/pahn1UmLO85WzWs1.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1540077733316886530/pu/vid/720x1356/A5GRA2gxGuw7CJYf.mp4?tag=12"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1540078385719922693"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

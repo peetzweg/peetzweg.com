@@ -1,0 +1,188 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-09T08:47:00.000Z",
+  "display_text_range": [
+    0,
+    230
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/sTDs0KQwR1",
+        "expanded_url": "https://x.com/peetzweg/status/2020781465319989490/photo/1",
+        "indices": [
+          231,
+          254
+        ],
+        "url": "https://t.co/sTDs0KQwR1"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "din.de",
+        "expanded_url": "https://www.din.de/",
+        "indices": [
+          207,
+          230
+        ],
+        "url": "https://t.co/U9t7ZIbhJh"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1995710751097659392",
+        "indices": [
+          32,
+          41
+        ],
+        "name": "OpenClaw🦞",
+        "screen_name": "openclaw"
+      }
+    ]
+  },
+  "id_str": "2020781465319989490",
+  "text": "Big LaTeX fanboy, so I asked my @openclaw to setup LaTeX, so it can now send out proper scary legit DINgore DIN 5008 letters PDFs to cancel subscriptions or and do correspondance with insurances and such. \n\nhttps://t.co/U9t7ZIbhJh https://t.co/sTDs0KQwR1",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2020781465319989490"
+    ],
+    "editable_until_msecs": "1770630420000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/sTDs0KQwR1",
+      "expanded_url": "https://x.com/peetzweg/status/2020781465319989490/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        231,
+        254
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HAs2LygXoAARBf6.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 818,
+            "w": 1460,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 986,
+            "w": 986,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 986,
+            "w": 865,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 986,
+            "w": 493,
+            "x": 82,
+            "y": 0
+          },
+          {
+            "h": 986,
+            "w": 1460,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 986,
+        "width": 1460
+      },
+      "sizes": {
+        "large": {
+          "h": 986,
+          "resize": "fit",
+          "w": 1460
+        },
+        "medium": {
+          "h": 810,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 459,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/sTDs0KQwR1"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 818,
+          "w": 1460,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 986,
+          "w": 986,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 986,
+          "w": 865,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 986,
+          "w": 493,
+          "x": 82,
+          "y": 0
+        },
+        {
+          "h": 986,
+          "w": 1460,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2020781465319989490/photo/1",
+      "url": "https://pbs.twimg.com/media/HAs2LygXoAARBf6.jpg",
+      "width": 1460,
+      "height": 986
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

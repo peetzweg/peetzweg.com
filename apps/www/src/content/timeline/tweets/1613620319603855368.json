@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2023-01-12T19:33:58.000Z",
+  "display_text_range": [
+    0,
+    198
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/184oVOH1P9",
+        "expanded_url": "https://x.com/peetzweg/status/1613620319603855368/photo/1",
+        "indices": [
+          198,
+          221
+        ],
+        "url": "https://t.co/184oVOH1P9"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1747487052898418688",
+        "indices": [
+          24,
+          29
+        ],
+        "name": "Cron",
+        "screen_name": "Cron"
+      }
+    ]
+  },
+  "id_str": "1613620319603855368",
+  "text": "Been using and enjoying @Cron for a few month now. \n\nHowever, it's sad I would have missed my Grandmas 80th birthday if I would only rely on it.\n\nI hope Cron gets Apple Calendar integration soon. 🤞 https://t.co/184oVOH1P9",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1613620319603855368"
+    ],
+    "editable_until_msecs": "1673553838000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/184oVOH1P9",
+      "expanded_url": "https://x.com/peetzweg/status/1613620319603855368/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        198,
+        221
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FmS7ISOXwAARpQa.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 556,
+            "w": 992,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 558,
+            "w": 558,
+            "x": 217,
+            "y": 0
+          },
+          {
+            "h": 558,
+            "w": 489,
+            "x": 252,
+            "y": 0
+          },
+          {
+            "h": 558,
+            "w": 279,
+            "x": 357,
+            "y": 0
+          },
+          {
+            "h": 558,
+            "w": 992,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 558,
+        "width": 992
+      },
+      "sizes": {
+        "large": {
+          "h": 558,
+          "resize": "fit",
+          "w": 992
+        },
+        "medium": {
+          "h": 558,
+          "resize": "fit",
+          "w": 992
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/184oVOH1P9"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 556,
+          "w": 992,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 558,
+          "w": 558,
+          "x": 217,
+          "y": 0
+        },
+        {
+          "h": 558,
+          "w": 489,
+          "x": 252,
+          "y": 0
+        },
+        {
+          "h": 558,
+          "w": 279,
+          "x": 357,
+          "y": 0
+        },
+        {
+          "h": 558,
+          "w": 992,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1613620319603855368/photo/1",
+      "url": "https://pbs.twimg.com/media/FmS7ISOXwAARpQa.jpg",
+      "width": 992,
+      "height": 558
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

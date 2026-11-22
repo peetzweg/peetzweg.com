@@ -1,0 +1,210 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-02-06T07:34:48.000Z",
+  "display_text_range": [
+    0,
+    69
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/qBhyOKtitC",
+        "expanded_url": "https://x.com/peetzweg/status/2019676132656968143/photo/1",
+        "indices": [
+          70,
+          93
+        ],
+        "url": "https://t.co/qBhyOKtitC"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2019151267746939224",
+        "indices": [
+          46,
+          69
+        ],
+        "url": "https://t.co/CXc0uVTRG6"
+      }
+    ]
+  },
+  "id_str": "2019676132656968143",
+  "text": "Oh no. The natural path of every group chat.\n\nhttps://t.co/CXc0uVTRG6 https://t.co/qBhyOKtitC",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2019676132656968143"
+    ],
+    "editable_until_msecs": "1770366888000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/qBhyOKtitC",
+      "expanded_url": "https://x.com/peetzweg/status/2019676132656968143/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        70,
+        93
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HAdUrB3WAAAcqU2.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 486,
+            "w": 868,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 670,
+            "w": 670,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 670,
+            "w": 588,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 670,
+            "w": 335,
+            "x": 115,
+            "y": 0
+          },
+          {
+            "h": 670,
+            "w": 868,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 670,
+        "width": 868
+      },
+      "sizes": {
+        "large": {
+          "h": 670,
+          "resize": "fit",
+          "w": 868
+        },
+        "medium": {
+          "h": 670,
+          "resize": "fit",
+          "w": 868
+        },
+        "small": {
+          "h": 525,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/qBhyOKtitC"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 486,
+          "w": 868,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 670,
+          "w": 670,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 670,
+          "w": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 670,
+          "w": 335,
+          "x": 115,
+          "y": 0
+        },
+        {
+          "h": 670,
+          "w": 868,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2019676132656968143/photo/1",
+      "url": "https://pbs.twimg.com/media/HAdUrB3WAAAcqU2.png",
+      "width": 868,
+      "height": 670
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 2,
+    "lang": "en",
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2026-02-04T20:49:10.000Z",
+    "display_text_range": [
+      0,
+      101
+    ],
+    "entities": {},
+    "id_str": "2019151267746939224",
+    "text": "2 humans &amp; 2 agents collaboratively vibing on a single piece of software. Charting new territory.",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2019151267746939224"
+      ],
+      "editable_until_msecs": "1770241750000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

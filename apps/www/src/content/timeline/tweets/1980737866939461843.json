@@ -1,0 +1,210 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-10-21T20:48:02.000Z",
+  "display_text_range": [
+    0,
+    213
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/85itH78IvY",
+        "expanded_url": "https://x.com/peetzweg/status/1980737866939461843/photo/1",
+        "indices": [
+          214,
+          237
+        ],
+        "url": "https://t.co/85itH78IvY"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1977784334892323308",
+        "indices": [
+          190,
+          213
+        ],
+        "url": "https://t.co/Agq0dOcRrX"
+      }
+    ]
+  },
+  "id_str": "1980737866939461843",
+  "text": "Did my first run since the marathon. Slowly easing into it and the dark season again. No indoor bike trainer for me this year. Pondering what events to sign up to for next year. Any ideas?\n\nhttps://t.co/Agq0dOcRrX https://t.co/85itH78IvY",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1980737866939461843"
+    ],
+    "editable_until_msecs": "1761083282000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/85itH78IvY",
+      "expanded_url": "https://x.com/peetzweg/status/1980737866939461843/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        214,
+        237
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/G3z-l9SXcAAHNvO.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 717,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 894,
+            "w": 894,
+            "x": 159,
+            "y": 0
+          },
+          {
+            "h": 894,
+            "w": 784,
+            "x": 214,
+            "y": 0
+          },
+          {
+            "h": 894,
+            "w": 447,
+            "x": 383,
+            "y": 0
+          },
+          {
+            "h": 894,
+            "w": 1280,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 894,
+        "width": 1280
+      },
+      "sizes": {
+        "large": {
+          "h": 894,
+          "resize": "fit",
+          "w": 1280
+        },
+        "medium": {
+          "h": 838,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 475,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/85itH78IvY"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 717,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 894,
+          "w": 894,
+          "x": 159,
+          "y": 0
+        },
+        {
+          "h": 894,
+          "w": 784,
+          "x": 214,
+          "y": 0
+        },
+        {
+          "h": 894,
+          "w": 447,
+          "x": 383,
+          "y": 0
+        },
+        {
+          "h": 894,
+          "w": 1280,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1980737866939461843/photo/1",
+      "url": "https://pbs.twimg.com/media/G3z-l9SXcAAHNvO.jpg",
+      "width": 1280,
+      "height": 894
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 0,
+    "lang": "en",
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2025-10-13T17:11:45.000Z",
+    "display_text_range": [
+      0,
+      70
+    ],
+    "entities": {},
+    "id_str": "1977784334892323308",
+    "text": "Ran my hometown marathon ✅\nRan my first marathon in barefoot sandals ✅",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1977784334892323308"
+      ],
+      "editable_until_msecs": "1760379105000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,197 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2024-02-28T14:42:08.000Z",
+  "display_text_range": [
+    0,
+    159
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/BAAfCOmm5d",
+        "expanded_url": "https://x.com/peetzweg/status/1762850676067967099/photo/1",
+        "indices": [
+          160,
+          183
+        ],
+        "url": "https://t.co/BAAfCOmm5d"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "blockchair.com/bitcoin/transa…",
+        "expanded_url": "https://blockchair.com/bitcoin/transaction/1cbbcacf16164385bba099a3e13fab89bb45b30ce19b56079083d60dbc6209bf",
+        "indices": [
+          136,
+          159
+        ],
+        "url": "https://t.co/BayEpj7z0o"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "776936941275246592",
+        "indices": [
+          4,
+          15
+        ],
+        "name": "Blockchair",
+        "screen_name": "Blockchair"
+      },
+      {
+        "id_str": "3313312856",
+        "indices": [
+          100,
+          110
+        ],
+        "name": "etherscan",
+        "screen_name": "etherscan"
+      }
+    ]
+  },
+  "id_str": "1762850676067967099",
+  "text": "TIL @Blockchair  can create these sleek PDF transaction receipts. I did so many dull printouts from @etherscan, this is so much nicer!\n\nhttps://t.co/BayEpj7z0o https://t.co/BAAfCOmm5d",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1762850676067967099"
+    ],
+    "editable_until_msecs": "1709134928000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/BAAfCOmm5d",
+      "expanded_url": "https://x.com/peetzweg/status/1762850676067967099/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        160,
+        183
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GHbk9GWXwAAeVO-.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1629,
+            "w": 2909,
+            "x": 34,
+            "y": 0
+          },
+          {
+            "h": 1629,
+            "w": 1629,
+            "x": 674,
+            "y": 0
+          },
+          {
+            "h": 1629,
+            "w": 1429,
+            "x": 774,
+            "y": 0
+          },
+          {
+            "h": 1629,
+            "w": 815,
+            "x": 1081,
+            "y": 0
+          },
+          {
+            "h": 1629,
+            "w": 2976,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1629,
+        "width": 2976
+      },
+      "sizes": {
+        "large": {
+          "h": 1121,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 657,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 372,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/BAAfCOmm5d"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1629,
+          "w": 2909,
+          "x": 34,
+          "y": 0
+        },
+        {
+          "h": 1629,
+          "w": 1629,
+          "x": 674,
+          "y": 0
+        },
+        {
+          "h": 1629,
+          "w": 1429,
+          "x": 774,
+          "y": 0
+        },
+        {
+          "h": 1629,
+          "w": 815,
+          "x": 1081,
+          "y": 0
+        },
+        {
+          "h": 1629,
+          "w": 2976,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1762850676067967099/photo/1",
+      "url": "https://pbs.twimg.com/media/GHbk9GWXwAAeVO-.jpg",
+      "width": 2976,
+      "height": 1629
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

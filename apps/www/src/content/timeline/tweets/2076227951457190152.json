@@ -1,0 +1,342 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-07-12T08:51:32.000Z",
+  "display_text_range": [
+    0,
+    207
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/O6H9tCfgod",
+        "expanded_url": "https://x.com/peetzweg/status/2076227951457190152/photo/1",
+        "indices": [
+          208,
+          231
+        ],
+        "url": "https://t.co/O6H9tCfgod"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2074380079551967649",
+        "indices": [
+          184,
+          207
+        ],
+        "url": "https://t.co/RHgPhBbPjf"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "13334762",
+        "indices": [
+          140,
+          147
+        ],
+        "name": "GitHub",
+        "screen_name": "github"
+      }
+    ]
+  },
+  "id_str": "2076227951457190152",
+  "text": "Still keeps coming. It's getting annoying as I can't see anyone else star cool shit on my GitHub feed anymore.\nSuffering from success. \nFyi @github this option does not seem to work.\n\nhttps://t.co/RHgPhBbPjf https://t.co/O6H9tCfgod",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2076227951457190152"
+    ],
+    "editable_until_msecs": "1783849892000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/O6H9tCfgod",
+      "expanded_url": "https://x.com/peetzweg/status/2076227951457190152/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        208,
+        231
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HNA-Pb1XQAABe_G.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 520,
+            "w": 929,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 520,
+            "w": 520,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 520,
+            "w": 456,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 520,
+            "w": 260,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 520,
+            "w": 1024,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 520,
+        "width": 1024
+      },
+      "sizes": {
+        "large": {
+          "h": 520,
+          "resize": "fit",
+          "w": 1024
+        },
+        "medium": {
+          "h": 520,
+          "resize": "fit",
+          "w": 1024
+        },
+        "small": {
+          "h": 345,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/O6H9tCfgod"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 520,
+          "w": 929,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 520,
+          "w": 520,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 520,
+          "w": 456,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 520,
+          "w": 260,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 520,
+          "w": 1024,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2076227951457190152/photo/1",
+      "url": "https://pbs.twimg.com/media/HNA-Pb1XQAABe_G.jpg",
+      "width": 1024,
+      "height": 520
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 4,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 1,
+    "retweet_count": 0,
+    "created_at": "2026-07-07T06:28:45.000Z",
+    "display_text_range": [
+      0,
+      122
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/zuFmRuxWXY",
+          "expanded_url": "https://x.com/peetzweg/status/2074380079551967649/video/1",
+          "indices": [
+            123,
+            146
+          ],
+          "url": "https://t.co/zuFmRuxWXY"
+        }
+      ]
+    },
+    "id_str": "2074380079551967649",
+    "text": "Waking up to this is surreal. OpenDisplay now sits at 182 stars rn. \n\nMy GitHub activity feed is my favorite social media. https://t.co/zuFmRuxWXY",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2074380079551967649"
+      ],
+      "editable_until_msecs": "1783409325000",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "additional_media_info": {},
+        "display_url": "pic.x.com/zuFmRuxWXY",
+        "expanded_url": "https://x.com/peetzweg/status/2074380079551967649/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          123,
+          146
+        ],
+        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2074379051410636800/img/sCoOWn7tsEH48-3z.jpg",
+        "original_info": {
+          "focus_rects": [],
+          "height": 1020,
+          "width": 1192
+        },
+        "sizes": {
+          "large": {
+            "h": 1020,
+            "resize": "fit",
+            "w": 1192
+          },
+          "medium": {
+            "h": 1020,
+            "resize": "fit",
+            "w": 1192
+          },
+          "small": {
+            "h": 582,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "video",
+        "url": "https://t.co/zuFmRuxWXY",
+        "video_info": {
+          "aspect_ratio": [
+            298,
+            255
+          ],
+          "duration_millis": 21825,
+          "variants": [
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/amplify_video/2074379051410636800/pl/IwLiMH3euWDoofv7.m3u8?tag=14"
+            },
+            {
+              "bitrate": 288000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/2074379051410636800/vid/avc1/314x270/mNfajyfZIGYfk4LD.mp4?tag=14"
+            },
+            {
+              "bitrate": 832000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/2074379051410636800/vid/avc1/420x360/WOjeVfKueXehgkyk.mp4?tag=14"
+            },
+            {
+              "bitrate": 2176000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/2074379051410636800/vid/avc1/840x720/j6_x_aSm6pPH5CjC.mp4?tag=14"
+            }
+          ]
+        }
+      }
+    ],
+    "photos": [],
+    "video": {
+      "aspectRatio": [
+        298,
+        255
+      ],
+      "contentType": "media_entity",
+      "durationMs": 21825,
+      "mediaAvailability": {
+        "status": "available"
+      },
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2074379051410636800/img/sCoOWn7tsEH48-3z.jpg",
+      "variants": [
+        {
+          "type": "application/x-mpegURL",
+          "src": "https://video.twimg.com/amplify_video/2074379051410636800/pl/IwLiMH3euWDoofv7.m3u8?tag=14"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/2074379051410636800/vid/avc1/314x270/mNfajyfZIGYfk4LD.mp4?tag=14"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/2074379051410636800/vid/avc1/420x360/WOjeVfKueXehgkyk.mp4?tag=14"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/amplify_video/2074379051410636800/vid/avc1/840x720/j6_x_aSm6pPH5CjC.mp4?tag=14"
+        }
+      ],
+      "videoId": {
+        "type": "tweet",
+        "id": "2074380079551967649"
+      },
+      "viewCount": 0
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

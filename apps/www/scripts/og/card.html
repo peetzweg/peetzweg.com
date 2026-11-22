@@ -1,0 +1,63 @@
+<!doctype html>
+<!-- The share image (public/og.png, 1200×630): the X profile picture filling the left, handle and
+     name in white on the yellow of the GitHub avatar. Render with scripts/og/render.sh. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face {
+        font-family: 'Noto Sans Mono';
+        src: url('./mono.woff2') format('woff2');
+      }
+
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        background: #cda763;
+        color: #fff;
+        font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img {
+        width: 540px;
+        height: 630px;
+        flex: none;
+        object-fit: cover;
+      }
+
+      div {
+        padding-left: 84px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 96px;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        line-height: 1.02;
+      }
+
+      p {
+        margin: 22px 0 0;
+        font-family: 'Noto Sans Mono', ui-monospace, monospace;
+        font-size: 32px;
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body>
+    <img alt="" src="./avatar.jpg" />
+    <div>
+      <h1>peetzweg</h1>
+      <p>Philip Poloczek</p>
+    </div>
+  </body>
+</html>

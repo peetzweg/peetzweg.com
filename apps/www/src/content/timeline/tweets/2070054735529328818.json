@@ -1,0 +1,226 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-06-25T08:01:23.000Z",
+  "display_text_range": [
+    0,
+    139
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/FzHbrqheIk",
+        "expanded_url": "https://x.com/peetzweg/status/2070054735529328818/photo/1",
+        "indices": [
+          140,
+          163
+        ],
+        "url": "https://t.co/FzHbrqheIk"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/2069799746777076108",
+        "indices": [
+          116,
+          139
+        ],
+        "url": "https://t.co/wWgnqSgjzI"
+      }
+    ]
+  },
+  "id_str": "2070054735529328818",
+  "text": "Got 37 Testers overnight already! Fixing some minor issues and just waiting for Apple to approve it to go live. :)\n\nhttps://t.co/wWgnqSgjzI https://t.co/FzHbrqheIk",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2070054735529328818"
+    ],
+    "editable_until_msecs": "1782378083000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/FzHbrqheIk",
+      "expanded_url": "https://x.com/peetzweg/status/2070054735529328818/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        140,
+        163
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HLpPojGXUAAWtO4.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 691,
+            "w": 1234,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 908,
+            "w": 908,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 908,
+            "w": 796,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 908,
+            "w": 454,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 908,
+            "w": 1234,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 908,
+        "width": 1234
+      },
+      "sizes": {
+        "large": {
+          "h": 908,
+          "resize": "fit",
+          "w": 1234
+        },
+        "medium": {
+          "h": 883,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 500,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/FzHbrqheIk"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 691,
+          "w": 1234,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 908,
+          "w": 908,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 908,
+          "w": 796,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 908,
+          "w": 454,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 908,
+          "w": 1234,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2070054735529328818/photo/1",
+      "url": "https://pbs.twimg.com/media/HLpPojGXUAAWtO4.jpg",
+      "width": 1234,
+      "height": 908
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 0,
+    "in_reply_to_screen_name": "peetzweg",
+    "in_reply_to_status_id_str": "2069799744822534653",
+    "in_reply_to_user_id_str": "1370705514271797250",
+    "lang": "zxx",
+    "possibly_sensitive": false,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "created_at": "2026-06-24T15:08:09.000Z",
+    "display_text_range": [
+      0,
+      23
+    ],
+    "entities": {
+      "urls": [
+        {
+          "display_url": "testflight.apple.com/join/3NYaY11c",
+          "expanded_url": "https://testflight.apple.com/join/3NYaY11c",
+          "indices": [
+            0,
+            23
+          ],
+          "url": "https://t.co/hWgWv8EmlU"
+        }
+      ]
+    },
+    "id_str": "2069799746777076108",
+    "text": "https://t.co/hWgWv8EmlU",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "2069799746777076108"
+      ],
+      "editable_until_msecs": "1782317289000",
+      "edits_remaining": "5",
+      "is_edit_eligible": false
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

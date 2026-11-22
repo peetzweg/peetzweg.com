@@ -1,0 +1,186 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 1,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-01-22T15:19:00.000Z",
+  "display_text_range": [
+    0,
+    152
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/olOqAVcgOw",
+        "expanded_url": "https://x.com/peetzweg/status/1882085563102367993/video/1",
+        "indices": [
+          153,
+          176
+        ],
+        "url": "https://t.co/olOqAVcgOw"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "sky-follower-bridge.dev",
+        "expanded_url": "http://sky-follower-bridge.dev",
+        "indices": [
+          129,
+          152
+        ],
+        "url": "https://t.co/VRkjMYWASO"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "927515451457806337",
+        "indices": [
+          46,
+          58
+        ],
+        "name": "Kawamata Ryo",
+        "screen_name": "KawamataRyo"
+      },
+      {
+        "id_str": "1199812749469126657",
+        "indices": [
+          118,
+          126
+        ],
+        "name": "Bluesky",
+        "screen_name": "bluesky"
+      }
+    ]
+  },
+  "id_str": "1882085563102367993",
+  "text": "This is the way. \n\nGreat experience. Kudos to @KawamataRyo for making it so convenient to find &amp; follow people on @bluesky.\n\nhttps://t.co/VRkjMYWASO https://t.co/olOqAVcgOw",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1882085563102367993"
+    ],
+    "editable_until_msecs": "1737562740000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "additional_media_info": {},
+      "display_url": "pic.x.com/olOqAVcgOw",
+      "expanded_url": "https://x.com/peetzweg/status/1882085563102367993/video/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        153,
+        176
+      ],
+      "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1882025530997780480/pu/img/dPNiuJ2orASfCiK-.jpg",
+      "original_info": {
+        "focus_rects": [],
+        "height": 810,
+        "width": 1092
+      },
+      "sizes": {
+        "large": {
+          "h": 810,
+          "resize": "fit",
+          "w": 1092
+        },
+        "medium": {
+          "h": 810,
+          "resize": "fit",
+          "w": 1092
+        },
+        "small": {
+          "h": 504,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "video",
+      "url": "https://t.co/olOqAVcgOw",
+      "video_info": {
+        "aspect_ratio": [
+          182,
+          135
+        ],
+        "duration_millis": 8149,
+        "variants": [
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/ext_tw_video/1882025530997780480/pu/pl/HM09dZfNIO9DEIYX.m3u8?tag=12"
+          },
+          {
+            "bitrate": 256000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1882025530997780480/pu/vid/avc1/364x270/Fk3s_yjKYmwrxtJ0.mp4?tag=12"
+          },
+          {
+            "bitrate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1882025530997780480/pu/vid/avc1/484x360/FCJMSGsAkMDnOJUy.mp4?tag=12"
+          },
+          {
+            "bitrate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/ext_tw_video/1882025530997780480/pu/vid/avc1/970x720/YVrgB605zb5ndZmL.mp4?tag=12"
+          }
+        ]
+      }
+    }
+  ],
+  "photos": [],
+  "video": {
+    "aspectRatio": [
+      182,
+      135
+    ],
+    "contentType": "media_entity",
+    "durationMs": 8149,
+    "mediaAvailability": {
+      "status": "available"
+    },
+    "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1882025530997780480/pu/img/dPNiuJ2orASfCiK-.jpg",
+    "variants": [
+      {
+        "type": "application/x-mpegURL",
+        "src": "https://video.twimg.com/ext_tw_video/1882025530997780480/pu/pl/HM09dZfNIO9DEIYX.m3u8?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1882025530997780480/pu/vid/avc1/364x270/Fk3s_yjKYmwrxtJ0.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1882025530997780480/pu/vid/avc1/484x360/FCJMSGsAkMDnOJUy.mp4?tag=12"
+      },
+      {
+        "type": "video/mp4",
+        "src": "https://video.twimg.com/ext_tw_video/1882025530997780480/pu/vid/avc1/970x720/YVrgB605zb5ndZmL.mp4?tag=12"
+      }
+    ],
+    "videoId": {
+      "type": "tweet",
+      "id": "1882085563102367993"
+    },
+    "viewCount": 0
+  },
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

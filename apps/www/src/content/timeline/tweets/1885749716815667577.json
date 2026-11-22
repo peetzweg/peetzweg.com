@@ -1,0 +1,188 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-02-01T17:59:02.000Z",
+  "display_text_range": [
+    0,
+    273
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/OHE68k48sN",
+        "expanded_url": "https://x.com/peetzweg/status/1885749716815667577/photo/1",
+        "indices": [
+          274,
+          297
+        ],
+        "url": "https://t.co/OHE68k48sN"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "en.shiftall.net/products/mutalk",
+        "expanded_url": "https://en.shiftall.net/products/mutalk",
+        "indices": [
+          250,
+          273
+        ],
+        "url": "https://t.co/imTrpIwClb"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1067313024577335296",
+        "indices": [
+          37,
+          53
+        ],
+        "name": "Shiftall Inc.",
+        "screen_name": "shiftall_global"
+      }
+    ]
+  },
+  "id_str": "1885749716815667577",
+  "text": "Thinking about getting a Mutalk from @shiftall_global—voice has the highest bandwidth I have with AI, but talking to my screen all day feels awkward at home or in the office. Is this the future or just weird until we have brain-computer interfaces?\n\nhttps://t.co/imTrpIwClb https://t.co/OHE68k48sN",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1885749716815667577"
+    ],
+    "editable_until_msecs": "1738436342000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/OHE68k48sN",
+      "expanded_url": "https://x.com/peetzweg/status/1885749716815667577/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        274,
+        297
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GiuHX5OXYAAMAg4.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 1344,
+            "w": 2400,
+            "x": 0,
+            "y": 6
+          },
+          {
+            "h": 1350,
+            "w": 1350,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1350,
+            "w": 1184,
+            "x": 68,
+            "y": 0
+          },
+          {
+            "h": 1350,
+            "w": 675,
+            "x": 323,
+            "y": 0
+          },
+          {
+            "h": 1350,
+            "w": 2400,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1350,
+        "width": 2400
+      },
+      "sizes": {
+        "large": {
+          "h": 1152,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 675,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/OHE68k48sN"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 1344,
+          "w": 2400,
+          "x": 0,
+          "y": 6
+        },
+        {
+          "h": 1350,
+          "w": 1350,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1350,
+          "w": 1184,
+          "x": 68,
+          "y": 0
+        },
+        {
+          "h": 1350,
+          "w": 675,
+          "x": 323,
+          "y": 0
+        },
+        {
+          "h": 1350,
+          "w": 2400,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1885749716815667577/photo/1",
+      "url": "https://pbs.twimg.com/media/GiuHX5OXYAAMAg4.jpg",
+      "width": 2400,
+      "height": 1350
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,254 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2022-09-20T13:27:47.000Z",
+  "display_text_range": [
+    0,
+    237
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/MB7xApepie",
+        "expanded_url": "https://x.com/peetzweg/status/1572215952103677952/photo/1",
+        "indices": [
+          238,
+          261
+        ],
+        "url": "https://t.co/MB7xApepie"
+      }
+    ],
+    "urls": [
+      {
+        "display_url": "x.com/peetzweg/statu…",
+        "expanded_url": "https://x.com/peetzweg/status/1564331402493104131",
+        "indices": [
+          214,
+          237
+        ],
+        "url": "https://t.co/Wf885ZwqEH"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "1303577160234328066",
+        "indices": [
+          37,
+          47
+        ],
+        "name": "Sushi.com",
+        "screen_name": "SushiSwap"
+      },
+      {
+        "id_str": "911011433147654144",
+        "indices": [
+          128,
+          140
+        ],
+        "name": "Trust Wallet",
+        "screen_name": "TrustWallet"
+      }
+    ]
+  },
+  "id_str": "1572215952103677952",
+  "text": "Token and network icons just broke - @SushiSwap just deleted or made their `icons` repo private. Guess more people move over to @TrustWallet `assets` but thats not longterm solution.\nAn on-chain Token Registry is!\nhttps://t.co/Wf885ZwqEH https://t.co/MB7xApepie",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1572215952103677952"
+    ],
+    "editable_until_msecs": "1663682267000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/MB7xApepie",
+      "expanded_url": "https://x.com/peetzweg/status/1572215952103677952/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        238,
+        261
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/FdGhQ1VXkAIcm2t.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 466,
+            "w": 832,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 466,
+            "w": 466,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 466,
+            "w": 409,
+            "x": 4,
+            "y": 0
+          },
+          {
+            "h": 466,
+            "w": 233,
+            "x": 92,
+            "y": 0
+          },
+          {
+            "h": 466,
+            "w": 1190,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 466,
+        "width": 1190
+      },
+      "sizes": {
+        "large": {
+          "h": 466,
+          "resize": "fit",
+          "w": 1190
+        },
+        "medium": {
+          "h": 466,
+          "resize": "fit",
+          "w": 1190
+        },
+        "small": {
+          "h": 266,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/MB7xApepie"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 466,
+          "w": 832,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 466,
+          "w": 466,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 466,
+          "w": 409,
+          "x": 4,
+          "y": 0
+        },
+        {
+          "h": 466,
+          "w": 233,
+          "x": 92,
+          "y": 0
+        },
+        {
+          "h": 466,
+          "w": 1190,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1572215952103677952/photo/1",
+      "url": "https://pbs.twimg.com/media/FdGhQ1VXkAIcm2t.jpg",
+      "width": 1190,
+      "height": 466
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "favorite_count": 1,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "reply_count": 2,
+    "retweet_count": 1,
+    "created_at": "2022-08-29T19:17:24.000Z",
+    "display_text_range": [
+      0,
+      228
+    ],
+    "entities": {
+      "urls": [
+        {
+          "display_url": "ethereum-magicians.org/t/eip-idea-tok…",
+          "expanded_url": "https://ethereum-magicians.org/t/eip-idea-token-information-service/10572",
+          "indices": [
+            205,
+            228
+          ],
+          "url": "https://t.co/tyvqthRmVw"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "996321865311358976",
+          "indices": [
+            181,
+            192
+          ],
+          "name": "ens.eth",
+          "screen_name": "ensdomains"
+        }
+      ]
+    },
+    "id_str": "1564331402493104131",
+    "text": "`symbol()`, `name()` and `decimals()` of a ERC20 token are stored onchain, but why isn't a `logo()`?\nToken logos are everywhere and essential. What do you think about my EIP Idea - @ensdomains for Tokens.\nhttps://t.co/tyvqthRmVw",
+    "user": {
+      "id_str": "1370705514271797250",
+      "name": "peetzweg/",
+      "screen_name": "peetzweg",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1564331402493104131"
+      ],
+      "editable_until_msecs": "1661802444000",
+      "edits_remaining": "5",
+      "is_edit_eligible": false
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

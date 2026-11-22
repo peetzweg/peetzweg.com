@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 2,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2026-07-09T12:24:37.000Z",
+  "display_text_range": [
+    0,
+    90
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/3fjXpwvUXu",
+        "expanded_url": "https://x.com/peetzweg/status/2075194409436459476/photo/1",
+        "indices": [
+          91,
+          114
+        ],
+        "url": "https://t.co/3fjXpwvUXu"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "783214",
+        "indices": [
+          9,
+          11
+        ],
+        "name": "X",
+        "screen_name": "X"
+      }
+    ]
+  },
+  "id_str": "2075194409436459476",
+  "text": "Kudos to @X chat is at least honest and straight in your face about unencrypted messaging. https://t.co/3fjXpwvUXu",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "2075194409436459476"
+    ],
+    "editable_until_msecs": "1783603477000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/3fjXpwvUXu",
+      "expanded_url": "https://x.com/peetzweg/status/2075194409436459476/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        91,
+        114
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/HMySLymWwAAIoEE.png",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 382,
+            "w": 682,
+            "x": 75,
+            "y": 0
+          },
+          {
+            "h": 382,
+            "w": 382,
+            "x": 225,
+            "y": 0
+          },
+          {
+            "h": 382,
+            "w": 335,
+            "x": 249,
+            "y": 0
+          },
+          {
+            "h": 382,
+            "w": 191,
+            "x": 321,
+            "y": 0
+          },
+          {
+            "h": 382,
+            "w": 832,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 382,
+        "width": 832
+      },
+      "sizes": {
+        "large": {
+          "h": 382,
+          "resize": "fit",
+          "w": 832
+        },
+        "medium": {
+          "h": 382,
+          "resize": "fit",
+          "w": 832
+        },
+        "small": {
+          "h": 312,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/3fjXpwvUXu"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 382,
+          "w": 682,
+          "x": 75,
+          "y": 0
+        },
+        {
+          "h": 382,
+          "w": 382,
+          "x": 225,
+          "y": 0
+        },
+        {
+          "h": 382,
+          "w": 335,
+          "x": 249,
+          "y": 0
+        },
+        {
+          "h": 382,
+          "w": 191,
+          "x": 321,
+          "y": 0
+        },
+        {
+          "h": 382,
+          "w": 832,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/2075194409436459476/photo/1",
+      "url": "https://pbs.twimg.com/media/HMySLymWwAAIoEE.png",
+      "width": 832,
+      "height": 382
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

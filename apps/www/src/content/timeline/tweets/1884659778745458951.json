@@ -1,0 +1,177 @@
+{
+  "__typename": "Tweet",
+  "favorite_count": 0,
+  "lang": "en",
+  "possibly_sensitive": false,
+  "created_at": "2025-01-29T17:48:01.000Z",
+  "display_text_range": [
+    0,
+    242
+  ],
+  "entities": {
+    "media": [
+      {
+        "display_url": "pic.x.com/Vv7sly2CaY",
+        "expanded_url": "https://x.com/peetzweg/status/1884659778745458951/photo/1",
+        "indices": [
+          243,
+          266
+        ],
+        "url": "https://t.co/Vv7sly2CaY"
+      }
+    ],
+    "user_mentions": [
+      {
+        "id_str": "4600040954",
+        "indices": [
+          177,
+          192
+        ],
+        "name": "Home Assistant",
+        "screen_name": "home_assistant"
+      }
+    ]
+  },
+  "id_str": "1884659778745458951",
+  "text": "Home Assistant found a humidity and temperature sensor and set it up for our system automatically. Turns out my Girlfriend bought it for the bedroom. I did not know we had one. @home_assistant now even keeps a history of the data. Super neat. https://t.co/Vv7sly2CaY",
+  "user": {
+    "id_str": "1370705514271797250",
+    "name": "peetzweg/",
+    "screen_name": "peetzweg",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2007464692655038464/8PT23YAj_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1884659778745458951"
+    ],
+    "editable_until_msecs": "1738176481000",
+    "edits_remaining": "5",
+    "is_edit_eligible": true
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/Vv7sly2CaY",
+      "expanded_url": "https://x.com/peetzweg/status/1884659778745458951/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        243,
+        266
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GieoFLUWkAApFgw.jpg",
+      "original_info": {
+        "focus_rects": [
+          {
+            "h": 682,
+            "w": 1218,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1048,
+            "w": 1048,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1048,
+            "w": 919,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 1048,
+            "w": 524,
+            "x": 72,
+            "y": 0
+          },
+          {
+            "h": 1048,
+            "w": 1218,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "height": 1048,
+        "width": 1218
+      },
+      "sizes": {
+        "large": {
+          "h": 1048,
+          "resize": "fit",
+          "w": 1218
+        },
+        "medium": {
+          "h": 1033,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 585,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/Vv7sly2CaY"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "h": 682,
+          "w": 1218,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1048,
+          "w": 1048,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1048,
+          "w": 919,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "h": 1048,
+          "w": 524,
+          "x": 72,
+          "y": 0
+        },
+        {
+          "h": 1048,
+          "w": 1218,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "expandedUrl": "https://x.com/peetzweg/status/1884659778745458951/photo/1",
+      "url": "https://pbs.twimg.com/media/GieoFLUWkAApFgw.jpg",
+      "width": 1218,
+      "height": 1048
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}
